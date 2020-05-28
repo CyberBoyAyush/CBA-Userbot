@@ -124,7 +124,7 @@ async def apkr(e):
 
         app_details += "\n\n<b>Download : </b> <a href='https://t.me/IndianBot_Official'>Request_Here by typing #request</a>"
 
-        app_details += "\n\n===> @IndianBot_Official <==="
+        app_details += "\n\n===>🥳 @FridaySupportOfficial 🥳<==="
 
         await e.edit(app_details, link_preview = True, parse_mode = 'HTML')
 
