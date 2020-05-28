@@ -18,7 +18,7 @@ USER_BOT_NO_WARN = ("[┏┓━┏┓━━━━┏┓━┏┓━━━━━ 
                     "**I Am Made By A Pro, I Found Ur Way Through "
                     f"{DEFAULTUSER}'s inbox**.\n\n"
                     "`⚡My Satellite is⚡ :` **🛰️HEROKUSAT-2🛰️**\n\n"
-                    "`We Have Found That You Were Trespassing To My Masters Inbox :` **We Found That Through 🛰️HEROKUSAT-2🛰️ Note:This Satellite Is Powerful Be Careful**\n\n"
+                    "`We Have Found That You Were Trespassing To My Masters Inbox :` **We Found That Through 🛰️HEROKUSAT-2🛰️ Note: This Satellite Is Powerful Be Careful**\n\n"
                     "**This Is Regarded As Trespassing And A Illegal Activity😡!**\n\n"
                     "**So Send `/start` To Start A Valid Conversation Or Get Killed In Cross Firing.")
 
