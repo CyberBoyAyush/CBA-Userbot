@@ -14,12 +14,12 @@ from userbot.utils import admin_cmd
 @borg.on(admin_cmd("leave$"))
 async def leave(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("`I iz Leaving dis Kensur Group kek!`")
+        await e.edit("`I iz Leaving dis Lol Group kek!`")
         time.sleep(3)
         if '-' in str(e.chat_id):
             await bot(LeaveChannelRequest(e.chat_id))
         else:
-            await e.edit('`Sar This is Not A Chat`')
+            await e.edit('`But Boss! This is Not A Chat`')
 
 @borg.on(admin_cmd(";__;$"))
 #@register(outgoing=True, pattern="^;__;$")
@@ -73,13 +73,13 @@ async def _(event):
 #@register(outgoing=True, pattern="^.source$")
 async def source(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("https://github.com/midhunkm1294-bit/Friday")
+        await e.edit("https://github.com/StarkGang/FridayUserbot")
 
 @borg.on(admin_cmd("readme$"))
 #@register(outgoing=True, pattern="^.readme$")
 async def reedme(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("https://github.com/midhunkm1294-bit/FRIDAY/blob/master/README.md")
+        await e.edit("https://github.com/StarkGang/FRIDAYUSERBOT/blob/master/README.md")
 
 
 
