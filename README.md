@@ -27,8 +27,8 @@ For any query or want to know how it works join 👇
 
 Simply clone the repository and run the main file:
 ```sh
-git clone https://github.com/midhunkm1294-bit/Friday
-cd Friday
+git clone https://github.com/starkGang/Fridayuserbot
+cd FridayUserbot
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
