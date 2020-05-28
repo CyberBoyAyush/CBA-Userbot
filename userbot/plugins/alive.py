@@ -13,12 +13,12 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars 
 @borg.on(admin_cmd(pattern=r"alive"))
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    await alive.edit("**MY STATUS** \n`FRIDAY➡️: ` **✅ Alive**\n\n"
+    await alive.edit("**MY STATUS** \n`FRIDAY: ` **✅ Alive**\n\n"
                      f"`My Boss`: {DEFAULTUSER}\n\n"
                      "`Telethon version:` **6.0.9**\n`Python:` **3.7.4**\n"
                      "`Database Status:` **ALL NORMAL!WORKING FINE 🙂**\n\n`Always with you, my Boss!!\n`"
                      "**Satellite Name:** 🛰️HEROKUSAT-2🛰️\n"
-                     "**Satellite Signal Strength:** -92 Db\n"
+                     "**Satellite Signal Strength:** 92 Db\n"
                      "**Satellite Staus:** ✅ Alive\n\n"
-                     "     [❤️Deploy FRIDAY❤️](https://github.com/midhunkm1294-bit/FRIDAY)") 
+                     "     [❤️Deploy FRIDAY❤️](https://github.com/StarkGang/FRIDAYUserbot)") 
 
