@@ -70,7 +70,7 @@ Fortunately there are no Mandatory vars for the UniBorg Support Config.
 
 
 # THANKS TO 🤟
-➡️ @SpEcHlDe - He is The Main Creator Of Uniborg [Thanks To Him For Codes 🤟]
+➡️ @SpEcHlDe - He is The Main Creator Of Uniborg [Thanks To Him For Codes 🤟] \n
 ➡️ Friendly Telegram - Thanks To Them For Memes.py And Some Awesome Plugin
 ➡️ THANKS TO MY TEAM [#𝗦ᵗ𝗮ʳ𝗞ᵍ𝗮ⁿ𝗴] FOR SUPPORTING AND HELPING IN THIS PROJECT
 ➡️ Thanks To Paper Plane - For Motivation For This Plugin
