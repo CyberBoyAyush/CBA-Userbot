@@ -18,10 +18,10 @@ async def _(event):
     if input_str == "credits":
         await event.edit(input_str)
         animation_chars = [
-            "AVENGERS",
-            "ASSEMBLE",
-            "YEAHHHHHH",
-            "CAPTAIN AMERICA: AVENGERS ASSEMBLE!!!!!!"
+            "➡️ @SpEcHlDe - He is The Main Creator Of Uniborg [Thanks To Him For Codes ❤️]",
+            "➡️ Thanks To PaperPlane For Memes.py And Other Plugin",
+            "➡️ Thanks To My Team StarkGang For Support",
+            "❤️Love And Thanks To You All"
         ]
         for i in animation_ttl:
             await asyncio.sleep(animation_interval)
