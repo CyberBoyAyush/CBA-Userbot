@@ -1,11 +1,11 @@
 """Invite the user(s) to the current chat
-Syntax: .invite <User(s)>"""
+Syntax: .add <User(s)>"""
 
 from telethon import functions
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="invite ?(.*)"))
+@borg.on(admin_cmd(pattern="add ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
