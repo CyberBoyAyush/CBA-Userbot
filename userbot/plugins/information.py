@@ -44,7 +44,7 @@ async def _(event):
     except Exception as e:
         dc_id = "`Need a Profile Picture to check **this**`"
         location = str(e)
-    caption = """<b>Extracted Userdata From IndianBhai's DATABASE<b>
+    caption = """<b>Extracted Userdata From Telegram DATABASE By Friday<b>
 <b>ID</b>: <code>{}</code>
 <b>Person Name</b>: <a href='tg://user?id={}'>{}</a>
 <b>Last Name</b>:<code>{}</code>
