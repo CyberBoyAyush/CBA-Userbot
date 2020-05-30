@@ -18,13 +18,13 @@ IS_SELECTED_DIFFERENT_BRANCH = (
 OFFICIAL_UPSTREAM_REPO = "https://github.com/StarkGang/FRIDAYUSERBOT/"
 BOT_IS_UP_TO_DATE = "the userbot is up-to-date."
 NEW_BOT_UP_DATE_FOUND = (
-    "new update found for {branch_name}\n"
+    "New Update found for {branch_name}\n"
     "changelog: \n\n{changelog}\n"
-    "updating ..."
+    "Finding Update..."
 )
 NEW_UP_DATE_FOUND = (
     "new update found for {branch_name}\n"
-    "updating ..."
+    "updating in Progress...."
 )
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
@@ -140,7 +140,7 @@ def generate_change_log(git_repo, diff_marker):
 
 async def deploy_start(bot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("restarted! do `.alive` to check if I am online?\nIt will takes approximately 5 mins to update your userbot")
+    await message.edit("Restarted Successfully! do `.alive` to check if I am online?\nIt will takes approximately 5 mins to update your userbot Thank You For Using Friday")
     await remote.push(refspec=refspec)
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
