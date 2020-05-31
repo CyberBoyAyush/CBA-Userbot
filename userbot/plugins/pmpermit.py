@@ -13,14 +13,14 @@ PREV_REPLY_MESSAGE = {}
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 USER_BOT_WARN_ZERO = "`You were spamming my peru master's inbox, henceforth your retarded lame ass has been blocked by my master's userbot.` "
-USER_BOT_NO_WARN = ("┏┓━┏┓━━━━┏┓━┏┓━━━━━ \n┃┃━┃┃━━━━┃┃━┃┃━━━━━ \n┃┗━┛┃┏━━┓┃┃━┃┃━┏━━┓ \n┃┏━┓┃┃┏┓┃┃┃━┃┃━┃┏┓┃ \n┃┃━┃┃┃┃━┫┃┗┓┃┗┓┃┗┛┃ \n┗┛━┗┛┗━━┛┗━┛┗━┛┗━━┛\n\n"
+USER_BOT_NO_WARN = ("    ╔┓┏╦━━╦┓╔┓╔━━╗ \n║┗┛║┗━╣┃║┃║X X║\n║┏┓║┏━╣┗╣┗╣╰╯║ \n╚┛┗╩━━╩━╩━╩━━╝﻿\n\n"
                     "`Hello, This Is An` **Automated Reply From My Master Userbot ⚡Friday⚡.**\n"
-                    "**I Am Made By A Pro, I Found Ur Way Through "
-                    f"{DEFAULTUSER}'s inbox**.\n\n"
-                    "`⚡My Satellite is⚡ :` **🛰️HEROKUSAT-2🛰️**\n\n"
+                    "**I Serve This My boss "
+                    f"{DEFAULTUSER}**.\n\n"
                     "`We Have Found That You Were Trespassing To My Masters Inbox :` **Please dont spam and Wait until my boss approve To Pm ! He Mostly Approves PM!**\n\n"
                     "**Please wait! But if you want you can Register Your Request!**\n\n"
                     "So Send `/start` To Start A Valid Conversation Or You Can Wait until You Have Approved.")
+
 
 
 if Var.PRIVATE_GROUP_ID is not None:
