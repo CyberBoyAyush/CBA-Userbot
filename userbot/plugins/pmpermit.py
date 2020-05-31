@@ -16,10 +16,9 @@ USER_BOT_WARN_ZERO = "`You were spamming my peru master's inbox, henceforth your
 USER_BOT_NO_WARN = ("    ╔┓┏╦━━╦┓╔┓╔━━╗ \n║┗┛║┗━╣┃║┃║X X║\n║┏┓║┏━╣┗╣┗╣╰╯║ \n╚┛┗╩━━╩━╩━╩━━╝﻿\n\n"
                     "`Hello, This Is An` **Automated Reply From My Master Userbot ⚡Friday⚡.**\n"
                     "**I Serve This My boss "
-                    f"{DEFAULTUSER}**.\n\n"
-                    "`We Have Found That You Were Trespassing To My Masters Inbox :` **Please dont spam and Wait until my boss approve To Pm ! He Mostly Approves PM!**\n\n"
-                    "**Please wait! But if you want you can Register Your Request!**\n\n"
-                    "So Send `/start` To Start A Valid Conversation Or You Can Wait until You Have Approved.")
+                    f"{DEFAULTUSER} 🔥**.\n\n"
+                    "**My boss Will Approve you To PM but if you want you can Register Your Request!**\n\n"
+                    "Send `/start` To Register Your Request!!.")
 
 
 
