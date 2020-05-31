@@ -15,10 +15,10 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars 
 USER_BOT_WARN_ZERO = "`You were spamming my peru master's inbox, henceforth your retarded lame ass has been blocked by my master's userbot.` "
 USER_BOT_NO_WARN = ("    ╔┓┏╦━━╦┓╔┓╔━━╗ \n║┗┛║┗━╣┃║┃║X X║\n║┏┓║┏━╣┗╣┗╣╰╯║ \n╚┛┗╩━━╩━╩━╩━━╝﻿\n\n"
                     "`Hello, This Is An` **Automated Reply From My Master Userbot ⚡Friday⚡.**\n"
-                    "**I Serve This My boss "
+                    "**I Serve This My boss 🔥 "
                     f"{DEFAULTUSER} 🔥**.\n\n"
                     "**My boss Will Approve you To PM but if you want you can Register Your Request!**\n\n"
-                    "Send `/start` To Register Your Request!!.")
+                    "Send `/start` To Register Your Request!!")
 
 
 
