@@ -24,7 +24,7 @@ async def _(event):
     PROCESS_RUN_TIME = 100
 #    dirname = event.pattern_match.group(1)
 #    tempdir = "localdir"
-    cmd = "ls -lh ./BotHub/"
+    cmd = "ls -lh ./DOWNLOADS/"
 #    if dirname == tempdir:
 	
     eply_to_id = event.message.id
@@ -34,7 +34,7 @@ async def _(event):
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
-    OUTPUT = f"**Files in [BotHub's](tg://need_update_for_some_feature/) DOWNLOADS Folder:**\n"
+    OUTPUT = f"**Files in [FRIDAY](tg://FridayOT/) DOWNLOADS Folder:**\n"
     stdout, stderr = await process.communicate()
     if len(stdout) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(stdout)) as out_file:
