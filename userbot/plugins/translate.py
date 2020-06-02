@@ -34,8 +34,8 @@ async def _(event):
         # TODO: emojify the :
         # either here, or before translation
         output_str = """**TRANSLATED** 
-         Source ( {} )
-         Translation ( {} )
+         Source **( {} )**
+         Translation **( {} )**
          {}""".format(
             translated.src,
             lan,
