@@ -180,7 +180,7 @@ async def _(dyno):
             reply_to=dyno.id,
             caption="logs of 100+ lines",
         )
-        await dyno.edit("Sending.......")
+        await dyno.edit("Sending in Progress.......")
         await asyncio.sleep(5)
         await dyno.delete()
         return os.remove('logs.txt')
