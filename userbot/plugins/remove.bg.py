@@ -1,17 +1,3 @@
-# (c) Shrimadhav U K
-#
-# This file is part of @UniBorg
-#
-# @UniBorg is free software; you cannot redistribute it and/or modify
-# it under the terms of the GNU General Public License as published
-# by the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# @UniBorg is not distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
 """Remove.BG Plugin for @UniBorg
 Syntax: .rmbg https://link.to/image.extension
 Syntax: .rmbg as reply to a media"""
@@ -39,7 +25,7 @@ async def _(event):
         message_id = event.reply_to_msg_id
         reply_message = await event.get_reply_message()
         # check if media message
-        await event.edit("Connecting to official IndianBot server and analysing that img ...")
+        await event.edit("Connecting to official Friday server and analysing that img ...")
         try:
             downloaded_file_name = await borg.download_media(
                 reply_message,
