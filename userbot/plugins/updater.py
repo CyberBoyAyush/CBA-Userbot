@@ -16,7 +16,7 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "please check out to an official branch, and re-start the updater."
 )
 OFFICIAL_UPSTREAM_REPO = "https://github.com/StarkGang/FRIDAYUSERBOT/"
-BOT_IS_UP_TO_DATE = "the userbot is up-to-date."
+BOT_IS_UP_TO_DATE = "This userbot is up-to-date."
 NEW_BOT_UP_DATE_FOUND = (
     "New Update found for {branch_name}\n"
     "changelog: \n\n{changelog}\n"
@@ -24,7 +24,7 @@ NEW_BOT_UP_DATE_FOUND = (
 )
 NEW_UP_DATE_FOUND = (
     "new update found for {branch_name}\n"
-    "updating in Progress...."
+    "Updating in Progress...."
 )
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
@@ -72,7 +72,7 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit("Updating...")
+        await message.edit("Updating Please Wait...")
         await asyncio.sleep(8)
  
     message_one = NEW_BOT_UP_DATE_FOUND.format(
@@ -140,7 +140,7 @@ def generate_change_log(git_repo, diff_marker):
 
 async def deploy_start(bot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("Restarted Successfully! do `.alive` to check if I am online?\nIt will takes approximately 5 mins to update your userbot Thank You For Using Friday")
+    await message.edit("Restarted Successfully!(◔‿◔) do `.alive` to check if I am online?\nIt will takes approximately 5 mins to update your userbot Thank You For Using Friday(◠‿・)—☆")
     await remote.push(refspec=refspec)
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
