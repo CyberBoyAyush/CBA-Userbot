@@ -15,7 +15,7 @@ async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     await alive.edit("**MY STATUS** \n`FRIDAY IS:` **✅ Alive**\n\n"
                      "`TELETHON VERSION:` **6.0.9**\n`Python:` **3.7.4**\n"
-                     "`DATABASE STATUS:` **ALL NORMAL! WORKING FINE 🙂**\n\n`NO PROBLEM FOUND🔥!\n`"
+                     "`DATABASE STATUS:` **ALL NORMAL! WORKING FINE 🙂**\n`NO PROBLEM FOUND🔥!\n`"
                      "`CONNECTION PROVIDER:` ** AMAZON WEB SERVICES\n"
                      "`CURRECT BOT LOCATION:` ** ASHBURN,UNITED STATES\n"
                      "`DEPLOYING SERVICE BY: HEROKU INC.\n"
