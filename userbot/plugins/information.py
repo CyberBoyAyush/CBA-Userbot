@@ -9,7 +9,7 @@ from telethon.utils import get_input_location
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd("info ?(.*)"))
+@borg.on(admin_cmd("dataz ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -45,16 +45,17 @@ async def _(event):
         dc_id = "`Need a Profile Picture to check **this**`"
         location = str(e)
     caption = """<b>Extracted Userdata From Telegram DATABASE By Friday<b>
-<b>ID</b>: <code>{}</code>
-<b>Person Name</b>: <a href='tg://user?id={}'>{}</a>
-<b>Last Name</b>:<code>{}</code>
-<b>Bio</b>: <code>{}</code>
-<b>DC ID</b>: {}
-<b>Number of PPs</b>: {}
-<b>Restricted?</b> : {}
-<b>Verified</b>: {}
-<b>Bot(nub)</b>: {}
-<b>Groups in Common</b>: {}
+<b>🔥Telegram ID</b>: <code>{}</code>
+<b>🤟Permanent Link</b>: <a href='tg://user?id={}'>Click Here</a>
+<b>🗣️First Name</b>: <code>{}</code>
+<b>🗣️Second Name</b>: <code>{}</code>
+<b>👨🏿‍💻BIO</b>: {}
+<b>🎃DC ID</b>: {}
+<b>⚡NO OF PSS</b> : {}
+<b>🤔IS RESTRICTED</b>: {}
+<b>✅VERIFIED</b>: {}
+<b>🙄IS A BOT</b>: {}
+<b>👥Groups in Common</b>: {}
 """.format(
         user_id,
         user_id,
@@ -136,3 +137,6 @@ async def get_full_user(event):
                 return replied_user, None
             except Exception as e:
                 return None, e
+
+
+        
