@@ -3,9 +3,9 @@
 # file, You can obtain one at https://www.gnu.org/licenses/gpl-3.0.en.html
 """Uploads Files to Telegram
 Available Commands:
-.upload <Path To File>
-.uploadir <Path To Directory>
-.uploadasstream <Path To File>"""
+.up <Path To File>
+.updir <Path To Directory>
+.upasstr <Path To File>"""
 
 import asyncio
 import os
@@ -33,7 +33,7 @@ def get_lst_of_files(input_directory, output_lst):
     return output_lst
 
 
-@borg.on(admin_cmd(pattern="uploadir (.*)"))
+@borg.on(admin_cmd(pattern="updir (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -141,7 +141,7 @@ async def _(event):
         await event.edit("404: Directory Not Found")
 
 
-@borg.on(admin_cmd(pattern="upload (.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="up (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -186,7 +186,7 @@ def get_video_thumb(file, output=None, width=90):
         return output
 
 
-@borg.on(admin_cmd(pattern="uploadasstream (.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="upasstr (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
