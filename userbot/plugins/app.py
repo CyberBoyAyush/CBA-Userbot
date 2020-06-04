@@ -3,11 +3,19 @@
 .appr <app_name>  to fetch app details with Xpl0iter request link."""
 
 import requests
-import bs4 
+
+import bs4
+
 import re
-from uniborg.util import admin_cmd
+
+
+
 from telethon import *
-from uniborg import *
+
+from userbot import CMD_HELP
+
+from userbot.events import register
+
 
 @borg.on(events.NewMessage(pattern='.app (.*)'))
 
