@@ -145,7 +145,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    mone = await event.reply("Processing ...")
+    mone = await event.reply("Sory!I am Noob...")
     input_str = event.pattern_match.group(1)
     thumb = None
     if os.path.exists(thumb_image_path):
