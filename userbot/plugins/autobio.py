@@ -5,7 +5,7 @@ from telethon import events
 import random, re
 from telethon.tl import functions
 from telethon.errors import FloodWaitError
-from userbot.util import admin_cmd
+from userbot.utils import admin_cmd
 
 
 BIO_STRINGS = [
