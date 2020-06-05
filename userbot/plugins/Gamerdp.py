@@ -14,7 +14,7 @@ from datetime import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 
-from userbot.util import admin_cmd
+from userbot.utils import admin_cmd
 
 import asyncio
 
