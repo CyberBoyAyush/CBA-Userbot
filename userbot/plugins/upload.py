@@ -141,7 +141,7 @@ async def _(event):
         await event.edit("404: Directory Not Found")
 
 
-@borg.on(admin_cmd(pattern="up (.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="up (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -186,7 +186,7 @@ def get_video_thumb(file, output=None, width=90):
         return output
 
 
-@borg.on(admin_cmd(pattern="upasstr (.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="upasstr (.*)"))
 async def _(event):
     if event.fwd_from:
         return
