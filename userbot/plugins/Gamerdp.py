@@ -2,7 +2,7 @@
 
 #And Thanks To The Creator Of Autopic This Script Was Made from Snippets From That Script
 
-#Usage .gamerpfp  Im Not Responsible For Any Ban caused By This
+#Usage .gamerpdp  Im Not Responsible For Any Ban caused By This
 
 import requests , re , random 
 
@@ -14,7 +14,7 @@ from datetime import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 
-from uniborg.util import admin_cmd
+from userbot.util import admin_cmd
 
 import asyncio
 
