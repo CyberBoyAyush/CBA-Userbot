@@ -3,7 +3,7 @@
 <p align="center">
 <img src="Logo.jpeg" alt="FRIDAY">
 
-Best User Bot To Manage Your Telegram Account 😉
+Best User Bot To Manage Your Telegram Account 
 ## Most PowerFul And Better And Secure
 
 ## By Team sᵗaʳkᵍaⁿg
@@ -15,7 +15,7 @@ For any query or want to know how it works join 👇
 
 I THANK INFOTEL FOR THIER FREE VIDEO SERVICE WATCH VIDEO ON HOW TO DEPLOY ♥️
 
-<a href="https://youtu.be/xfHcm_e92eQ"><img src="https://telegra.ph/file/9ac774b59c57b7b3a0c89.png?logo=youtube"></a>
+.. <a href="https://youtu.be/xfHcm_e92eQ"><img src="https://telegra.ph/file/9ac774b59c57b7b3a0c89.png?logo=youtube"></a>
 
 ## Installing Heroku 
 
@@ -24,9 +24,7 @@ I THANK INFOTEL FOR THIER FREE VIDEO SERVICE WATCH VIDEO ON HOW TO DEPLOY ♥️
 
 ## GET STRING SESSION FROM REPL RUN 
 
-.. image:: https://img.shields.io/badge/REPL RUN-Run Online-red.svg
-      :target: https://friday.starkgang.repl.run
-      :alt: Repl Run
+.. [!Repl Run](https://img.shields.io/badge/REPL%20RUN-Run%20Online-blue.svg)](https://friday.starkgang.repl.run)
 
 ### The Normal Way
 
