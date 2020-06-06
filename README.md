@@ -9,13 +9,14 @@ Best User Bot To Manage Your Telegram Account
 ## By Team sᵗaʳkᵍaⁿg
 
 For any query or want to know how it works join 👇
-.. <a href="https://t.me/FridaySupportOfficial"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
+<a href="https://t.me/FridaySupportOfficial"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
+<a href="https://t.me/fridayOT"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
 ## HOW TO DEPLOY 
 
 I THANK INFOTEL FOR THIER FREE VIDEO SERVICE WATCH VIDEO ON HOW TO DEPLOY ♥️
 
-.. <a href="https://youtu.be/xfHcm_e92eQ"><img src="https://telegra.ph/file/9ac774b59c57b7b3a0c89.png?logo=youtube"></a>
+ <a href="https://youtu.be/xfHcm_e92eQ"><img src="https://telegra.ph/file/9ac774b59c57b7b3a0c89.png?logo=youtube"></a>
 
 ## Installing Heroku 
 
