@@ -102,12 +102,7 @@ if bool(ENV):
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
 
-    # Custom (forked) repo URL for updater.
-    UPSTREAM_REPO_URL = os.environ.get(
-        "UPSTREAM_REPO_URL",
-        "https://github.com/starkgang/fridayuserbot")
-    
-
+   
     # Youtube API key
     YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
