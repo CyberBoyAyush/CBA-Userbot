@@ -30,6 +30,16 @@
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
+    "REM_BG_API_KEY": {
+      "description": "Required for Removing image background functionality. Get from https://www.remove.bg/",
+      "value": "",
+      "required": false
+    },
+    "LYDIA_API_KEY": {
+      "description": "Needed for Lydia AI. Follow https://telegra.ph/Lydia-09-05 to get your API.",
+      "value": "",
+      "required": false
+    },
     "API_HASH": {
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
