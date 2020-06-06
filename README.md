@@ -24,7 +24,7 @@ I THANK INFOTEL FOR THIER FREE VIDEO SERVICE WATCH VIDEO ON HOW TO DEPLOY ♥️
 
 ## GET STRING SESSION FROM REPL RUN 
 
-.. .. image: https://img.shields.io/badge/REPL RUN-Run Online-red.svg
+.. image:: https://img.shields.io/badge/REPL RUN-Run Online-red.svg
       :target: https://friday.starkgang.repl.run
       :alt: Repl Run
 
