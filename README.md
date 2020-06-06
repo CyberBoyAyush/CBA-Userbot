@@ -26,7 +26,7 @@ I THANK INFOTEL FOR THIER FREE VIDEO SERVICE WATCH VIDEO ON HOW TO DEPLOY ♥️
 
 ## GET STRING SESSION FROM REPL RUN 
 
-[![Repl](https://img.shields.io/badge/REPL%20RUN-Run%20Online-blue.svg)](https://friday.starkgang.repl.run)
+[![Repl.it](https://img.shields.io/badge/REPL%20RUN-Run%20Online-blue.svg)](https://friday.starkgang.repl.run)
 
 ### The Normal Way
 
@@ -54,7 +54,7 @@ class Development(Var):
   APP_ID = 6
   API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
 ```
-[![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/StarkGang/FridayUserbot/?ref=repository-badge)
+
 
 ### UniBorg Configuration
 
