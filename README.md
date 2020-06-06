@@ -22,9 +22,12 @@ I THANK INFOTEL FOR THIER FREE VIDEO SERVICE WATCH VIDEO ON HOW TO DEPLOY ♥️
 ### The Easy Way
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/StarkGang/fridayuserbot)
 
-## GET STRING SESSION FROM REPL IT [TAP ON LOGO TO RUN ONLINE]
+## GET STRING SESSION FROM REPL RUN 
 
-# <a href="https://FRIDAY.starkgang.repl.run"><img src="https://img.shields.io/badge/REPL%20RUN-Run%20Online-red.svg?logo=Repl"></a>
+.. .. image: https://img.shields.io/badge/REPL RUN-Run Online-red.svg
+      :target: https://friday.starkgang.repl.run
+      :alt: Repl Run
+
 ### The Normal Way
 
 Simply clone the repository and run the main file:
