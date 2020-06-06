@@ -16,8 +16,8 @@ USER_BOT_WARN_ZERO = "`You were spamming my peru master's inbox, henceforth your
 USER_BOT_NO_WARN = ("   ──▄────▄▄▄▄▄▄▄────▄─── \n─▀▀▄─▄█████████▄─▄▀▀── \n─────██─▀███▀─██────── \n───▄─▀████▀████▀─▄──── \n─▀█────██▀█▀██────█▀──\n\n"
                     "`Hello ! This is` **F.R.I.D.A.Y**\n"
                     "`Private Messaging Security Protocol ⚠️`\n\n"
-                    "**You Have Trespassed To My Masters"
-                    f"{DEFAULTUSER}'s Inbox ☢️**\n\n"
+                    "**You Have Trespassed To My Masters\n"
+                    f"{DEFAULTUSER}'s Inbox**\n\n"
                     "**This is Illegal And Regarded As A Crime ☣️**"
                     "**Now You Are In Trouble So Send** 🔥 `/start` 🔥  **To Start A Valid Conversation!!**")
 
