@@ -24,7 +24,7 @@ I THANK INFOTEL FOR THIER FREE VIDEO SERVICE WATCH VIDEO ON HOW TO DEPLOY ♥️
 
 ## GET STRING SESSION FROM REPL IT [TAP ON LOGO TO RUN ONLINE]
 
-# <a href="https://FRIDAY.starkgang.repl.run"><img src="@https://img.shields.io/badge/REPL%20RUN-Run%20Online-red.svg?logo=Repl"></a>
+# <a href="https://FRIDAY.starkgang.repl.run"><img src="https://img.shields.io/badge/REPL%20RUN-Run%20Online-red.svg?logo=Repl"></a>
 ### The Normal Way
 
 Simply clone the repository and run the main file:
