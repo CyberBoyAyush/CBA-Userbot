@@ -100,10 +100,10 @@
     "OPEN_WEATHER_MAP_APPID": {
       "description": "Get your own APPID from https://api.openweathermap.org/data/2.5/weather",
       "required": false
-      
+    },
        "UPSTREAM_REPO": {
        "description": "set this to your USERGE fork on GitHub if you don't have leave it as it is!",
-       "value" : "https://github.com/StarkGang/FridayUserbot"
+       "value" : "https://github.com/StarkGang/FridayUserbot",
        "required": false
     },
     "TZ": {
