@@ -54,8 +54,10 @@ class Development(Var):
   APP_ID = 6
   API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
 ```
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/StarkGang/FridayUserbot/?ref=repository-badge)
 
 ### UniBorg Configuration
+
 
 The UniBorg Config is situated in `userbot/uniborgConfig.py`.
 
