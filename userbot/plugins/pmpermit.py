@@ -13,13 +13,13 @@ PREV_REPLY_MESSAGE = {}
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 USER_BOT_WARN_ZERO = "`You were spamming my peru master's inbox, henceforth your retarded lame ass has been blocked by my master's userbot.` "
-USER_BOT_NO_WARN = ("    ╔┓┏╦━━╦┓╔┓╔━━╗ \n║┗┛║┗━╣┃║┃║X X║\n║┏┓║┏━╣┗╣┗╣╰╯║ \n╚┛┗╩━━╩━╩━╩━━╝﻿\n\n"
-                    "`Hello, This Is An` **Automated Reply From My Master Userbot ⚡Friday⚡.**\n"
-                    "**I Serve This My boss 🔥 "
-                    f"{DEFAULTUSER} 🔥**.\n\n"
-                    "**My boss Will Approve you To PM but if you want you can Register Your Request!**\n\n"
-                    "Send `/start` To Register Your Request!!")
-
+USER_BOT_NO_WARN = ("  ╭━━━━━━━╮ \n┃     ● ══      ┃ \n┃███████ ┃ \n┃██  ⚠️  ██┃ \n┃██  ⚠️  ██┃ \n┃██  ⚠️  ██┃\n┃██  ⚠️  ██┃ \n┃██  ⚠️  ██┃ \n┃██  ⚠️  ██┃ \n┃███████ ┃ \n┃        🔥       ┃\n╰━━━━━━━╯\n\n"
+                    "`Hello ! This is` **F.R.I.D.A.Y**\n"
+                    "`Private Messaging Security Protocol ⚠️`\n\n"
+                    "**You Have Trespassed To My Masters"
+                    f"{DEFAULTUSER}'s Inbox ☢️**\n\n"
+                    "**This is Illegal And Regarded As A Crime ☣️**
+                    "**Now You Are In Trouble So Send** 🔥 `/start` 🔥  **To Start A Valid Conversation!!**")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
@@ -202,6 +202,6 @@ async def hehehe(event):
     chat = await event.get_chat()
     if event.is_private:
         if not pmpermit_sql.is_approved(chat.id):
-            pmpermit_sql.approve(chat.id, "**My master🙈🙈**")
-            await borg.send_message(chat, "**My master is come....U are Lucky**")
+            pmpermit_sql.approve(chat.id, "**My Boss Is Best🔥**")
+            await borg.send_message(chat, "**Boss Meet My Creator**")
            
