@@ -105,7 +105,7 @@ if bool(ENV):
     # Custom (forked) repo URL for updater.
     UPSTREAM_REPO_URL = os.environ.get(
         "UPSTREAM_REPO_URL",
-        "https://github.com/starkgang/fridayuserbot.git")
+        "https://github.com/starkgang/fridayuserbot")
     
 
     # Youtube API key
