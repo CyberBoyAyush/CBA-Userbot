@@ -18,7 +18,7 @@ USER_BOT_NO_WARN = ("  ╭━━━━━━━╮ \n┃     ● ══      ┃
                     "`Private Messaging Security Protocol ⚠️`\n\n"
                     "**You Have Trespassed To My Masters"
                     f"{DEFAULTUSER}'s Inbox ☢️**\n\n"
-                    "**This is Illegal And Regarded As A Crime ☣️**
+                    "**This is Illegal And Regarded As A Crime ☣️**"
                     "**Now You Are In Trouble So Send** 🔥 `/start` 🔥  **To Start A Valid Conversation!!**")
 
 
@@ -54,7 +54,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         chat = await event.get_chat()
         if event.is_private:
           if chat.id == 813878981:
-            await event.edit("You bitch tryed to block my Creator, now i will sleep for 100 seconds")
+            await event.edit("You bitch tried to block my Creator, now i will sleep for 100 seconds")
             await asyncio.sleep(100)
           else:
             if pmpermit_sql.is_approved(chat.id):
