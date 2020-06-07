@@ -1,8 +1,8 @@
-#Made By @Nihinivi Keep Credits If You Are Goanna Kang This Lol
+#Made By @MarioDevs Keep Credits If You Are Goanna Kang This Lol
 
 #And Thanks To The Creator Of Autopic This Script Was Made from Snippets From That Script
 
-#Usage .avengers Im Not Responsible For Any Ban caused By This
+#Usage .avengersdp Im Not Responsible For Any Ban caused By This
 
 import requests , re , random 
 
@@ -22,19 +22,15 @@ from time import sleep
 
 COLLECTION_STRING = [
 
-  "Avengers-Wallpaper",
+  "avengers-logo-wallpaper",
 
-  "4k-Avengers-wallpaper",
+  "avengers-hd-wallpapers-1080p",
 
-  "Avengers-iphone-6-wallpaper",
+  "avengers-iphone-wallpaper",
 
-  "Avengers-wallpaper",
+  "iron-man-wallpaper-1920x1080",
 
-  "Avengers"
-
-  "Tony-Stark"
-
-  "Captain-America"
+  "iron-man-wallpapers"
 
 ]
 
@@ -66,7 +62,7 @@ async def animepp():
 
 async def main(event):
 
-    await event.edit("**Starting Avengers Profile Pic...\n\nDone !!! Check Your DP") #Owner MarioDevs
+    await event.edit("**Starting Avengers Profile Pic...\n\nDone !!! Check Your DP By @MarioDevs) #Owner MarioDevs
 
     while True:
 
