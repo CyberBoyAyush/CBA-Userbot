@@ -1,18 +1,29 @@
 '''
-ThankYou @pureindialover
+# © StarkGang
+added speciality for sudos if u kang give me credits
 '''
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
 from userbot.utils import admin_cmd
-
+from telethon import events
 #@command(outgoing=True, pattern=r"^.gmute ?(\d+)?")
 @borg.on(admin_cmd(pattern=r"gmute ?(\d+)?"))
 async def startgmute(event):
     private = False
     if event.fwd_from:
         return
+    reply = await event.get_reply_message()
+    user_id = reply.sender_id
+    if user_id == (await borg.get_me()).id:	
+        await event.edit(r"Boss!BTW!! Why would I Gmute You. You are my Boss😁!!")	
+        return	
+    if user_id in Config.SUDO_USERS:	
+        await event.edit(	
+            "**He has more Power than me.**\nPerhaps I can't gmute him ! I Am Sorry Boss!!.\n\n"	
+            "**Why ?: ** Because He is sudo user.")	
+        return
     elif event.is_private:
-        await event.edit("Putting Duct Tape on that person's mouth!")
+        await event.edit("Putting Tape on that person's mouth and Ass!")
         await asyncio.sleep(3)
         private = True
     reply = await event.get_reply_message()
