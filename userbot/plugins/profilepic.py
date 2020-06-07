@@ -135,7 +135,7 @@ async def main(event):
 
 
 # Space lovers 
-COLLECTION_STRINGX = [
+COLLECTION_STRINGS = [
 
   "1920x1080-space-wallpapers",
 
@@ -148,9 +148,9 @@ async def animepp():
 
     os.system("rm -rf donot.jpg")
 
-    rnd = random.randint(0, len(COLLECTION_STRINGX) - 1)
+    rnd = random.randint(0, len(COLLECTION_STRINGS) - 1)
 
-    pack = COLLECTION_STRINGX[rnd]
+    pack = COLLECTION_STRINGS[rnd]
 
     pc = requests.get("http://getwallpapers.com/collection/" + pack).text
 
@@ -166,7 +166,7 @@ async def animepp():
 
         urllib.request.urlretrieve("https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf","f.ttf")
 
-    urllib.request.urlretrieve(fy,"donottouch.jpg")
+    urllib.request.urlretrieve(fy,"friday.jpg")
 
 @borg.on(admin_cmd(pattern="spacedp ?(.*)"))
 
