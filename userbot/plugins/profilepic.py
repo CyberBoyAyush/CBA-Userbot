@@ -97,7 +97,7 @@ async def animepp():
 
     rnd = random.randint(0, len(COLLECTION_STRINGZ) - 1)
 
-    pack = COLLECTION_STRING[rnd]
+    pack = COLLECTION_STRINGZ[rnd]
 
     pc = requests.get("http://getwallpapers.com/collection/" + pack).text
 
@@ -150,7 +150,7 @@ async def animepp():
 
     rnd = random.randint(0, len(COLLECTION_STRINGX) - 1)
 
-    pack = COLLECTION_STRING[rnd]
+    pack = COLLECTION_STRINGX[rnd]
 
     pc = requests.get("http://getwallpapers.com/collection/" + pack).text
 
