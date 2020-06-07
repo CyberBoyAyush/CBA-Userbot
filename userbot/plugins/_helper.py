@@ -1,5 +1,7 @@
 from userbot import CMD_LIST
 from userbot.utils import admin_cmd
+import sys
+from telethon import events, functions, __version__
 
 @command(pattern="^.help ?(.*)")
 #@borg.on(admin_cmd(pattern=r"help ?(.*)"))
