@@ -3,9 +3,9 @@
 # file, You can obtain one at https://www.gnu.org/licenses/gpl-3.0.en.html
 """Uploads Files to Telegram
 Available Commands:
-.up <Path To File>
-.updir <Path To Directory>
-.upasstr <Path To File>"""
+.upload <Path To File>
+.uploadir <Path To Directory>
+.uploadasstream <Path To File>"""
 
 import asyncio
 import os
@@ -17,7 +17,7 @@ from hachoir.parser import createParser
 from telethon import events
 from telethon.tl.types import DocumentAttributeVideo
 from telethon.tl.types import DocumentAttributeAudio
-from userbot.utils import progress, admin_cmd
+from uniborg.util import progress, admin_cmd
 
 
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
@@ -33,7 +33,7 @@ def get_lst_of_files(input_directory, output_lst):
     return output_lst
 
 
-@borg.on(admin_cmd(pattern="updir (.*)"))
+@borg.on(admin_cmd(pattern="uploadir (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -141,11 +141,11 @@ async def _(event):
         await event.edit("404: Directory Not Found")
 
 
-@borg.on(admin_cmd(pattern="up (.*)"))
+@borg.on(admin_cmd(pattern="upload (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
-    mone = await event.reply("Sory!I am Noob...")
+    mone = await event.reply("Processing ...")
     input_str = event.pattern_match.group(1)
     thumb = None
     if os.path.exists(thumb_image_path):
@@ -186,7 +186,7 @@ def get_video_thumb(file, output=None, width=90):
         return output
 
 
-@borg.on(admin_cmd(pattern="upasstr (.*)"))
+@borg.on(admin_cmd(pattern="uploadasstream (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
