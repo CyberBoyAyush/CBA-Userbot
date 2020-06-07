@@ -16,15 +16,15 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "Please check out to an official branch, and re-start the updater."
 )
 OFFICIAL_UPSTREAM_REPO = "https://github.com/StarkGang/FridayUserbot/"
-BOT_IS_UP_TO_DATE = "Boss! My System is already Upgraded!."
+BOT_IS_UP_TO_DATE = "**Boss! My System is already Upgraded!**."
 NEW_BOT_UP_DATE_FOUND = (
     "Boss I found update for {branch_name}\n"
-    "Please Check Changelog: \n\n{changelog}\n"
-    "Ok Boss ! I Am Trying To Pull Update"
+    "{changelog}\n"
+    "**Ok Boss ! I Am Trying To Pull Update**"
 )
 NEW_UP_DATE_FOUND = (
-    "Boss I Found new update found for {branch_name}\n"
-    "i am updating ..."
+    "**Boss I Found new update found for {branch_name}**\n"
+    "`i am updating ...`"
 )
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
@@ -72,7 +72,7 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit("Boss i Found UPDATE Let me Upgrade Myself To Serve You Better!!...")
+        await message.edit("**Boss i Found UPDATE Let me Upgrade Myself To Serve You Better!!...**")
         await asyncio.sleep(8)
  
     message_one = NEW_BOT_UP_DATE_FOUND.format(
@@ -135,12 +135,12 @@ def generate_change_log(git_repo, diff_marker):
     out_put_str = ""
     d_form = "%d/%m/%y"
     for repo_change in git_repo.iter_commits(diff_marker):
-        out_put_str += f"•[{repo_change.committed_datetime.strftime(d_form)}]: {repo_change.summary} {repo_change.author}\n"
+        out_put_str += f"❥︎[{repo_change.committed_datetime.strftime(d_form)}]➪︎ {repo_change.summary} ✪︎{repo_change.author}\n"
     return out_put_str
 
 async def deploy_start(bot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("Boss! I Am Upgraded Now I Am Trying A Restart do `.alive` to check if I am Alive Or Dead\nIt will takes approximately 5 mins to update My Software!!\nBoss Thank You For Using Me You Are My Best Boss!!,")
+    await message.edit("**Boss! I Am Upgraded Now I Am Trying A Restart do** `.alive` **to check if I am Alive Or Dead**\nIt will takes approximately 5 mins to update My Software!!\nBoss Thank You For Using Me You Are My Best Boss!!,")
     await remote.push(refspec=refspec)
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
