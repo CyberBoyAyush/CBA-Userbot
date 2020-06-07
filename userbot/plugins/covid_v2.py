@@ -1,5 +1,5 @@
-# @pureindialover
-# Big Thanks To Spechide
+# @TechnoAyanOfficial
+# Big Thanks To Spechide and ItWaze
 
 """Corona: Avaible commands: .covid <cname>
 """
