@@ -3,9 +3,12 @@ import asyncio
 import json
 import random
 import re
-from telethon import events, errors, custom
+from telethon import events, errors, custom, functions, __version__
 from userbot import CMD_LIST
 import io
+import sys
+from uniborg.util import admin_cmd
+
 
 if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
