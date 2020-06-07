@@ -96,7 +96,7 @@ async def updater(message):
         await message.edit(message_one)
 
     temp_upstream_remote.fetch(active_branch_name)
-    repo.git.reset("--master", "FETCH_HEAD")
+    repo.git.reset("--hard", "FETCH_HEAD")
 
     if Var.HEROKU_API_KEY is not None:
         import heroku3
