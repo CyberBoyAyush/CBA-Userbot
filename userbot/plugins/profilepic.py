@@ -77,7 +77,7 @@ async def main(event):
         await asyncio.sleep(3600) #Edit this to your required needs
 
 
-COLLECTION_STRING = [
+COLLECTION_STRINGZ = [
 
   "star-wars-wallpaper-1080p",
 
@@ -95,7 +95,7 @@ async def animepp():
 
     os.system("rm -rf donot.jpg")
 
-    rnd = random.randint(0, len(COLLECTION_STRING) - 1)
+    rnd = random.randint(0, len(COLLECTION_STRINGZ) - 1)
 
     pack = COLLECTION_STRING[rnd]
 
@@ -135,7 +135,7 @@ async def main(event):
 
 
 # Space lovers 
-COLLECTION_STRING = [
+COLLECTION_STRINGX = [
 
   "1920x1080-space-wallpapers",
 
@@ -148,7 +148,7 @@ async def animepp():
 
     os.system("rm -rf donot.jpg")
 
-    rnd = random.randint(0, len(COLLECTION_STRING) - 1)
+    rnd = random.randint(0, len(COLLECTION_STRINGX) - 1)
 
     pack = COLLECTION_STRING[rnd]
 
