@@ -10,28 +10,28 @@ from userbot.utils import admin_cmd
 
 # -- Constants -- #
 IS_SELECTED_DIFFERENT_BRANCH = (
-    "Looks like a custom branch {branch_name} "
-    "Is being used:\n"
-    "In this case, Updater is unable to identify the branch to be updated."
-    "Please check out to an official branch, and re-start the updater."
+    "looks like a custom branch {branch_name} "
+    "is being used:\n"
+    "in this case, Updater is unable to identify the branch to be updated."
+    "please check out to an official branch, and re-start the updater."
 )
 OFFICIAL_UPSTREAM_REPO = "https://github.com/StarkGang/FridayUserbot/"
-BOT_IS_UP_TO_DATE = "**Boss! My System is already Upgraded!**."
+BOT_IS_UP_TO_DATE = "Friday userbot is up-to-date!."
 NEW_BOT_UP_DATE_FOUND = (
-    "Boss I found update for {branch_name}\n"
-    "{changelog}\n"
-    "**Ok Boss ! I Am Trying To Pull Update**"
+    "**Boss!!I Found Update For {branch_name}\n"
+    "\n\n{changelog}\n"
+    "Pulling Updating And Restating"
 )
 NEW_UP_DATE_FOUND = (
-    "**Boss I Found new update found for {branch_name}**\n"
-    "`i am updating ...`"
+    "**New update found for** {branch_name}\n"
+    "Updating And Restarting..."
 )
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
 DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
-NO_HEROKU_APP_CFGD = "Boss ! no heroku application found, but a key given? 😕 "
+NO_HEROKU_APP_CFGD = "no heroku application found, but a key given? 😕 "
 HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
-RESTARTING_APP = "Boss ! I am Restarting "
+RESTARTING_APP = "re-starting heroku application"
 # -- Constants End -- #
 
 
@@ -72,7 +72,7 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit("**Boss i Found UPDATE Let me Upgrade Myself To Serve You Better!!...**")
+        await message.edit("Updating!!!Please Wait")
         await asyncio.sleep(8)
  
     message_one = NEW_BOT_UP_DATE_FOUND.format(
@@ -109,7 +109,7 @@ async def updater(message):
                     if i.name == Var.HEROKU_APP_NAME:
                         heroku_app = i
                 if heroku_app is None:
-                    await message.edit("Boss ! Invalid APP Name. Boss Please set the name of your bot in heroku in the var HEROKU_APP_NAME.")
+                    await message.edit("Invalid APP Name. Please set the name of your bot in heroku in the var HEROKU_APP_NAME.")
                     return
                 heroku_git_url = heroku_app.git_url.replace(
                     "https://",
@@ -123,24 +123,24 @@ async def updater(message):
                 asyncio.get_event_loop().create_task(deploy_start(bot, message, HEROKU_GIT_REF_SPEC, remote))
 
             else:
-                await message.edit("Boss ! Please create the var HEROKU_APP_NAME as the key and the name of your bot in heroku as your value.")
+                await message.edit("Please create the var HEROKU_APP_NAME as the key and the name of your bot in heroku as your value.")
                 return
         else:
             await message.edit(NO_HEROKU_APP_CFGD)
     else:
-        await message.edit("Boss ! I Found No heroku api key found in HEROKU_API_KEY var")
+        await message.edit("No heroku api key found in HEROKU_API_KEY var")
         
 
 def generate_change_log(git_repo, diff_marker):
     out_put_str = ""
     d_form = "%d/%m/%y"
     for repo_change in git_repo.iter_commits(diff_marker):
-        out_put_str += f"❥︎[{repo_change.committed_datetime.strftime(d_form)}]➪︎ {repo_change.summary} ✪︎{repo_change.author}\n"
+        out_put_str += f"•[{repo_change.committed_datetime.strftime(d_form)}]: {repo_change.summary} <{repo_change.author}>\n"
     return out_put_str
 
 async def deploy_start(bot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("**Boss! I Am Upgraded Now I Am Trying A Restart do** `.alive` **to check if I am Alive Or Dead**\nIt will takes approximately 5 mins to update My Software!!\nBoss Thank You For Using Me You Are My Best Boss!!,")
+    await message.edit("**Restarted! do** `.alive` **to check if I am online?**\n`It will takes approximately 5 mins to update Friday`")
     await remote.push(refspec=refspec)
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
