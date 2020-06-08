@@ -5,7 +5,7 @@
 Available Commands:
 .upload <Path To File>
 .uploadir <Path To Directory>
-.uploadasstream <Path To File>"""
+.uploadsstream <Path To File>"""
 
 import asyncio
 import os
@@ -33,7 +33,7 @@ def get_lst_of_files(input_directory, output_lst):
     return output_lst
 
 
-@borg.on(admin_cmd(pattern="uploadir (.*)"))
+@borg.on(admin_cmd("uploadir (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -67,7 +67,7 @@ async def _(event):
                         width = metadata.get("width")
                     if metadata.has("height"):
                         height = metadata.get("height")
-                if single_file.upper().endswith(Config.TL_VID_STREAM_TYPES):
+                if single_file.endswith((".mkv", ".mp4", ".webm")):
                     metadata = extractMetadata(createParser(single_file))
                     duration = 0
                     if metadata.has("duration"):
@@ -83,7 +83,7 @@ async def _(event):
                     ]
                     supports_streaming = True
                     force_document = False
-                if single_file.upper().endswith(Config.TL_MUS_STREAM_TYPES):
+                if single_file.endswith((".mp3", ".flac", ".wav")):
                     metadata = extractMetadata(createParser(single_file))
                     duration = 0
                     title = ""
@@ -170,7 +170,7 @@ async def _(event):
         ms = (end - start).seconds
         await mone.edit("Uploaded in {} seconds.".format(ms))
     else:
-        await mone.edit("404: File Not Found")
+        await mone.edit("6969: Sorry!! file Not Found, File Not Found")
 
 
 def get_video_thumb(file, output=None, width=90):
@@ -186,7 +186,7 @@ def get_video_thumb(file, output=None, width=90):
         return output
 
 
-@borg.on(admin_cmd(pattern="uploadasstream (.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="uploadsstream (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
