@@ -10,5 +10,4 @@ selenium
 aria2p 
 chatterbot
 chatterbot_corpus
--r ./requirements-stdborg.txt
 -r requirements-startup.txt
