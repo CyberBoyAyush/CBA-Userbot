@@ -1,13 +1,2 @@
 telethon>=1.10.3
-git+https://github.com/LonamiWebs/Telethon
-pip==20.1
-async_generator
-pybase64
-zalgo_text
-pyfiglet
-lxml
-selenium
-aria2p 
-chatterbot
-chatterbot_corpus
 -r requirements-startup.txt
