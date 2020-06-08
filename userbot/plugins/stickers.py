@@ -53,12 +53,12 @@ async def _(event):
     #packname = f"FRIDAY PACK"
     #packshortname = f"FRIDAY_{userid}_ns"  # format: Uni_Borg_userid
     if userid == 953414679:
-        packname = f"IndianBhaikeStickers"
-        packshortname = "FRIDAY_ke_locker_me"
+        packname = f"My Boss Sticker Pack"
+        packshortname = "FRIDAY"
     else:
         packname = f"{user.first_name}'s FRIDAY Vol.{pack}"
-        packshortname = f"FRIDAY_{userid}_kang"
-    await event.edit("`Look dat way,it's a gurl!\nMeanwhile, lemme kang this stcker over hehe ヽ༼ ಠ益ಠ ༽ﾉ`")
+        packshortname = f"FRIDAY_{userid}_Pack"
+    await event.edit("`Look that way,it's a Kang King!\nMeanwhile, let me kang this stcker over HeHe!! ヽ༼ ಠ益ಠ ༽ﾉ`")
 
     is_a_s = is_it_animated_sticker(reply_message)
     file_ext_ns_ion = "@FRIDAY.png"
@@ -139,7 +139,7 @@ async def _(event):
                        # packshortname = "Vol._{pack}_FRIDAY_ke_locker_me"
                    # else:
                        # packname = f"Vol._{pack}_FRIDAY{userid}"
-                        #packshortname = f"Vol._{pack}_IndianBot_{userid}_ns"
+                        #packshortname = f"Vol._{pack}_Friday_{userid}_ns"
                     if not await stickerset_exists(bot_conv, packshortname):
                         await event.edit("**Pack No. **" + str(prevv) + "** full! Making a new Pack, Vol. **" + str(pack))
                         if is_a_s:
@@ -192,7 +192,7 @@ async def _(event):
                 await silently_send_message(bot_conv, response)
                 await silently_send_message(bot_conv, sticker_emoji)
                 await silently_send_message(bot_conv, "/done")
-    await event.edit(f"sticker added! Your pack can be found [here](t.me/addstickers/{packshortname})")
+    await event.edit(f"Yes!!😁 Boss Your Sticker Have Been added! Your pack can be found 🔥[here](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd(pattern="packinfo"))
