@@ -7,8 +7,8 @@ from userbot import LOAD_PLUG
 from userbot import CMD_LIST
 import re
 import logging
-import inspect
 import time
+import inspect
 
 def command(**args):
     args["func"] = lambda e: e.via_bot_id is None
@@ -292,7 +292,7 @@ def errors_handler(func):
 
     return wrapper
 
-async def progress(current, total, event, start, type_of_ps):
+async def progress(current, total, event, start, type_of_ps, file_name=None):
     """Generic progress_callback for both
     upload.py and download.py"""
     now = time.time()
@@ -303,9 +303,9 @@ async def progress(current, total, event, start, type_of_ps):
         elapsed_time = round(diff) * 1000
         time_to_completion = round((total - current) / speed) * 1000
         estimated_total_time = elapsed_time + time_to_completion
-        progress_str = "[{0}{1}]\nPercent: {2}%\n".format(
-            ''.join(["█" for _ in range(math.floor(percentage / 5))]),
-            ''.join(["░" for _ in range(20 - math.floor(percentage / 5))]),
+        progress_str = "[{0}{1}]\nProgress: {2}%\n".format(
+            ''.join(["█" for i in range(math.floor(percentage / 5))]),
+            ''.join(["░" for i in range(20 - math.floor(percentage / 5))]),
             round(percentage, 2))
         tmp = progress_str + \
             "{0} of {1}\nETA: {2}".format(
@@ -313,10 +313,12 @@ async def progress(current, total, event, start, type_of_ps):
                 humanbytes(total),
                 time_formatter(estimated_total_time)
             )
-        await event.edit("{}\n {}".format(
-            type_of_ps,
-            tmp
-        ))
+        if file_name:
+            await event.edit("{}\nFile Name: `{}`\n{}".format(
+                type_of_ps, file_name, tmp))
+        else:
+            await event.edit("{}\n{}".format(type_of_ps, tmp))
+
 
 def humanbytes(size):
     """Input size in bytes,
