@@ -115,7 +115,12 @@
       "description": "Required for Correct Time for autopic get from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
       "value": "",
       "required": false
-    }
+    },
+    "REDIRECTCHANNEL" : {
+    "description": "Put You Channel Username Reflecting Your Info , Your Tags Etc..",
+    "value" : "",
+    "required": false
+
   },
   "addons": [{
     "plan": "heroku-postgresql",
