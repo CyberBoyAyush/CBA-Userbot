@@ -117,9 +117,9 @@
       "required": false
     },
     "REDIRECTCHANNEL": {
-    "description": "Put You Channel Username Reflecting Your Info , Your Tags Etc..",
-    "value": "",
-    "required": false
+      "description": "Put You Channel Username Reflecting Your Info , Your Tags Etc",
+      "value": "",
+      "required": false
 
   },
   "addons": [{
