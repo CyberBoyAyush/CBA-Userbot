@@ -120,6 +120,7 @@
       "description": "Put You Channel Username Reflecting Your Info or Your Tags Etc",
       "value": "",
       "required": false
+    }
 
   },
   "addons": [{
