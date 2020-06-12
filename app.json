@@ -22,6 +22,12 @@
       "value": "./userbot/DOWNLOADS/",
       "required": false
     },
+    "F_BAN_LOGGER_GROUP": {
+      "description": "Put Group id Same As PRIVATE_GROUP_ID.",
+      "value": ""
+      "required": false
+
+    },
     "ALIVE_NAME": {
       "description": "Fill your Full name or Username like @Mariodevs.",
       "value": ""
