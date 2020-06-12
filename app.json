@@ -24,7 +24,7 @@
     },
     "F_BAN_LOGGER_GROUP": {
       "description": "Put Group id Same As PRIVATE_GROUP_ID.",
-      "value": ""
+      "value": "",
       "required": false
 
     },
