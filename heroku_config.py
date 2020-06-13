@@ -18,6 +18,7 @@ class Var(object):
     OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "813878981").split())
     SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", "").split())
     PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None))
+    F_BAN_LOGGER_GROUP = os.environ.get("F_BAN_LOGGER_GROUP", None)
     LYDIA_API_KEY = os.environ.get("LYDIA_API_KEY", None)
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -39,7 +40,7 @@ class Var(object):
             PRIVATE_GROUP_ID = int(PRIVATE_GROUP_ID)
         except ValueError:
             raise ValueError("Invalid Private Group ID. Make sure your ID is starts with -100 and make sure that it is only numbers.")
-
+     
 class Development(Var):
     LOGGER = True
     # Here for later purposes
