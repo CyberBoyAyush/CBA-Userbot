@@ -108,6 +108,4 @@ if ENV:
 else:
     class Config(object):
         DB_URI = None
-       #Fban Plugin 
-       F_BAN_LOGGER_GROUP = os.environ.get("F_BAN_LOGGER_GROUP", None)     
-        
+      
