@@ -16,16 +16,8 @@ async def amireallyalive(alive):
     await alive.edit("**MY STATUS** \n`FRIDAY IS:` **✅ Alive**\n\n"
                      "`TELETHON VERSION:` **6.0.9**\n`Python:` **3.7.4**\n"
                      "`DATABASE STATUS:` **ALL NORMAL! WORKING FINE 🙂**\n`NO PROBLEM FOUND🔥!\n`"
-                     "`CONNECTION PROVIDER:` ** AMAZON WEB SERVICES\n"
-                     "`CURRECT BOT LOCATION:` ** ASHBURN,UNITED STATES\n"
-                     "`DEPLOYING SERVICE BY: HEROKU INC.\n"
-                     "`IP:` 3.82.66.232\n"
-                     "`SYSTEM TYPE:` LINUX\n"
-                     "`BASED ON:` UNIBORG\n"
-                     "`SATELLITE:` ⚡STARK SAT-2⚡\n"
-                     "`MADE USING:` PYTHON\n"
+                     "`F.R.I.D.A.Y VERSION`: [2.0 FRIDAY OS](https://telegra.ph/FRIDAY-06-15)
                      f"`MY BOSS`: {DEFAULTUSER}\n\n"
                      "ALWAYS WITH YOU MY BOSS\n\n"
-                     "`SATELLITE STATUS: ✅ Alive\n\n"
                      "[⚡DEPLOY FRIDAY⚡](https://github.com/StarkGang/FRIDAYUserbot)") 
 
