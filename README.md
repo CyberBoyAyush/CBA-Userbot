@@ -1,7 +1,7 @@
 # FRIDAY
 
 <p align="center">
-<a href="https://t.me/FridaySupportOfficial"><img src="<a href="https://telegra.ph/file/c3ba2e9b965f624936358.png"></a>
+<img src="friday.png" alt="FRIDAY USERBOT">
 
 Best User Bot To Manage Your Telegram Account 
 ## Most PowerFul And Better And Secure
