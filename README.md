@@ -1,7 +1,7 @@
 # FRIDAY
 
 <p align="center">
-<img src="Logo.jpeg" alt="FRIDAY">
+<a href="https://t.me/FridaySupportOfficial"><img src="<a href="https://telegra.ph/file/c3ba2e9b965f624936358.png?logo=Telegram"></a>
 
 Best User Bot To Manage Your Telegram Account 
 ## Most PowerFul And Better And Secure
