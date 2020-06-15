@@ -58,7 +58,7 @@ async def _(event):
     else:
         packname = f"{user.first_name}'s FRIDAY Vol.{pack}"
         packshortname = f"FRIDAY_{userid}_Pack"
-    await event.edit("`Is It Legal ? Oh Yes it is !! \nLook That Way ! Let me Kang This 🤟")
+    await event.edit("`Is It Legal ? Oh Yes it is !! \nLook That Way ! Let me Kang This ¯\_(ツ)_/¯`")
 
     is_a_s = is_it_animated_sticker(reply_message)
     file_ext_ns_ion = "@FRIDAY.png"
@@ -192,7 +192,7 @@ async def _(event):
                 await silently_send_message(bot_conv, response)
                 await silently_send_message(bot_conv, sticker_emoji)
                 await silently_send_message(bot_conv, "/done")
-    await event.edit(f"**Sticker** Kanged Legally And It Can Be Found [#here](t.me/addstickers/{packshortname})")
+    await event.edit(f"**Sticker** `Kanged Legally And It Can Be Found` [⚡Here⚡](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd(pattern="packinfo"))
