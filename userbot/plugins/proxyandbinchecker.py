@@ -30,7 +30,7 @@ async def _(event):
               await borg.send_message(event.chat_id, audio.text)
           except YouBlockedUserError:
               await event.edit("**Error:** `unblock` @CasperCarderBot `and retry!")
-     elif "" in sysarg :
+     if "x" not in sysarg:
       async with borg.conversation(bot) as conv:
           try:
               await conv.send_message("/start")
@@ -40,7 +40,7 @@ async def _(event):
               audio = await conv.get_response()
               await borg.send_message(event.chat_id, audio.text)
           except YouBlockedUserError:
-              await event.edit("**Error:** `unblock` @CasperCarderBot `and retry!")
+              await event.edit("**Error:** `unblock` @CasperCarderBot `and retry!!")
 @borg.on(admin_cmd("bin ?(.*)"))
 async def _(event):
     if event.fwd_from:
