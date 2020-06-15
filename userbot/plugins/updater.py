@@ -18,7 +18,7 @@ IS_SELECTED_DIFFERENT_BRANCH = (
 OFFICIAL_UPSTREAM_REPO = "https://github.com/StarkGang/FridayUserbot/"
 BOT_IS_UP_TO_DATE = "Friday userbot is up-to-date!."
 NEW_BOT_UP_DATE_FOUND = (
-    "**Friday Update Found For {branch_name}\n"
+    "**Friday Update Found For** {branch_name}\n"
     "\n\n{changelog}\n"
     "Pulling Updates !!"
 )
