@@ -72,7 +72,7 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit("Updating!!!Please Wait")
+        await message.edit("Pulling Update From Branch **master** !!!!")
         await asyncio.sleep(8)
  
     message_one = NEW_BOT_UP_DATE_FOUND.format(
