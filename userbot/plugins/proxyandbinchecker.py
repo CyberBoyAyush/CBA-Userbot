@@ -29,7 +29,7 @@ async def _(event):
               audio = await conv.get_response()
               await borg.send_message(event.chat_id, audio.text)
           except YouBlockedUserError:
-              await event.edit("**Error:** `unblock` @CasperCarderBot `and retry!")
+              await event.edit("**Error:** `unblock` @CasperCarderBot `and retry!!")
      if "x" not in sysarg:
       async with borg.conversation(bot) as conv:
           try:
