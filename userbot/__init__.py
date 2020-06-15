@@ -128,7 +128,6 @@ if bool(ENV):
 CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT", None)
     CUSTOM_STICKER_PACK_NAME = os.environ.get("CUSTOM_STICKER_PACK_NAME", None)
     CUSTOM_ANIMATED_PACK_NAME = os.environ.get("CUSTOM_ANIMATED_PACK_NAME", None)
-    CUSTOM_AFK_MESSAGE = os.environ.get("CUSTOM_AFK_MESSAGE", None)
 
     # Last.fm Module
     BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
