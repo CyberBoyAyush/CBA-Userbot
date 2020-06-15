@@ -25,7 +25,7 @@ async def _(event):
               await conv.send_message("/start")
               await event.delete()
               response = await conv.get_response()
-              await conv.send_message("!proxy")
+              await conv.send_message("!proxy " + sysarg)
               audio = await conv.get_response()
               await borg.send_message(event.chat_id, audio.text)
           except YouBlockedUserError:
@@ -36,7 +36,7 @@ async def _(event):
         return
     sysarg = event.pattern_match.group(1)
 
-     if "x" not in sysarg:
+     if "." in sysarg:
       async with borg.conversation(bot) as conv:
           try:
               await conv.send_message("/start")
