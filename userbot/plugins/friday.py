@@ -12,7 +12,7 @@ naam = str(ALIVE_NAME)
 
 bot = "@FridayUserobot"
 
-@borg.on(admin_cmd("hcc ?(.*)"))
+@borg.on(admin_cmd("friday ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
