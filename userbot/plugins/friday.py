@@ -25,7 +25,7 @@ async def _(event):
               response = await conv.get_response()
               await conv.send_message("/hello")
               audio = await conv.get_response()
-              await borg.send_file(event.chat_id, audio, caption="⚡”°**TO BOSS : **" + naam +"\n`Check out` [FRIDAY](https://github.com/STARKGANG/Fridayuserbot)")
+              await borg.send_file(event.chat_id, audio, caption="⚡Boss Listen To This Audio" + naam +"\n`Check out` [FRIDAY](https://github.com/STARKGANG/Fridayuserbot)")
               await event.delete()
           except YouBlockedUserError:
               await event.edit("**Error:** `unblock` @FridayUserobot `and retry!")
@@ -47,7 +47,7 @@ async def _(event):
               response = await conv.get_response()
               await conv.send_message("/movies")
               audio = await conv.get_response()
-              await borg.send_file(event.chat_id, audio, caption="**Friday Is Here To Help**\n`Check out` [FRIDAY](https://github.com/STARKGANG/Fridayuserbot)")
+              await borg.send_file(event.chat_id, audio, caption="**Here is Movie**\n`Check out` [FRIDAY](https://github.com/STARKGANG/Fridayuserbot)")
               await event.delete()
           except YouBlockedUserError:
               await event.edit("**Error:** `unblock` @FridayUserobot `and retry!`")
