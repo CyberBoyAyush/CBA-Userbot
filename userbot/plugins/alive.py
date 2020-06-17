@@ -8,16 +8,20 @@ from userbot.utils import admin_cmd
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
+FRIDAY_IS_ALIVE = ("**F.R.I.D.A.Y** IS AT YOUR SERVICE❗\n\n"
+                   "**💻Currently Status💻** : `No Issue Found`\n"
+                   "**🌐Current Branch🌐** : `master`\n"
+                   "**🐍Python Version🐍** : `3.8`\n"
+                   "**Friday Os** : `2.0`\n"
+                   f"**❤️My Boss❤️** : {DEFAULTUSER} \n"
+                   "**❗Updates❗** : [Check Here](t.me/fridaysupportofficial)\n"
+                   " [⚡Deploy Friday Userbot⚡](https://telegra.ph/FRIDAY-06-15)") 
+
 
 #@command(outgoing=True, pattern="^.alive$")
 @borg.on(admin_cmd(pattern=r"alive"))
 async def amireallyalive(alive):
+    chat = await alive.get_chat()
+    await alive.delete()
     """ For .alive command, check if the bot is running.  """
-    await alive.edit("**MY STATUS** \n`FRIDAY IS:` **✅ Alive**\n\n"
-                     "`TELETHON VERSION:` **6.0.9**\n`Python:` **3.7.4**\n"
-                     "`DATABASE STATUS:` **ALL NORMAL! WORKING FINE 🙂**\n`NO PROBLEM FOUND🔥!\n`"
-                     "`F.R.I.D.A.Y VERSION`: [2.0 FRIDAY OS](https://telegra.ph/FRIDAY-06-15)\n"
-                     f"`MY BOSS`: {DEFAULTUSER}\n\n"
-                     "ALWAYS WITH YOU MY BOSS\n\n"
-                     "[⚡DEPLOY FRIDAY⚡](https://github.com/StarkGang/FRIDAYUserbot)") 
-
+    await borg.send_message(chat, FRIDAY_IS_ALIVE) 
