@@ -18,7 +18,7 @@ FRIDAY_IS_ALIVE = ("**✨F.R.I.D.A.Y✨** IS AT YOUR SERVICE❗\n\n"
                    "**❗Updates❗** : `Found`\n\n"
                    "**🔥Heroku Database🔥** : `No Known Error Found`\n\n"
                    "**📙License📙** : [MIT Licence](github.com/StarkGang/FridayUserbot/blob/master/LICENSE)\n\n"
-                   "**©️Copyright©️** : By [StarkGang@Github](GitHub.com/StarkGang)\n\n"
+                   " ©️Copyright©️ : By [StarkGang@Github](GitHub.com/StarkGang)\n\n"
                    " [⚡Deploy Friday Userbot⚡](https://telegra.ph/FRIDAY-06-15)") 
 
 
