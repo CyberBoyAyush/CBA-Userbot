@@ -29,7 +29,7 @@ from telethon.tl.types import (
 from userbot.utils import admin_cmd
 from userbot import ALIVE_NAME, CUSTOM_STICKER_PACK_NAME, CUSTOM_ANIMATED_PACK_NAME
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MyBoss"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Who is this"
 CUSTOM_STICKER_NAME =str(CUSTOM_STICKER_PACK_NAME) if CUSTOM_STICKER_PACK_NAME else "My Boss Friday Volume Pack One"
 CUSTOM_ANIME_PACK = str(CUSTOM_ANIMATED_PACK_NAME) if CUSTOM_ANIMATED_PACK_NAME else "My Boss Animated Pack"
 FILLED_UP_DADDY = "Invalid pack selected."
@@ -56,7 +56,7 @@ async def _(event):
     #packshortname = f"FRIDAY_{userid}_ns"  # format: Uni_Borg_userid
     if userid == 813878981:
         packname = f"STARKGANGPACK"
-        packshortname = "StarkGang"
+        packshortname = "Starkgang"
     else:
         packname = f"{user.first_name}'s FRIDAY Vol.{pack}"
         packshortname = f"FRIDAY_{userid}_Pack"
