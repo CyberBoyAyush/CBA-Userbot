@@ -1,92 +1,25 @@
-#autobio for @PhycoNinja13b, Edit bio strings Amigo if u use this plugin, Or else u are cursed :)
 import asyncio
 import time
-from telethon import events
-import random, re
 from telethon.tl import functions
 from telethon.errors import FloodWaitError
 from userbot.utils import admin_cmd
 
 
-BIO_STRINGS = [
-     "👉⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️🔲",
-     "⬜️👉⬛️⬛️⬛️⬛️⬛️⬛️⬛️🔲",
-     "⬜️⬜️👉⬛️⬛️⬛️⬛️⬛️⬛️🔲",
-     "⬜️⬜️⬜️👉⬛️⬛️⬛️⬛️⬛️🔲",
-     "⬜️⬜️⬜️⬜️👉⬛️⬛️⬛️⬛️🔲",
-     "⬜️⬜️⬜️⬜️⬜️👉⬛️⬛️⬛️🔲",
-     "⬜️⬜️⬜️⬜️⬜️⬜️👉⬛️⬛️🔲",
-     "⬜️⬜️⬜️⬜️⬜️⬜️⬜️👉⬛️🔲",
-     "⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️👉🔲",
-     "⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️👉🔳",
-     "⬜️⬜️⬜️⬜️⬜️⬜️⬜️👉⬜️🔳",
-     "⬜️⬜️⬜️⬜️⬜️⬜️👉⬜️⬜️🔳",
-     "⬜️⬜️⬜️⬜️⬜️👉⬜️⬜️⬜️🔳",
-     "⬜️⬜️⬜️⬜️👉⬜️⬜️⬜️⬜️🔳",
-     "⬜️⬜️⬜️👉⬜️⬜️⬜️⬜️⬜️🔳",
-     "⬜️⬜️👉⬜️⬜️⬜️⬜️⬜️⬜️🔳",
-     "⬜️👉⬜️⬜️⬜️⬜️⬜️⬜️⬜️🔳",
-     "👉⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️🔳",
-     "🐵",
-     "🙈",
-     "🙉",
-     "🙊",
-     "🖕🐵🖕",
-     "🐵",
-     "🙈",
-     "🙉",
-     "🙊",
-     "🖕🐵🖕",
-     "👉⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️🔲",
-     "⬜️👉⬛️⬛️⬛️⬛️⬛️⬛️⬛️🔲",
-     "⬜️⬜️👉⬛️⬛️⬛️⬛️⬛️⬛️🔲",
-     "⬜️⬜️⬜️👉⬛️⬛️⬛️⬛️⬛️🔲",
-     "⬜️⬜️⬜️⬜️👉⬛️⬛️⬛️⬛️🔲",
-     "⬜️⬜️⬜️⬜️⬜️👉⬛️⬛️⬛️🔲",
-     "⬜️⬜️⬜️⬜️⬜️⬜️👉⬛️⬛️🔲",
-     "⬜️⬜️⬜️⬜️⬜️⬜️⬜️👉⬛️🔲",
-     "⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️👉🔲",
-     "⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️👉🔳",
-     "⬜️⬜️⬜️⬜️⬜️⬜️⬜️👉⬜️🔳",
-     "⬜️⬜️⬜️⬜️⬜️⬜️👉⬜️⬜️🔳",
-     "⬜️⬜️⬜️⬜️⬜️👉⬜️⬜️⬜️🔳",
-     "⬜️⬜️⬜️⬜️👉⬜️⬜️⬜️⬜️🔳",
-     "⬜️⬜️⬜️👉⬜️⬜️⬜️⬜️⬜️🔳",
-     "⬜️⬜️👉⬜️⬜️⬜️⬜️⬜️⬜️🔳",
-     "⬜️👉⬜️⬜️⬜️⬜️⬜️⬜️⬜️🔳",
-     "👉⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️🔳",
-     "🐵",
-     "🙈",
-     "🙉",
-     "🙊",
-     "🖕🐵🖕",
-     "🐵",
-     "🙈",
-     "🙉",
-     "🙊",
-     "🖕🐵🖕",
-
-]
+DEL_TIME_OUT = 60
 
 
-DEL_TIME_OUT = 30
-
-
-@borg.on(admin_cmd(pattern="monkeybio"))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="bio"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
     while True:
-        bro = random.randint(0, len(BIO_STRINGS) - 1)    
-        #input_str = event.pattern_match.group(1)
-        Bio = BIO_STRINGS[bro]
         DMY = time.strftime("%d.%m.%Y")
         HM = time.strftime("%H:%M:%S")
-        #bio = f"📅 {DMY} | ᗯᗩᏆᎢᏆᑎᏀ ᏞᏆᏦᗴ ᎢᏆᗰᗴ | ⌚️ {HM}"
-        logger.info(Bio)
+        bio = f"📅 {DMY} | I am A Pro 😎 | ⌚️ {HM}"
+        logger.info(bio)
         try:
             await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
-                about=Bio
+                about=bio
             ))
         except FloodWaitError as ex:
             logger.warning(str(e))
@@ -98,3 +31,5 @@ async def _(event):
             #     "Successfully Changed Profile Bio"
             # )
         await asyncio.sleep(DEL_TIME_OUT)
+
+
