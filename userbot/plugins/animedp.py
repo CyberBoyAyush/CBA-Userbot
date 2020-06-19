@@ -22,15 +22,17 @@ from time import sleep
 
 COLLECTION_STRING = [
 
-  "cute-anime-wallpapers-hd",
+  "pokemon-serena-wallpaper",
 
-  "anime-christmas-wallpaper-hd",
+  "hd-pokemon-iphone-wallpapers",
 
-  "anime-samurai-girl-wallpaper",
+  "pokemon-wallpaper-pikachu",
 
-  "4k-anime-wallpapers",
+  "doraemon-3d-wallpaper-2018",
+  
+  "pokemon-serena-wallpaper",
 
-  "2560-x-1440-wallpaper-anime"
+  "anime-girls-wallpapers"
 
 ]
 
