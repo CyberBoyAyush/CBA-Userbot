@@ -22,9 +22,9 @@
       "value": "./userbot/DOWNLOADS/",
       "required": false
     },
-    "F_BAN_LOGGER_GROUP": {
-      "description": "Put Group id Same As PRIVATE_GROUP_ID.",
-      "value": "",
+    "CUSTOM_PMPERMIT": {
+      "description": "Enter Custom Middle Pm Permit To Show When Some One PM's You.",
+      "value": ""
       "required": false
 
     },
@@ -119,11 +119,6 @@
     },
     "TZ": {
       "description": "Required for Correct Time for autopic get from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
-      "value": "",
-      "required": false
-    },
-    "REDIRECTCHANNEL": {
-      "description": "Put You Channel Username Reflecting Your Info or Your Tags Etc",
       "value": "",
       "required": false
     }
