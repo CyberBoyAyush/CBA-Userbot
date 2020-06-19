@@ -24,7 +24,7 @@
     },
     "CUSTOM_PMPERMIT": {
       "description": "Enter Custom Middle Pm Permit To Show When Some One PM You.",
-      "value": ""
+      "value": "",
       "required": false
     },
     "ALIVE_NAME": {
