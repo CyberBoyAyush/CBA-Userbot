@@ -8,18 +8,18 @@ from userbot.utils import admin_cmd
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
-FRIDAY_IS_ALIVE = ("**☯︎F.R.I.D.A.Y☯︎** IS AT YOUR SERVICE❗\n\n"
-                   "**☯︎Currently Status☯︎** : `No Issue Found`\n\n"
-                   "**☯︎Current Branch☯︎** : `master`\n\n"
-                   "**☯︎Python Version☯︎** : `3.8`\n\n"
-                   "**☯︎Friday OS☯︎** : `3.0 Snapdragon`\n\n"
-                   "**☯︎Current Sat☯︎ : `StarkGangSat-2.0`\n\n"
-                   f"**☯︎My Boss☯︎** : {DEFAULTUSER} \n\n"
-                   "**☯︎Updates☯︎** : `Found`\n\n"
-                   "**☯︎Heroku Database☯︎** : `No Known Error Found`\n\n"
-                   "**☯︎License☯︎** : [MIT Licence](Github.com/StarkGang/FridayUserbot/blob/master/LICENSE)\n\n"
-                   "☯︎Copyright☯︎ : By [StarkGang@Github](GitHub.com/StarkGang)\n\n"
-                   " [⌨︎☯︎Deploy Friday Userbot☯︎⌨︎](https://telegra.ph/FRIDAY-06-15)") 
+FRIDAY_IS_ALIVE = ("**☘︎F.R.I.D.A.Y☘︎** IS AT YOUR SERVICE❗\n\n"
+                   "**♧︎︎︎Currently Status♧︎︎︎** : `No Issue Found`\n\n"
+                   "**♧︎︎︎Current Branch♧︎︎︎** : `master`\n\n"
+                   "**♧︎︎︎Python Version♧︎︎︎** : `3.8`\n\n"
+                   "**♧︎︎︎Friday OS♧︎︎︎** : `3.0 Snapdragon`\n\n"
+                   "**♧︎︎︎Current Sat♧︎︎︎ : `StarkGangSat-2.0`\n\n"
+                   f"**♧︎︎︎My Boss♧︎︎︎** : {DEFAULTUSER} \n\n"
+                   "**♧︎︎︎Updates♧︎︎︎** : `Found`\n\n"
+                   "**♧︎︎︎Heroku Database♧︎︎︎** : `No Known Error Found`\n\n"
+                   "**♧︎︎︎License♧︎︎︎** : [MIT Licence](Github.com/StarkGang/FridayUserbot/blob/master/LICENSE)\n\n"
+                   "♧︎︎︎Copyright♧︎︎︎ : By [StarkGang@Github](GitHub.com/StarkGang)\n\n"
+                   " [⌨︎♧︎︎︎Deploy Friday Userbot♧︎︎︎⌨︎](https://telegra.ph/FRIDAY-06-15)") 
 
 
 #@command(outgoing=True, pattern="^.alive$")
