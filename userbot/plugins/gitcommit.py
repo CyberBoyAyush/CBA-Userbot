@@ -13,7 +13,6 @@ import time
 from datetime import datetime
 from telethon import events
 from telethon.tl.types import DocumentAttributeVideo
-
 async def progress(current, total, event, start, type_of_ps, file_name=None):
     """Generic progress_callback for uploads and downloads."""
     now = time.time()
@@ -128,7 +127,7 @@ async def git_commit(file_name,mone):
         file_name = file_name.replace("./userbot/temp/","")
         print(file_name)
         try:
-            repo.create_file(file_name, "New Plugin Uploaded To Friday", commit_data, branch="master")
+            repo.create_file(file_name, "Uploaded New Plugin", commit_data, branch="master")
             print("Committed File")
             ccess = Var.GIT_REPO_NAME
             ccess = ccess.strip()
