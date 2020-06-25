@@ -1,3 +1,4 @@
+import os
 import time
 import asyncio
 import io
@@ -7,6 +8,12 @@ from telethon import events, errors, functions, types
 from userbot import ALIVE_NAME, CUSTOM_PMPERMIT
 from userbot.utils import admin_cmd
 
+PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
+if PMPERMIT_PIC is None:
+  WARN_PIC = "https://telegra.ph/file/82c595986872349e5ba1a.jpg"
+else:
+  WARN_PIC = PMPERMIT_PIC
+
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
@@ -14,8 +21,7 @@ PREV_REPLY_MESSAGE = {}
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "**YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n`THIS IS ILLEGAL AND REGARDED AS A CRIME`"
 USER_BOT_WARN_ZERO = "`You were spamming my peru master's inbox, henceforth your retarded lame ass has been blocked by my master's userbot.` "
-USER_BOT_NO_WARN = ("    ╭━━━━━━━╮ \n┃       ● ══    ┃ \n┃███████┃ \n┃███████┃ \n┃███████┃ \n┃███████┃ \n┃███████┃ \n┃███████┃ \n┃███████┃ \n┃███████┃ \n┃        🄾        ┃ \n╰━━━━━━━╯\n\n" 
-                    "`Hello ! This is` **F.R.I.D.A.Y**\n"
+USER_BOT_NO_WARN = ("`Hello ! This is` **F.R.I.D.A.Y**\n"
                     "`Private Messaging Security Protocol ⚠️`\n\n"
                     "**You Have Trespassed To My Boss\n"
                     f"{DEFAULTUSER}'s Inbox**\n\n"
@@ -186,7 +192,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 return
             except:
                 return
-        r = await event.reply(USER_BOT_NO_WARN)
+        r = await event.client.send_file(event.chat_id, WARN_PIC, caption=USER_BOT_NO_WARN)
         PM_WARNS[chat_id] += 1
         if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
