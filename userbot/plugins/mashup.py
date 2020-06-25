@@ -6,7 +6,6 @@ Syntax: .mashup <text>
 import asyncio
 import datetime
 import asyncio
-
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError, UserAlreadyParticipantError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
