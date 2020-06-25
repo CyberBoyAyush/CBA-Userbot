@@ -27,7 +27,7 @@ async def autopic(event):
         current_time = datetime.now().strftime(" %H:%M ")
         img = Image.open(photo)
         drawn_text = ImageDraw.Draw(img)
-        fnt = ImageFont.truetype(FONT_FILE_TO_USE, 100)
+        fnt = ImageFont.truetype(FONT_FILE_TO_USE, 60)
         drawn_text.text((95, 250), current_time, font=fnt, fill=(255, 255, 255))
         img.save(photo)
         file = await bot.upload_file(photo)  # pylint:disable=E0602
