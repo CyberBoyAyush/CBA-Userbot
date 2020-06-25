@@ -8,7 +8,7 @@ import shutil
 from userbot.utils import admin_cmd
 
 
-FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+FONT_FILE_TO_USE = "/usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-Bold.ttf"
 
 #@command(pattern="^.autopic", outgoing=True)
 @borg.on(admin_cmd(pattern=r"autopic"))
