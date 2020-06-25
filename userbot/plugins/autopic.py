@@ -5,10 +5,13 @@ from pySmartDL import SmartDL
 from telethon.tl import functions
 import asyncio
 import shutil
+from userbot.utils import admin_cmd
 
-FONT_FILE_TO_USE = "/usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-Bold.ttf"
 
-@command(pattern="^.autopic", outgoing=True)
+FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+
+#@command(pattern="^.autopic", outgoing=True)
+@borg.on(admin_cmd(pattern=r"autopic"))
 async def autopic(event):
     downloaded_file_name = "userbot/original_pic.png"
     downloader = SmartDL(Var.DOWNLOAD_PFP_URL_CLOCK, downloaded_file_name, progress_bar=False)
@@ -21,11 +24,11 @@ async def autopic(event):
         shutil.copy(downloaded_file_name, photo)
         im = Image.open(photo)
         file_test = im.rotate(counter, expand=False).save(photo, "PNG")
-        current_time = datetime.now().strftime("Time: %H:%M \n  Date: %d.%m.%y")
+        current_time = datetime.now().strftime(" %H:%M ")
         img = Image.open(photo)
         drawn_text = ImageDraw.Draw(img)
-        fnt = ImageFont.truetype(FONT_FILE_TO_USE, 30)
-        drawn_text.text((95, 250), current_time, font=fnt, fill=(500, 500, 500))
+        fnt = ImageFont.truetype(FONT_FILE_TO_USE, 60)
+        drawn_text.text((95, 250), current_time, font=fnt, fill=(255, 255, 255))
         img.save(photo)
         file = await bot.upload_file(photo)  # pylint:disable=E0602
         try:
