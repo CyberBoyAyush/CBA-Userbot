@@ -39,7 +39,7 @@ async def _(event):
              await event.delete()
              await borg.send_file(event.chat_id, response.message, reply_to=reply_to_id)
 
-@borg.on(sudo_cmd(pattern="mash ?(.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="mash ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
