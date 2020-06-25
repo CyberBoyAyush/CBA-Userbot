@@ -3,13 +3,19 @@
 video meme mashup:
 Syntax: .mashup <text>
 """
+import asyncio
 import datetime
+import asyncio
+
 from telethon import events
-from telethon.errors.rpcerrorlist import YouBlockedUserError
+from telethon.errors.rpcerrorlist import YouBlockedUserError, UserAlreadyParticipantError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-from userbot.utils import admin_cmd, sudo_cmd
+from uniborg.util import admin_cmd
 from userbot import CMD_HELP
 
+
+
+from userbot import CMD_HELP
 @borg.on(admin_cmd(pattern="mashup ?(.*)"))
 async def _(event):
     if event.fwd_from:
