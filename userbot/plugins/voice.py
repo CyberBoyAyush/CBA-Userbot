@@ -76,10 +76,10 @@ async def _(event):
 
         
 CMD_HELP.update({
-    "tts":
+    "voice":
     " Google Text to Speech\
 \nAvailable Commands:\
-\n.tts LanguageCode as reply to a message\
-\n\n.tts LangaugeCode | text to speak\
+\n.voice LanguageCode as reply to a message\
+\n\n.voice LangaugeCode | text to speak\
 "
 }) 
