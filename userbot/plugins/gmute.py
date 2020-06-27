@@ -21,12 +21,12 @@ async def startgmute(event):
     if user_id in Config.WHITELIST_USERS:	
         await event.edit(	
             "**He has more immunity.**\nPerhaps I can't gmute him.\n\n"	
-            "**** This User is Whitelist user.")	
+            "**This User is Whitelist user**.")	
         return
     if user_id in Config.SUPPORT_USERS:	
         await event.edit(	
             "**He has more connections.**\nPerhaps I can't gmute him.\n\n"	
-            "He is Pruh So I can't Just Sorry ")	
+            "He is Pruh So I can't Just Sorry")	
         return
     if user_id in Config.DEVLOPERS:	
         await event.edit(	
