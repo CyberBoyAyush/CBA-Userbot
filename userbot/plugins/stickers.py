@@ -54,9 +54,9 @@ async def _(event):
     userid = event.from_id
     #packname = f"FRIDAY PACK"
     #packshortname = f"FRIDAY_{userid}_ns"  # format: Uni_Borg_userid
-    if userid == 813878981:
-        packname = f"STARKGANGPACK"
-        packshortname = "Starkgang"
+    if userid == 1263617196:
+        packname = f"@StarkGang Packs 🎭"
+        packshortname = "StarkGangPack"
     else:
         packname = f"{user.first_name}'s FRIDAY Vol.{pack}"
         packshortname = f"FRIDAY_{userid}_Pack"
