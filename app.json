@@ -119,6 +119,11 @@
     "PRIVATE_CHANNEL_BOT_API_ID": {
       "description": "Enter A Channel Id.Required For Cbutton Plugin",
       "required": false
+    },
+    "PM_LOGGR_BOT_API_ID": {
+      "description": "Enter Valid Id. Required For Pm Logger Plugin Ignore If You Want [Not Usefull]",
+      "required": false
+
 
     },
     "TZ": {
