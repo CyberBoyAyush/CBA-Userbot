@@ -76,7 +76,6 @@ if bool(ENV):
     # Cbutton 
     PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("PRIVATE_CHANNEL_BOT_API_ID", None)
 
-
     # Console verbose logging
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
