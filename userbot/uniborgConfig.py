@@ -111,6 +111,8 @@ if ENV:
         #Lydia API
         LYDIA_API = os.environ.get("LYDIA_API",None)
         PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", False))
+        # C Button 
+        PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("PRIVATE_CHANNEL_BOT_API_ID", None)
 else:
     class Config(object):
         DB_URI = None
