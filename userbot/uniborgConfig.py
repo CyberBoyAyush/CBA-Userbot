@@ -1,4 +1,3 @@
- 
 import os
 from telethon.tl.types import ChatBannedRights
 ENV = bool(os.environ.get("ENV", False))
@@ -21,7 +20,7 @@ if ENV:
         # This is required for the hash to torrent file functionality to work.
         HASH_TO_TORRENT_API = os.environ.get("HASH_TO_TORRENT_API", "https://example.com/torrent/{}");
         # This is required for the @telegraph functionality.
-        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "FridayTg")
+        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "Telegraph By Friday")
         # Get a Free API Key from OCR.Space
         OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
         # Send .get_id in any group with all your administration bots (added)
@@ -32,8 +31,9 @@ if ENV:
         # Telegram BOT Token from @BotFather
         TG_BOT_TOKEN_BF_HER = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
         TG_BOT_USER_NAME_BF_HER = os.environ.get("TG_BOT_USER_NAME_BF_HER", None)
-        #
-        #
+        # C Button 
+        PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("PRIVATE_CHANNEL_BOT_API_ID", None)
+        # 
         # DO NOT EDIT BELOW THIS LINE IF YOU DO NOT KNOW WHAT YOU ARE DOING
         # TG API limit. A message can have maximum 4096 characters!
         MAX_MESSAGE_SIZE_LIMIT = 4095
@@ -72,7 +72,7 @@ if ENV:
         # DataBase would not work
         DB_URI = os.environ.get("DATABASE_URL", None)
         # number of rows of buttons to be displayed in .helpme command
-        NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD = int(os.environ.get("NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD", 5))
+        NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD = int(os.environ.get("NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD", 4))
         # specify command handler that should be used for the plugins
         # this should be a valid "regex" pattern
         COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", "\.")
@@ -106,16 +106,12 @@ if ENV:
             t_file.close()
         YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
         GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", None)
-        # C Button 
-        PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("PRIVATE_CHANNEL_BOT_API_ID", None)
-
         #MongoDB
         MONGO_URI = os.environ.get("MONGO_URI", None)
         #Lydia API
         LYDIA_API = os.environ.get("LYDIA_API",None)
         PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", False))
-
-   else:
+else:
     class Config(object):
         DB_URI = None
         # Add your UniBorg Vars Here
