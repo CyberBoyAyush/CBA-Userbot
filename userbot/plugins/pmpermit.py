@@ -24,9 +24,9 @@ USER_BOT_WARN_ZERO = "`You were spamming my Boss's inbox, henceforth your retard
 USER_BOT_NO_WARN = ("`Hello ! This is` **F.R.I.D.A.Y**\n"
                     "`Private Messaging Security Protocol ⚠️`\n\n"
                     "**Currently My Boss**\n"
-                    f"{DEFAULTUSER} is Busy ! So Better Don't Spam His Inbox !**\n\n"
+                    f"{DEFAULTUSER} is Busy ! So Better Don't Spam His Inbox !\n\n"
                     f"{CUSTOM_MIDDLE_PMP} \n\n"
-                    "**Now You Are In Trouble So Send** 🍁 `/start` 🍁  **To Start A Valid Conversation!! **")
+                    "**Now You Are In Trouble So Send** 🍁 `/start` 🍁  **To Start A Valid Conversation!!**")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
