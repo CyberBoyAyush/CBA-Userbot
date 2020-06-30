@@ -5,8 +5,18 @@ import os
 import sys
 from telethon.sessions import StringSession
 from telethon import TelegramClient
-
 from var import Var
+from pylast import LastFMNetwork, md5
+from logging import basicConfig, getLogger, INFO, DEBUG
+from distutils.util import strtobool as sb
+from pySmartDL import SmartDL
+from dotenv import load_dotenv
+import asyncio
+import pylast
+from requests import get
+import time
+
+StartTime = time.time()
 
 os.system("pip install --upgrade pip")
 if Var.STRING_SESSION:
