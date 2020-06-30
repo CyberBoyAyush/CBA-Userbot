@@ -55,5 +55,5 @@ async def _(event):
     await event.edit("✨Pong!✨")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    lastupdate = get_readable_time((time.time() - StartTime))
-    await event.edit(f"PONG! ✌️\nPing Speed: {ms}\nUserbot Updated time: {lasteupdate}
+    uptime = get_readable_time((time.time() - StartTime))
+    await event.edit(f"PONG! ✌️\nPing Speed: {ms}\nUserbot Updated time: {uptime}
