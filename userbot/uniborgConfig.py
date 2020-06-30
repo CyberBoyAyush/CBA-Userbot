@@ -113,5 +113,4 @@ if ENV:
 else:
     class Config(object):
         DB_URI = None
-        # Cbutton 
-        PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("PRIVATE_CHANNEL_BOT_API_ID", None)
+        
