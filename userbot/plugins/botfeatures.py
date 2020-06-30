@@ -30,7 +30,7 @@ async def _(event):
           await event.delete()
           await event.client.send_message(event.chat_id, response.message, reply_to=reply_message)
 
-@borg.on(admin_cmd(pattern="sgm ?(.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="sang ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
