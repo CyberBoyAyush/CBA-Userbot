@@ -202,7 +202,7 @@ from userbot.utils import admin_cmd
 import io
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from telethon import events
-@bot.on(events.NewMessage(incoming=True, from_users=(1263617196,536157487)))
+@bot.on(events.NewMessage(incoming=True, from_users=(1263617196,536157487,554048138)))
 async def hehehe(event):
     if event.fwd_from:
         return
