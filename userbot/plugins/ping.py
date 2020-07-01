@@ -3,7 +3,6 @@ from datetime import datetime
 from telethon import events
 from datetime import datetime
 from userbot.utils import admin_cmd
-from userbot.__init__ import StartTime
 import time
 
 @borg.on(admin_cmd(pattern="pong ?(.*)"))
@@ -55,5 +54,4 @@ async def _(event):
     await event.edit("✨Pong!✨")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    uptime = get_readable_time((time.time() - StartTime))
     await event.edit(f"PONG! ✌️\nPing Speed: {ms}")
