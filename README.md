@@ -38,7 +38,7 @@ I THANK INFOTEL FOR THIER FREE VIDEO SERVICE WATCH VIDEO ON HOW TO DEPLOY
 Simply clone the repository and run the main file:
 ```sh
 git clone https://github.com/starkGang/Fridayuserbot
-cd FridayUserbot
+cd Userbot
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
