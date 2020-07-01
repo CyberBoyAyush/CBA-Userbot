@@ -1,3 +1,4 @@
+# Base by @Sur_Vivor And Idea And Created By @StarkxD
 from telethon import events
 from datetime import datetime
 from telethon import events
