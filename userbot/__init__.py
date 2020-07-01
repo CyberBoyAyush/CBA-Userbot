@@ -16,7 +16,7 @@ import pylast
 from requests import get
 import time
 
-StartTime = time.time()
+
 
 os.system("pip install --upgrade pip")
 if Var.STRING_SESSION:
