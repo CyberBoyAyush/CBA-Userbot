@@ -13,8 +13,5 @@ import time
 async def _(event):
     if event.fwd_from:
         return
-        start = datetime.now()
-    await event.edit("🔼Last")
-    end = datetime.now()
     updatedtime = get_readable_time((time.time() - Lastupdate))
     await event.edit(f"🔼Last Updated or Restarted!\nOn : {updatedtime}")
