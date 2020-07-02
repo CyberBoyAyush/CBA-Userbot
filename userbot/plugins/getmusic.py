@@ -1,4 +1,3 @@
-
 from telethon import events
 import subprocess
 from telethon.errors import MessageEmptyError, MessageTooLongError, MessageNotModifiedError
@@ -33,11 +32,11 @@ async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
-    await event.edit("Ok finding Your Awesome Song From My Database ◉‿◉")    
+    await event.edit("ok finding the song")    
     bruh(str(cmd))
     l = glob.glob("*.mp3")
     loa = l[0]
-    await event.edit("Sending Song From My Database To Telegram")
+    await event.edit("sending song")
     await borg.send_file(
                 event.chat_id,
                 loa,
