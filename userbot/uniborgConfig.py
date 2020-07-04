@@ -78,12 +78,12 @@ if ENV:
         # specify list of users allowed to use bot
         # WARNING: be careful who you grant access to your bot.
         # malicious users could do ".exec rm -rf /*"
-        SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", None).split())
-        WHITELIST_USERS = set(int(x) for x in os.environ.get("WHITELIST_USERS", None).split())
-        BLACKLIST_USERS = set(int(x) for x in os.environ.get("BLACKLIST_USERS", None).split())
-        DEVLOPERS = set(int(x) for x in os.environ.get("DEVLOPERS", None).split())
-        OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", None).split())
-        SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", None).split())
+        SUDO_USERS = os.environ.get("SUDO_USERS", None)
+        WHITELIST_USERS = os.environ.get("WHITELIST_USERS", None)
+        BLACKLIST_USERS = os.environ.get("BLACKLIST_USERS", None)
+        DEVLOPERS = os.environ.get("DEVLOPERS", None)
+        OWNER_ID = os.environ.get("OWNER_ID", None)
+        SUPPORT_USERS = os.environ.get("SUPPORT_USERS", None)
         # VeryStream only supports video formats
         VERY_STREAM_LOGIN = os.environ.get("VERY_STREAM_LOGIN", None)
         VERY_STREAM_KEY = os.environ.get("VERY_STREAM_KEY", None)
