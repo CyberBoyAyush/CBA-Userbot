@@ -9,7 +9,7 @@ from userbot.utils import admin_cmd
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
-ALIVE_IMG = "https://telegra.ph/file/5fbacbbc038bb7fac6704.jpg"
+ALIVE_IMG = "https://telegra.ph/file/dc22c073ca83434d8144c.mp4"
 ALIVE_caption = "`FRIDAY IS:` **ONLINE**\n\n"
 ALIVE_caption += "**SYSTEM STATUS**\n\n"
 ALIVE_caption += "`TELETHON VERSION:` **6.0.9**\n`Python:` **3.7.4**\n\n"
