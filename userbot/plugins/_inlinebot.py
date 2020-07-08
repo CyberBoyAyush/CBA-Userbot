@@ -19,8 +19,8 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             rev_text = query[::-1]
             buttons = paginate_help(0, CMD_LIST, "helpme")
             result = builder.article(
-                "© FRIDAYUserBot Help",
-                text="{}\nCurrently Loaded Plugins: {}".format(
+                "© FridayUserBot Help",
+                text="{}\nTotal Plugins Loaded: {}".format(
                     query, len(CMD_LIST)),
                 buttons=buttons,
                 link_preview=False
@@ -57,7 +57,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "Get your own friday userbot, don't use others's\n ib @MarioDevs for learning how to get userbot!"
+            reply_pop_up_alert = "Get your own friday userbot, don't use Mine\n ib @StarkxD for learning how to get userbot!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"us_plugin_(.*)")
