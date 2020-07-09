@@ -146,6 +146,9 @@ if bool(ENV):
     # Pm Permit Img
     PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 
+    # Gban 
+    USER_IS = os.environ.get("USER_IS", None)
+
     # Last.fm Module
     BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
     DEFAULT_BIO = os.environ.get("DEFAULT_BIO", None)
