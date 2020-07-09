@@ -32,7 +32,7 @@ I THANK INFOTEL FOR THIER FREE VIDEO SERVICE WATCH VIDEO ON HOW TO DEPLOY
 ## GET STRING SESSION FROM REPL RUN 
 
 [![repl-dot-it.svg](https://img.shields.io/badge/REPL%20RUN-Run%20Online-blue.svg?logo=repl-dot-it.svg)](https://friday.starkgang.repl.run)
-<a href="https://youtu.be/xfHcm_e92eQ"><img src="https://img.shields.io/badge/How%20To-Deploy-red.svg?logo=Repl-dot-it.svg"></a>
+<a href="https://youtu.be/xfHcm_e92eQ"><img src="https://img.shields.io/badge/How%20To-Deploy-red.svg?logo=.replit.svg"></a>
 
 
 ### The Normal Way
