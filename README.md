@@ -31,7 +31,7 @@ I THANK INFOTEL FOR THIER FREE VIDEO SERVICE WATCH VIDEO ON HOW TO DEPLOY
 
 ## GET STRING SESSION FROM REPL RUN 
 
-[![Run on Repl.it](https://img.shields.io/badge/REPL%20RUN-Run%20Online-blue.svg)](https://friday.starkgang.repl.run)
+[![Run on Repl.it](https://repl.it/badge/github/STARKGANG/friday)](https://friday.starkgang.repl.run)
 
 
 ### The Normal Way
