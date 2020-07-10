@@ -9,7 +9,7 @@ from userbot.utils import admin_cmd
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
-ALIVE_STCR = "https://srv-file22.gofile.io/download/s3awbn/IMG_20200710_155316_668.webp"
+ALIVE_STCR = "https://telegra.ph/file/717b3eff2ba34d1de6b98.png"
 FRIDAY_ALIVE = ("`FRIDAY IS:` **ONLINE**\n\n"
 "**SYSTEM STATUS**\n\n"
 "`TELETHON VERSION:` **6.0.9**\n`Python:` **3.7.4**\n\n"
@@ -35,4 +35,5 @@ async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
 
     await borg.send_file(chat, ALIVE_STCR)
+    ALIVE_STCR.name = "test.webp"
     await borg.send_message(chat, FRIDAY_ALIVE)
