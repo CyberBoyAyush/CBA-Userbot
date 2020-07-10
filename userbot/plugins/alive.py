@@ -1,5 +1,5 @@
 """Check if userbot alive. If you change these, you become the gayest gay such that even the gay world will disown you."""
-# @starkxD
+#@starkxD
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
