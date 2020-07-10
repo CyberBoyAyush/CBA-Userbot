@@ -34,5 +34,5 @@ async def amireallyalive(alive):
 
     """ For .alive command, check if the bot is running.  """
 
-    await borg.send_message(chat, ALIVE_STCR)
+    await borg.send_image(chat, ALIVE_STCR)
     await borg.send_message(chat, FRIDAY_ALIVE)
