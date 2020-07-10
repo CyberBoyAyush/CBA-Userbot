@@ -4,7 +4,7 @@ import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
 
-PM_IMG = "https://telegra.ph/file/0adbdf47628be382a67c7.jpg"
+PM_IMG = "https://telegra.ph/file/717b3eff2ba34d1de6b98.png"
 pm_caption = "`FRIDAY IS:` **ONLINE**\n\n"
 pm_caption += "**SYSTEM STATUS**\n"
 pm_caption += "`TELETHON VERSION:` **6.0.9**\n`Python:` **3.7.4**\n"
