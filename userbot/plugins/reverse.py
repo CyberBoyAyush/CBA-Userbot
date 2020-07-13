@@ -144,7 +144,7 @@ async def wiki(wiki_q):
 
 
 
-@borg.on(admin_cmd(outgoing=True, pattern=r"trt(?: |$)([\s\S]*)"))
+@borg.on(admin_cmd(outgoing=True, pattern=r"tran(?: |$)([\s\S]*)"))
 async def translateme(trans):
     """ For .trt command, translate the given text using Google Translate. """
     translator = Translator()
