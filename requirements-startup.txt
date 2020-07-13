@@ -51,6 +51,7 @@ selenium
 speedtest-cli>=2.0.2
 sqlalchemy>=1.2
 telegraph
+tswift
 urbandict>=0.5
 wikipedia>=1.4.0
 youtube-dl
