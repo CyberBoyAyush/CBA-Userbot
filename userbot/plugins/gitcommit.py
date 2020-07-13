@@ -1,7 +1,7 @@
 """
 GITHUB File Uploader Plugin for userbot. Heroku Automation should be Enabled. Else u r not that lazy // For lazy people
 Instructions:- Set GITHUB_ACCESS_TOKEN and GIT_REPO_NAME Variables in Heroku vars First
-usage:- .commit reply_to_any_plugin //can be any type of file too. but for plugin must be in .py 
+usage:- .commit reply to any plugin with commit But Note on py plugins
 """
 
 
@@ -13,10 +13,11 @@ import time
 from datetime import datetime
 from telethon import events
 from telethon.tl.types import DocumentAttributeVideo
-from userbot.utils import admin_cmd, progress
+from userbot.utils import admin_cmd
+
 
 GIT_TEMP_DIR = "./userbot/temp/"
-@command(pattern="^.commit", outgoing=True)
+@borg.on(admin_cmd(pattern="commit", outgoing=True))
 async def download(event):
     if event.fwd_from:
         return	
@@ -75,7 +76,7 @@ async def git_commit(file_name,mone):
             print("Committed File")
             ccess = Var.GIT_REPO_NAME
             ccess = ccess.strip()
-            await mone.edit(f"`Commited On Your Github Repo`\n\n[Your STDPLUGINS](https://github.com/{ccess}/tree/master/userbot/plugins/)")
+            await mone.edit(f"`Commited On Your Github Repo`\n\n[Your PLUGINS](https://github.com/{ccess}/tree/master/userbot/plugins/)")
         except:    
             print("Cannot Create Plugin")
             await mone.edit("Cannot Upload Plugin")
