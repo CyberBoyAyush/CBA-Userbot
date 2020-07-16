@@ -48,8 +48,8 @@ async def _(event):
         sticker_emoji = input_str
 
     user = await bot.get_me()
-    if not user.first_name:
-        user.first_name = user.id
+    if not user.username:
+        user.username = user.id
     pack = 1
     userid = event.from_id
     #packname = f"FRIDAY PACK"
@@ -97,11 +97,11 @@ async def _(event):
             else:
                 response = await silently_send_message(bot_conv, "/newpack")
             if "Yay!" not in response.text:
-                await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                await event.edit(f"**Error**! @Stickers replied: {response.text}")
                 return
             response = await silently_send_message(bot_conv, packname)
             if not response.text.startswith("Alright!"):
-                await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                await event.edit(f"**Error**! @Stickers replied: {response.text}")
                 return
             w = await bot_conv.send_file(
                 file=uploaded_sticker,
@@ -110,7 +110,7 @@ async def _(event):
             )
             response = await bot_conv.get_response()
             if "Sorry" in response.text:
-                await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                await event.edit(f"**Error**! @Stickers replied: {response.text}")
                 return
             await silently_send_message(bot_conv, sticker_emoji)
             await silently_send_message(bot_conv, "/publish")
@@ -118,7 +118,7 @@ async def _(event):
             await silently_send_message(bot_conv, "/skip")
             response = await silently_send_message(bot_conv, packshortname)
             if response.text == "Sorry, this short name is already taken.":
-                await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                await event.edit(f"**Error**! @Stickers replied: {response.text}")
                 return
         else:
             await silently_send_message(bot_conv, "/cancel")
@@ -134,10 +134,10 @@ async def _(event):
                 while response.text == FILLED_UP_DADDY:
                     pack += 1
                     prevv = int(pack) - 1
-                    packname = f"{user.first_name}'s FRIDAY Vol.{pack}"
-                    packshortname = f"Vol_{pack}_with_{user.first_name}"
+                    packname = f"{user.username}'s FRIDAY Vol.{pack}"
+                    packshortname = f"Vol_{pack}_with_{user.username}"
                     #if userid == 948408212:
-                       # packname = f"{user.first_name}'s FRIDAY Vol.{pack}"
+                       # packname = f"{user.username}'s FRIDAY Vol.{pack}"
                        # packshortname = "Vol._{pack}_FRIDAY_ke_locker_me"
                    # else:
                        # packname = f"Vol._{pack}_FRIDAY{userid}"
@@ -149,11 +149,11 @@ async def _(event):
                         else:
                             response = await silently_send_message(bot_conv, "/newpack")
                         if "Yay!" not in response.text:
-                            await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                            await event.edit(f"**Error**! @Stickers replied: {response.text}")
                             return
                         response = await silently_send_message(bot_conv, packname)
                         if not response.text.startswith("Alright!"):
-                            await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                            await event.edit(f"**Error**! @Stickers replied: {response.text}")
                             return
                         w = await bot_conv.send_file(
                             file=uploaded_sticker,
@@ -162,7 +162,7 @@ async def _(event):
                         )
                         response = await bot_conv.get_response()
                         if "Sorry" in response.text:
-                            await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                            await event.edit(f"**Error**! @Stickers replied: {response.text}")
                             return
                         await silently_send_message(bot_conv, sticker_emoji)
                         await silently_send_message(bot_conv, "/publish")
@@ -170,7 +170,7 @@ async def _(event):
                         await silently_send_message(bot_conv, "/skip")
                         response = await silently_send_message(bot_conv, packshortname)
                         if response.text == "Sorry, this short name is already taken.":
-                            await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                            await event.edit(f"**Error**! @Stickers replied: {response.text}")
                             return
                     else:
                         await event.edit("Pack No. " + str(prevv) + " full! Switching to Vol. " + str(pack))
@@ -183,13 +183,13 @@ async def _(event):
                         )
                         response = await bot_conv.get_response()
                         if "Sorry" in response.text:
-                            await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                            await event.edit(f"**Error**! @Stickers replied: {response.text}")
                             return
                         await silently_send_message(bot_conv, sticker_emoji)
                         await silently_send_message(bot_conv, "/done")
             else:
                 if "Sorry" in response.text:
-                    await event.edit(f"**FAILED**! @Stickers replied: {response.text}")
+                    await event.edit(f"**Error**! @Stickers replied: {response.text}")
                     return
                 await silently_send_message(bot_conv, response)
                 await silently_send_message(bot_conv, sticker_emoji)
