@@ -134,10 +134,10 @@ async def _(event):
                 while response.text == FILLED_UP_DADDY:
                     pack += 1
                     prevv = int(pack) - 1
-                    packname = f"{user.username}'s FRIDAY Vol.{pack}"
+                    packname = f"{user.username}'s {pack}"
                     packshortname = f"Vol_{pack}_with_{user.username}"
                     #if userid == 948408212:
-                       # packname = f"{user.username}'s FRIDAY Vol.{pack}"
+                       # packname = f"{user.username}'s {pack}"
                        # packshortname = "Vol._{pack}_FRIDAY_ke_locker_me"
                    # else:
                        # packname = f"Vol._{pack}_FRIDAY{userid}"
