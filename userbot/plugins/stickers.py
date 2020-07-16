@@ -58,12 +58,12 @@ async def _(event):
         packname = f"@StarkGang Packs 🎭"
         packshortname = "StarkGangPack"
     else:
-        packname = f"{user.first_name}'s FRIDAY Vol.{pack}"
+        packname = f"{user.username}'s {pack}"
         packshortname = f"FRIDAY_{userid}_Pack"
     await event.edit("`Is It Legal ? Oh Yes it is !! \nLook That Way ! Let me Kang This ¯\_(ツ)_/¯`")
 
     is_a_s = is_it_animated_sticker(reply_message)
-    file_ext_ns_ion = "@FRIDAY.png"
+    file_ext_ns_ion = "@FRIDAYOT.png"
     file = await borg.download_file(reply_message.media)
     uploaded_sticker = None
     if is_a_s:
@@ -73,7 +73,7 @@ async def _(event):
             packname = f"StarkGang Ka Pack"
             packshortname = "StarkGangisgreat"
         else:
-            packname = f"{user.first_name}'s FRIDAY Animated Vol.{pack}"
+            packname = f"{user.username}'s {pack}"
             packshortname = f"FRIDAY_{userid}" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
@@ -90,7 +90,7 @@ async def _(event):
         now = datetime.datetime.now()
         dt = now + datetime.timedelta(minutes=1)
         if not await stickerset_exists(bot_conv, packshortname):
-            await event.edit("`Brewing a new pack! ヽ(´▽｀)ノ`")
+            await event.edit("`Creating a new pack!`")
             await silently_send_message(bot_conv, "/cancel")
             if is_a_s:
                 response = await silently_send_message(bot_conv, "/newanimated")
