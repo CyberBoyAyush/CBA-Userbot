@@ -24,7 +24,7 @@ async def set_not_afk(event):
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
-                "Mine Owner has gone for some Important work he is very busy😅"
+                "#AfkLogger My Boss Went Afk"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
@@ -61,7 +61,7 @@ async def _(event):
             afk_time = datetime.datetime.now()  # pylint:disable=E0602
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
-            await event.edit(f"My Boss Is Going , The Reason is {reason}")
+            await event.edit(f"My Boss Is Going Afk ! And The Reason is {reason}")
         else:
             await event.edit(f"My Boss is Going")
         await asyncio.sleep(5)
@@ -69,7 +69,7 @@ async def _(event):
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
-                f"My Boss Want {reason}"
+                f"#AfkLogger Reason : {reason}"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             logger.warn(str(e))  # pylint:disable=E0602
@@ -121,7 +121,7 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"**My Boss is AFK** ! \n\n**Reason** : `{reason}` \n\n**Afk Since** : `{afk_time}`" + \
+        message_to_reply = f"**My Boss is AFK** ! \n\n**Reason** : `{reason}` \n\n**Afk Since** : `{afk_since}`" + \
             f"\n\n__Kindly Leave A Message__ ! \n`He Will Reply To You Soon !`" \
             if reason \
             else f"**Important Notice**\n\n[This User Is Dead Forever...](https://telegra.ph//file/a53fa950ff31781d5930a.jpg) "
