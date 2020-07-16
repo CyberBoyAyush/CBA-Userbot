@@ -121,8 +121,8 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"**My Boss is AFK** ! \n\n**Reason** : `{reason}` \n\n**Afk Since** : `{total_afk_time}`" + \
-            f"\n\n__Kindly Leave A Message ! \n`He Will Reply To You Soon !`" \
+        message_to_reply = f"**My Boss is AFK** ! \n\n**Reason** : `{reason}` \n\n**Afk Since** : `{afk_time}`" + \
+            f"\n\n__Kindly Leave A Message__ ! \n`He Will Reply To You Soon !`" \
             if reason \
             else f"**Important Notice**\n\n[This User Is Dead Forever...](https://telegra.ph//file/a53fa950ff31781d5930a.jpg) "
         msg = await event.reply(message_to_reply)
