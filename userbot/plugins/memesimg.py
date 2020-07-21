@@ -1,4 +1,4 @@
-# Created By starkdy And Ported For Type 2 Userbot By StarkxD
+# Created By sandy - Sandeep - @mrconfused And Ported For Type 2 Userbot By StarkxD
 from userbot.events import register
 import requests , re
 from PIL import Image
