@@ -202,7 +202,7 @@ async def nekobot(borg):
     
 CMD_HELP.update({
 "imgmeme":
-"Fun purpose 😛😛😏😏\
+"Fun purpose\
 \n\n`.modi` (text)\
      \nUsage : Tweet with modi\
 \n\n`.trump` (text)\
