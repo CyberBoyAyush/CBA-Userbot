@@ -81,7 +81,7 @@ if bool(ENV):
     LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
     
     # Bleep Blop, this is a bot ;)
-    PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
+    PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "True"))
 
     # Console verbose logging
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
