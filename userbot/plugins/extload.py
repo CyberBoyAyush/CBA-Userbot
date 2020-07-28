@@ -12,7 +12,7 @@ import traceback
 import os
 import userbot.utils
 
-@command(pattern="^.load", outgoing=True)
+@command(pattern="^.extload", outgoing=True)
 async def install(event):
     if event.fwd_from:
         return
