@@ -4,6 +4,7 @@
 import asyncio
 import datetime
 from telethon import events
+from var import Var
 from uniborg.util import admin_cmd
 from telethon.tl.types import (
     DocumentAttributeFilename,
