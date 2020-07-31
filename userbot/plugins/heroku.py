@@ -172,7 +172,6 @@ async def _(dyno):
         except:
   	       return await dyno.reply(" Please make sure your Heroku API Key, Your App name are configured correctly in the heroku var please check https://t.me/IndianBot_Official/55?single")
         await dyno.edit("Downloading Logs..")
-.")
         with open('logs.txt', 'w') as log:
             log.write(app.get_log())
         await dyno.client.send_file(
