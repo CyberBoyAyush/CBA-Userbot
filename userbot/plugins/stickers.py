@@ -26,9 +26,10 @@ from telethon.tl.types import (
     InputStickerSetShortName,
     MessageMediaPhoto
 )
-from userbot.utils import admin_cmd
+from userbot.utils import admin_cmd, DEFUALTUSER
 
 FILLED_UP_DADDY = "Invalid pack selected."
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No name "
 
 @borg.on(admin_cmd(pattern="kang ?(.*)"))
 async def _(event):
