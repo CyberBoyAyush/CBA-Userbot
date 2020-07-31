@@ -1,4 +1,5 @@
-# All rights reserved.
+"""Credit :- @RefundisIllegal (Avatar)"""
+
 """
    Heroku manager for your userbot
 """
@@ -8,15 +9,25 @@ import asyncio
 import os
 import requests
 import math
-from userbot.utils import register
 from userbot.utils import admin_cmd
+from userbot import CMD_HELP
+from userbot.uniborgConfig import Config
+import urllib3
 
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+# ================= 
+
+Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
+Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
+heroku_api = "https://api.heroku.com"
+HEROKU_APP_NAME = Config.HEROKU_APP_NAME
+HEROKU_API_KEY = Config.HEROKU_API_KEY
 
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
 
 
-@register(outgoing=True, pattern=r"^\.(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)")
+@borg.on(admin_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)", outgoing=True))
 async def variable(var):
     """
         Manage most of ConfigVars setting, set new var, get current var,
@@ -93,12 +104,12 @@ async def variable(var):
             return await var.edit(f"**{variable}**  `is not exists`")
 
 
-@register(outgoing=True, pattern=r"^\.usage(?: |$)")
+@borg.on(admin_cmd(pattern="usage(?: |$)", outgoing=True))
 async def dyno_usage(dyno):
     """
         Get your account Dyno Usage
     """
-    await dyno.edit("`Processing...`")
+    await dyno.edit("`Processing Request !`")
     useragent = ('Mozilla/5.0 (Linux; Android 10; SM-G975F) '
                  'AppleWebKit/537.36 (KHTML, like Gecko) '
                  'Chrome/80.0.3987.149 Mobile Safari/537.36'
@@ -124,7 +135,6 @@ async def dyno_usage(dyno):
     minutes_remaining = remaining_quota / 60
     hours = math.floor(minutes_remaining / 60)
     minutes = math.floor(minutes_remaining % 60)
-
     """ - Current - """
     App = result['apps']
     try:
@@ -137,50 +147,37 @@ async def dyno_usage(dyno):
         AppPercentage = math.floor(App[0]['quota_used'] * 100 / quota)
     AppHours = math.floor(AppQuotaUsed / 60)
     AppMinutes = math.floor(AppQuotaUsed % 60)
-
     await asyncio.sleep(1.5)
-
     return await dyno.edit("**Dyno Usage**:\n\n"
                            f" -> `Dyno usage for`  **{Var.HEROKU_APP_NAME}**:\n"
-                           f"     •  `{AppHours}`**h**  `{AppMinutes}`**m**  "
+                           f"     ✓  `{AppHours}`**h**  `{AppMinutes}`**m**  "
                            f"**|**  [`{AppPercentage}`**%**]"
                            "\n\n"
                            " -> `Dyno hours quota remaining this month`:\n"
-                           f"     •  `{hours}`**h**  `{minutes}`**m**  "
+                           f"     ✓  `{hours}`**h**  `{minutes}`**m**  "
                            f"**|**  [`{percentage}`**%**]"
                            )
 
-
-@command(pattern="^.info heroku")
-async def info(event):
-    await borg.send_message(event.chat_id, "**Info for Module to Manage Heroku:**\n\n`.usage`\nUsage:__Check your heroku dyno hours status.__\n\n`.set var <NEW VAR> <VALUE>`\nUsage: __add new variable or update existing value variable__\n**!!! WARNING !!!, after setting a variable the bot will restart.**\n\n`.get var or .get var <VAR>`\nUsage: __get your existing varibles, use it only on your private group!__\n**This returns all of your private information, please be cautious...**\n\n`.del var <VAR>`\nUsage: __delete existing variable__\n**!!! WARNING !!!, after deleting variable the bot will restarted**")
-    await event.delete()
-
-
+@borg.on(admin_cmd(pattern="herokulogs$", outgoing=True))
+async def _(dyno):        
+    try:
+        Heroku = heroku3.from_key(HEROKU_API_KEY)                         
+        app = Heroku.app(HEROKU_APP_NAME)
+    except:
+  	     return await dyno.reply(" Please make sure your Heroku API Key, Your App name are configured correctly in the heroku") 
+    data = app.get_log()
+    key = requests.post('https://nekobin.com/api/documents', json={"content": data}).json().get('result').get('key')
+    url = f'https://nekobin.com/{key}'
+    reply_text = f'Recent 100 lines of heroku logs: [here]({url})'
+    await dyno.edit(reply_text)
+    
 def prettyjson(obj, indent=2, maxlinelength=80):
     """Renders JSON content with indentation and line splits/concatenations to fit maxlinelength.
     Only dicts, lists and basic types are supported"""
-
     items, _ = getsubitems(obj, itemkey="", islast=True, maxlinelength=maxlinelength - indent, indent=indent)
     return indentitems(items, indent, level=0)
 
-@register(outgoing=True, pattern=r"^\.logs")
-async def _(dyno):        
-        try:
-             Heroku = heroku3.from_key(Var.HEROKU_API_KEY)                         
-             app = Heroku.app(Var.HEROKU_APP_NAME)
-        except:
-  	       return await dyno.reply(" Please make sure your Heroku API Key, Your App name are configured correctly in the heroku Please Join @FridayOT For Any Issue")
-        await dyno.edit("Getting Logs....")
-        with open('logs.txt', 'w') as log:
-            log.write(app.get_log())
-        await dyno.client.send_file(
-            dyno.chat_id,
-            "logs.txt",
-            reply_to=dyno.id,
-            caption="logs of 100+ lines",
-        )
-        await dyno.edit("Sending in Progress.......")
-        await asyncio.sleep(5)
-        await dyno.delete()
-        return os.remove('fridaylogs.txt')
+CMD_HELP.update({
+  "heroku":
+  "Info for Module to Manage Heroku:**\n\n`.usage`\nUsage:__Check your heroku dyno hours status.__\n\n`.set var <NEW VAR> <VALUE>`\nUsage: __add new variable or update existing value variable__\n**!!! WARNING !!!, after setting a variable the bot will restart.**\n\n`.get var or .get var <VAR>`\nUsage: __get your existing varibles, use it only on your private group!__\n**This returns all of your private information, please be cautious...**\n\n`.del var <VAR>`\nUsage: __delete existing variable__\n**!!! WARNING !!!, after deleting variable the bot will restarted**\n\n`.herokulogs`\nUsage:sends you recent 100 lines of logs in heroku"
+})    
