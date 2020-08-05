@@ -1,7 +1,7 @@
 # FRIDAY
 
 <p align="center">
-<img src="friday.png" alt="FRIDAY USERBOT">
+<img src="https://images.discordapp.net/avatars/318312854816161792/f8d52e539f66686f53ade9c11098ace8.png" alt="FRIDAY USERBOT">
 
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
