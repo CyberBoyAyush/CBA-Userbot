@@ -22,7 +22,7 @@ USER_BOT_WARN_ZERO = "`You were spamming my peru master's inbox, henceforth your
 USER_BOT_NO_WARN = ("`Hello My Friend ! This is` **F.R.I.D.A.Y**\n"
                     "`Private Messaging Security Protocol ⚠️`\n\n"
                     "**Currently My Boss**\n"
-                    f"{DEFAULTUSER} is Busy ! Please Don't Spam My Masters Inbox\n\n"
+                    f"{DEFAULTUSER} is Busy ! Please Don't Spam My Masters Inbox ? Sed\n\n"
                     "**Kindly Send** `/start` **If You Want To Register Your Request**")
 
 
