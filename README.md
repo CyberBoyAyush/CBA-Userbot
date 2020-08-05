@@ -1,7 +1,7 @@
 # FRIDAY
 
 <p align="center">
-<img src="https://images.discordapp.net/avatars/318312854816161792/f8d52e539f66686f53ade9c11098ace8.png" alt="FRIDAY USERBOT">
+<img src="FRIDAY.png" alt="FRIDAY USERBOT">
 
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
@@ -27,7 +27,7 @@ I THANK INFOTEL FOR THIER FREE VIDEO SERVICE WATCH VIDEO ON HOW TO DEPLOY
 ## Installing Heroku 
 
 ### The Easy Way
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/StarkGang/fridaybots)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/StarkGang/FridayUserbot)
 
 ## GET STRING SESSION FROM REPL RUN 
 
