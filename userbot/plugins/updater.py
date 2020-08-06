@@ -16,7 +16,7 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "please check out to an official branch, and re-start the updater."
 )
 OFFICIAL_UPSTREAM_REPO = "https://github.com/StarkGang/FridayUserbot"
-BOT_IS_UP_TO_DATE = "Friday userbot is up-to-date!."
+BOT_IS_UP_TO_DATE = "Friday userbot is up-to-date!"
 NEW_BOT_UP_DATE_FOUND = (
     "**Friday Update Found For** {branch_name}\n"
     "\n\n{changelog}\n"
@@ -29,9 +29,9 @@ NEW_UP_DATE_FOUND = (
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
 DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
-NO_HEROKU_APP_CFGD = "no heroku application found, but a key given? 😕 "
+NO_HEROKU_APP_CFGD = "No heroku application found, but a key given?"
 HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
-RESTARTING_APP = "re-starting heroku application"
+RESTARTING_APP = "Re-Starting heroku application"
 # -- Constants End -- #
 
 
@@ -72,8 +72,8 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit("Pulling Update From Branch **master** !!!!")
-        await asyncio.sleep(8)
+        await message.edit("Trying To Pull Updates !")
+        await asyncio.sleep(10)
  
     message_one = NEW_BOT_UP_DATE_FOUND.format(
         branch_name=active_branch_name,
@@ -140,7 +140,7 @@ def generate_change_log(git_repo, diff_marker):
 
 async def deploy_start(bot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("**The Latest Branch** `Master` **Has Been Pushed To Heroku** \n**Now Trying A Restart To Complete Updation Process ⚠️ !!** To Check If I am Alive Just Do `.alive` or `.help` !!!! Thank For Using Friday Userbot Service (◍•ᴗ•◍)❤")
+    await message.edit("Trying To Restart Dyno To Finalize Updation Process ! \nYou Can Do `.alive` To Check If I am Alive !")
     remote.push(refspec=refspec)
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
