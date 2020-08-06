@@ -847,11 +847,15 @@ async def vapor(vpr):
 
 			  
 @register(outgoing=True, pattern="^.repo$")
-async def source(e):
+async def repo(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("Click [here](https://github.com/StarkGang/fridayUserbot) to open this cool And Best userbot repo .")
-			  
-			  
+        await e.edit("Hey ! I am Using [Friday Userbot](https://github.com/StarkGang/FridayUserbot] !")
+
+@register(outgoing=True, pattern="^.source$")
+async def source(sed):
+    if not sed.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+        await sed.edit("View Source Code By Clicking [Here](https://github.com/StarkGang/FridayUserbot] !")
+				  
 @register(outgoing=True, pattern="^.str(?: |$)(.*)")
 async def stretch(stret):
     """ Stretch it."""
