@@ -116,20 +116,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await event.delete()
         else:
             await event.edit(APPROVED_PMs)
-# Originally By X-TRA TG ( JUST MODIFIED BY ME )
-    @bot.on(events.NewMessage(outgoing=True))
-    async def howdareyoumc(event):
-        if event.fwd_from:
-            return
-        chat = await event.get_chat()
-        if event.is_private:
-            if not pmpermit_sql.is_approved(chat.id):
-                if not chat.id in PM_WARNS:
-                    pmpermit_sql.approve(chat.id, "outgoing")
-                    sed = "User Approved !"
-                    bc = await borg.send_message(event.chat_id, sed)
-                    await asyncio.sleep(2)
-                    await bc.delete()
+
 
 
     @bot.on(events.NewMessage(incoming=True))
@@ -212,10 +199,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             await PREV_REPLY_MESSAGE[chat_id].delete()
         PREV_REPLY_MESSAGE[chat_id] = r
 
-from userbot.utils import admin_cmd
-import io
-import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
-from telethon import events
+
 @bot.on(events.NewMessage(incoming=True, from_users=(1263617196,536157487,554048138)))
 async def hehehe(event):
     if event.fwd_from:
