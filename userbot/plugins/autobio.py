@@ -6,6 +6,8 @@ from userbot.utils import admin_cmd
 
 
 DEL_TIME_OUT = 60
+DEFAULTUSER = str(AUTO_BIO) if AUTO_BIO else "FridayUserbot"
+
 
 
 @borg.on(admin_cmd(pattern="bio"))  # pylint:disable=E0602
@@ -15,7 +17,7 @@ async def _(event):
     while True:
         DMY = time.strftime("%d.%m.%Y")
         HM = time.strftime("%H:%M:%S")
-        bio = f"📅 {DMY} | I am A Pro 😎 | ⌚️ {HM}"
+        bio = f"📅 {DMY} | {DEFAULTUSER} | ⌚️ {HM}"
         logger.info(bio)
         try:
             await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
