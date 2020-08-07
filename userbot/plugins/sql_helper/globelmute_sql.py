@@ -1,3 +1,5 @@
+# From Javes 05 Userbot ( For Gmute Plugin )
+
 try:
     from userbot.modules.sql_helper import SESSION, BASE
 except ImportError:
