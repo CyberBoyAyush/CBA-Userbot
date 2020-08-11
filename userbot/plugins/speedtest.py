@@ -21,7 +21,7 @@ async def _(event):
         as_document = True
     elif input_str == "text":
         as_text = True
-    await event.edit("`Calculating my internet speed. Please wait!`")
+    await event.edit("`Calculating my internet 🦄speed🦄. Please wait!`")
     start = datetime.now()
     s = speedtest.Speedtest()
     s.get_best_server()
@@ -54,14 +54,14 @@ async def _(event):
             await borg.send_file(
                 event.chat_id,
                 speedtest_image,
-                caption="**SpeedTest** completed in {} seconds".format(ms),
+                caption="**💞SpeedTest💞** completed in {} seconds".format(ms),
                 force_document=as_document,
                 reply_to=reply_msg_id,
                 allow_cache=False
             )
             await event.delete()
     except Exception as exc:
-        await event.edit("""**SpeedTest** completed in {} seconds
+        await event.edit("""**💞SpeedTest💞** completed in {} seconds
 Download: {}
 Upload: {}
 Ping: {}
