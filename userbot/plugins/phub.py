@@ -60,23 +60,29 @@ async def _(event):
 
     animation_ttl = range(0, 101)
 
-    await event.edit("amore")
+    await event.edit("fayash")
 
     animation_chars = [
 
-            "A_",
+            "F_",
 
-            "AM_",
+            "FA_",
 
-            "AMO_",
+            "FAY_",
 
-            "AMOR_",
+            "FAYA_",
             
-            "AMORE_",
+            "FAYAS_",
             
-            "AMORE❤_",
+            "FAYASH_",
             
-            ".-.",
+            "FAYASH🦄_",
+        
+            "FAYASH🦄💜_",
+            
+            "FAYASH🦄💜🍭",
+        
+            
 
         ]
 
