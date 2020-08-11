@@ -11,10 +11,10 @@ async def _(event):
         return
     await event.delete()
     start = datetime.now()
-    mone = await event.reply("Ping 🥍")
+    mone = await event.reply("Ping 💞")
     end = datetime.now()
     ms = (end - start).microseconds * 0.00001
-    await mone.edit("‎‎‎‎‎‎‎‎Ping 🥍 Speed is `{} ms`".format(ms))
+    await mone.edit("‎‎‎‎‎‎‎‎Ping 💞 Speed is `{} ms`".format(ms))
  
 
 def get_readable_time(seconds: int) -> str:
@@ -51,7 +51,7 @@ async def _(event):
     if event.fwd_from:
         return
     start = datetime.now()
-    await event.edit("Pong 🏓")
+    await event.edit("Pong 💗")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await event.edit(f"Pong Speed is `{ms}` 🏓")
+    await event.edit(f"Pong Speed is `{ms}` 💗")
