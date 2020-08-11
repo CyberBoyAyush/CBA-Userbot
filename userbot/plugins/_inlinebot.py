@@ -36,7 +36,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_popp_up_alert = "you don't have permission 4 clic this button!"
+            reply_popp_up_alert = "im not your bot!"
             await event.answer(reply_popp_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -54,7 +54,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "Please get your own Userbot, and don't use mine!"
+            reply_pop_up_alert = "im not your bot!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"us_plugin_(.*)")
@@ -81,7 +81,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 halps = "Do .help {} to get the list of commands.".format(plugin_name)
                 await event.answer(halps, cache_time=0, alert=True)
         else:
-            reply_pop_up_alert = "you don't have permission 4 clic this button!"
+            reply_pop_up_alert = "im not your bot!"
 
 def paginate_help(page_number, loaded_plugins, prefix):
     number_of_rows = 8
