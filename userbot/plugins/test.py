@@ -8,4 +8,4 @@ from uniborg.util import admin_cmd
 async def test(event):
     if event.fwd_from:
         return 
-    await event.edit("Test Successfull. Boss !")      
+    await event.edit("Test Successfull. Master !")      
