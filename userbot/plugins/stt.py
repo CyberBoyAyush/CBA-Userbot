@@ -15,7 +15,7 @@ async def _(event):
     input_str = event.pattern_match.group(1)
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
-    await event.edit("Downloading to my local, for analysis 🙂......")
+    await event.edit("Downloading to my local, for analysis 🧚🏻......")
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         required_file_name = await borg.download_media(
