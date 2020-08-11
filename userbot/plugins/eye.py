@@ -28,7 +28,7 @@ async def _(event):
 
     animation_chars = [
 
-            "👁👁\n  👄  =====> Gay",
+            "👁👁\n  👄  =====> Gay & Lesbo",
             "👁👁\n  👅  =====> Muh faker",    
             "👁👁\n  💋  =====> coc sukker",
             "👁👁\n  👄  =====> dick head",
