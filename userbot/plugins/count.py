@@ -111,7 +111,7 @@ async def stats(event: NewMessage.Event) -> None:  # pylint: disable = R0912, R0
     stop_time = time.time() - start_time
 
     full_name = inline_mention(await event.client.get_me())
-    response = f'🔸 **Stats for {full_name}** \n\n'
+    response = f'🍎 **Stats for {full_name}** \n\n'
     response += f'**Private Chats:** {private_chats} \n'
     response += f'   • `Users: {private_chats - bots}` \n'
     response += f'   • `Bots: {bots}` \n'
