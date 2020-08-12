@@ -28,16 +28,16 @@ async def _(event):
 
     animation_chars = [
 
-            "👁👁\n  👄  =====> Gay & Lesbo",
-            "👁👁\n  👅  =====> Muh faker",    
-            "👁👁\n  💋  =====> coc sukker",
-            "👁👁\n  👄  =====> dick head",
-            "👁👁\n  👅  =====> Pussy face",    
-            "👁👁\n  💋  =====> dickyfied dude",
-            "👁👁\n  👄  =====> homos",
-            "👁👁\n  👅  =====> Bhosdk",    
-            "👁👁\n  💋  =====> coc & pusy less",
-            "👁👁\n  👄  =====> Hi All, How Are You All..."
+            "👁👁\n  👄  =====> Gays",
+            "👁👁\n  👅  =====> Lesbos",    
+            "👁👁\n  💋  =====> Crakers",
+            "👁👁\n  👄  =====> Jokers",
+            "👁👁\n  👅  =====> Fools",    
+            "👁👁\n  💋  =====> Idiots",
+            "👁👁\n  👄  =====> Stupids",
+            "👁👁\n  👅  =====> Harami Creatures",    
+            "👁👁\n  💋  =====> Crazys",
+            "👁👁\n  👄  =====> Hi All🧚🏻💚, How Are You All🧚🏻💚..."
         ]
 
     for i in animation_ttl:
