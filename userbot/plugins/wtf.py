@@ -22,7 +22,10 @@ async def _(event):
             "What The",
             "What The F",
             "What The F Brah",
-            "[What The F Brah](https://telegra.ph/file/b54bbc1dce80356bbc892.png)"
+            "What The Fu Brah",
+            "What The Fuc Brah",
+            "What The Fuck Brah",
+            "[What The Fuck Brah](https://telegra.ph//file/f3b760e4a99340d331f9b.jpg)"
         ]
 
     for i in animation_ttl:
