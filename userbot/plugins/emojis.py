@@ -23,7 +23,7 @@ async def _(event):
     elif input_str == ":)":
         await event.edit(input_str)
         animation_chars = [
-            ":))",
+            ":)",
             ":("
         ]
         for i in animation_ttl:
