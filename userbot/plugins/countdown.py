@@ -94,5 +94,5 @@ async def timer_blankx(e):
 
  if e.pattern_match.group(1) == 'f':
 
-  await e.edit("`Successfully Promoted As Admin.` ")
+  await e.edit("`🎈You Successfully Promoted As Admin...!🎈` ")
 
