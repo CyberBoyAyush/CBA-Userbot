@@ -20,11 +20,11 @@ async def _(event):
         await event.edit("¯\_(ツ)_/¯")
     elif input_str == "apple":
         await event.edit("\uF8FF")
-    elif input_str == ":/":
+    elif input_str == ":)":
         await event.edit(input_str)
         animation_chars = [
-            ":\\",
-            ":/"
+            ":))",
+            ":("
         ]
         for i in animation_ttl:
             await asyncio.sleep(animation_interval)
