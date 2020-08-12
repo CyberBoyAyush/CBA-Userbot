@@ -10,7 +10,7 @@ from userbot.utils import admin_cmd
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 if PMPERMIT_PIC is None:
-  WARN_PIC = "https://telegra.ph/file/09dc7f7f4d0c902e1e01b.jpg"
+  WARN_PIC = "https://telegra.ph/file/d59cc705ff17d984d11fa.jpg"
 else:
   WARN_PIC = PMPERMIT_PIC
 
@@ -19,14 +19,14 @@ PREV_REPLY_MESSAGE = {}
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
-CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "**NOW YOU ARE IN MY MASTER'S😈 INBOX** \n`I DON,T ALLOW YOU TO SPAM HERE LICK IT🍭& WAIT`"
+CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "**NOW YOU ARE IN MY MASTER'S😈 INBOX** \n`I DON,T🧜🏻‍♀️ALLOW🔱YOU TO SPAM HERE LICK IT🍭& WAIT`"
 USER_BOT_WARN_ZERO = "`You were spamming my Master's inbox, Don't send next msg I ill 🦶ur # outta here.` "
-USER_BOT_NO_WARN = ("`yey...heyyy ! This is` **🧚🏻 G.U.L.F.Y 🧚🏻**\n"
-                    "`Faya's PM 🧜🏻‍♀️ Gaurdian Angel 🧜🏻‍♀️`\n\n"
+USER_BOT_NO_WARN = ("`yey...heyyy !   This  is`**🧚🏻 G.U.L.F.Y 🧚🏻**\n"
+                    "`FAYA promoted me as a PM🧜🏻‍♀️ GUARDIAN ANGEL 🧜🏻‍♀️`\n\n"
                     "**Currently My Master**\n"
-                    f"{DEFAULTUSER} is Busy ! So Better Don't Spam His Inbox !\n\n"
+                    f"{DEFAULTUSER} is Busy ! So🦄Better🦋Don't🦄Spam🦋His🦄Inbox !\n\n"
                     f"{CUSTOM_MIDDLE_PMP} \n\n"
-                    "**Now You Are In Trouble So Send** 💜 `/start` 💜  **To Start A Valid Conversation!!**")
+                    "**Click here and make*•.¸♡** 💜 `/start` 💜 **♡¸.•*Nice Conversation!!**")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
