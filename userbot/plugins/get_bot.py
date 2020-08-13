@@ -5,7 +5,7 @@ from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd("get_bot ?(.*)"))
+@borg.on(admin_cmd(pattern="get_bot ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -25,7 +25,7 @@ async def _(event):
     try:
         async for x in borg.iter_participants(chat, filter=ChannelParticipantsBots):
             if isinstance(x.participant, ChannelParticipantAdmin):
-                mentions += "\n 🍎 [{}](tg://user?id={}) `{}`".format(x.first_name, x.id, x.id)
+                mentions += "\n ⚜️ [{}](tg://user?id={}) `{}`".format(x.first_name, x.id, x.id)
             else:
                 mentions += "\n [{}](tg://user?id={}) `{}`".format(x.first_name, x.id, x.id)
     except Exception as e:

@@ -13,7 +13,7 @@ from userbot.utils import admin_cmd, progress
 FF_MPEG_DOWN_LOAD_MEDIA_PATH = "uniborg.media.ffmpeg"
 
 
-@borg.on(admin_cmd("ffmpegsave"))
+@borg.on(admin_cmd(pattern="ffmpegsave"))
 async def ff_mpeg_trim_cmd(event):
     if event.fwd_from:
         return
@@ -28,7 +28,9 @@ async def ff_mpeg_trim_cmd(event):
                 downloaded_file_name = await borg.download_media(
                     reply_message,
                     FF_MPEG_DOWN_LOAD_MEDIA_PATH,
-                    
+                    progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
+                      progress(d, t, event, c_time, "trying to download")
+                    )
                 )
             except Exception as e:  # pylint:disable=C0103,W0703
                 await event.edit(str(e))
@@ -42,7 +44,7 @@ async def ff_mpeg_trim_cmd(event):
         await event.edit(f"a media file already exists in path. Please remove the media and try again!\n`.exec rm {FF_MPEG_DOWN_LOAD_MEDIA_PATH}`")
 
 
-@borg.on(admin_cmd("ffmpegtrim"))
+@borg.on(admin_cmd(pattern="ffmpegtrim"))
 async def ff_mpeg_trim_cmd(event):
     if event.fwd_from:
         return
@@ -72,8 +74,10 @@ async def ff_mpeg_trim_cmd(event):
                 force_document=False,
                 supports_streaming=True,
                 allow_cache=False,
-                # reply_to=event.message.id,
-                
+                reply_to=event.message.id,
+                progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
+                   progress(d, t, event, c_time, "trying to upload")
+                )
             )
             os.remove(o)
         except Exception as e:
@@ -94,11 +98,11 @@ async def ff_mpeg_trim_cmd(event):
                 o,
                 caption=" ".join(cmt[1:]),
                 force_document=True,
-                # supports_streaming=True,
+                supports_streaming=True,
                 allow_cache=False,
-                # reply_to=event.message.id,
+                reply_to=event.message.id,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                    progress(d, t, event, c_time, "trying to upload")
+                   progress(d, t, event, c_time, "trying to upload")
                 )
             )
             os.remove(o)

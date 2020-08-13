@@ -1,157 +1,272 @@
+
+import asyncio
+import random
+import re
+import time
+from random import choice, randint
+from collections import deque
 from telethon import events
-import random, re
-from uniborg.util import admin_cmd
+import requests
 
-METOOSTR = [
-    "`Me too thanks`",
-    "`Haha yes, me too`",
-    "`Same lol`",
-    "`Me irl`",
-    "`Same here`",
-    "`Haha yes`",
-    "`Same pinch bsdk`",
-]
-RUNSREACTS = [
-    "`Runs to Thanos`",
-    "`Runs far, far away from earth`",
-    "`Running faster than usian bolt coz I'mma Bot`",
-    "`Runs to Marie`",
-    "`This Group is too cancerous to deal with.`",
-    "`Cya bois`",
-    "`I am a mad person. Plox Ban me.`",
-    "`I go away`",
-    "`I am just walking off, coz me is too fat.`",
-    "`I Fugged off!`",
-]
-RAPE_STRINGS = [
-     "`Rape Done Drink The Cum`",
-     "`The user has been successfully raped`",
-     "`Dekho Bhaiyya esa hai! Izzat bachailo apni warna Gaand maar lenge tumhari`",
-     "`Relax your Rear, ders nothing to fear,The Rape train is finally here`",
-     "`Rape coming... Raped! haha 😆`",
-     "`Lodu Andha hai kya Yaha tera rape ho raha hai aur tu abhi tak yahi gaand mara raha hai lulz`",
-] 
-ABUSE_STRINGS = [
-       "`Madharchod`",
-	   "`Gaandu`",
-	   "`Chutiya he rah jaye ga`",
-	   "`Ja be Gaandu`",
-	   "`Ma ka Bhodsa madharchod`",
-	   "`mml`",
-	   "`You MotherFukcer`",
-	   "`Muh Me Lega Bhosdike ?`"
-]
-GEY_STRINGS = [
-     "`you gey bsdk`",
-     "`you gey`",
-     "`you gey in the house`",
-     "`you chakka`",
-     "`you gey gey gey gey gey gey gey gey`",
-     "`you gey go away`",
-]
-PRO_STRINGS = [
-     "`This gey is pro as phack.`",
-     "`Pros here -_- Time to Leave`",
-]
-INSULT_STRINGS = [ 
-    "`Owww ... Such a stupid idiot.`",
-    "`Don't drink and type.`",
-    "`Command not found. Just like your brain.`",
-    "`Bot rule 544 section 9 prevents me from replying to stupid humans like you.`",
-    "`Sorry, we do not sell brains.`",
-    "`Believe me you are not normal.`",
-    "`I bet your brain feels as good as new, seeing that you never use it.`",
-    "`If I wanted to kill myself I'd climb your ego and jump to your IQ.`",
-    "`You didn't evolve from apes, they evolved from you.`",
-    "`What language are you speaking? Cause it sounds like bullshit.`",
-    "`You are proof that evolution CAN go in reverse.`",
-    "`I would ask you how old you are but I know you can't count that high.`",
-    "`As an outsider, what do you think of the human race?`",
-    "`Ordinarily people live and learn. You just live.`",
-    "`Keep talking, someday you'll say something intelligent!.......(I doubt it though)`",
-    "`Everyone has the right to be stupid but you are abusing the privilege.`",
-    "`I'm sorry I hurt your feelings when I called you stupid. I thought you already knew that.`",
-    "`You should try tasting cyanide.`",
-    "`You should try sleeping forever.`",
-    "`Pick up a gun and shoot yourself.`",
-    "`Try bathing with Hydrochloric Acid instead of water.`",
-    "`Go Green! Stop inhaling Oxygen.`",
-    "`God was searching for you. You should leave to meet him.`",
-    "`You should Volunteer for target in an firing range.`",
-    "`Try playing catch and throw with RDX its fun.`",
-    "`People like you are the reason we have middle fingers.`",
-    "`When your mom dropped you off at the school, she got a ticket for littering.`",
-    "`You’re so ugly that when you cry, the tears roll down the back of your head…just to avoid your face.`",
-    "`If you’re talking behind my back then you’re in a perfect position to kiss my a**!.`",
-]
+from telethon.tl.functions.users import GetFullUserRequest
+from telethon.tl.types import MessageEntityMentionName
+
+
+from userbot import CMD_HELP
+from userbot.utils import admin_cmd
+
+
+# ================= CONSTANT =================
+
+
+GAMBAR_TITIT = """
+🍆🍆
+🍆🍆🍆
+  🍆🍆🍆
+    🍆🍆🍆
+     🍆🍆🍆
+       🍆🍆🍆
+        🍆🍆🍆
+         🍆🍆🍆
+          🍆🍆🍆
+          🍆🍆🍆
+      🍆🍆🍆🍆
+ 🍆🍆🍆🍆🍆🍆
+ 🍆🍆🍆  🍆🍆🍆
+    🍆🍆       🍆🍆
+"""
+
 # ===========================================
-                          
 
-@borg.on(admin_cmd(pattern="run ?(.*)"))
-async def _(event):
-    if event.fwd_from:
-         return
-    bro = random.randint(0, len(RUNSREACTS) - 1)    
-    input_str = event.pattern_match.group(1)
-    reply_text = RUNSREACTS[bro]
-    await event.edit(reply_text)
+@borg.on(admin_cmd(pattern=r"hf$"))
+async def facepalm(e):
+    """ Facepalm  🤦‍♂ """
+    await e.edit("🤦‍♂")
 
-
-@borg.on(admin_cmd(pattern="metoo ?(.*)"))
-async def _(event):
-    if event.fwd_from:
-         return
-    bro = random.randint(0, len(METOOSTR) - 1)    
-    input_str = event.pattern_match.group(1)
-    reply_text = METOOSTR[bro]
-    await event.edit(reply_text)
+@borg.on(admin_cmd(pattern=r"corona$"))
+async def iqless(e):
+    await e.edit("Antivirus scan was completed \n⚠️ Warning! This  donkey has Corona Virus")
 
 
-@borg.on(admin_cmd(pattern="rapee ?(.*)"))
+@borg.on(admin_cmd(pattern=r"ggl (.*)"))
+async def let_me_google_that_for_you(lmgtfy_q):
+    textx = await lmgtfy_q.get_reply_message()
+    qry = lmgtfy_q.pattern_match.group(1)
+    if qry:
+        query = str(qry)
+    elif textx:
+        query = textx
+        query = query.message
+    query_encoded = query.replace(" ", "+")
+    lfy_url = f"http://lmgtfy.com/?s=g&iie=1&q={query_encoded}"
+    payload = {'format': 'json', 'url': lfy_url}
+    r = requests.get('http://is.gd/create.php', params=payload)
+    await lmgtfy_q.edit(f"Tap this blue, help yourself.\
+    \n[{query}]({r.json()['shorturl']})")
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="fail$"))
+async def fail(e):
+        await e.edit("`\n▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ `" 
+                     "`\n████▌▄▌▄▐▐▌█████ `"    
+                     "`\n████▌▄▌▄▐▐▌▀████ `"       
+                     "`\n▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ `")    
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="lol$"))
+async def lol(e):
+        await e.edit("`\n╱┏┓╱╱╱╭━━━╮┏┓╱╱╱╱ `" 
+                     "`\n╱┃┃╱╱╱┃╭━╮┃┃┃╱╱╱╱ `"       
+                     "`\n╱┃┗━━┓┃╰━╯┃┃┗━━┓╱ `" 
+                     "`\n╱┗━━━┛╰━━━╯┗━━━┛╱ `") 
+ 
+ 
+                                                                                   
+@borg.on(admin_cmd(outgoing=True, pattern="lool$"))
+async def lool(e):
+        await e.edit("`\n╭╭━━━╮╮┈┈┈┈┈┈┈┈┈┈\n┈┃╭━━╯┈┈┈┈▕╲▂▂╱▏┈\n┈┃┃╱▔▔▔▔▔▔▔▏╱▋▋╮┈`"
+                     "`\n┈┃╰▏┃╱╭╮┃╱╱▏╱╱▆┃┈\n┈╰━▏┗━╰╯┗━╱╱╱╰┻┫┈\n┈┈┈▏┏┳━━━━▏┏┳━━╯┈`"
+                     "`\n┈┈┈▏┃┃┈┈┈┈▏┃┃┈┈┈┈ `")
+                     
+
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="nih$"))
+async def nih(e):
+        await e.edit("`\n(\_/)`"
+                     "`\n(•_•)`"
+                     "`\n >🌹 *`"
+                     "`\n                    `"
+                     "`\n(\_/)`"
+                     "`\n(•_•)`"
+                     "`\n🌹<\ *`")
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="hoi$"))  
+async def gtfo(e):
+        await e.edit("`\n█████████`" 
+                     "`\n█▄█████▄█`"    
+                     "`\n█▼▼▼▼▼`"       
+                     "`\n█  Hello Man`"
+                     "`\n█▲▲▲▲▲`"
+                     "`\n█████████`"
+                    "`\n ██   ██`")               
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="ml(?: |$)(.*)"))
+async def gtfo(e):
+        message = e.pattern_match.group(1)
+        await e.edit("`\n█████████`" 
+                     "`\n█▄█████▄█`"    
+                     "`\n█▼▼▼▼▼`"       
+                     f"`\n█  {message}`"
+                     "`\n█▲▲▲▲▲`"
+                     "`\n█████████`"
+                    "`\n ██   ██`")               
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="taco$")) 
+async def taco(e):
+        await e.edit("\n{\__/}"
+                     "\n(●_●)"
+                     "\n( >🌮 Want a taco?")
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="paw$"))  
+async def paw(e):
+        await e.edit("`(=ↀωↀ=)")
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="tf$")) 
+async def tf(e):
+        await e.edit("(̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄  ")  
+      
+
+@borg.on(admin_cmd(outgoing=True, pattern="gay$"))           
+async def gey(e):
+        await e.edit("`\n┈┈┈╭━━━━━╮┈┈┈┈┈\n┈┈┈┃┊┊┊┊┊┃┈┈┈┈┈`"
+                     "`\n┈┈┈┃┊┊╭━╮┻╮┈┈┈┈\n┈┈┈╱╲┊┃▋┃▋┃┈┈┈┈\n┈┈╭┻┊┊╰━┻━╮┈┈┈┈`"
+                     "`\n┈┈╰┳┊╭━━━┳╯┈┈┈┈\n┈┈┈┃┊┃╰━━┫┈U GAY`"
+                    "\n┈┈┈┈┈┈┏━┓┈┈┈┈┈┈")    
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="bot$"))
+async def bot(e):
+        await e.edit("` \n   ╲╲╭━━━━╮ \n╭╮┃▆┈┈▆┃╭╮ \n┃╰┫▽▽▽┣╯┃ \n╰━┫△△△┣━╯`"
+                     "`\n╲╲┃┈┈┈┈┃  \n╲╲┃┈┏┓┈┃ `")
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="hai$"))
+async def hey(e):
+        await e.edit("\n┈┈┈╱▔▔▔▔╲┈╭━━━━━\n┈┈▕▂▂▂▂▂▂▏┃HELLO!┊😀`"
+                     "`\n┈┈▕▔▇▔▔┳▔▏╰┳╮HELLO!┊\n┈┈▕╭━╰╯━╮▏━╯╰━━━\n╱▔▔▏▅▅▅▅▕▔▔╲┈┈┈┈`"
+                     "`\n▏┈┈╲▂▂▂▂╱┈┈┈▏┈┈┈`")
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="nou$"))
+async def nou(e):
+        await e.edit("`\n┈╭╮╭╮\n┈┃┃┃┃\n╭┻┗┻┗╮`"
+                     "`\n┃┈▋┈▋┃\n┃┈╭▋━╮━╮\n┃┈┈╭╰╯╰╯╮`"
+                     "`\n┫┈┈  NoU\n┃┈╰╰━━━━╯`"
+                     "`\n┗━━┻━┛`")
+
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="mf$"))
+async def gtfo(e):
+        await e.edit(
+"\n......................................../´¯/) "
+"\n......................................,/¯../ "
+"\n...................................../..../ "
+"\n..................................../´.¯/"
+"\n..................................../´¯/"
+"\n..................................,/¯../ "
+"\n................................../..../ "
+"\n................................./´¯./"
+"\n................................/´¯./"
+"\n..............................,/¯../ "
+"\n............................./..../ "
+"\n............................/´¯/"
+"\n........................../´¯./"
+"\n........................,/¯../ "
+"\n......................./..../ "
+"\n....................../´¯/"
+"\n....................,/¯../ "
+"\n.................../..../ "
+"\n............./´¯/'...'/´¯¯`·¸ "
+"\n........../'/.../..../......./¨¯\ "
+"\n........('(...´...´.... ¯~/'...') "
+"\n.........\.................'...../ "
+"\n..........''...\.......... _.·´ "
+"\n............\..............( "
+"\n..............\.............\...")
+
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="sayhi$"))
+async def shalom(e):
+    await e.edit(
+        "\n💛💛💛💛💛💛💛💛💛"
+        "\n💛🔷🔷🔷🔷🔷🔷🔷💛"
+        "\n💛💛💛💛🔷💛💛💛💛"
+        "\n💛💛💛💛🔷💛💛💛💛"
+        "\n💛💛💛💛🔷💛💛💛💛"
+        "\n💛🔷🔷🔷🔷️🔷🔷🔷💛"
+        "\n💛💛💛💛💛💛💛💛💛"
+        "\n💛💛💛💛💛💛💛💛💛"
+        "\n💛🔷💛💛️💛💛💛🔷💛"
+        "\n💛🔷🔷🔷🔷🔷🔷🔷💛"
+        "\n💛🔷🔷🔷🔷🔷🔷️🔷💛"
+        "\n💛🔷💛💛💛💛️💛🔷💛"
+        "\n💛💛💛💛💛💛💛💛💛")
+
+@borg.on(admin_cmd(outgoing=True, pattern=r"(?:penis|dick)\s?(.)?"))
+async def emoji_penis(e):
+    emoji = e.pattern_match.group(1)
+    titid = GAMBAR_TITIT
+    if emoji:
+        titid = titid.replace('🍆', emoji)
+    await e.edit(titid)
+
+
+@borg.on(admin_cmd(pattern=f"muth", outgoing=True))
+
 async def _(event):
+
     if event.fwd_from:
-         return
-    bro = random.randint(0, len(RAPE_STRINGS) - 1)    
-    input_str = event.pattern_match.group(1)
-    reply_text = RAPE_STRINGS[bro]
-    await event.edit(reply_text)
-			  
-                          
-@borg.on(admin_cmd(pattern="insultt ?(.*)"))
-async def _(event):
-    if event.fwd_from:
-         return
-    bro = random.randint(0, len(INSULT_STRINGS) - 1)    
-    input_str = event.pattern_match.group(1)
-    reply_text = INSULT_STRINGS[bro]
-    await event.edit(reply_text)
-			  
-			  
-@borg.on(admin_cmd(pattern="proo ?(.*)"))
-async def _(event):
-    if event.fwd_from:
-         return
-    bro = random.randint(0, len(PRO_STRINGS) - 1)    
-    input_str = event.pattern_match.group(1)
-    reply_text = PRO_STRINGS[bro]
-    await event.edit(reply_text)
-			  
-			  
-@borg.on(admin_cmd(pattern="abusee ?(.*)"))
-async def _(event):
-    if event.fwd_from:
-         return
-    bro = random.randint(0, len(ABUSE_STRINGS) - 1)    
-    input_str = event.pattern_match.group(1)
-    reply_text = ABUSE_STRINGS[bro]
-    await event.edit(reply_text)
-			  
-			  
-@borg.on(admin_cmd(pattern="geyy ?(.*)"))
-async def _(event):
-    if event.fwd_from:
-         return
-    bro = random.randint(0, len(GEY_STRINGS) - 1)    
-    input_str = event.pattern_match.group(1)
-    reply_text = GEY_STRINGS[bro]
-    await event.edit(reply_text) 
+
+        return
+
+    animation_interval = 0.3
+
+    animation_ttl = range(0, 100)
+         
+    animation_chars = [
+
+            "8✊️===D",
+
+            "8=✊️==D",
+
+            "8==✊️=D",
+
+            "8===✊️D",
+
+            "8==✊️=D",
+
+            "8=✊️==D",
+
+            "8✊️===D",
+
+            "8===✊️D💦",
+
+            "8==✊️=D💦💦",
+
+            "8=✊️==D💦💦💦"
+
+        ]
+
+    for i in animation_ttl:
+        
+            await asyncio.sleep(animation_interval)
+        
+            await event.edit(animation_chars[i % 8])
