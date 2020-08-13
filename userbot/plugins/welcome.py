@@ -2,7 +2,8 @@ from telethon import events
 from telethon.utils import pack_bot_file_id
 from userbot.plugins.sql_helper.welcome_sql import get_current_welcome_settings, \
     add_welcome_setting, rm_welcome_setting, update_previous_welcome
-
+from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 @bot.on(events.ChatAction())  # pylint:disable=E0602
 async def _(event):
@@ -48,7 +49,7 @@ async def _(event):
             update_previous_welcome(event.chat_id, current_message.id)
 
 
-@command(pattern="^.savewelcome")  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="savewelcome"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -63,7 +64,7 @@ async def _(event):
         await event.edit("Welcome note saved. ")
 
 
-@command(pattern="^.clearwelcome")  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="clearwelcome"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -74,7 +75,7 @@ async def _(event):
         "The previous welcome message was `{}`.".format(cws.custom_welcome_message)
     )
 
-@command(pattern="^.listwelcome")  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="listwelcome"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -88,3 +89,19 @@ async def _(event):
         await event.edit(
             "No Welcome Message found"
         )
+        
+        
+        
+CMD_HELP.update({
+    "welcome":
+    "\
+.savewelcome <welcome message> or reply to a message with .setwelcome\
+\nUsage: Saves the message as a welcome note in the chat.\
+\n\nAvailable variables for formatting welcome messages :\
+\n`{mention}, {title}, {count}, {first}, {last}, {fullname}, {userid}, {username}, {my_first}, {my_fullname}, {my_last}, {my_mention}, {my_username}`\
+\n\n.listwelcome\
+\nUsage: Check whether you have a welcome note in the chat.\
+\n\n.clearwelcome\
+\nUsage: Deletes the welcome note for the current chat.\
+"
+})        

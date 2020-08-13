@@ -1,7 +1,6 @@
 """
 SLAP Plugin For Userbot
 usage:- .slap in reply to any message, or u gonna slap urself.
-
 """
 
 import sys
@@ -11,19 +10,44 @@ import random
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from userbot import ALIVE_NAME
+from userbot import CMD_HELP
 
 SLAP_TEMPLATES = [
-    "{user1} {hits} {user2} with a {item}.",
-    "{user1} {hits} {user2} in the face with a {item}.",
-    "{user1} {hits} {user2} around a bit with a {item}.",
-    "{user1} {throws} a {item} at {user2}.",
-    "{user1} grabs a {item} and {throws} it at {user2}'s face.",
-    "{user1} launches a {item} in {user2}'s general direction.",
-    "{user1} starts slapping {user2} silly with a {item}.",
-    "{user1} pins {user2} down and repeatedly {hits} them with a {item}.",
-    "{user1} grabs up a {item} and {hits} {user2} with it.",
-    "{user1} ties {user2} to a chair and {throws} a {item} at them.",
-    "{user1} gave a friendly push to help {user2} learn to swim in lava."
+    "{user1} {hits} {victim} with a {item}.",
+    "{user1} {hits} {victim} in the face with a {item}.",
+    "{user1} {hits} {victim} around a bit with a {item}.",
+    "{user1} {throws} a {item} at {victim}.",
+    "{user1} grabs a {item} and {throws} it at {victim}'s face.",
+    "{user1} {hits} a {item} at {victim}.",
+    "{user1} {throws} a few {item} at {victim}.",
+    "{user1} grabs a {item} and {throws} it in {victim}'s face.",
+    "{user1} launches a {item} in {victim}'s general direction.",
+    "{user1} sits on {victim}'s face while slamming a {item} {where}.",
+    "{user1} starts slapping {victim} silly with a {item}.",
+    "{user1} pins {victim} down and repeatedly {hits} them with a {item}.",
+    "{user1} grabs up a {item} and {hits} {victim} with it.",
+    "{user1} starts slapping {victim} silly with a {item}.",
+    "{user1} holds {victim} down and repeatedly {hits} them with a {item}.",
+    "{user1} prods {victim} with a {item}.",
+    "{user1} picks up a {item} and {hits} {victim} with it.",
+    "{user1} ties {victim} to a chair and {throws} a {item} at them.",
+    "{user1} {hits} {victim} {where} with a {item}.",
+    "{user1} ties {victim} to a pole and whips them {where} with a {item}."
+    "{user1} gave a friendly push to help {victim} learn to swim in lava.",
+    "{user1} sent {victim} to /dev/null.",
+    "{user1} sent {victim} down the memory hole.",
+    "{user1} beheaded {victim}.",
+    "{user1} threw {victim} off a building.",
+    "{user1} replaced all of {victim}'s music with Nickelback.",
+    "{user1} spammed {victim}'s email.",
+    "{user1} made {victim} a knuckle sandwich.",
+    "{user1} slapped {victim} with pure nothing.",
+    "{user1} hit {victim} with a small, interstellar spaceship.",
+    "{user1} quickscoped {victim}.",
+    "{user1} put {victim} in check-mate.",
+    "{user1} RSA-encrypted {victim} and deleted the private key.",
+    "{user1} put {victim} in the friendzone.",
+    "{user1} slaps {victim} with a DMCA takedown request!"
 ]
 
 ITEMS = [
@@ -35,11 +59,15 @@ ITEMS = [
     "nail",
     "printer",
     "shovel",
+    "pair of trousers",
     "CRT monitor",
+    "diamond sword",
+    "baguette",
     "physics textbook",
     "toaster",
     "portrait of Richard Stallman",
     "television",
+    "mau5head",
     "five ton truck",
     "roll of duct tape",
     "book",
@@ -47,8 +75,11 @@ ITEMS = [
     "old television",
     "sack of rocks",
     "rainbow trout",
+    "cobblestone block",
+    "lava bucket",
     "rubber chicken",
     "spiked bat",
+    "gold block",
     "fire extinguisher",
     "heavy rock",
     "chunk of dirt",
@@ -73,9 +104,11 @@ HIT = [
     "bashes",
 ]
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "FridayUserbot"
+WHERE = ["in the chest", "on the head", "on the butt", "on the crotch"]
 
-@borg.on(admin_cmd(pattern="slap ?(.*)", allow_sudo=True))
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@Sur_vivor"
+
+@borg.on(admin_cmd(pattern="slap ?(.*)"))
 async def who(event):
     if event.fwd_from:
         return
@@ -106,7 +139,7 @@ async def get_user(event):
             self_user = await event.client.get_me()
             user = self_user.id
 
-        if event.message.entities is not None:
+        if event.message.entities:
             probable_user_mention_entity = event.message.entities[0]
 
             if isinstance(probable_user_mention_entity, MessageEntityMentionName):
@@ -136,7 +169,16 @@ async def slap(replied_user, event):
     item = random.choice(ITEMS)
     hit = random.choice(HIT)
     throw = random.choice(THROW)
+    where = random.choice(WHERE)		  
 
-    caption = temp.format(user1=DEFAULTUSER, user2=slapped, item=item, hits=hit, throws=throw)
+    caption = temp.format(user1=DEFAULTUSER, victim=slapped, item=item, hits=hit, throws=throw, where=where)
 
     return caption
+
+
+
+CMD_HELP.update({
+    "slap":
+    ".slap reply to someones text with .slap\
+    \nUsage: reply to slap them with random objects !!"
+})

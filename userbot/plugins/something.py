@@ -1,4 +1,4 @@
-''' Whatever Plugin by Noobs of Telegram i.e. @pureindialover '''
+''' Whatever Plugin by Noobs of Telegram i.e. @PhycoNinja13b and @Halto_Tha '''
 
 from telethon import events
 import asyncio
@@ -21,11 +21,12 @@ async def test(event):
 
 🏬🏨🏫🏢🏤🏥🏦🏪🏫
               🌲/     l🚍\🌳👭
-           🌳/  🚘 l  🏃 \🌴 👬                       👬  🌴/            l  🚔    \🌲
-      🌲/   🚖     l               \
-   🌳/🚶           |   🚍         \ 🌴🚴🚴
+           🌳/  🚘 l  🏃 \🌴 👬                        👬     🌴/            l  🚔    \🌲
+      🌲/   🚖     l        \        
+          🌳/🚶           |   🚍         \ 🌴🚴🚴
 🌴/                    |                     \🌲""")
 
+# @PhycoNinja13b 's Part begin from here
 
 @borg.on(admin_cmd(pattern=r"hi"))
 async def hi(event):
@@ -44,6 +45,12 @@ async def getwell(event):
     if event.fwd_from:
         return
     await event.edit("🌹🌹🌹🌹🌹🌹🌹🌹 \n🌹😷😢😓😷😢💨🌹\n🌹💝💉🍵💊💐💝🌹\n🌹 GetBetter Soon! 🌹\n🌹🌹🌹🌹🌹🌹🌹🌹")
+
+@borg.on(admin_cmd(pattern=r"luck"))
+async def luck(event):
+    if event.fwd_from:
+        return
+    await event.edit("💚~🍀🍀🍀🍀🍀\n🍀╔╗╔╗╔╗╦╗✨🍀\n🍀║╦║║║║║║👍🍀\n🍀╚╝╚╝╚╝╩╝。 🍀\n🍀・・ⓁⓊⒸⓀ🍀\n🍀🍀🍀 to you💚")
 
 @borg.on(admin_cmd(pattern=r"sprinkle"))
 async def sprinkle(event):
