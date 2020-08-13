@@ -44,4 +44,4 @@ async def _(event):
     result = await borg(functions.help.GetConfigRequest())  # pylint:disable=E0602
     result = result.stringify()
     logger.info(result)  # pylint:disable=E0602
-    await event.edit("""Telethon UserBot powered by @FRIDAYSUPPORTOFFICIAL""")
+    await event.edit("""Telethon UserBot powered by @[Sensible Userbot Support](t.me/sensible_userbot)""")

@@ -1,7 +1,7 @@
 """Emoji
 Available Commands:
 .nope
-Credits to @mariodevs
+Credits to 
 """
 
 from telethon import events

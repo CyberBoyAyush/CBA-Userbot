@@ -3,6 +3,7 @@
 Support chatbox for pmpermit.
 Used by incoming messages with trigger as /start
 Will not work for already approved people.
+Credits: written by ༺αиυвιѕ༻ {@A_Dark_Princ3}
 """
 import asyncio
 import io 
@@ -14,7 +15,7 @@ from userbot import ALIVE_NAME
 from userbot.utils import admin_cmd
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in heroku vars"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "cat"
 PREV_REPLY_MESSAGE = {}
 
 
@@ -26,22 +27,27 @@ async def _(event):
         chat = await event.get_chat()
         if event.fwd_from:
             return
-        if event.is_private:
-         
-         PM = ("`🧚‍♀️Hello. You are accessing the availabe menu of my master🧚‍♀️,`"
+        if not event.is_private:
+            return
+        Nudas = ("__Please state your gender.__\n"
+                  "`1`. Female Homo-Sapien\n"
+                  "`2`. Male Homo-Sapien\n"
+                  "`3`. Other\n")
+        PM = ("`Hello. You are accessing the availabe menu of my peru master,`"
                f"{DEFAULTUSER}.\n"
-               "__Let's make this smooth and let me know why you are here🧜🏻‍♀️ ! So Select A Reason And Send it's Number__\n"
+               "__Let's make this smooth and let me know why you are here.__\n"
                "**Choose one of the following reasons why you are here:**\n\n"
-               "`1`. 🧚‍♀️To chat with my master🧜🏻‍♀️\n"
-               "`2`. 🧚‍♀️To Spam my master's Inbox🧜🏻‍♀️.\n"
-
-               "`3`. To enquire something\n"
-               "`4`. To request something\n")
-         ONE = ("`I🧚‍♀️ Have Registered Your Request ! Don't Worry My Master Will Be Here Soon To Chat With You !` \n\n")
-         TWO = ("`Please🧚‍♀️ Don't Spam My Master Inbox ! You Have Been Reported Until Further Notice !`")
-         FOUR = ("`Okay ! I 🧚‍♀️See You Can Request Your Demands ! Please Wait Untill My Master Approves You` !")
-         FIVE = ("`Okay. please have the basic manners as to not bother my master too much🧚‍♀️. If he wishes to help you, he will respond to you soon.`\n**Kindly Do not ask repeatdly else you will be blocked and reported.**")
-         LWARN = ("**This is your last warning🧜🏻‍♀️. DO NOT send another message else you will be blocked and reported. Keep patience. My master will respond you ASAP.**\n__Use__ `/start` __to go back to the main menu.__")
+               "`1`. To chat with my master\n"
+               "`2`. To spam my master's inbox.\n"
+               "`4`. To enquire something\n"
+               "`5`. To request something\n")
+        ONE = ("__Okay. Your request has been registered. Do not spam my master's inbox.You can expect a reply within 24 light years. He is a busy man, unlike you probably.__\n\n"
+                "**⚠️ You will be blocked and reported if you spam nibba. ⚠️**\n\n"
+                "__Use__ `/start` __to go back to the main menu.__")
+        TWO = (" `███████▄▄███████████▄  \n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓███░░░░░░░░░░░░█\n██████▀▀▀█░░░░██████▀  \n░░░░░░░░░█░░░░█  \n░░░░░░░░░░█░░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░░▀▀ `\n\n**So uncool, this is not your home. Go bother someone else. You have been blocked and reported until further notice.**")
+        FOUR = ("__Okay. My master has not seen your message yet.He usually responds to people,though idk about retarted ones.__\n __He'll respond when he comes back, if he wants to.There's already a lot of pending messages😶__\n **Please do not spam unless you wish to be blocked and reported.**")
+        FIVE = ("`Okay. please have the basic manners as to not bother my master too much. If he wishes to help you, he will respond to you soon.`\n**Do not ask repeatdly else you will be blocked and reported.**")
+        LWARN = ("**This is your last warning. DO NOT send another message else you will be blocked and reported. Keep patience. My master will respond you ASAP.**\n__Use__ `/start` __to go back to the main menu.__")
      
         async with borg.conversation(chat) as conv:
          await borg.send_message(chat, PM)
@@ -70,9 +76,7 @@ async def _(event):
                  await borg.send_message(chat, TWO)
                  await asyncio.sleep(3)
                  await event.client(functions.contacts.BlockRequest(chat_id))
-         
-
-         elif y == "3":
+         elif y == "4":
              await borg.send_message(chat, FOUR)
              response = await conv.get_response(chat)
              await event.delete()
@@ -85,7 +89,7 @@ async def _(event):
                      await borg.send_message(chat, TWO)
                      await asyncio.sleep(3)
                      await event.client(functions.contacts.BlockRequest(chat_id))
-         elif y == "4":
+         elif y == "5":
              await borg.send_message(chat,FIVE)
              response = await conv.get_response(chat)
              if not response.text == "/start":
@@ -106,4 +110,3 @@ async def _(event):
                      await borg.send_message(chat, TWO)
                      await asyncio.sleep(3)
                      await event.client(functions.contacts.BlockRequest(chat_id))
-

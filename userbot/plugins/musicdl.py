@@ -15,7 +15,7 @@ async def _(event):
     if ".com" not in d_link:
         await event.edit("` I need a link to download something pro.`**(._.)**")
     else:
-        await event.edit("🦄**Initiating Download!**🦄")
+        await event.edit("🎶**Initiating Download!**🎶")
     bot = "@DeezLoadBot"
     
     async with borg.conversation("@DeezLoadBot") as conv:
@@ -31,7 +31,7 @@ async def _(event):
               await borg.send_message(event.chat_id, details)
               await conv.get_response()
               songh = await conv.get_response()
-              await borg.send_file(event.chat_id, songh, caption="💜**Here's the requested song!**💜\n`Check out` [Friday userbot](https://github.com/StarkGang/FridayUserbot)")
+              await borg.send_file(event.chat_id, songh, caption="🔆**Here's the requested song!**🔆")
               await event.delete()
           except YouBlockedUserError:
               await event.edit("**Error:** `unblock` @DeezLoadBot `and retry!`")
