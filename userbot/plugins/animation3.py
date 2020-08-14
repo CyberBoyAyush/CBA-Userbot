@@ -125,7 +125,7 @@ async def _(event):
             "😁",    
             "😂",
             "🤣",
-            "😃",
+            "❤️",
             "😄",
             "😅",
             "😊",
@@ -140,7 +140,7 @@ async def _(event):
             "😥",
             "😮",    
             "🤐",
-            "😯",
+            "💋",
             "😴",
             "😔",
             "😕",
@@ -160,7 +160,7 @@ async def _(event):
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i % 35])
             
-@borg.on(admin_cmd(pattern=f"plane", outgoing=True))
+@borg.on(admin_cmd(pattern=f"planee", outgoing=True))
 async def _(event):
     if event.fwd_from:
         retun
