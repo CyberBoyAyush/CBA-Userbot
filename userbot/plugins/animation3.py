@@ -11,7 +11,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "cat"
 async def _(event):
 	if event.fwd_from:
 		return
-	deq = deque(list("🦋✨🦋✨🦋✨🦋✨"))
+	deq = deque(list("🦋✨🧚🏻🦋✨🧚🏻🦋✨🧚🏻🦋✨"))
 	for _ in range(48):
 		await asyncio.sleep(0.1)
 		await event.edit("".join(deq))
@@ -106,13 +106,13 @@ async def _(event):
  ]
     if event.fwd_from:
         return
-    await event.edit("fleaveme....")
+    await event.edit("leaveme....")
     await asyncio.sleep(2)
     for i in animation_ttl:
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i % 10])
 		
-@borg.on(admin_cmd(pattern="loveu", outgoing=True))
+@borg.on(admin_cmd(pattern="likeu", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -154,7 +154,7 @@ async def _(event):
             "🤯",
             "💔",
             "❤",
-            "i Love You❤",   
+            "i Like You❤",   
         ]
     for i in animation_ttl:
             await asyncio.sleep(animation_interval)
@@ -164,20 +164,20 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         retun
-    await event.edit("✈-------------")
-    await event.edit("-✈------------")
-    await event.edit("--✈-----------")
-    await event.edit("---✈----------")
-    await event.edit("----✈---------")
-    await event.edit("-----✈--------")
-    await event.edit("------✈-------")
-    await event.edit("-------✈------")
-    await event.edit("--------✈-----") 
-    await event.edit("---------✈----")
-    await event.edit("----------✈---")
-    await event.edit("-----------✈--")
-    await event.edit("------------✈-")
-    await event.edit("-------------✈")
+    await event.edit("❤️-------------")
+    await event.edit("-🧡------------")
+    await event.edit("--💛-----------")
+    await event.edit("---💚----------")
+    await event.edit("----💙---------")
+    await event.edit("-----💜--------")
+    await event.edit("------💖-------")
+    await event.edit("-------❤️------")
+    await event.edit("--------🤎-----") 
+    await event.edit("---------💖----")
+    await event.edit("----------💚---")
+    await event.edit("-----------🤍--")
+    await event.edit("------------🖤-")
+    await event.edit("-------------💔")
     await asyncio.sleep(3)
     await event.delete()           
     
