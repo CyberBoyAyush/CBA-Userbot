@@ -191,7 +191,6 @@ S = ("......♥️..♥️_____♥️..♥️___\n"
 "___...___♥️_\_♥️_______\n"
 "_____.....___♥️________\n"
 
-
 W = ("───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───\n"
 "───█▒▒░░░░░░░░░▒▒█───\n"
 "────█░░█░░░░░█░░█────\n"
@@ -325,7 +324,7 @@ async def bluedevilsupreme(supreme):
     await supreme.edit(S)
 @borg.on(admin_cmd(pattern=r"india"))
 async def bluedevilindia(india):
-    await india.edit(I)
+    await india.edit(I
 @borg.on(admin_cmd(pattern=r"wlcm"))
 async def bluedevilwelcome(welcome):
     await welcome.edit(W)
