@@ -59,7 +59,7 @@ async def _(event):
     await asyncio.sleep(0.5)
     await event.edit("▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n😵😵😵😵 \n")
     await asyncio.sleep(0.5)
-    await event.edit("`RIP PLOXXX......`")
+    await event.edit("`🌚💭BOOM....💭🌚`")
     await asyncio.sleep(2)
    
 @borg.on(admin_cmd(pattern=r"call$"))
@@ -68,27 +68,22 @@ async def _(event):
         return
     animation_interval = 3
     animation_ttl = range(0, 18)
-    await event.edit("Calling Pavel Durov (ceo of telegram)......")
+    await event.edit("......")
     animation_chars = [
         
-            "`Connecting To Telegram Headquarters...`",
+            "`Call Connecting To This User...`",
             "`Call Connected.`",
-            "`Telegram: Hello This is Telegram HQ. Who is this?`",
-            f"`Me: Yo this is` {DEFAULTUSER} ,`Please Connect me to my lil bro,Pavel Durov `",
-            "`User Authorised.`",
-            "`Calling Shivamani `  `At +916969696969`",
-            "`Private  Call Connected...`",
-            "`Me: Hello Sir, Please Ban This Telegram Account.`",    
-            "`Shivamani : May I Know Who Is This?`",
-            f"`Me: Yo Brah, I Am` {DEFAULTUSER} ",
-            "`Shivamani : OMG!!! Long time no see, Wassup cat...\nI'll Make Sure That Guy Account Will Get Blocked Within 24Hrs.`",
-            "`Me: Thanks, See You Later Brah.`",
-            "`Shivamani : Please Don't Thank Brah, Telegram Is Our's. Just Gimme A Call When You Become Free.`",
-            "`Me: Is There Any Issue/Emergency???`",
-            "`Shivamani : Yes Sur, There Is A Bug In Telegram v69.6.9.\nI Am Not Able To Fix It. If Possible, Please Help Fix The Bug.`",
-            "`Me: Send Me The App On My Telegram Account, I Will Fix The Bug & Send You.`",
-            "`Shivamani : Sure Sur \nTC Bye Bye :)`",
-            "`Private Call Disconnected.`"
+            "`USER: Hello Who is this?`",
+            f"`Me: Yo this is` {DEFAULTUSER}  `",
+            "`PLease Ban your self.`",
+            "`Call Rejected`",
+            "`Call Connecting To Telgram CEO Pavel Durov`",
+            "`Pavel Durov: yo man wassup? `",    
+            "`Me:FYn Brat...Plese BAN this User for me`",
+            f"`Pavel Durov: Chill Bruv ... I will Do it For YOU `",
+            "`Me: Thanks Sir..Bye`",
+            "`Call Ended...`",
+	    
         ]
     for i in animation_ttl:
             await asyncio.sleep(animation_interval)
@@ -115,7 +110,7 @@ async def _(event):
             "------------------>",    
             "------>;(^。^)ノ",
             "(￣ー￣) DEAD",
-            "`Targeted user killed by Headshot 😈.😈.😈.😈.😈.😈.😈......`\n '#Sad_Reacts_Online'\n",
+            "`Targeted user killed by Headshot .Nyc Shot Fayash🔫......`\n '#Sad_Reacts_Online'\n",
         ]
     for i in animation_ttl:
             await asyncio.sleep(animation_interval)
@@ -225,7 +220,7 @@ async def _(event):
 
 @borg.on(admin_cmd(pattern=f"charging$"))
 async def timer_blankx(e):
- txt=e.text[10:] + '\n\n`Tesla Wireless Charging (beta) Started...\nDevice Detected: Nokia 1100\nBattery Percentage:` '
+ txt=e.text[10:] + '\n\n`Tesla Wireless Charging (beta) Started...\nDevice Detected: Appl S11\nBattery Percentage:` '
  j=10
  k=j
  for j in range(j):
@@ -233,4 +228,4 @@ async def timer_blankx(e):
   k=k+10
   await asyncio.sleep(1)
  await asyncio.sleep(1) 
- await e.edit("`Tesla Wireless Charging (beta) Completed...\nDevice Detected: Nokia 1100 (Space Grey Varient)\nBattery Percentage:` [100%](https://telegra.ph/file/a45aa7450c8eefed599d9.mp4) ", link_preview=True)
+ await e.edit("`Tesla Wireless Charging (beta) Completed...\nDevice Detected: Apple S11 (Space Grey Varient)\nBattery Percentage:` [100%](https://telegra.ph/file/a45aa7450c8eefed599d9.mp4) ", link_preview=True)
