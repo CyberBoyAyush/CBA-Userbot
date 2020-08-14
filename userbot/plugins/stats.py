@@ -37,9 +37,9 @@ async def _(event):
             print(d)
     end = datetime.now()
     ms = (end - start).seconds
-    await event.edit("""`Your Stats Obtained in {} seconds`
-`You have {} Private Messages`
-`You are in {} Groups`
-`You are in {} Super Groups`
-`You Are in {} Channels`
-`And finally Bots = {}`""".format(ms, u, g, c, bc, b))
+    await event.edit("""`Your🐲Stats Obtained in🔥 {} 🐉seconds`
+`You🐲have🔥 {} 🐉Private Messages`
+`You🐲are in🔥 {} 🐉Groups`
+`You🐲are in🔥 {} 🐉Super Groups`
+`You🐲Are in🔥 {} 🐉Channels`
+`And🐲finally Bots =🔥 {} 🐉`""".format(ms, u, g, c, bc, b))
