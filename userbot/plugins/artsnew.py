@@ -322,9 +322,6 @@ async def bluedevilcouple(couple):
 @borg.on(admin_cmd(pattern=r"tnk"))
 async def bluedevilsupreme(supreme):
     await supreme.edit(S)
-@borg.on(admin_cmd(pattern=r"india"))
-async def bluedevilindia(india):
-    await india.edit(I
 @borg.on(admin_cmd(pattern=r"wlcm"))
 async def bluedevilwelcome(welcome):
     await welcome.edit(W)
