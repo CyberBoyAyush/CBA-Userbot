@@ -165,7 +165,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 30])
 
-@borg.on(admin_cmd(pattern=r"repe$", outgoing=True))
+@borg.on(admin_cmd(pattern=r"byee$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
