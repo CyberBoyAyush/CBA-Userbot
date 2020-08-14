@@ -14,7 +14,7 @@ async def _(event):
     mone = await event.reply("💜🦄🍭Ping🍭🦄💜")
     end = datetime.now()
     ms = (end - start).microseconds * 0.00001
-    await mone.edit("🦋💙Ping  Speed is💙🦋 `{} ms`".format(ms))
+    await mone.edit("💜🦄Ping  Speed is💜🦄 `{} ms`".format(ms))
  
 
 def get_readable_time(seconds: int) -> str:
