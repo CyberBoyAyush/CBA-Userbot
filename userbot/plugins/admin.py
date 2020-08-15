@@ -68,7 +68,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 # ================================================
 
 #@register(outgoing=True, pattern="^.setgpic$", allow_sudo=True))
-@borg.on(admin_cmd(pattern=r"setgpic", allow_sudo=True)))
+@borg.on(admin_cmd(pattern=r"setgpic", allow_sudo=True))
 @errors_handler
 async def set_group_photo(gpic):
     """ For .setgpic command, changes the picture of a group """
