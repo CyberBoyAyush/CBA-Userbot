@@ -44,7 +44,7 @@ def deEmojify(inputString: str) -> str:
     return re.sub(EMOJI_PATTERN, '', inputString)
 
 
-@register(outgoing=True, pattern="^.waifu(?: |$)(.*)")
+@register(outgoing=True, pattern="^.waifu(?: |$)(.*)", allow_sudo=True))
 
 async def waifu(animu):
 #"""Creates random anime sticker!"""
