@@ -313,7 +313,7 @@ B = ("────██───\n"
 "─▀───────▀▀─\n🚶🏻‍♂️🚶🏻‍♂️ɮʏɛ ʄʀɨɛռɖֆ..")
 
 
-@borg.on(admin_cmd(pattern=r"monster"))
+@borg.on(admin_cmd(pattern=r"monsterr"))
 async def bluedevilmonster(monster):
     await monster.edit(M)
 @borg.on(admin_cmd(pattern=r"pig"))
@@ -346,6 +346,6 @@ async def bluedevilwelcome(welcome):
 @borg.on(admin_cmd(pattern=r"snk"))
 async def bluedevilsnake(snake):
     await snake.edit(Z)
-@borg.on(admin_cmd(pattern=r"bye"))
+@borg.on(admin_cmd(pattern=r"byee"))
 async def bluedevilbye(bye):
     await bye.edit(B)    
