@@ -20,6 +20,7 @@ from PIL import ImageEnhance, ImageOps
 
 from userbot import CMD_HELP
 from userbot.events import register
+from userbot.utils import admin_cmd
 
 
 
