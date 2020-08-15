@@ -17,10 +17,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@borg.on(events.NewMessage(pattern='.app (.*)', allow_sudo=True))
-
-@borg.on(events.MessageEdited(pattern='.app (.*)', allow_sudo=True))
-
+@borg.on(admin_cmd(pattern="app ?(.*)", allow_sudo=True))
 async def apk(e):
     try:
         app_name = e.pattern_match.group(1)
@@ -48,10 +45,7 @@ async def apk(e):
     except Exception as err:
         await e.edit("Exception Occured:- "+str(err))
 
-@borg.on(events.NewMessage(pattern='.appr (.*)', allow_sudo=True))
-
-@borg.on(events.MessageEdited(pattern='.appr (.*)', allow_sudo=True))
-
+@borg.on(admin_cmd(pattern="apk ?(.*)", allow_sudo=True))
 async def apkr(e):
     try:
         app_name = e.pattern_match.group(1)
