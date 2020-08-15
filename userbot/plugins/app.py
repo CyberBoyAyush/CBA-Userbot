@@ -3,18 +3,12 @@
 .appr <app_name>  to fetch app details with Xpl0iter request link."""
 
 import requests
-
 import bs4
-
 import re
-
-
-
 from telethon import *
-
 from userbot import CMD_HELP
-
 from userbot.events import register
+from userbot.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="app ?(.*)", allow_sudo=True))
