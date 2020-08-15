@@ -20,7 +20,7 @@ pm_caption += "**License** : [MIT Licence](github.com/StarkGang/FridayUserbot/bl
 pm_caption += "Copyright : By [StarkGang@Github](GitHub.com/StarkGang)\n"
 pm_caption += " [Deploy FridayUserbot](https://telegra.ph/FRIDAY-06-15)"
 #@command(outgoing=True, pattern="^.alive$")
-@borg.on(admin_cmd(pattern=r"alive"))
+@borg.on(admin_cmd(pattern=r"alive", allow_sudo=True))
 async def amireallyalive(alive):
     chat = await alive.get_chat()
     await alive.delete()
