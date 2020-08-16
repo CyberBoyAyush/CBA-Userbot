@@ -320,15 +320,15 @@ async def bluedevilmonster(demon):
 @borg.on(admin_cmd(pattern=r"hy"))
 async def bluedevilhy(hy):
     await hy.edit(P)
-@borg.on(admin_cmd(pattern=r"hibb"))
-async def bluedevilhibb(hibb):
-    await hibb.edit(K)
+@borg.on(admin_cmd(pattern=r"baby"))
+async def bluedevilbaby(baby):
+    await baby.edit(K)
 @borg.on(admin_cmd(pattern=r"muusic"))
 async def bluedevilgun(gun):
     await gun.edit(G)
-@borg.on(admin_cmd(pattern=r"gn"))
-async def bluedevilgn(gn):
-    await gn.edit(D)    
+@borg.on(admin_cmd(pattern=r"goodn"))
+async def bluedevilgoodn(goodn):
+    await goodn.edit(D)    
 @borg.on(admin_cmd(pattern=r"hello"))
 async def bluedevilhello(hello):
     await hello.edit(H)
