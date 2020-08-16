@@ -160,7 +160,7 @@ G = ("╔══╗        🎧\n"
 D = ("🌙.     *       ☄️      \n"
 "🌟   .  *       .         \n"
 "                       *   .      🛰     .        ✨      *\n"
-"  .     *   SLEEP WELL        🚀     
+"  .     *   SLEEP WELL        🚀     \n"
 "      .              . . SWEET DREAMS 🌙\n"
 ". *       🌏 GOOD NIGHT         *\n"
 "                     🌙.     *       ☄️      \n"
