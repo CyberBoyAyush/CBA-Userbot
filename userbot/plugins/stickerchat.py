@@ -57,7 +57,7 @@ if 1 == 1:
                                           "default_username_color": "#b48bf2"})
     client = borg
 
-    @borg.on(admin_cmd(pattern="stchat(.*)"))
+    @borg.on(admin_cmd(pattern="stca (.*)"))
     async def quotecmd(message):  # noqa: C901
         """Quote a message.
         Usage: .quote [template]
