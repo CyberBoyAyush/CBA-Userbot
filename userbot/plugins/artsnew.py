@@ -142,10 +142,13 @@ P = ("██╗░░██╗██╗\n"
 "██║░░██║██║\n"
 "╚═╝░░╚═╝╚═╝\n")
 
-K = ("_/﹋\_\n"
-"(҂`_´)\n"
-"<,︻╦╤─ ҉ - -\n"
-"_/﹋\_\n")
+K = ("..... (¯`v´¯)♥️\n"
+".......•.¸.•´\n"
+"....¸.•´  🅷🅸\n"
+"... (   BABYy\n"
+"☻/ \n"
+"/▌✿🌷✿\n"
+"/ \     \|/\n")
 
 G = ("╔══╗        🎧\n"
 "║██║  Nice ya ! (•  ̮ •) \n"
@@ -154,16 +157,16 @@ G = ("╔══╗        🎧\n"
 "▄ █ ▄ █ ▄ ▄ █ ▄ █ ▄ █\n"
 "Min- - - - - - - - - - - -●Max\n")
 
-D = ("╥━━━━━━━━╭━━╮━━┳\n"
-"╢╭╮╭━━━━━┫┃▋▋━▅┣\n"
-"╢┃╰┫┈┈┈┈┈┃┃┈┈╰┫┣\n"
-"╢╰━┫┈┈┈┈┈╰╯╰┳━╯┣\n"
-"╢┊┊┃┏┳┳━━┓┏┳┫┊┊┣\n"
-"╨━━┗┛┗┛━━┗┛┗┛━━┻\n")
-H = ("╔┓┏╦━╦┓╔┓╔━━╗\n" 
-"║┗┛║┗╣┃║┃║X X║\n"
-"║┏┓║┏╣┗╣┗╣╰╯║\n"
-"╚┛┗╩━╩━╩━╩━━╝\n")
+D = ("🌙.     *       ☄️      \n"
+"🌟   .  *       .         \n"
+"                       *   .      🛰     .        ✨      *\n"
+"  .     *   SLEEP WELL        🚀     
+"      .              . . SWEET DREAMS 🌙\n"
+". *       🌏 GOOD NIGHT         *\n"
+"                     🌙.     *       ☄️      \n"
+"🌟   .  *       .         \n"
+"                       *   .      🛰     .        ✨      *\n")
+
 E = ("▬▬▬.◙.▬▬▬ \n"
 "═▂▄▄▓▄▄▂ \n"
 "◢◤ █▀▀████▄▄▄▄◢◤ \n"
@@ -317,15 +320,15 @@ async def bluedevilmonster(demon):
 @borg.on(admin_cmd(pattern=r"hy"))
 async def bluedevilhy(hy):
     await hy.edit(P)
-@borg.on(admin_cmd(pattern=r"kiler"))
-async def bluedevilkiller(kiler):
-    await kiler.edit(K)
+@borg.on(admin_cmd(pattern=r"hibb"))
+async def bluedevilhibb(hibb):
+    await hibb.edit(K)
 @borg.on(admin_cmd(pattern=r"muusic"))
 async def bluedevilgun(gun):
     await gun.edit(G)
-@borg.on(admin_cmd(pattern=r"dog"))
-async def bluedevildog(dog):
-    await dog.edit(D)    
+@borg.on(admin_cmd(pattern=r"gn"))
+async def bluedevilgn(gn):
+    await gn.edit(D)    
 @borg.on(admin_cmd(pattern=r"hello"))
 async def bluedevilhello(hello):
     await hello.edit(H)
@@ -344,6 +347,6 @@ async def bluedevilwelcome(welcome):
 @borg.on(admin_cmd(pattern=r"snk"))
 async def bluedevilsnake(snake):
     await snake.edit(Z)
-@borg.on(admin_cmd(pattern=r"byee"))
-async def bluedevilbye(bye):
-    await bye.edit(B)    
+@borg.on(admin_cmd(pattern=r"cya"))
+async def bluedevilcya(cya):
+    await cya.edit(B)    
