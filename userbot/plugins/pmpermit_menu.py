@@ -40,7 +40,7 @@ async def _(event):
                "`1`. 🧜‍♀️To chat with my master🧜‍♀️\n"
                "`2`. 🧜‍♀️To spam my master's inbox.🧜‍♀️\n"
                "`4`. 🧝‍♂️To enquire something🧝‍♂️\n"
-               "`5`. 🧝‍♂️MuhfAker girls seeker_pm nibba\n🧝‍♂️")
+               "`5`. 🧝‍♂️MuhfAker girls seeker_pm nibba\n")
         ONE = ("__Okay🧞‍♀️. Your request has been registered🧞‍♀️. Do not spam my master's inbox.You can expect a reply within 24 light years🧞‍♀️. He is a busy man, unlike you probably🧞‍♀️.__\n\n"
                 "**⚓🧜‍♀️You will be blocked and reported if you spam nibba.🌪🧞‍♀️⚠️**\n\n"
                 "__Use__ `/start` __to go back to the main menu.__")
