@@ -12,7 +12,7 @@ from userbot.utils import admin_cmd
 
 # RegEx by https://t.me/c/1220993104/500653 ( @SnapDragon7410 )
 
-@borg.on(admin_cmd(pattern="stikc ?(?:(.*?) \| )?(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern="stik ?(?:(.*?) \| )?(.*)", outgoing=True))
 async def sticklet(event):
     R = random.randint(0,256)
     G = random.randint(0,256)
