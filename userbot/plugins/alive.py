@@ -25,6 +25,7 @@ async def friday(alive):
     chat = await alive.get_chat()
     """ For .alive command, check if the bot is running.  """
     await borg.send_file(alive.chat_id, PM_IMG,caption=pm_caption)
+    await alive.delete()
 
     
 @borg.on(admin_cmd(pattern=r"Alive", allow_sudo=True))
