@@ -103,14 +103,14 @@ async def _(event):
     animation_ttl = range(0, 11)
     animation_chars = [
             "😁",
-            "😧",
+            "😂",
             "😡",
-            "😢",
-            "‎**Repo of catuserbot**",
-            "😁",
-            "😧",
-            "😡",
-            "😢",
+            "😈",
+            "😍",
+            "😘",
+            "🎃",
+            "💀",
+            "😻",
             "[‎](github.com/sandy1709/catuserbot)",
             "__**Good to See you guys....**__"
         ]
