@@ -20,7 +20,14 @@ pm_caption += "**License** : [MIT Licence](github.com/StarkGang/FridayUserbot/bl
 pm_caption += "Copyright : By [StarkGang@Github](GitHub.com/StarkGang)\n"
 pm_caption += " [Deploy FridayUserbot](https://telegra.ph/FRIDAY-06-15)"
 
-@borg.on(admin_cmd(pattern=r"alive", allow_sudo=True))
+@borg.on(admin_cmd(pattern=r"alive"))
+async def friday(alive):
+    chat = await alive.get_chat()
+    """ For .alive command, check if the bot is running.  """
+    await borg.send_file(alive.chat_id, PM_IMG,caption=pm_caption)
+
+    
+@borg.on(admin_cmd(pattern=r"Alive", allow_sudo=True))
 async def friday(alive):
     chat = await alive.get_chat()
     """ For .alive command, check if the bot is running.  """
