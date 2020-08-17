@@ -23,8 +23,7 @@ pm_caption += " [Deploy FridayUserbot](https://telegra.ph/FRIDAY-06-15)"
 @borg.on(admin_cmd(pattern=r"alive", allow_sudo=True))
 async def amireallyalive(alive):
     chat = await alive.get_chat()
-    await alive.delete()
     """ For .alive command, check if the bot is running.  """
     await borg.send_file(alive.chat_id, PM_IMG,caption=pm_caption)
-    await alive.delete() 
+
     
