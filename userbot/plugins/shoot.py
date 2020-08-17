@@ -16,7 +16,7 @@ from collections import deque
 
 DEF = str(ALIVE_NAME) if ALIVE_NAME else "cat"
 
-@borg.on(admin_cmd(pattern="kilr (.*)"))
+@borg.on(admin_cmd(pattern="shoot (.*)"))
 async def _(event):
     name = event.pattern_match.group(1)
     if event.fwd_from:
