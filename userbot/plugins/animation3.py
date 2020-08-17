@@ -112,13 +112,13 @@ async def _(event):
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i % 10])
 		
-@borg.on(admin_cmd(pattern="likeu", outgoing=True))
+@borg.on(admin_cmd(pattern="lyku", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
     animation_interval = 0.5
     animation_ttl = range(0, 70)
-    await event.edit("loveu")
+    await event.edit("lyku")
     animation_chars = [
             "😀",
             "👩‍🎨",
@@ -160,7 +160,7 @@ async def _(event):
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i % 35])
             
-@borg.on(admin_cmd(pattern=f"planee", outgoing=True))
+@borg.on(admin_cmd(pattern=f"hart", outgoing=True))
 async def _(event):
     if event.fwd_from:
         retun
