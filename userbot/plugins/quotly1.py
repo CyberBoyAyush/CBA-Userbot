@@ -13,7 +13,7 @@ import logging
 import os
 from .. import process
 
-@borg.on(admin_cmd(pattern="q(?: |$)(.*)"))
+@borg.on(admin_cmd(pattern="qly(?: |$)(.*)"))
 async def stickerchat(catquotes):
     if catquotes.fwd_from:
         return
@@ -37,7 +37,7 @@ async def stickerchat(catquotes):
     await borg.send_file(catquotes.chat_id, ".tmp/sticker.webp" , reply_to = reply)
     os.remove('.tmp/sticker.webp')
     
-@borg.on(admin_cmd(pattern="qbot(?: |$)(.*)",outgoing=True))
+@borg.on(admin_cmd(pattern="qly(?: |$)(.*)",outgoing=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -69,7 +69,7 @@ async def _(event):
              await event.delete()
              await event.client.send_message(event.chat_id, response.message)
   
-@borg.on(sudo_cmd(pattern="qbot(?: |$)(.*)",allow_sudo = True))
+@borg.on(sudo_cmd(pattern="qly(?: |$)(.*)",allow_sudo = True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -85,7 +85,7 @@ async def _(event):
     if reply_message.sender.bot:
        await event.reply("```Reply to actual users message.```")
        return
-    cat = await event.reply("```Making a Quote```")
+    cat = await event.reply("```🧚🏻Making🌈a🌈Quote🧚🏻```")
     await borg.send_read_acknowledge(conv.chat_id)
     async with event.client.conversation(chat) as conv:
           try:     
