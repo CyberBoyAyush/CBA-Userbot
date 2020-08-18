@@ -319,11 +319,10 @@ Z = ("░░░░▓\n"
 "░░░░░░░░░░░░░░░░███\n"
 "░░░░░░░░░░░░░░░░░░░\n")
 
-B = ("────██───\n"
-"──▄▀█▄▄▄─────\n"
-"▄▀──█▄▄──────\n"
-"─▄▄▄▀──▀▄───\n"
-"─▀───────▀▀─\n🚶🏻‍♂️🚶🏻‍♂️ɮʏɛ ʄʀɨɛռɖֆ..")
+B = ("😍🔊Noice to Hear🎧😍\n"
+"0:35 ━❍──────── -5:32\n"
+"        ↻     ⊲  ▶️  ⊳     ↺\n"
+"VOLUME: ▁▂▃▄▅▆▇ 100%\n")
 
 
 @borg.on(admin_cmd(pattern=r"demon"))
@@ -359,6 +358,6 @@ async def bluedevilwelcome(welcome):
 @borg.on(admin_cmd(pattern=r"snk"))
 async def bluedevilsnake(snake):
     await snake.edit(Z)
-@borg.on(admin_cmd(pattern=r"cya"))
-async def bluedevilcya(cya):
-    await cya.edit(B)    
+@borg.on(admin_cmd(pattern=r"noice"))
+async def bluedevilnoice(noice):
+    await noice.edit(B)    
