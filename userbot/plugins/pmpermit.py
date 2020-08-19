@@ -30,7 +30,7 @@ USER_BOT_NO_WARN = ("`Hello ! This is` **F.R.I.D.A.Y**\n"
 
 
 if Var.PRIVATE_GROUP_ID is not None:
-    @command(pattern="^.approve ?(.*)")
+    @command(pattern="^.a ?(.*)")
     async def approve_p_m(event):
         if event.fwd_from:
            return
@@ -60,17 +60,13 @@ if Var.PRIVATE_GROUP_ID is not None:
         reason = event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
-          if chat.id == 1263617196:
-            await event.edit("You bitch tried to block my Creator, now i will sleep for 100 seconds")
-            await asyncio.sleep(100)
-          else:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit(" ███████▄▄███████████▄  \n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓███░░░░░░░░░░░░█\n██████▀▀▀█░░░░██████▀  \n░░░░░░░░░█░░░░█  \n░░░░░░░░░░█░░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░░▀▀ \n\n**This is Uncool ! Now My boss Banned you nigga Due To backchodi 💩**[{}](tg://user?id={})".format(firstname, chat.id))
+                await event.edit("Blocked [{}](tg://user?id={})".format(firstname, chat.id))
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
-    @command(pattern="^.disapprove ?(.*)")
+    @command(pattern="^.da ?(.*)")
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -79,14 +75,10 @@ if Var.PRIVATE_GROUP_ID is not None:
         reason = event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
-          if chat.id == 813878981:
-            await event.edit("Sorry, I Can't Disapprove My Master")
-          else:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit("Disapproved [{}](tg://user?id={})".format(firstname, chat.id))
-                
-    
+                await event.edit("Disapproved User [{}](tg://user?id={})".format(firstname, chat.id))
+                await event.delete()
 
     @command(pattern="^.listapproved")
     async def approve_p_m(event):
