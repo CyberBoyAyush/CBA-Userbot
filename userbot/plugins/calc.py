@@ -45,17 +45,19 @@ async def _(event):
         evaluation = "Something went wrong"
 
     final_output = "**EQUATION**: `{}` \n\n **SOLUTION**: \n`{}` \n".format(
-        cmd, evaluation)
+        cmd, evaluation
+    )
     await event.edit(final_output)
 
 
 async def aexec(code, event):
-    exec(
-        f'async def __aexec(event): ' +
-        ''.join(f'\n {l}' for l in code.split('\n'))
-    )
-    return await locals()['__aexec'](event)
+    exec(f"async def __aexec(event): " + "".join(f"\n {l}" for l in code.split("\n")))
+    return await locals()["__aexec"](event)
 
-CMD_HELP.update({"calc": "`.calc` your equation :\
+
+CMD_HELP.update(
+    {
+        "calc": "`.calc` your equation :\
       \nUSAGE: solves the given maths equation by bodmass rule. "
-                 })
+    }
+)

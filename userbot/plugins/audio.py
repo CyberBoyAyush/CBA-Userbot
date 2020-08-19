@@ -1,4 +1,3 @@
-
 import datetime
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -25,14 +24,17 @@ async def _(event):
     await event.edit("```Processing```")
     async with borg.conversation(chat) as conv:
         try:
-            response = conv.wait_event(events.NewMessage(
-                incoming=True, from_users=507379365))
+            response = conv.wait_event(
+                events.NewMessage(incoming=True, from_users=507379365)
+            )
             await borg.send_message(chat, reply_message)
             response = await response
         except YouBlockedUserError:
             await event.reply("```Please unblock @sangmatainfo_bot and try again```")
             return
         if response.text.startswith("🌐"):
-            await event.edit("```can you kindly disable your forward privacy settings for good?```")
+            await event.edit(
+                "```can you kindly disable your forward privacy settings for good?```"
+            )
         else:
             await borg.send_file(event.chat_id, response.message.message.media)

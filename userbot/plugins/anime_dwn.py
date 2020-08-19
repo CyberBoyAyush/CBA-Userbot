@@ -19,7 +19,7 @@ async def get_file_name(link):
     new_link = link[26:]
     l = ""
     for c in new_link:
-        if c == '?':
+        if c == "?":
             break
         l = l + c
     l = l.replace("/", "_")
@@ -53,17 +53,17 @@ async def anime_download(event):
     var = event.text
     var = var[6:]
     res = requests.get(var)
-    source = bs(res.text, 'lxml')
+    source = bs(res.text, "lxml")
 
-    for a in source.find_all('a', {'class': 'infovan'}):
-        url_links.append(a['href'])
+    for a in source.find_all("a", {"class": "infovan"}):
+        url_links.append(a["href"])
 
     for i in url_links:
         res = requests.get(i)
-        source = bs(res.text, 'lxml')
+        source = bs(res.text, "lxml")
 
-        for a in source.find_all('a', {'class': 'an'}):
-            urls.append(a['href'])
+        for a in source.find_all("a", {"class": "an"}):
+            urls.append(a["href"])
         print("Getting Link...")
 
     counter = 0
@@ -82,6 +82,6 @@ async def anime_download(event):
     for i in urls:
         filename = await get_file_name(i)
         print(filename)
-        filename = download_dir+"/"+filename
+        filename = download_dir + "/" + filename
         await download_file(i, filename)
     await event.edit("All Episodes Downloaded.")

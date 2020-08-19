@@ -16,35 +16,19 @@ async def _(event):
     animation_ttl = range(0, 13)
     await event.edit("sadmin")
     animation_chars = [
-
-
-
         "@aaaaaaaaaaaaadddddddddddddmmmmmmmmmmmmmiiiiiiiiiiiiinnnnnnnnnnnnn",
-
         "@aaaaaaaaaaaaddddddddddddmmmmmmmmmmmmiiiiiiiiiiiinnnnnnnnnnnn",
-
         "@aaaaaaaaaaadddddddddddmmmmmmmmmmmiiiiiiiiiiinnnnnnnnnnn",
-
         "@aaaaaaaaaaddddddddddmmmmmmmmmmiiiiiiiiiinnnnnnnnnn",
-
         "@aaaaaaaaadddddddddmmmmmmmmmiiiiiiiiinnnnnnnnn",
-
         "@aaaaaaaaddddddddmmmmmmmmiiiiiiiinnnnnnnn",
-
         "@aaaaaaadddddddmmmmmmmiiiiiiinnnnnnn",
-
         "@aaaaaaddddddmmmmmmiiiiiinnnnnn",
-
         "@aaaaadddddmmmmmiiiiinnnnn",
-
         "@aaaaddddmmmmiiiinnnn",
-
         "@aaadddmmmiiinnn",
-
         "@aaddmmiinn",
-
-        "@admin"
-
+        "@admin",
     ]
 
     for i in animation_ttl:

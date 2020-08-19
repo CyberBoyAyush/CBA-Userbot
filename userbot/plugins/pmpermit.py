@@ -18,20 +18,27 @@ PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
 
-DEFAULTUSER = str(
-    ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
-CUSTOM_MIDDLE_PMP = str(
-    CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "**NOW YOU ARE IN MY MASTER'S😈 INBOX** \n`I DON,T🧜🏻‍♀️ALLOW🔱YOU TO SPAM HERE LICK IT🍭& WAIT`"
+DEFAULTUSER = (
+    str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
+)
+CUSTOM_MIDDLE_PMP = (
+    str(CUSTOM_PMPERMIT)
+    if CUSTOM_PMPERMIT
+    else "**NOW YOU ARE IN MY MASTER'S😈 INBOX** \n`I DON,T🧜🏻‍♀️ALLOW🔱YOU TO SPAM HERE LICK IT🍭& WAIT`"
+)
 USER_BOT_WARN_ZERO = "`You were spamming my Master's inbox, Don't send next msg I ill 🦶ur # outta here.` "
-USER_BOT_NO_WARN = ("`yey...heyyy ! This is           `**🧚🏻 G.U.L.F.Y 🧚🏻**\n"
-                    "`FAYA promoted me as a PM        🧜🏻‍♀️ GUARDIAN ANGEL 🧜🏻‍♀️`\n\n"
-                    "**Currently My Master**\n"
-                    f"{DEFAULTUSER} is Busy ! So🦄Better🦋Don't🦄Spam🦋His🦄Inbox !\n\n"
-                    f"{CUSTOM_MIDDLE_PMP} \n\n"
-                    "**Click here and make*•.¸♡** 💜 `/start` 💜 **♡¸.•*Nice Conversation!!**")
+USER_BOT_NO_WARN = (
+    "`yey...heyyy ! This is           `**🧚🏻 G.U.L.F.Y 🧚🏻**\n"
+    "`FAYA promoted me as a PM        🧜🏻‍♀️ GUARDIAN ANGEL 🧜🏻‍♀️`\n\n"
+    "**Currently My Master**\n"
+    f"{DEFAULTUSER} is Busy ! So🦄Better🦋Don't🦄Spam🦋His🦄Inbox !\n\n"
+    f"{CUSTOM_MIDDLE_PMP} \n\n"
+    "**Click here and make*•.¸♡** 💜 `/start` 💜 **♡¸.•*Nice Conversation!!**"
+)
 
 
 if Var.PRIVATE_GROUP_ID is not None:
+
     @command(pattern="^.approve ?(.*)")
     async def approve_p_m(event):
         if event.fwd_from:
@@ -48,7 +55,9 @@ if Var.PRIVATE_GROUP_ID is not None:
                     await PREV_REPLY_MESSAGE[chat.id].delete()
                     del PREV_REPLY_MESSAGE[chat.id]
                 pmpermit_sql.approve(chat.id, reason)
-                await event.edit("Approved to pm [{}](tg://user?id={})".format(firstname, chat.id))
+                await event.edit(
+                    "Approved to pm [{}](tg://user?id={})".format(firstname, chat.id)
+                )
                 await asyncio.sleep(3)
                 await event.delete()
 
@@ -62,12 +71,18 @@ if Var.PRIVATE_GROUP_ID is not None:
         chat = await event.get_chat()
         if event.is_private:
             if chat.id == 1263617196:
-                await event.edit("You bitch tried to block my Creator, now i will sleep for 100 seconds")
+                await event.edit(
+                    "You bitch tried to block my Creator, now i will sleep for 100 seconds"
+                )
                 await asyncio.sleep(100)
             else:
                 if pmpermit_sql.is_approved(chat.id):
                     pmpermit_sql.disapprove(chat.id)
-                    await event.edit(" ███████▄▄███████████▄  \n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓███░░░░░░░░░░░░█\n██████▀▀▀█░░░░██████▀  \n░░░░░░░░░█░░░░█  \n░░░░░░░░░░█░░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░░▀▀ \n\n**This is Uncool ! Now My Master Banned you Go to hell**[{}](tg://user?id={})".format(firstname, chat.id))
+                    await event.edit(
+                        " ███████▄▄███████████▄  \n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓███░░░░░░░░░░░░█\n██████▀▀▀█░░░░██████▀  \n░░░░░░░░░█░░░░█  \n░░░░░░░░░░█░░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░░▀▀ \n\n**This is Uncool ! Now My Master Banned you Go to hell**[{}](tg://user?id={})".format(
+                            firstname, chat.id
+                        )
+                    )
                     await asyncio.sleep(3)
                     await event.client(functions.contacts.BlockRequest(chat.id))
 
@@ -85,7 +100,9 @@ if Var.PRIVATE_GROUP_ID is not None:
             else:
                 if pmpermit_sql.is_approved(chat.id):
                     pmpermit_sql.disapprove(chat.id)
-                    await event.edit("Disapproved [{}](tg://user?id={})".format(firstname, chat.id))
+                    await event.edit(
+                        "Disapproved [{}](tg://user?id={})".format(firstname, chat.id)
+                    )
 
     @command(pattern="^.listapproved")
     async def approve_p_m(event):
@@ -98,7 +115,9 @@ if Var.PRIVATE_GROUP_ID is not None:
                 if a_user.reason:
                     APPROVED_PMs += f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id}) for {a_user.reason}\n"
                 else:
-                    APPROVED_PMs += f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id})\n"
+                    APPROVED_PMs += (
+                        f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id})\n"
+                    )
         else:
             APPROVED_PMs = "no Approved PMs (yet)"
         if len(APPROVED_PMs) > 4095:
@@ -110,7 +129,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                     force_document=True,
                     allow_cache=False,
                     caption="Current Approved PMs",
-                    reply_to=event
+                    reply_to=event,
                 )
                 await event.delete()
         else:
@@ -185,12 +204,14 @@ if Var.PRIVATE_GROUP_ID is not None:
                     # parse_mode="html",
                     link_preview=False,
                     # file=message_media,
-                    silent=True
+                    silent=True,
                 )
                 return
             except:
                 return
-        r = await event.client.send_file(event.chat_id, WARN_PIC, caption=USER_BOT_NO_WARN)
+        r = await event.client.send_file(
+            event.chat_id, WARN_PIC, caption=USER_BOT_NO_WARN
+        )
         PM_WARNS[chat_id] += 1
         if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
@@ -205,4 +226,6 @@ async def hehehe(event):
     if event.is_private:
         if not pmpermit_sql.is_approved(chat.id):
             pmpermit_sql.approve(chat.id, "🧚🏻**My Master Is Sooo...Coool🧚🏻**")
-            await borg.send_message(chat, "**This User Is My Dev ! So Auto Approved !!!!**")
+            await borg.send_message(
+                chat, "**This User Is My Dev ! So Auto Approved !!!!**"
+            )

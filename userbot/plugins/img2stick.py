@@ -27,15 +27,18 @@ async def _(event):
     await event.edit("```Making a sticker```")
     async with event.client.conversation(chat) as conv:
         try:
-            response = conv.wait_event(events.NewMessage(
-                incoming=True, from_users=164977173))
+            response = conv.wait_event(
+                events.NewMessage(incoming=True, from_users=164977173)
+            )
             await event.client.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
             await event.reply("```Please unblock me (@buildstickerbot) u Nigga```")
             return
         if response.text.startswith("Hi!"):
-            await event.edit("```Can you kindly disable your forward privacy settings for good?```")
+            await event.edit(
+                "```Can you kindly disable your forward privacy settings for good?```"
+            )
         else:
             await event.delete()
             await event.client.send_message(event.chat_id, response.message)
@@ -60,15 +63,18 @@ async def _(event):
     await event.edit("```Making a image```")
     async with event.client.conversation(chat) as conv:
         try:
-            response = conv.wait_event(events.NewMessage(
-                incoming=True, from_users=1020956520))
+            response = conv.wait_event(
+                events.NewMessage(incoming=True, from_users=1020956520)
+            )
             await event.client.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
             await event.reply("``` unblock me (@StickerToPicbot) to work```")
             return
         if response.text.startswith("Hi!"):
-            await event.edit("```Can you kindly disable your forward privacy settings for good?```")
+            await event.edit(
+                "```Can you kindly disable your forward privacy settings for good?```"
+            )
         else:
             await event.delete()
             await event.client.send_message(event.chat_id, response.message)

@@ -27,7 +27,6 @@ async def _(event):
     animation_ttl = range(0, 12)
     await event.edit(f"**Ready Commando **__{DEF}....")
     animation_chars = [
-
         "Ｆｉｉｉｉｉｒｅ",
         f"__**Commando **__{DEF}          \n\n_/﹋\_\n (҂`_´)\n <,︻╦╤─ ҉ - \n _/﹋\_\n",
         f"__**Commando **__{DEF}          \n\n_/﹋\_\n (҂`_´)\n  <,︻╦╤─ ҉ - -\n _/﹋\_\n",

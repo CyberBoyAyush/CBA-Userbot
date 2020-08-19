@@ -56,7 +56,14 @@ from gtts import gTTS
 
 from emoji import get_emoji_regexp
 
-from userbot import CMD_HELP, BOTLOG, BOTLOG_CHATID, YOUTUBE_API_KEY, CHROME_DRIVER, GOOGLE_CHROME_BIN
+from userbot import (
+    CMD_HELP,
+    BOTLOG,
+    BOTLOG_CHATID,
+    YOUTUBE_API_KEY,
+    CHROME_DRIVER,
+    GOOGLE_CHROME_BIN,
+)
 
 from userbot.utils import register
 
@@ -74,7 +81,7 @@ async def carbon_api(e):
 
         await e.edit("`Processing..`")
 
-        CARBON = 'https://carbon.now.sh/?l={lang}&code={code}'
+        CARBON = "https://carbon.now.sh/?l={lang}&code={code}"
 
         global CARBONLANG
 
@@ -110,29 +117,31 @@ async def carbon_api(e):
 
         chrome_options.add_argument("--disable-gpu")
 
-        prefs = {'download.default_directory': './'}
+        prefs = {"download.default_directory": "./"}
 
-        chrome_options.add_experimental_option('prefs', prefs)
+        chrome_options.add_experimental_option("prefs", prefs)
 
-        driver = webdriver.Chrome(
-            executable_path=CHROME_DRIVER, options=chrome_options)
+        driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
 
         driver.get(url)
 
         await e.edit("`Be Patient...\n50%`")
 
-        download_path = './'
+        download_path = "./"
 
         driver.command_executor._commands["send_command"] = (
-            "POST", '/session/$sessionId/chromium/send_command')
+            "POST",
+            "/session/$sessionId/chromium/send_command",
+        )
 
-        params = {'cmd': 'Page.setDownloadBehavior', 'params': {
-            'behavior': 'allow', 'downloadPath': download_path}}
+        params = {
+            "cmd": "Page.setDownloadBehavior",
+            "params": {"behavior": "allow", "downloadPath": download_path},
+        }
 
         command_result = driver.execute("send_command", params)
 
-        driver.find_element_by_xpath(
-            "//button[contains(text(),'Export')]").click()
+        driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
 
         # driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
 
@@ -146,25 +155,19 @@ async def carbon_api(e):
 
         await e.edit("`Done Dana Done...\n100%`")
 
-        file = './carbon.png'
+        file = "./carbon.png"
 
         await e.edit("`Uploading..`")
 
         await e.client.send_file(
-
             e.chat_id,
-
             file,
-
             caption="<< Here's your carbon, \n Carbonised by [GULFY](https://www.github.com/midhunkm1294-bit/FRIDAY)>> ",
-
             force_document=True,
-
             reply_to=e.message.reply_to_msg_id,
-
         )
 
-        os.remove('./FRIDAY.png')
+        os.remove("./FRIDAY.png")
 
         driver.quit()
 

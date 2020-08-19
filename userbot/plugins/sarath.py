@@ -21,66 +21,36 @@ async def _(event):
     animation_ttl = range(0, 30)
 
     animation_chars = [
-
         "S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽",
-
         "◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽",
-
         "◼️◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽",
-
         "◼️◼️◼️️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽",
-
         "◼️◼️◼️◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽",
-
         "‎◼️◼️◼️◼️◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽",
-
         "◼️◼️◼️◼️◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽",
-
         "◼️◼️◼️◼️◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽",
-
         "◼️◼️◼️◼️◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽",
-
         "◼️◼️◼️◼️◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️",
-
         "◼️◼️◼️◼️◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️◼️",
-
         "◼️◼️◼️◼️◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\nS͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\n◼️◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\n◼️◼️◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\n◼️◼️◼️◼️◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\n◼️◼️◼️◼️◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️\n◼️◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\n◼️◼️◼️◼️◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️◼️\n◼️◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\n◼️◼️◼️◼️◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️◼️◼️\n◼️◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\n◼️◼️◼️◼️◼️\n◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️◼️\n◼️◼️◼️◼️◼️\n◼️◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\n◼️◼️◼️◼️◼️\n◼️◼️S͓̽A͓̽R͓̽A͓̽T͓̽H͓̽◼️◼️\n◼️◼️◼️◼️◼️\n◼️◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️◼️\n◼️◼️◼️◼️◼️\n◼️◼️◼️◼️◼️\n◼️◼️◼️◼️◼️\n◼️◼️◼️◼️◼️",
-
         "◼️◼️◼️◼️\n◼️◼️◼️◼️\n◼️◼️◼️◼️\n◼️◼️◼️◼️",
-
         "◼️◼️◼️\n◼️◼️◼️\n◼️◼️◼️",
-
         "◼️◼️\n◼️◼️",
-
-        "◼️"
+        "◼️",
     ]
 
     for i in animation_ttl:

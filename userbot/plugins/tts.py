@@ -47,11 +47,12 @@ async def _(event):
             "100k",
             "-vbr",
             "on",
-            required_file_name + ".opus"
+            required_file_name + ".opus",
         ]
         try:
             t_response = subprocess.check_output(
-                command_to_execute, stderr=subprocess.STDOUT)
+                command_to_execute, stderr=subprocess.STDOUT
+            )
         except (subprocess.CalledProcessError, NameError, FileNotFoundError) as exc:
             await event.edit(str(exc))
             # continue sending required_file_name
@@ -66,7 +67,7 @@ async def _(event):
             # caption="Processed {} ({}) in {} seconds!".format(text[0:97], lan, ms),
             reply_to=event.message.reply_to_msg_id,
             allow_cache=False,
-            voice_note=True
+            voice_note=True,
         )
         os.remove(required_file_name)
         await event.edit("Processed {} ({}) in {} seconds!".format(text[0:97], lan, ms))
@@ -76,11 +77,12 @@ async def _(event):
         await event.edit(str(e))
 
 
-CMD_HELP.update({
-    "tts":
-    " Google Text to Speech\
+CMD_HELP.update(
+    {
+        "tts": " Google Text to Speech\
 \nAvailable Commands:\
 \n.tts LanguageCode as reply to a message\
 \n\n.tts LangaugeCode | text to speak\
 "
-})
+    }
+)

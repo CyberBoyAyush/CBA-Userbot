@@ -43,13 +43,22 @@ async def _(event):
         response = s.results.share()
         speedtest_image = response
         if as_text:
-            await event.edit("""`SpeedTest completed in {} seconds`
+            await event.edit(
+                """`SpeedTest completed in {} seconds`
 
 `Download: {}`
 `Upload: {}`
 `Ping: {}`
 `Internet Service Provider: {}`
-`ISP Rating: {}`""".format(ms, convert_from_bytes(download_speed), convert_from_bytes(upload_speed), ping_time, i_s_p, i_s_p_rating))
+`ISP Rating: {}`""".format(
+                    ms,
+                    convert_from_bytes(download_speed),
+                    convert_from_bytes(upload_speed),
+                    ping_time,
+                    i_s_p,
+                    i_s_p_rating,
+                )
+            )
         else:
             await borg.send_file(
                 event.chat_id,
@@ -57,29 +66,31 @@ async def _(event):
                 caption="**💞SpeedTest💞** completed in {} seconds".format(ms),
                 force_document=as_document,
                 reply_to=reply_msg_id,
-                allow_cache=False
+                allow_cache=False,
             )
             await event.delete()
     except Exception as exc:
-        await event.edit("""**💞SpeedTest💞** completed in {} seconds
+        await event.edit(
+            """**💞SpeedTest💞** completed in {} seconds
 Download: {}
 Upload: {}
 Ping: {}
 
 __With the Following ERRORs__
-{}""".format(ms, convert_from_bytes(download_speed), convert_from_bytes(upload_speed), ping_time, str(exc)))
+{}""".format(
+                ms,
+                convert_from_bytes(download_speed),
+                convert_from_bytes(upload_speed),
+                ping_time,
+                str(exc),
+            )
+        )
 
 
 def convert_from_bytes(size):
-    power = 2**10
+    power = 2 ** 10
     n = 0
-    units = {
-        0: "",
-        1: "kilobytes",
-        2: "megabytes",
-        3: "gigabytes",
-        4: "terabytes"
-    }
+    units = {0: "", 1: "kilobytes", 2: "megabytes", 3: "gigabytes", 4: "terabytes"}
     while size > power:
         size /= power
         n += 1

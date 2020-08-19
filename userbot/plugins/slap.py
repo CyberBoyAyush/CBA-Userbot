@@ -47,7 +47,7 @@ SLAP_TEMPLATES = [
     "{user1} put {victim} in check-mate.",
     "{user1} RSA-encrypted {victim} and deleted the private key.",
     "{user1} put {victim} in the friendzone.",
-    "{user1} slaps {victim} with a DMCA takedown request!"
+    "{user1} slaps {victim} with a DMCA takedown request!",
 ]
 
 ITEMS = [
@@ -174,14 +174,21 @@ async def slap(replied_user, event):
     throw = random.choice(THROW)
     where = random.choice(WHERE)
 
-    caption = temp.format(user1=DEFAULTUSER, victim=slapped,
-                          item=item, hits=hit, throws=throw, where=where)
+    caption = temp.format(
+        user1=DEFAULTUSER,
+        victim=slapped,
+        item=item,
+        hits=hit,
+        throws=throw,
+        where=where,
+    )
 
     return caption
 
 
-CMD_HELP.update({
-    "slap":
-    ".slap reply to someones text with .slap\
+CMD_HELP.update(
+    {
+        "slap": ".slap reply to someones text with .slap\
     \nUsage: reply to slap them with random objects !!"
-})
+    }
+)

@@ -6,8 +6,10 @@ from datetime import datetime
 import asyncio
 from telethon import events
 import logging
-logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
-                    level=logging.WARNING)
+
+logging.basicConfig(
+    format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
+)
 
 
 """
@@ -49,9 +51,7 @@ async def _(event):
         return
     start = datetime.now()
     to_promote_id = None
-    rights = ChatAdminRights(
-        post_messages=True
-    )
+    rights = ChatAdminRights(post_messages=True)
     input_str = event.pattern_match.group(1)
     reply_msg_id = event.message.id
     if reply_msg_id:

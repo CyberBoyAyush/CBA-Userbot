@@ -15,10 +15,10 @@ import random
 import importlib.util
 
 
-@borg.on(admin_cmd(pattern='(f?c)d '))
+@borg.on(admin_cmd(pattern="(f?c)d "))
 async def timer_blankx(e):
 
-    txt = e.text[4:] + '\nDeleting in '
+    txt = e.text[4:] + "\nDeleting in "
 
     j = 86400
 
@@ -28,23 +28,23 @@ async def timer_blankx(e):
 
         await e.edit(txt + str(k))
 
-        k = k-50
+        k = k - 50
 
         await asyncio.sleep(50)
 
-    if e.pattern_match.group(1) == 'c':
+    if e.pattern_match.group(1) == "c":
 
         await e.delete()
 
     else:
 
-        await e.edit(txt + 'NaN')
+        await e.edit(txt + "NaN")
 
 
-@borg.on(admin_cmd(pattern='(f?s)cd '))
+@borg.on(admin_cmd(pattern="(f?s)cd "))
 async def timer_blankx(e):
 
-    txt = e.text[4:] + '\nDeleting in '
+    txt = e.text[4:] + "\nDeleting in "
 
     j = 10
 
@@ -54,23 +54,23 @@ async def timer_blankx(e):
 
         await e.edit(txt + str(k))
 
-        k = k-1
+        k = k - 1
 
         await asyncio.sleep(1)
 
-    if e.pattern_match.group(1) == 's':
+    if e.pattern_match.group(1) == "s":
 
         await e.delete()
 
     else:
 
-        await e.edit(txt + 'NaN')
+        await e.edit(txt + "NaN")
 
 
-@borg.on(events.NewMessage(outgoing=True, pattern='^\.(f?p)an '))
+@borg.on(events.NewMessage(outgoing=True, pattern="^\.(f?p)an "))
 async def timer_blankx(e):
 
-    txt = e.text[7:] + '\n\n`Promoting You As Admin In` '
+    txt = e.text[7:] + "\n\n`Promoting You As Admin In` "
 
     j = 5
 
@@ -80,10 +80,10 @@ async def timer_blankx(e):
 
         await e.edit(txt + str(k))
 
-        k = k-1
+        k = k - 1
 
         await asyncio.sleep(1)
 
-    if e.pattern_match.group(1) == 'f':
+    if e.pattern_match.group(1) == "f":
 
         await e.edit("`🎈You Successfully Promoted As Admin...!🎈` ")

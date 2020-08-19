@@ -17,8 +17,8 @@ async def _(event):
         return
     animation_interval = 0.1
     animation_ttl = range(0, 36)
-    #input_str = event.pattern_match.group(1)
-   # if input_str == "nope":
+    # input_str = event.pattern_match.group(1)
+    # if input_str == "nope":
     await event.edit("nope")
     animation_chars = [
         "No",
@@ -27,7 +27,7 @@ async def _(event):
         "Yeah ! No problem",
         "No Problem Boss.lol",
         "No Problem Boss😇.Lol",
-        "No Problem Man😇.Lol"
+        "No Problem Man😇.Lol",
     ]
 
     for i in animation_ttl:

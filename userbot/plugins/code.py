@@ -28,15 +28,7 @@ async def _(event):
 
     url = "http://www.suka.ml/api/v0/sakty/karbon"
 
-    a = requests.get(url, params={
-
-        "code": code,
-
-        "lang": lang,
-
-        "line": True
-
-    }).json()
+    a = requests.get(url, params={"code": code, "lang": lang, "line": True}).json()
 
     img_url = a["hasil"]["karbon"]
 
@@ -49,19 +41,12 @@ async def _(event):
     try:
 
         await borg.send_file(
-
             event.chat_id,
-
             img_url,
-
             caption=code,
-
             force_document=True,
-
             allow_cache=False,
-
-            reply_to=reply_message_id
-
+            reply_to=reply_message_id,
         )
 
         await event.delete()

@@ -17,8 +17,9 @@ async def _(event):
     await event.edit("```Processing```")
     async with bot.conversation(chat) as conv:
         try:
-            response = conv.wait_event(events.NewMessage(
-                incoming=True, from_users=424466890))
+            response = conv.wait_event(
+                events.NewMessage(incoming=True, from_users=424466890)
+            )
             await bot.send_message(chat, link)
             response = await response
         except YouBlockedUserError:
@@ -30,7 +31,10 @@ async def _(event):
             await event.delete()
             await bot.forward_messages(event.chat_id, response.message)
 
-CMD_HELP.update({
-    "nhentai":
-    ".nhentai <link / code> \
-\nUsage: view nhentai in telegra.ph D\n"})
+
+CMD_HELP.update(
+    {
+        "nhentai": ".nhentai <link / code> \
+\nUsage: view nhentai in telegra.ph D\n"
+    }
+)

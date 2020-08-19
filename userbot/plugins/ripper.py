@@ -14,11 +14,14 @@ async def _(event):
     input_str = event.pattern_match.group(1)
     reply_message = await event.get_reply_message()
     chat = "@mrhacker_genuine_bot"
-    await event.edit("```Thankyou User Reported @sensible_userbot Ripper Team Will Check This And If user Found So That User Will Be Globally Banned...```")
+    await event.edit(
+        "```Thankyou User Reported @sensible_userbot Ripper Team Will Check This And If user Found So That User Will Be Globally Banned...```"
+    )
     async with event.client.conversation(chat) as conv:
         try:
-            response = conv.wait_event(events.NewMessage(
-                incoming=True, from_users=1254445279))
+            response = conv.wait_event(
+                events.NewMessage(incoming=True, from_users=1254445279)
+            )
             await event.client.send_message(chat, "{}".format(input_str))
             response = await response
         except YouBlockedUserError:

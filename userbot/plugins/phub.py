@@ -1,4 +1,3 @@
-
 from telethon import events
 
 import asyncio
@@ -20,23 +19,14 @@ async def _(event):
     await event.edit("phub")
 
     animation_chars = [
-
         "P_",
-
         "PO_",
-
         "POR_",
-
         "PORN_",
-
         "PORNH_",
-
         "PORNHU_",
-
         "PORNHUB_",
-
         "PORNHUB",
-
     ]
 
     for i in animation_ttl:
@@ -60,27 +50,16 @@ async def _(event):
     await event.edit("fayash")
 
     animation_chars = [
-
         "F_",
-
         "FA_",
-
         "FAY_",
-
         "FAYA_",
-
         "FAYAS_",
-
         "FAYASH_",
-
         "FAYASH🦄_",
-
         "FAYASH🦄💜_",
-
         "FAYASH🦄💜🍭",
-
         "o××}̶̶[̶̶Ғ@YΔ🅢ℌ>➤",
-
     ]
 
     for i in animation_ttl:
@@ -104,19 +83,12 @@ async def _(event):
     await event.edit("Sexy")
 
     animation_chars = [
-
         "S_",
-
         "SE_",
-
         "SEX_",
-
         "SEXY_",
-
         "SEXY👄_",
-
         "SEXY👄",
-
     ]
 
     for i in animation_ttl:

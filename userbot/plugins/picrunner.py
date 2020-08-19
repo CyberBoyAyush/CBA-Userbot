@@ -43,7 +43,7 @@ if AUTOPFP_PACK is None:
         "War-Plane-Wallpaper",
         "World-War-Ii-Wallpaper",
         "Cool-War-Wallpapers",
-        "World-War-2-Wallpaper-HD"
+        "World-War-2-Wallpaper-HD",
     ]
 else:
     PACK = AUTOPFP_PACK
@@ -54,13 +54,15 @@ async def animepp():
     rnd = random.randint(0, len(PACK) - 1)
     pack = PACK[rnd]
     pc = requests.get("http://getwallpapers.com/collection/" + pack).text
-    f = re.compile('/\w+/full.+.jpg')
+    f = re.compile("/\w+/full.+.jpg")
     f = f.findall(pc)
-    fy = "http://getwallpapers.com"+random.choice(f)
+    fy = "http://getwallpapers.com" + random.choice(f)
     print(fy)
     if not os.path.exists("f.ttf"):
         urllib.request.urlretrieve(
-            "https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf", "f.ttf")
+            "https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf",
+            "f.ttf",
+        )
     urllib.request.urlretrieve(fy, "donottouch.jpg")
 
 
@@ -72,7 +74,11 @@ async def main(event):
         try:
             await animepp()
             file = await event.client.upload_file("donottouch.jpg")
-            await event.client(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit=1)))
+            await event.client(
+                functions.photos.DeletePhotosRequest(
+                    await event.client.get_profile_photos("me", limit=1)
+                )
+            )
             await event.client(functions.photos.UploadProfilePhotoRequest(file))
             os.system("rm -rf donottouch.jpg")
         except:

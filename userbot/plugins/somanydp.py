@@ -15,8 +15,9 @@ FONT_FILE_TO_USE = "Fonts/digital.ttf"
 # @borg.on(admin_cmd(pattern=r"somanydp"))
 async def somanydp(event):
     downloaded_file_name = "userbot/original_pic.png"
-    downloader = SmartDL(Var.DOWNLOAD_PFP_URL_CLOCK,
-                         downloaded_file_name, progress_bar=False)
+    downloader = SmartDL(
+        Var.DOWNLOAD_PFP_URL_CLOCK, downloaded_file_name, progress_bar=False
+    )
     downloader.start(blocking=False)
     photo = "userbot/photo_pfp.png"
     while not downloader.isFinished():
@@ -34,9 +35,9 @@ async def somanydp(event):
         img.save(photo)
         file = await bot.upload_file(photo)  # pylint:disable=E0602
         try:
-            await bot(functions.photos.UploadProfilePhotoRequest(  # pylint:disable=E0602
-                file
-            ))
+            await bot(
+                functions.photos.UploadProfilePhotoRequest(file)  # pylint:disable=E0602
+            )
             os.remove(photo)
             counter -= 30
             await asyncio.sleep(1)

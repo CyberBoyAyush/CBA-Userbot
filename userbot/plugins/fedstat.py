@@ -6,7 +6,10 @@
 import datetime
 import asyncio
 from telethon import events
-from telethon.errors.rpcerrorlist import YouBlockedUserError, UserAlreadyParticipantError
+from telethon.errors.rpcerrorlist import (
+    YouBlockedUserError,
+    UserAlreadyParticipantError,
+)
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
 from userbot.utils import admin_cmd
@@ -31,7 +34,9 @@ async def _(event):
                 await conv.send_message("/fedstat")
                 audio = await conv.get_response()
                 final = (
-                    "If you would like to know more about the fedban reason in a specific federation, use /fbanstat <FedID> in RoseBot.", "")
+                    "If you would like to know more about the fedban reason in a specific federation, use /fbanstat <FedID> in RoseBot.",
+                    "",
+                )
                 await borg.send_message(event.chat_id, audio.text)
                 await event.delete()
             except YouBlockedUserError:
@@ -44,7 +49,9 @@ async def _(event):
                 await conv.send_message("/fedstat " + sysarg)
                 audio = await conv.get_response()
                 final = (
-                    "If you would like to know more about the fedban reason in a specific federation, use /fbanstat <FedID> in RoseBot.", "")
+                    "If you would like to know more about the fedban reason in a specific federation, use /fbanstat <FedID> in RoseBot.",
+                    "",
+                )
                 await borg.send_message(event.chat_id, audio.text)
                 await event.delete()
             except YouBlockedUserError:
@@ -57,7 +64,9 @@ async def _(event):
                 await conv.send_message("/fedstat " + sysarg)
                 audio = await conv.get_response()
                 final = (
-                    "If you would like to know more about the fedban reason in a specific federation, use /fbanstat <FedID> in RoseBot.", "")
+                    "If you would like to know more about the fedban reason in a specific federation, use /fbanstat <FedID> in RoseBot.",
+                    "",
+                )
                 await borg.send_message(event.chat_id, audio.text)
                 await event.delete()
             except YouBlockedUserError:

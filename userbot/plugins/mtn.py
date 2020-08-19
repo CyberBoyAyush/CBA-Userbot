@@ -20,14 +20,13 @@ async def _(event):
 
     animation_ttl = range(0, 19)
 
-   # input_str = event.pattern_match.group(1)
+    # input_str = event.pattern_match.group(1)
 
-   # if input_str == "mtn":
+    # if input_str == "mtn":
 
     await event.edit("mtn")
 
     animation_chars = [
-
         "`Connecting To MTN NG ....`",
         "`█ ▇ ▆ ▅ ▄ ▂ ▁`",
         "`▒ ▇ ▆ ▅ ▄ ▂ ▁`",
@@ -46,8 +45,7 @@ async def _(event):
         "`▁ ▂ ▄ ▅ ▆ ▒ ▒`",
         "`▁ ▂ ▄ ▅ ▆ ▇ ▒`",
         "`▁ ▂ ▄ ▅ ▆ ▇ █`",
-        "**MTN Network Boosted....**"
-
+        "**MTN Network Boosted....**",
     ]
 
     for i in animation_ttl:

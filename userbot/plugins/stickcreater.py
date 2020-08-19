@@ -39,7 +39,7 @@ async def sticklet(event):
     # https://docs.python.org/3/library/textwrap.html#textwrap.wrap
     sticktext = textwrap.wrap(sticktext, width=10)
     # converts back the list to a string
-    sticktext = '\n'.join(sticktext)
+    sticktext = "\n".join(sticktext)
     image = Image.new("RGBA", (512, 512), (255, 255, 255, 0))
     draw = ImageDraw.Draw(image)
     fontsize = 230
@@ -49,14 +49,20 @@ async def sticklet(event):
         fontsize -= 3
         font = ImageFont.truetype(FONT_FILE, size=fontsize)
     width, height = draw.multiline_textsize(sticktext, font=font)
-    draw.multiline_text(((512-width)/2, (512-height)/2),
-                        sticktext, font=font, fill=(R, G, B))
+    draw.multiline_text(
+        ((512 - width) / 2, (512 - height) / 2), sticktext, font=font, fill=(R, G, B)
+    )
     image_stream = io.BytesIO()
     image_stream.name = "Friday.webp"
     image.save(image_stream, "WebP")
     image_stream.seek(0)
     # finally, reply the sticker
-    await event.client.send_file(event.chat_id, image_stream, caption="Created Using Friday Userbot", reply_to=event.message.reply_to_msg_id)
+    await event.client.send_file(
+        event.chat_id,
+        image_stream,
+        caption="Created Using Friday Userbot",
+        reply_to=event.message.reply_to_msg_id,
+    )
     # cleanup
     try:
         os.remove(FONT_FILE)
@@ -72,7 +78,7 @@ async def get_font_file(client, channel_id, search_kw=""):
         # this might cause FLOOD WAIT,
         # if used too many times
         limit=None,
-        search=search_kw
+        search=search_kw,
     )
     # get a random font from the list of fonts
     # https://docs.python.org/3/library/random.html#random.choice

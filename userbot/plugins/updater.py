@@ -23,8 +23,7 @@ NEW_BOT_UP_DATE_FOUND = (
     "Pulling Updates !!"
 )
 NEW_UP_DATE_FOUND = (
-    "**New update found for** {branch_name}\n"
-    "Updating And Restarting..."
+    "**New update found for** {branch_name}\n" "Updating And Restarting..."
 )
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
@@ -49,9 +48,9 @@ async def updater(message):
 
     active_branch_name = repo.active_branch.name
     if active_branch_name != IFFUCI_ACTIVE_BRANCH_NAME:
-        await message.edit(IS_SELECTED_DIFFERENT_BRANCH.format(
-            branch_name=active_branch_name
-        ))
+        await message.edit(
+            IS_SELECTED_DIFFERENT_BRANCH.format(branch_name=active_branch_name)
+        )
         return False
 
     try:
@@ -66,30 +65,26 @@ async def updater(message):
     changelog = generate_change_log(
         repo,
         DIFF_MARKER.format(
-            remote_name=REPO_REMOTE_NAME,
-            branch_name=active_branch_name
-        )
+            remote_name=REPO_REMOTE_NAME, branch_name=active_branch_name
+        ),
     )
 
     if not changelog:
-        await message.edit("**Updating Userbot** \n**Version** : `2.0` \n**Telethon** : `1.15.0` \n**Status** : `Pulling Updates` \n**Thank You For Using Friday !**")
+        await message.edit(
+            "**Updating Userbot** \n**Version** : `2.0` \n**Telethon** : `1.15.0` \n**Status** : `Pulling Updates` \n**Thank You For Using Friday !**"
+        )
         await asyncio.sleep(5)
 
     message_one = NEW_BOT_UP_DATE_FOUND.format(
-        branch_name=active_branch_name,
-        changelog=changelog
+        branch_name=active_branch_name, changelog=changelog
     )
-    message_two = NEW_UP_DATE_FOUND.format(
-        branch_name=active_branch_name
-    )
+    message_two = NEW_UP_DATE_FOUND.format(branch_name=active_branch_name)
 
     if len(message_one) > 4095:
         with open("change.log", "w+", encoding="utf8") as out_file:
             out_file.write(str(message_one))
         await bot.send_message(
-            message.chat_id,
-            document="change.log",
-            caption=message_two
+            message.chat_id, document="change.log", caption=message_two
         )
         os.remove("change.log")
     else:
@@ -100,6 +95,7 @@ async def updater(message):
 
     if Var.HEROKU_API_KEY is not None:
         import heroku3
+
         heroku = heroku3.from_key(Var.HEROKU_API_KEY)
         heroku_applications = heroku.apps()
         if len(heroku_applications) >= 1:
@@ -109,11 +105,12 @@ async def updater(message):
                     if i.name == Var.HEROKU_APP_NAME:
                         heroku_app = i
                 if heroku_app is None:
-                    await message.edit("Invalid APP Name. Please set the name of your bot in heroku in the var HEROKU_APP_NAME.")
+                    await message.edit(
+                        "Invalid APP Name. Please set the name of your bot in heroku in the var HEROKU_APP_NAME."
+                    )
                     return
                 heroku_git_url = heroku_app.git_url.replace(
-                    "https://",
-                    "https://api:" + Var.HEROKU_API_KEY + "@"
+                    "https://", "https://api:" + Var.HEROKU_API_KEY + "@"
                 )
                 if "heroku" in repo.remotes:
                     remote = repo.remote("heroku")
@@ -121,10 +118,13 @@ async def updater(message):
                 else:
                     remote = repo.create_remote("heroku", heroku_git_url)
                 asyncio.get_event_loop().create_task(
-                    deploy_start(bot, message, HEROKU_GIT_REF_SPEC, remote))
+                    deploy_start(bot, message, HEROKU_GIT_REF_SPEC, remote)
+                )
 
             else:
-                await message.edit("Please create the var HEROKU_APP_NAME as the key and the name of your bot in heroku as your value.")
+                await message.edit(
+                    "Please create the var HEROKU_APP_NAME as the key and the name of your bot in heroku as your value."
+                )
                 return
         else:
             await message.edit(NO_HEROKU_APP_CFGD)
@@ -142,7 +142,9 @@ def generate_change_log(git_repo, diff_marker):
 
 async def deploy_start(bot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("**Updating Userbot** \n**Version** : `2.0` \n**Telethon** : `1.15.0` \n**Branch** : `Master` \n**Status** : `Updating & Restarting` \n__You Can Do__ `.alive` __To Check If I am Alive !__")
+    await message.edit(
+        "**Updating Userbot** \n**Version** : `2.0` \n**Telethon** : `1.15.0` \n**Branch** : `Master` \n**Status** : `Updating & Restarting` \n__You Can Do__ `.alive` __To Check If I am Alive !__"
+    )
     remote.push(refspec=refspec)
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)

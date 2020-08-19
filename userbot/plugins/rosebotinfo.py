@@ -1,9 +1,10 @@
-
-
 import datetime
 import asyncio
 from telethon import events
-from telethon.errors.rpcerrorlist import YouBlockedUserError, UserAlreadyParticipantError
+from telethon.errors.rpcerrorlist import (
+    YouBlockedUserError,
+    UserAlreadyParticipantError,
+)
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
 from userbot.utils import admin_cmd
@@ -28,7 +29,9 @@ async def _(event):
                 await conv.send_message("/info")
                 audio = await conv.get_response()
                 final = (
-                    "If you would like to know more about this user, use /info <userid/username> in RoseBot.", "")
+                    "If you would like to know more about this user, use /info <userid/username> in RoseBot.",
+                    "",
+                )
                 await borg.send_message(event.chat_id, audio.text)
                 await event.delete()
             except YouBlockedUserError:
@@ -41,7 +44,9 @@ async def _(event):
                 await conv.send_message("/info " + sysarg)
                 audio = await conv.get_response()
                 final = (
-                    "If you would like to know more about this user, use /info <username/userid> in RoseBot.", "")
+                    "If you would like to know more about this user, use /info <username/userid> in RoseBot.",
+                    "",
+                )
                 await borg.send_message(event.chat_id, audio.text)
                 await event.delete()
             except YouBlockedUserError:
@@ -54,7 +59,9 @@ async def _(event):
                 await conv.send_message("/info " + sysarg)
                 audio = await conv.get_response()
                 final = (
-                    "If you would like to know more about this user go to PM hahahah.", "")
+                    "If you would like to know more about this user go to PM hahahah.",
+                    "",
+                )
                 await borg.send_message(event.chat_id, audio.text)
                 await event.delete()
             except YouBlockedUserError:

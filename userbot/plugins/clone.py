@@ -23,7 +23,9 @@ async def _(event):
         await event.edit(str(error_i_a))
         return False
     user_id = replied_user.user.id
-    profile_pic = await event.client.download_profile_photo(user_id, Config.TMP_DOWNLOAD_DIRECTORY)
+    profile_pic = await event.client.download_profile_photo(
+        user_id, Config.TMP_DOWNLOAD_DIRECTORY
+    )
     # some people have weird HTML in their names
     first_name = html.escape(replied_user.user.first_name)
     # https://stackoverflow.com/a/5072031/4723940
@@ -46,21 +48,15 @@ async def _(event):
         return
     if user_bio is not None:
         user_bio = html.escape(replied_user.about)
-    await borg(functions.account.UpdateProfileRequest(
-        first_name=first_name
-    ))
-    await borg(functions.account.UpdateProfileRequest(
-        last_name=last_name
-    ))
-    await borg(functions.account.UpdateProfileRequest(
-        about=user_bio
-    ))
+    await borg(functions.account.UpdateProfileRequest(first_name=first_name))
+    await borg(functions.account.UpdateProfileRequest(last_name=last_name))
+    await borg(functions.account.UpdateProfileRequest(about=user_bio))
     n = 1
     pfile = await borg.upload_file(profile_pic)  # pylint:disable=E060
-    await borg(functions.photos.UploadProfilePhotoRequest(  # pylint:disable=E0602
-        pfile
-    ))
-    #message_id_to_reply = event.message.reply_to_msg_id
+    await borg(
+        functions.photos.UploadProfilePhotoRequest(pfile)  # pylint:disable=E0602
+    )
+    # message_id_to_reply = event.message.reply_to_msg_id
     # if not message_id_to_reply:
     #    message_id_to_reply = event.message.id
     # await borg.send_message(
@@ -70,9 +66,7 @@ async def _(event):
     #  )
     await event.delete()
     await borg.send_message(
-        event.chat_id,
-        "**💫🧚🏻LET US BE AS ONE!🧚🏻💫**",
-        reply_to=reply_message
+        event.chat_id, "**💫🧚🏻LET US BE AS ONE!🧚🏻💫**", reply_to=reply_message
     )
 
 
@@ -82,15 +76,14 @@ async def get_full_user(event):
         if previous_message.forward:
             replied_user = await event.client(
                 GetFullUserRequest(
-                    previous_message.forward.from_id or previous_message.forward.channel_id
+                    previous_message.forward.from_id
+                    or previous_message.forward.channel_id
                 )
             )
             return replied_user, None
         else:
             replied_user = await event.client(
-                GetFullUserRequest(
-                    previous_message.from_id
-                )
+                GetFullUserRequest(previous_message.from_id)
             )
             return replied_user, None
     else:

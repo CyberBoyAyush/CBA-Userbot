@@ -52,7 +52,7 @@ async def _(event):
         "¶H×NK&N*",
         "NGITHKIN",
         "T+I#K@₹G",
-        "THINKING... 🤔"
+        "THINKING... 🤔",
     ]
 
     for i in animation_ttl:

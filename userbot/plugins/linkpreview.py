@@ -1,4 +1,3 @@
-
 import datetime
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -22,8 +21,9 @@ async def _(event):
     await event.edit("```Processing```")
     async with event.client.conversation(chat) as conv:
         try:
-            response = conv.wait_event(events.NewMessage(
-                incoming=True, from_users=272572121))
+            response = conv.wait_event(
+                events.NewMessage(incoming=True, from_users=272572121)
+            )
             await event.client.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:

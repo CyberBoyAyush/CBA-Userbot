@@ -2,7 +2,10 @@
 import datetime
 import asyncio
 from telethon import events
-from telethon.errors.rpcerrorlist import YouBlockedUserError, UserAlreadyParticipantError
+from telethon.errors.rpcerrorlist import (
+    YouBlockedUserError,
+    UserAlreadyParticipantError,
+)
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
 from userbot.utils import admin_cmd
@@ -24,7 +27,7 @@ async def _(event):
             await conv.send_message("/start")
             response = await conv.get_response()
             try:
-                await borg(ImportChatInviteRequest('AAAAAFZPuYvdW1A8mrT8Pg'))
+                await borg(ImportChatInviteRequest("AAAAAFZPuYvdW1A8mrT8Pg"))
             except UserAlreadyParticipantError:
                 await asyncio.sleep(0.00000069420)
             await conv.send_message(d_link)
@@ -32,7 +35,11 @@ async def _(event):
             await borg.send_message(event.chat_id, details)
             await conv.get_response()
             songh = await conv.get_response()
-            await borg.send_file(event.chat_id, songh, caption="🔆**Here's the requested song!**🔆\n`Check out` [X-tra userbot](https://github.com/spandey112/sensibleuserbot)")
+            await borg.send_file(
+                event.chat_id,
+                songh,
+                caption="🔆**Here's the requested song!**🔆\n`Check out` [X-tra userbot](https://github.com/spandey112/sensibleuserbot)",
+            )
             await event.delete()
         except YouBlockedUserError:
             await event.edit("**Error:** `unblock` @DeezLoadBot `and retry!`")
