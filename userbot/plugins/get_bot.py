@@ -1,7 +1,8 @@
 """ Get the Bots in any chat*
 Syntax: .get_bot"""
 from telethon import events
-from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
+from telethon.tl.types import ChannelParticipantAdmin
+from telethon.tl.types import ChannelParticipantsBots
 
 from userbot.utils import admin_cmd
 

@@ -1,6 +1,5 @@
 """Update UserBot code
 Syntax: .update"""
-
 import asyncio
 import os
 import sys

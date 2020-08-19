@@ -10,7 +10,9 @@ from datetime import datetime
 from time import sleep
 
 import requests
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
 from telethon.tl import functions
 from uniborg.util import admin_cmd
 

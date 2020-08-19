@@ -6,28 +6,34 @@ from os import remove
 
 from emoji import emojize
 from telethon import events
-from telethon.errors import (BadRequestError, ChannelInvalidError,
-                             ChannelPrivateError, ChannelPublicGroupNaError,
-                             ChatAdminRequiredError, ImageProcessFailedError,
-                             InviteHashEmptyError, InviteHashExpiredError,
-                             InviteHashInvalidError, PhotoCropSizeSmallError,
-                             UserAdminInvalidError)
-from telethon.errors.rpcerrorlist import (MessageTooLongError,
-                                          UserIdInvalidError)
+from telethon.errors import BadRequestError
+from telethon.errors import ChannelInvalidError
+from telethon.errors import ChannelPrivateError
+from telethon.errors import ChannelPublicGroupNaError
+from telethon.errors import ChatAdminRequiredError
+from telethon.errors import ImageProcessFailedError
+from telethon.errors import InviteHashEmptyError
+from telethon.errors import InviteHashExpiredError
+from telethon.errors import InviteHashInvalidError
+from telethon.errors import PhotoCropSizeSmallError
+from telethon.errors import UserAdminInvalidError
+from telethon.errors.rpcerrorlist import MessageTooLongError
+from telethon.errors.rpcerrorlist import UserIdInvalidError
 from telethon.events import ChatAction
-from telethon.tl.functions.channels import (GetFullChannelRequest,
-                                            GetParticipantsRequest,
-                                            LeaveChannelRequest)
-from telethon.tl.functions.messages import (CheckChatInviteRequest,
-                                            GetFullChatRequest,
-                                            GetHistoryRequest)
-from telethon.tl.types import (ChannelParticipantCreator,
-                               ChannelParticipantsAdmins,
-                               MessageActionChannelMigrateFrom)
+from telethon.tl.functions.channels import GetFullChannelRequest
+from telethon.tl.functions.channels import GetParticipantsRequest
+from telethon.tl.functions.channels import LeaveChannelRequest
+from telethon.tl.functions.messages import CheckChatInviteRequest
+from telethon.tl.functions.messages import GetFullChatRequest
+from telethon.tl.functions.messages import GetHistoryRequest
+from telethon.tl.types import ChannelParticipantCreator
+from telethon.tl.types import ChannelParticipantsAdmins
+from telethon.tl.types import MessageActionChannelMigrateFrom
 from telethon.utils import get_input_location
 
 from userbot import CMD_HELP
-from userbot.utils import admin_cmd, errors_handler
+from userbot.utils import admin_cmd
+from userbot.utils import errors_handler
 
 
 @borg.on(admin_cmd(pattern="leave$"))

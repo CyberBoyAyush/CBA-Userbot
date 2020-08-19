@@ -3,7 +3,6 @@
 Available Commands:
 
 .wtf"""
-
 import asyncio
 
 from telethon import events

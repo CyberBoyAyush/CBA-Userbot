@@ -9,7 +9,10 @@ import asyncio
 import io
 
 import telethon.sync
-from telethon import errors, events, functions, types
+from telethon import errors
+from telethon import events
+from telethon import functions
+from telethon import types
 from telethon.tl.functions.users import GetFullUserRequest
 
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql

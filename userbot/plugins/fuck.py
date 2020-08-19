@@ -4,7 +4,6 @@ Available Commands:
 .sex
 .kiss
 """
-
 import asyncio
 
 from telethon import events

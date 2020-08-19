@@ -1,9 +1,6 @@
 # Made By mariodevs Keep Credits If You Are Goanna Kang This Lol
-
 # And Thanks To The Creator Of Autopic This Script Was Made from Snippets From That Script
-
 # Usage .gamerdp  Im Not Responsible For Any Ban caused By This
-
 import asyncio
 import os
 import random
@@ -13,7 +10,9 @@ from datetime import datetime
 from time import sleep
 
 import requests
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
 from telethon.tl import functions
 from uniborg.util import admin_cmd
 

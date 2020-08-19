@@ -2,7 +2,6 @@
 usage: .karb //as a reply to any text message
 
 Thanks to @mariodevs for THIS PLUGIN"""
-
 import asyncio
 import os
 import random

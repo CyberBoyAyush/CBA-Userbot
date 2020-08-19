@@ -2,7 +2,6 @@
 Available Commands:
 .support
 """
-
 import asyncio
 
 from telethon import events

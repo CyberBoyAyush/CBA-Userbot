@@ -1,11 +1,11 @@
 """Get Administrators of any Chat*
 Syntax: .userlist"""
 from telethon import events
-from telethon.errors.rpcerrorlist import (MessageTooLongError,
-                                          UserIdInvalidError)
-from telethon.tl.types import (ChannelParticipantAdmin,
-                               ChannelParticipantCreator,
-                               ChannelParticipantsAdmins)
+from telethon.errors.rpcerrorlist import MessageTooLongError
+from telethon.errors.rpcerrorlist import UserIdInvalidError
+from telethon.tl.types import ChannelParticipantAdmin
+from telethon.tl.types import ChannelParticipantCreator
+from telethon.tl.types import ChannelParticipantsAdmins
 from uniborg.util import admin_cmd
 
 

@@ -1,10 +1,7 @@
 """ Sing a English song... 
     Command .esing 
     By @Deonnn """
-
-
 # BY @Deonnn
-
 import asyncio
 import os
 import random

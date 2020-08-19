@@ -1,7 +1,6 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
 """ Command: .dab , .brain 
 credit: lejend @r4v4n4
 """
@@ -12,7 +11,10 @@ from random import choice
 from urllib import parse
 
 import requests
-from telethon import events, functions, types, utils
+from telethon import events
+from telethon import functions
+from telethon import types
+from telethon import utils
 
 from userbot.utils import admin_cmd
 

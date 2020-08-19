@@ -1,5 +1,4 @@
 # This Plugin Is Created By @StarkxD
-
 import asyncio
 import random
 import re

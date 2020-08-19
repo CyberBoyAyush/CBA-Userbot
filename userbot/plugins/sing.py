@@ -3,7 +3,6 @@
             .singhi(pending)
             .singpu(pending)
     By @PhycoNinja13b """
-
 import asyncio
 import os
 import random

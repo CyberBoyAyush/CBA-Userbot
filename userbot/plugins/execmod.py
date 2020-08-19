@@ -11,9 +11,12 @@ import time
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
 
-from telethon import __version__, events, functions
-from telethon.errors import (MessageEmptyError, MessageNotModifiedError,
-                             MessageTooLongError)
+from telethon import __version__
+from telethon import events
+from telethon import functions
+from telethon.errors import MessageEmptyError
+from telethon.errors import MessageNotModifiedError
+from telethon.errors import MessageTooLongError
 
 from userbot.utils import admin_cmd
 

@@ -5,7 +5,6 @@ Available Commands:
 .isro
 
 built by @r4v4n4 , isse bhi loot lo betichod"""
-
 import asyncio
 
 from telethon import events

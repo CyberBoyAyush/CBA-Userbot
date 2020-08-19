@@ -1,7 +1,6 @@
 """Take screenshot of any website
 Syntax: .siteshot <Website URL with http://>
 \n `Credits` @amnd33p"""
-
 import io
 import traceback
 from datetime import datetime

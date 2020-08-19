@@ -3,7 +3,6 @@ Available Commands: .gf
 
 by @KshitijGagan
 inspired from @xcruzhd2 """
-
 import asyncio
 
 from telethon import events

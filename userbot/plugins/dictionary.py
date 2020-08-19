@@ -1,6 +1,5 @@
 """Dictionary Plugin for @UniBorg
 Syntax: .meaning <word>"""
-
 import requests
 from telethon import events
 

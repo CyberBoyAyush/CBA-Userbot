@@ -3,7 +3,8 @@ import asyncio
 from platform import uname
 
 from telethon import events
-from telethon.tl import functions, types
+from telethon.tl import functions
+from telethon.tl import types
 from telethon.tl.types import ChannelParticipantsAdmins
 
 from userbot import ALIVE_NAME

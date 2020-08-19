@@ -3,10 +3,13 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import html
 
-from telethon import events, utils
-from telethon.errors import (BadRequestError, ChatAdminRequiredError,
-                             ImageProcessFailedError, PhotoCropSizeSmallError,
-                             UserAdminInvalidError)
+from telethon import events
+from telethon import utils
+from telethon.errors import BadRequestError
+from telethon.errors import ChatAdminRequiredError
+from telethon.errors import ImageProcessFailedError
+from telethon.errors import PhotoCropSizeSmallError
+from telethon.errors import UserAdminInvalidError
 from telethon.tl import types
 
 from userbot.utils import admin_cmd

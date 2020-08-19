@@ -5,7 +5,9 @@ import random
 import re
 from math import ceil
 
-from telethon import custom, errors, events
+from telethon import custom
+from telethon import errors
+from telethon import events
 
 from userbot import CMD_LIST
 

@@ -3,7 +3,6 @@ Available Commands:
 .support
 Credits to noone
 """
-
 import asyncio
 
 from telethon import events

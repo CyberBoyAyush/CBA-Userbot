@@ -1,7 +1,6 @@
 """Emoji
 Available Commands:
 .mtn"""
-
 import asyncio
 
 from telethon import events

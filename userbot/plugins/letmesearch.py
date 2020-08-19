@@ -16,8 +16,6 @@ Syntax:
  .gem <Type name of item as on gem.gov.in>
  .archive <Type name of website you want to get info on wayback machine>
 """
-
-
 import json
 import os
 

@@ -1,7 +1,5 @@
 """just for fun
 .whatsapp"""
-
-
 import asyncio
 
 from telethon import events

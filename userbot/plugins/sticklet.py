@@ -1,12 +1,13 @@
 # Random RGB Sticklet by @PhycoNinja13b
 # modified by @UniBorg
-
 import io
 import os
 import random
 import textwrap
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
 from telethon.tl.types import InputMessagesFilterDocument
 from uniborg.util import admin_cmd
 

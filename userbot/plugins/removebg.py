@@ -24,7 +24,8 @@ import requests
 from telethon import events
 
 from userbot import CMD_HELP
-from userbot.utils import admin_cmd, progress
+from userbot.utils import admin_cmd
+from userbot.utils import progress
 
 
 @borg.on(admin_cmd(pattern="rmbg ?(.*)"))

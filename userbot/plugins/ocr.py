@@ -2,14 +2,15 @@
 #
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
-
 import logging
 import os
 
 import requests
 from telethon import events
 
-from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
+from userbot import bot
+from userbot import CMD_HELP
+from userbot import TEMP_DOWNLOAD_DIRECTORY
 from userbot.utils import admin_cmd
 
 OCR_SPACE_API_KEY = Config.OCR_SPACE_API_KEY

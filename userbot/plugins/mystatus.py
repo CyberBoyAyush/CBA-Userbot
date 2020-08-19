@@ -4,8 +4,6 @@ Offline = Add an offline tag in your name and change profile pic to black.
 Online = Remove Offline Tag from your name and change profile pic to vars PROFILE_IMAGE.
 Note - If you have a last name remove it unless it automatically removed.
 """
-
-
 import os
 import urllib
 

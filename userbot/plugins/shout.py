@@ -2,11 +2,11 @@
 usage: .shout message
 originaly from : @corsicanu_bot
 """
-
 import random
 import sys
 
-from telethon import events, functions
+from telethon import events
+from telethon import functions
 
 from userbot import CMD_HELP
 from userbot.utils import admin_cmd

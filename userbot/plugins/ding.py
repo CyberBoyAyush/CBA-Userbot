@@ -3,7 +3,6 @@
 Available Commands:
 
 .ding"""
-
 import asyncio
 
 from telethon import events

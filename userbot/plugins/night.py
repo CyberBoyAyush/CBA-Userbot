@@ -4,7 +4,8 @@ import asyncio
 import datetime
 
 from telethon import events
-from telethon.tl import functions, types
+from telethon.tl import functions
+from telethon.tl import types
 
 from userbot import ALIVE_NAME
 from userbot.utils import admin_cmd

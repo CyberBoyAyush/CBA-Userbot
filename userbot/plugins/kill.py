@@ -1,7 +1,6 @@
 """Emoji
 Available Commands:
 .kill"""
-
 import asyncio
 
 from telethon import events

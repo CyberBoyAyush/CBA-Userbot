@@ -1,7 +1,8 @@
 """Create Private Groups
 Available Commands:
 .create (b|g) GroupName"""
-from telethon.tl import functions, types
+from telethon.tl import functions
+from telethon.tl import types
 
 from userbot import utils
 from userbot.utils import admin_cmd

@@ -1,7 +1,8 @@
 import asyncio
 from asyncio import wait
 
-from telethon import events, utils
+from telethon import events
+from telethon import utils
 
 from userbot.events import register
 

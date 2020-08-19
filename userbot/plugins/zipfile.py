@@ -5,7 +5,10 @@ import zipfile
 
 from pySmartDL import SmartDL
 from telethon import events
-from uniborg.util import admin_cmd, humanbytes, progress, time_formatter
+from uniborg.util import admin_cmd
+from uniborg.util import humanbytes
+from uniborg.util import progress
+from uniborg.util import time_formatter
 
 
 @borg.on(admin_cmd(pattern="compress ?(.*)"))

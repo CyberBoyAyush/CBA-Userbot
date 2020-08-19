@@ -7,7 +7,6 @@ usage: .rgbk2//as a reply to any text message
 usage: .kargb //as a reply to any text message
 usage: .karpp //your profile pic will be setted
 Thanks to @r4v4n4 for vars"""
-
 import asyncio
 import os
 import random
@@ -17,7 +16,9 @@ from time import sleep
 from urllib.error import HTTPError
 from urllib.parse import quote_plus
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys

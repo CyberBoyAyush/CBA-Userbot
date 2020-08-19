@@ -1,7 +1,6 @@
 # (c) @TeleBotHelp and @Sensible_userbot
 # By @xditya. Kangers keep credits xD
 # All in one code.
-
 """TeleBot
 Available Commands:
 .tlol
@@ -9,7 +8,6 @@ Available Commands:
 .heart
 .candy
 .nothappy"""
-
 import asyncio
 from collections import deque
 

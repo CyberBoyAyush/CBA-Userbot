@@ -5,7 +5,8 @@ from collections import deque
 
 from telethon import events
 
-from userbot import ALIVE_NAME, CMD_HELP
+from userbot import ALIVE_NAME
+from userbot import CMD_HELP
 from userbot.utils import admin_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "cat"

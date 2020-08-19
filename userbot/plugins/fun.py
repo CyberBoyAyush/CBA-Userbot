@@ -3,7 +3,8 @@ import random
 import re
 import time
 from collections import deque
-from random import choice, randint
+from random import choice
+from random import randint
 
 import requests
 from telethon import events

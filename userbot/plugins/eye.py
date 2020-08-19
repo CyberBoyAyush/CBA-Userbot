@@ -1,5 +1,4 @@
 """COMMAND : .eye"""
-
 import asyncio
 
 from telethon import events

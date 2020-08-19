@@ -5,7 +5,10 @@ import io
 import sys
 import traceback
 
-from telethon import errors, events, functions, types
+from telethon import errors
+from telethon import events
+from telethon import functions
+from telethon import types
 
 from userbot import CMD_HELP
 from userbot.utils import admin_cmd

@@ -1,6 +1,5 @@
 """Get Telegram Profile Picture and other information
 Syntax: .info @username"""
-
 import html
 
 from telethon.tl.functions.photos import GetUserPhotosRequest

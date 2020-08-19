@@ -2,7 +2,8 @@ import asyncio
 import time
 from asyncio import wait
 
-from telethon import events, utils
+from telethon import events
+from telethon import utils
 
 from userbot.utils import admin_cmd
 

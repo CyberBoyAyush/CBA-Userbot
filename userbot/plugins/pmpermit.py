@@ -3,11 +3,15 @@ import io
 import os
 import time
 
-from telethon import errors, events, functions, types
+from telethon import errors
+from telethon import events
+from telethon import functions
+from telethon import types
 from telethon.tl.functions.users import GetFullUserRequest
 
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
-from userbot import ALIVE_NAME, CUSTOM_PMPERMIT
+from userbot import ALIVE_NAME
+from userbot import CUSTOM_PMPERMIT
 from userbot.utils import admin_cmd
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)

@@ -1,5 +1,4 @@
 """ Whatever Plugin by Noobs of Telegram i.e. @PhycoNinja13b and @Halto_Tha """
-
 import asyncio
 import os
 import sys

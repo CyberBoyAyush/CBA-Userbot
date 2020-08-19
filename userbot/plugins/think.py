@@ -1,7 +1,6 @@
 """Emoji
 Available Commands:
 .think"""
-
 import asyncio
 
 from telethon import events

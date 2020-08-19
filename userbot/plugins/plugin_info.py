@@ -4,7 +4,6 @@
 # you may not use this file except in compliance with the License.
 #
 """ Userbot plugin_info command """
-
 from userbot import CMD_HELP
 from userbot.utils import admin_cmd
 
