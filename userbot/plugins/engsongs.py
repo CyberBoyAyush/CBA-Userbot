@@ -1,5 +1,5 @@
-""" Sing a English song... 
-    Command .esing 
+""" Sing a English song...
+    Command .esing
     By @Deonnn """
 # BY @Deonnn
 import asyncio

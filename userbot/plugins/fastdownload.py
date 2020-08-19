@@ -1,5 +1,5 @@
 """
-command: .url 
+command: .url
 
 """
 import asyncio

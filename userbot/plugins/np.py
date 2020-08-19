@@ -1,7 +1,7 @@
 """Emoji
 Available Commands:
 .nope
-Credits to 
+Credits to
 """
 import asyncio
 

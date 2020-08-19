@@ -2,7 +2,7 @@
 Anime Batch Downloader Plugin for userbot. //set TEMP_DIR Env Var first.
 usage:- get a link of Animefrenzy.net Anime page and use in cmd.
 cmd:- .anime page_link
-By:- @Zero_cool7870	  
+By:- @Zero_cool7870
 
 """
 import asyncio

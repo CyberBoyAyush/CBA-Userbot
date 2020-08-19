@@ -1,4 +1,4 @@
-"""COMMAND : .ftoimg 
+"""COMMAND : .ftoimg
 here file must be in image file """
 import asyncio
 from io import BytesIO

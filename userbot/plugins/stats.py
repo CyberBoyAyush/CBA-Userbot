@@ -41,7 +41,7 @@ async def _(event):
     ms = (end - start).seconds
     await event.edit(
         """`Your🧜🏻‍♀️Stats🔱Obtained🔱in 🔱{} 🧜🏻‍♀️seconds`
-    
+
 `You🐠 have 🐬 {} 🦈Private Messages`
 `You🐠are in🐬 {} 🦈Groups`
 `You🐠are in🐬 {} 🦈Super Groups`

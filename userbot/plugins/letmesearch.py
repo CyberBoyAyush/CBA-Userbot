@@ -1,5 +1,5 @@
 """
-Let me Google / YouTube / DuckDuckGo / altnews / Xvideo / Pornhub / var / log / dyno that for you! 
+Let me Google / YouTube / DuckDuckGo / altnews / Xvideo / Pornhub / var / log / dyno that for you!
 Syntax:
  .lmg <search query>
  .lmy <search query>

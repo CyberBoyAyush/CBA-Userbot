@@ -1,5 +1,5 @@
-""" secret module 18+... 
-    use .xtx 
+""" secret module 18+...
+    use .xtx
     By @imperialxx """
 # BY @imperialxx
 import asyncio
