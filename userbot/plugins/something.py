@@ -20,8 +20,7 @@ async def test(event):
 async def test(event):
     if event.fwd_from:
         return
-    await event.edit(
-        """☁☁🌞      ☁           ☁
+    await event.edit("""☁☁🌞      ☁           ☁
        ☁  ✈         ☁    🚁    ☁    ☁        ☁          ☁     ☁   ☁
 
 🏬🏨🏫🏢🏤🏥🏦🏪🏫
@@ -29,8 +28,7 @@ async def test(event):
            🌳/  🚘 l  🏃 \🌴 👬                        👬     🌴/            l  🚔    \🌲
       🌲/   🚖     l        \
           🌳/🚶           |   🚍         \ 🌴🚴🚴
-🌴/                    |                     \🌲"""
-    )
+🌴/                    |                     \🌲""")
 
 
 # @PhycoNinja13b 's Part begin from here
@@ -58,7 +56,8 @@ async def cheer(event):
 async def getwell(event):
     if event.fwd_from:
         return
-    await event.edit("🌹🌹🌹🌹🌹🌹🌹🌹 \n🌹😷😢😓😷😢💨🌹\n🌹💝💉🍵💊💐💝🌹\n🌹 GetBetter Soon! 🌹\n🌹🌹🌹🌹🌹🌹🌹🌹")
+    await event.edit(
+        "🌹🌹🌹🌹🌹🌹🌹🌹 \n🌹😷😢😓😷😢💨🌹\n🌹💝💉🍵💊💐💝🌹\n🌹 GetBetter Soon! 🌹\n🌹🌹🌹🌹🌹🌹🌹🌹")
 
 
 @borg.on(admin_cmd(pattern=r"luck"))

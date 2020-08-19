@@ -5,7 +5,8 @@ from userbot.utils import admin_cmd
 @command(pattern="^.help ?(.*)")
 # @borg.on(admin_cmd(pattern=r"help ?(.*)"))
 async def cmd_list(event):
-    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
+    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@",
+                                                             "!"):
         tgbotusername = Var.TG_BOT_USER_NAME_BF_HER
         input_str = event.pattern_match.group(1)
         if tgbotusername is None or input_str == "text":
@@ -42,9 +43,8 @@ async def cmd_list(event):
         else:
             help_string = """Userbot Modules \n [🧜🏻GULFY🧚🏻‍♀️](https://t.me/FridayOT)\n`Userbot Commands`"""
             results = await bot.inline_query(  # pylint:disable=E0602
-                tgbotusername, help_string
-            )
-            await results[0].click(
-                event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
-            )
+                tgbotusername, help_string)
+            await results[0].click(event.chat_id,
+                                   reply_to=event.reply_to_msg_id,
+                                   hide_via=True)
             await event.delete()

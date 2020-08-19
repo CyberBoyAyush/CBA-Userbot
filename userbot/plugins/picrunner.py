@@ -79,10 +79,9 @@ async def main(event):
             file = await event.client.upload_file("donottouch.jpg")
             await event.client(
                 functions.photos.DeletePhotosRequest(
-                    await event.client.get_profile_photos("me", limit=1)
-                )
-            )
-            await event.client(functions.photos.UploadProfilePhotoRequest(file))
+                    await event.client.get_profile_photos("me", limit=1)))
+            await event.client(functions.photos.UploadProfilePhotoRequest(file)
+                               )
             os.system("rm -rf donottouch.jpg")
         except:
             pass

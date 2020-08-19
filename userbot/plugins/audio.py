@@ -26,12 +26,12 @@ async def _(event):
     async with borg.conversation(chat) as conv:
         try:
             response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=507379365)
-            )
+                events.NewMessage(incoming=True, from_users=507379365))
             await borg.send_message(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await event.reply("```Please unblock @sangmatainfo_bot and try again```")
+            await event.reply(
+                "```Please unblock @sangmatainfo_bot and try again```")
             return
         if response.text.startswith("🌐"):
             await event.edit(

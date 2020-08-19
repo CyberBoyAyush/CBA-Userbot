@@ -48,7 +48,6 @@ LANG = "en"
 async def carbon_api(e):
 
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-
         """ A Wrapper for carbon.now.sh """
 
         await e.edit("`Processing..`")
@@ -93,7 +92,8 @@ async def carbon_api(e):
 
         chrome_options.add_experimental_option("prefs", prefs)
 
-        driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+        driver = webdriver.Chrome(executable_path=CHROME_DRIVER,
+                                  options=chrome_options)
 
         driver.get(url)
 
@@ -108,12 +108,16 @@ async def carbon_api(e):
 
         params = {
             "cmd": "Page.setDownloadBehavior",
-            "params": {"behavior": "allow", "downloadPath": download_path},
+            "params": {
+                "behavior": "allow",
+                "downloadPath": download_path
+            },
         }
 
         command_result = driver.execute("send_command", params)
 
-        driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
+        driver.find_element_by_xpath(
+            "//button[contains(text(),'Export')]").click()
 
         # driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
 
@@ -134,7 +138,8 @@ async def carbon_api(e):
         await e.client.send_file(
             e.chat_id,
             file,
-            caption="<< Here's your carbon, \n Carbonised by [GULFY](https://www.github.com/midhunkm1294-bit/FRIDAY)>> ",
+            caption=
+            "<< Here's your carbon, \n Carbonised by [GULFY](https://www.github.com/midhunkm1294-bit/FRIDAY)>> ",
             force_document=True,
             reply_to=e.message.reply_to_msg_id,
         )

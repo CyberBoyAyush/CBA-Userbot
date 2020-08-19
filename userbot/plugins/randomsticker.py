@@ -31,14 +31,9 @@ def choser(cmd, pack, blacklist={}):
         nonlocal docs
         if docs is None:
             docs = [
-                utils.get_input_document(x)
-                for x in (
-                    await borg(
-                        functions.messages.GetStickerSetRequest(
-                            types.InputStickerSetShortName(pack)
-                        )
-                    )
-                ).documents
+                utils.get_input_document(x) for x in (await borg(
+                    functions.messages.GetStickerSetRequest(
+                        types.InputStickerSetShortName(pack)))).documents
                 if x.id not in blacklist
             ]
         await event.respond(file=random.choice(docs))
@@ -66,6 +61,7 @@ choser(
     },
 )
 
+
 # HeadPat Module for Userbot (http://headp.at)
 # cmd:- .pat username or reply to msg
 # By:- git: jaskaranSM tg: @Zero_cool7870
@@ -86,5 +82,7 @@ async def lastfm(event):
     if username:
         await borg.send_file(event.chat_id, PAT_IMAGE, caption=username)
     else:
-        await borg.send_file(event.chat_id, PAT_IMAGE, reply_to=event.reply_to_msg_id)
+        await borg.send_file(event.chat_id,
+                             PAT_IMAGE,
+                             reply_to=event.reply_to_msg_id)
     remove(PAT_IMAGE)

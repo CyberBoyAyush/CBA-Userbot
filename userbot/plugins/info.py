@@ -18,10 +18,8 @@ async def info(event):
         else:
             await event.edit("Please specify a valid plugin name.")
     else:
-        await event.edit(
-            "Please specify which plugin do you want help for !!\
-            \nUsage: .info <plugin name>"
-        )
+        await event.edit("Please specify which plugin do you want help for !!\
+            \nUsage: .info <plugin name>")
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)

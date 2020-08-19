@@ -271,23 +271,26 @@ async def _(event):
     await asyncio.sleep(1)
     await event.edit("╔═══════════════════╗ \n ░ ░ ░ \n╚═══════════════════╝")
     await asyncio.sleep(1)
-    await event.edit("╔═══════════════════╗ \n ░ ░ ░ ░ \n╚═══════════════════╝")
-    await asyncio.sleep(1)
-    await event.edit("╔═══════════════════╗ \n ░ ░ ░ ░ ░ \n╚═══════════════════╝")
-    await asyncio.sleep(1)
-    await event.edit("╔═══════════════════╗ \n ░ ░ ░ ░ ░ ░ \n╚═══════════════════╝")
-    await asyncio.sleep(1)
-    await event.edit("╔═══════════════════╗ \n ░ ░ ░ ░ ░ ░ ░ \n╚═══════════════════╝")
-    await asyncio.sleep(1)
-    await event.edit("╔═══════════════════╗ \n ░ ░ ░ ░ ░ ░ ░ ░ \n╚═══════════════════╝")
+    await event.edit("╔═══════════════════╗ \n ░ ░ ░ ░ \n╚═══════════════════╝"
+                     )
     await asyncio.sleep(1)
     await event.edit(
-        "╔═══════════════════╗ \n ░ ░ ░ ░ ░ ░ ░ ░ ░ \n╚═══════════════════╝"
-    )
+        "╔═══════════════════╗ \n ░ ░ ░ ░ ░ \n╚═══════════════════╝")
     await asyncio.sleep(1)
     await event.edit(
-        "╔═══════════════════╗ \n ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ \n╚═══════════════════╝"
-    )
+        "╔═══════════════════╗ \n ░ ░ ░ ░ ░ ░ \n╚═══════════════════╝")
+    await asyncio.sleep(1)
+    await event.edit(
+        "╔═══════════════════╗ \n ░ ░ ░ ░ ░ ░ ░ \n╚═══════════════════╝")
+    await asyncio.sleep(1)
+    await event.edit(
+        "╔═══════════════════╗ \n ░ ░ ░ ░ ░ ░ ░ ░ \n╚═══════════════════╝")
+    await asyncio.sleep(1)
+    await event.edit(
+        "╔═══════════════════╗ \n ░ ░ ░ ░ ░ ░ ░ ░ ░ \n╚═══════════════════╝")
+    await asyncio.sleep(1)
+    await event.edit(
+        "╔═══════════════════╗ \n ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ \n╚═══════════════════╝")
     await asyncio.sleep(1)
     await event.edit(
         "╔═══════════════════╗ \n ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ \n╚═══════════════════╝"

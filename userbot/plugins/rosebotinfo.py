@@ -35,7 +35,8 @@ async def _(event):
                 await borg.send_message(event.chat_id, audio.text)
                 await event.delete()
             except YouBlockedUserError:
-                await event.edit("**Error:** `unblock` @MissRose_bot `and retry!")
+                await event.edit(
+                    "**Error:** `unblock` @MissRose_bot `and retry!")
     elif "@" in sysarg:
         async with borg.conversation(bot) as conv:
             try:
@@ -50,7 +51,8 @@ async def _(event):
                 await borg.send_message(event.chat_id, audio.text)
                 await event.delete()
             except YouBlockedUserError:
-                await event.edit("**Error:** `unblock` @MissRose_Bot `and try again!")
+                await event.edit(
+                    "**Error:** `unblock` @MissRose_Bot `and try again!")
     elif "" in sysarg:
         async with borg.conversation(bot) as conv:
             try:
@@ -65,4 +67,5 @@ async def _(event):
                 await borg.send_message(event.chat_id, audio.text)
                 await event.delete()
             except YouBlockedUserError:
-                await event.edit("**Error:** `unblock` @MissRose_Bot `and try again!")
+                await event.edit(
+                    "**Error:** `unblock` @MissRose_Bot `and try again!")

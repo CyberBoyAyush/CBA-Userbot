@@ -30,12 +30,12 @@ async def _(event):
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=164977173)
-            )
+                events.NewMessage(incoming=True, from_users=164977173))
             await event.client.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await event.reply("```Please unblock me (@buildstickerbot) u Nigga```")
+            await event.reply(
+                "```Please unblock me (@buildstickerbot) u Nigga```")
             return
         if response.text.startswith("Hi!"):
             await event.edit(

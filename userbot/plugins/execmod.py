@@ -32,7 +32,11 @@ async def pipcheck(pip):
     if pipmodule:
         await pip.edit("`Searching . . .`")
         pipc = await asyncrunapp(
-            "pip3", "search", pipmodule, stdout=asyncPIPE, stderr=asyncPIPE,
+            "pip3",
+            "search",
+            pipmodule,
+            stdout=asyncPIPE,
+            stderr=asyncPIPE,
         )
 
         stdout, stderr = await pipc.communicate()
@@ -45,23 +49,22 @@ async def pipcheck(pip):
                 file.write(pipout)
                 file.close()
                 await pip.client.send_file(
-                    pip.chat_id, "pips.txt", reply_to=pip.id, caption=pipmodule,
+                    pip.chat_id,
+                    "pips.txt",
+                    reply_to=pip.id,
+                    caption=pipmodule,
                 )
                 os.remove("output.txt")
                 return
-            await pip.edit(
-                "**Query: **\n`"
-                f"pip3 search {pipmodule}"
-                "`\n**Result: **\n`"
-                f"{pipout}"
-                "`"
-            )
+            await pip.edit("**Query: **\n`"
+                           f"pip3 search {pipmodule}"
+                           "`\n**Result: **\n`"
+                           f"{pipout}"
+                           "`")
         else:
-            await pip.edit(
-                "**Query: **\n`"
-                f"pip3 search {pipmodule}"
-                "`\n**Result: **\n`No Result Returned/False`"
-            )
+            await pip.edit("**Query: **\n`"
+                           f"pip3 search {pipmodule}"
+                           "`\n**Result: **\n`No Result Returned/False`")
     else:
         await pip.edit("`Use .help system to see an example`")
 
@@ -82,8 +85,7 @@ async def _(event):
         reply_to_id = event.reply_to_msg_id
     start_time = time.time() + PROCESS_RUN_TIME
     process = await asyncio.create_subprocess_shell(
-        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-    )
+        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
     stdout, stderr = await process.communicate()
     o = stdout.decode()
     OUTPUT = f"**[Cat's](tg://need_update_for_some_feature/) SUICIDE BOMB:**\n{o}"
@@ -119,8 +121,7 @@ async def _(event):
         reply_to_id = event.reply_to_msg_id
     start_time = time.time() + PROCESS_RUN_TIME
     process = await asyncio.create_subprocess_shell(
-        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-    )
+        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
     stdout, stderr = await process.communicate()
     o = stdout.decode()
     OUTPUT = f"**[Cat's](tg://need_update_for_some_feature/) PLUGINS:**\n{o}"
@@ -156,8 +157,7 @@ async def _(event):
         reply_to_id = event.reply_to_msg_id
     start_time = time.time() + PROCESS_RUN_TIME
     process = await asyncio.create_subprocess_shell(
-        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-    )
+        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
     stdout, stderr = await process.communicate()
     o = stdout.decode()
     OUTPUT = f"{o}"
@@ -193,8 +193,7 @@ async def _(event):
         reply_to_id = event.reply_to_msg_id
     start_time = time.time() + PROCESS_RUN_TIME
     process = await asyncio.create_subprocess_shell(
-        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-    )
+        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
     stdout, stderr = await process.communicate()
     o = stdout.decode()
     OUTPUT = (
@@ -233,8 +232,7 @@ async def _(event):
         reply_to_id = event.reply_to_msg_id
     start_time = time.time() + PROCESS_RUN_TIME
     process = await asyncio.create_subprocess_shell(
-        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-    )
+        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
     stdout, stderr = await process.communicate()
     o = stdout.decode()
     OUTPUT = f"**[Cat's](tg://need_update_for_some_feature/) , Server Speed Calculated:**\n{o}"
@@ -270,8 +268,7 @@ async def _(event):
         reply_to_id = event.reply_to_msg_id
     start_time = time.time() + PROCESS_RUN_TIME
     process = await asyncio.create_subprocess_shell(
-        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-    )
+        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
     stdout, stderr = await process.communicate()
     o = stdout.decode()
     OUTPUT = f"{o}"
@@ -307,8 +304,7 @@ async def _(event):
         reply_to_id = event.reply_to_msg_id
     start_time = time.time() + PROCESS_RUN_TIME
     process = await asyncio.create_subprocess_shell(
-        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-    )
+        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
     stdout, stderr = await process.communicate()
     o = stdout.decode()
     OUTPUT = f"{o}"
@@ -344,8 +340,7 @@ async def _(event):
         reply_to_id = event.reply_to_msg_id
     start_time = time.time() + PROCESS_RUN_TIME
     process = await asyncio.create_subprocess_shell(
-        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-    )
+        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
     stdout, stderr = await process.communicate()
     o = stdout.decode()
     OUTPUT = f"{o}"
@@ -381,8 +376,7 @@ async def _(event):
         reply_to_id = event.reply_to_msg_id
     start_time = time.time() + PROCESS_RUN_TIME
     process = await asyncio.create_subprocess_shell(
-        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-    )
+        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
     stdout, stderr = await process.communicate()
     o = stdout.decode()
     OUTPUT = f"{o}"
@@ -418,8 +412,7 @@ async def _(event):
         reply_to_id = event.reply_to_msg_id
     start_time = time.time() + PROCESS_RUN_TIME
     process = await asyncio.create_subprocess_shell(
-        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-    )
+        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
     stdout, stderr = await process.communicate()
     o = stdout.decode()
     OUTPUT = f"{o}"

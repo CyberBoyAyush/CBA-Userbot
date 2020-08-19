@@ -39,7 +39,6 @@ async def on_file_to_photo(event):
                 message=target.message,
                 entities=target.entities,
                 reply_to_msg_id=target.id,
-            )
-        )
+            ))
     except PhotoInvalidDimensionsError:
         return

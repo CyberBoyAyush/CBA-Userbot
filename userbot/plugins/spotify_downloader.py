@@ -17,7 +17,8 @@ async def _(event):
         return
     d_link = event.pattern_match.group(1)
     if ".com" not in d_link:
-        await event.edit("` I need a link to download something pro.`**(._.)**")
+        await event.edit("` I need a link to download something pro.`**(._.)**"
+                         )
     else:
         await event.edit("🎶**Initiating Download!**🎶")
     bot = "@DeezLoadBot"
@@ -35,9 +36,9 @@ async def _(event):
             await borg.send_message(event.chat_id, details)
             await conv.get_response()
             songh = await conv.get_response()
-            await borg.send_file(
-                event.chat_id, songh, caption="🔆**Here's the requested song!**🔆"
-            )
+            await borg.send_file(event.chat_id,
+                                 songh,
+                                 caption="🔆**Here's the requested song!**🔆")
             await event.delete()
         except YouBlockedUserError:
             await event.edit("**Error:** `unblock` @DeezLoadBot `and retry!`")

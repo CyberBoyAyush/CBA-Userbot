@@ -22,8 +22,7 @@ async def _(event):
             if cws.should_clean_welcome:
                 try:
                     await bot.delete_messages(  # pylint:disable=E0602
-                        event.chat_id, cws.previous_welcome
-                    )
+                        event.chat_id, cws.previous_welcome)
                 except Exception as e:  # pylint:disable=C0103,W0703
                     logger.warn(str(e))  # pylint:disable=E0602
             a_user = await event.get_user()
@@ -33,19 +32,20 @@ async def _(event):
             title = chat.title if chat.title else "this chat"
             participants = await event.client.get_participants(chat)
             count = len(participants)
-            mention = "[{}](tg://user?id={})".format(a_user.first_name, a_user.id)
+            mention = "[{}](tg://user?id={})".format(a_user.first_name,
+                                                     a_user.id)
             first = a_user.first_name
             last = a_user.last_name
             if last:
                 fullname = f"{first} {last}"
             else:
                 fullname = first
-            username = (
-                f"@{me.username}" if me.username else f"[Me](tg://user?id={me.id})"
-            )
+            username = (f"@{me.username}"
+                        if me.username else f"[Me](tg://user?id={me.id})")
             userid = a_user.id
             current_saved_welcome_message = cws.custom_welcome_message
-            mention = "[{}](tg://user?id={})".format(a_user.first_name, a_user.id)
+            mention = "[{}](tg://user?id={})".format(a_user.first_name,
+                                                     a_user.id)
 
             current_message = await event.reply(
                 current_saved_welcome_message.format(
@@ -70,7 +70,8 @@ async def _(event):
     msg = await event.get_reply_message()
     if msg and msg.media:
         bot_api_file_id = pack_bot_file_id(msg.media)
-        add_welcome_setting(event.chat_id, msg.message, True, 0, bot_api_file_id)
+        add_welcome_setting(event.chat_id, msg.message, True, 0,
+                            bot_api_file_id)
         await event.edit("Welcome note saved. ")
     else:
         input_str = event.text.split(None, 1)
@@ -84,10 +85,9 @@ async def _(event):
         return
     cws = get_current_welcome_settings(event.chat_id)
     rm_welcome_setting(event.chat_id)
-    await event.edit(
-        "Welcome note cleared. "
-        + "The previous welcome message was `{}`.".format(cws.custom_welcome_message)
-    )
+    await event.edit("Welcome note cleared. " +
+                     "The previous welcome message was `{}`.".format(
+                         cws.custom_welcome_message))
 
 
 @borg.on(admin_cmd(pattern="listwelcome"))  # pylint:disable=E0602
@@ -96,17 +96,16 @@ async def _(event):
         return
     cws = get_current_welcome_settings(event.chat_id)
     if hasattr(cws, "custom_welcome_message"):
-        await event.edit(
-            "Welcome note found. "
-            + "Your welcome message is\n\n`{}`.".format(cws.custom_welcome_message)
-        )
+        await event.edit("Welcome note found. " +
+                         "Your welcome message is\n\n`{}`.".format(
+                             cws.custom_welcome_message))
     else:
         await event.edit("No Welcome Message found")
 
 
-CMD_HELP.update(
-    {
-        "welcome": "\
+CMD_HELP.update({
+    "welcome":
+    "\
 .savewelcome <welcome message> or reply to a message with .setwelcome\
 \nUsage: Saves the message as a welcome note in the chat.\
 \n\nAvailable variables for formatting welcome messages :\
@@ -116,5 +115,4 @@ CMD_HELP.update(
 \n\n.clearwelcome\
 \nUsage: Deletes the welcome note for the current chat.\
 "
-    }
-)
+})

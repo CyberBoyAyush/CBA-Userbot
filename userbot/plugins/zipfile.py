@@ -35,16 +35,14 @@ async def _(event):
             c_time = time.time()
 
             downloaded_file_name = await borg.download_media(
-                reply_message, Config.TMP_DOWNLOAD_DIRECTORY
-            )
+                reply_message, Config.TMP_DOWNLOAD_DIRECTORY)
 
             directory_name = downloaded_file_name
 
             await event.edit("Finish downloading to my local")
 
-            zipfile.ZipFile(directory_name + ".zip", "w", zipfile.ZIP_DEFLATED).write(
-                directory_name
-            )
+            zipfile.ZipFile(directory_name + ".zip", "w",
+                            zipfile.ZIP_DEFLATED).write(directory_name)
 
             await borg.send_file(
                 event.chat_id,
@@ -79,10 +77,8 @@ async def _(event):
 
         directory_name = input_str
 
-        zipfile.ZipFile(directory_name + ".zip", "w", zipfile.ZIP_DEFLATED).write(
-            directory_name
-        )
+        zipfile.ZipFile(directory_name + ".zip", "w",
+                        zipfile.ZIP_DEFLATED).write(directory_name)
 
         await event.edit(
-            "Local file compressed to `{}`".format(directory_name + ".zip")
-        )
+            "Local file compressed to `{}`".format(directory_name + ".zip"))

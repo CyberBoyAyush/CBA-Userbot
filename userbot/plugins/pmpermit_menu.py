@@ -33,12 +33,10 @@ async def _(event):
             return
         if not event.is_private:
             return
-        Nudas = (
-            "__Please state your gender.__\n"
-            "`1`. 🧟‍♀️Female Homo-Sapien\n"
-            "`2`. 🧟‍♂️Male Homo-Sapien\n"
-            "`3`. 🙈Other\n"
-        )
+        Nudas = ("__Please state your gender.__\n"
+                 "`1`. 🧟‍♀️Female Homo-Sapien\n"
+                 "`2`. 🧟‍♂️Male Homo-Sapien\n"
+                 "`3`. 🙈Other\n")
         PM = (
             "`🧚‍♀️Heyyy🧚‍♀️. You are accessing the availabe menu of my master🧚‍♀️,`"
             f"{DEFAULTUSER}.🧛‍♂️\n"
@@ -47,13 +45,11 @@ async def _(event):
             "`1`. 🧜‍♀️To chat with my master🧜‍♀️\n"
             "`2`. 🧜‍♀️To spam my master's inbox.🧜‍♀️\n"
             "`4`. 🧝‍♂️To enquire something🧝‍♂️\n"
-            "`5`. 🧝‍♂️MuhfAker girls seeker_pm nibba\n"
-        )
+            "`5`. 🧝‍♂️MuhfAker girls seeker_pm nibba\n")
         ONE = (
             "__Okay🧞‍♀️. Your request has been registered🧞‍♀️. Do not spam my master's inbox.You can expect a reply within 24 light years🧞‍♀️. He is a busy man, unlike you probably🧞‍♀️.__\n\n"
             "**⚓🧜‍♀️You will be blocked and reported if you spam nibba.🌪🧞‍♀️⚠️**\n\n"
-            "__Use__ `/start` __to go back to the main menu.__"
-        )
+            "__Use__ `/start` __to go back to the main menu.__")
         TWO = " `███████▄▄███████████▄  \n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓███░░░░░░░░░░░░█\n██████▀▀▀█░░░░██████▀  \n░░░░░░░░░█░░░░█  \n░░░░░░░░░░█░░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░░▀▀ `\n\n**So uncool, this is not your home. Go bother someone else. You have been blocked and reported until further notice.**"
         FOUR = "__Okay. My master has not seen your message yet.He usually responds to people,though idk about retarted ones.__\n __He'll respond when he comes back, if he wants to.There's already a lot of pending messages😶__\n **Please do not spam unless you wish to be blocked and reported.**"
         FIVE = "`Okay. please have the basic manners as to not bother my master too much. If he wishes to help you, he will respond to you soon.`\n**Do not ask repeatdly else you will be blocked and reported.**"
@@ -78,14 +74,16 @@ async def _(event):
                     if not response.text == "/start":
                         await borg.send_message(chat, TWO)
                         await asyncio.sleep(3)
-                        await event.client(functions.contacts.BlockRequest(chat_id))
+                        await event.client(
+                            functions.contacts.BlockRequest(chat_id))
             elif y == "2":
                 await borg.send_message(chat, LWARN)
                 response = await conv.get_response(chat)
                 if not response.text == "/start":
                     await borg.send_message(chat, TWO)
                     await asyncio.sleep(3)
-                    await event.client(functions.contacts.BlockRequest(chat_id))
+                    await event.client(functions.contacts.BlockRequest(chat_id)
+                                       )
             elif y == "4":
                 await borg.send_message(chat, FOUR)
                 response = await conv.get_response(chat)
@@ -98,7 +96,8 @@ async def _(event):
                     if not response.text == "/start":
                         await borg.send_message(chat, TWO)
                         await asyncio.sleep(3)
-                        await event.client(functions.contacts.BlockRequest(chat_id))
+                        await event.client(
+                            functions.contacts.BlockRequest(chat_id))
             elif y == "5":
                 await borg.send_message(chat, FIVE)
                 response = await conv.get_response(chat)
@@ -108,7 +107,8 @@ async def _(event):
                     if not response.text == "/start":
                         await borg.send_message(chat, TWO)
                         await asyncio.sleep(3)
-                        await event.client(functions.contacts.BlockRequest(chat_id))
+                        await event.client(
+                            functions.contacts.BlockRequest(chat_id))
             else:
                 await borg.send_message(
                     chat,
@@ -122,4 +122,5 @@ async def _(event):
                     if not response.text == "/start":
                         await borg.send_message(chat, TWO)
                         await asyncio.sleep(3)
-                        await event.client(functions.contacts.BlockRequest(chat_id))
+                        await event.client(
+                            functions.contacts.BlockRequest(chat_id))

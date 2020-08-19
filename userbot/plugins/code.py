@@ -26,7 +26,11 @@ async def _(event):
 
     url = "http://www.suka.ml/api/v0/sakty/karbon"
 
-    a = requests.get(url, params={"code": code, "lang": lang, "line": True}).json()
+    a = requests.get(url, params={
+        "code": code,
+        "lang": lang,
+        "line": True
+    }).json()
 
     img_url = a["hasil"]["karbon"]
 

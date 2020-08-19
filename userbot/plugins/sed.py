@@ -11,9 +11,8 @@ from telethon.tl import types
 from userbot import CMD_HELP
 
 HEADER = "「sed」\n"
-KNOWN_RE_BOTS = re.compile(
-    r"(regex|moku|BananaButler_|rgx|l4mR)bot", flags=re.IGNORECASE
-)
+KNOWN_RE_BOTS = re.compile(r"(regex|moku|BananaButler_|rgx|l4mR)bot",
+                           flags=re.IGNORECASE)
 
 # Heavily based on
 # https://github.com/SijmenSchoon/regexbot/blob/master/regexbot.py
@@ -48,7 +47,7 @@ def doit(chat_id, match, original):
         try:
             s = original.message
             if s.startswith(HEADER):
-                s = s[len(HEADER) :]
+                s = s[len(HEADER):]
             s, i = regex.subn(fr, to, s, count=count, flags=flags)
             if i > 0:
                 return original, s
@@ -90,11 +89,13 @@ async def on_edit(event):
             break
 
 
-@command(pattern=re.compile(r"^s/((?:\\/|[^/])+)/((?:\\/|[^/])*)(/.*)?"), outgoing=True)
+@command(pattern=re.compile(r"^s/((?:\\/|[^/])+)/((?:\\/|[^/])*)(/.*)?"),
+         outgoing=True)
 async def on_regex(event):
     if event.fwd_from:
         return
-    if not event.is_private and await group_has_sedbot(await event.get_input_chat()):
+    if not event.is_private and await group_has_sedbot(await
+                                                       event.get_input_chat()):
         # await event.edit("This group has a sed bot. Ignoring this message!")
         return
 
@@ -104,7 +105,9 @@ async def on_regex(event):
 
     if m is not None:
         s = f"{HEADER}{s}"
-        out = await bot.send_message(await event.get_input_chat(), s, reply_to=m.id)
+        out = await bot.send_message(await event.get_input_chat(),
+                                     s,
+                                     reply_to=m.id)
         last_msgs[chat_id].appendleft(out)
     elif s is not None:
         await event.edit(s)
@@ -112,11 +115,10 @@ async def on_regex(event):
     raise events.StopPropagation
 
 
-CMD_HELP.update(
-    {
-        "sed": ".s<delimiter><old word(s)><delimiter><new word(s)>\
+CMD_HELP.update({
+    "sed":
+    ".s<delimiter><old word(s)><delimiter><new word(s)>\
     \nUsage: Replaces a word or words using sed.\
     \nDelimiters: `/, :, |, _`\
     example: tag any sentence and type s/a/b. where is required word to replace and b is correct word."
-    }
-)
+})

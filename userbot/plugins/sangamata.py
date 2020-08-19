@@ -9,8 +9,8 @@ from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from userbot.utils import admin_cmd
 
 logging.basicConfig(
-    format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
-)
+    format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s",
+    level=logging.WARNING)
 
 
 @borg.on(admin_cmd(pattern=("sg ?(.*)")))
@@ -33,12 +33,12 @@ async def _(event):
     async with borg.conversation(chat) as conv:
         try:
             response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=461843263)
-            )
+                events.NewMessage(incoming=True, from_users=461843263))
             await borg.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await event.reply("```Please unblock @sangmatainfo_bot and try again```")
+            await event.reply(
+                "```Please unblock @sangmatainfo_bot and try again```")
             return
         if response.text.startswith("Forward"):
             await event.edit(
@@ -59,13 +59,14 @@ async def _(event):
         try:
             m = await event.client.send_message("@fakemailbot", "/generate")
             await asyncio.sleep(5)
-            k = await event.client.get_messages(
-                entity="@fakemailbot", limit=1, reverse=False
-            )
+            k = await event.client.get_messages(entity="@fakemailbot",
+                                                limit=1,
+                                                reverse=False)
             mail = k[0].text
             # print(k[0].text)
         except YouBlockedUserError:
-            await event.reply("```Please unblock @fakemailbot and try again```")
+            await event.reply("```Please unblock @fakemailbot and try again```"
+                              )
             return
         await event.edit(mail)
 
@@ -81,13 +82,14 @@ async def _(event):
         try:
             m = await event.client.send_message("@fakemailbot", "/id")
             await asyncio.sleep(5)
-            k = await event.client.get_messages(
-                entity="@fakemailbot", limit=1, reverse=False
-            )
+            k = await event.client.get_messages(entity="@fakemailbot",
+                                                limit=1,
+                                                reverse=False)
             mail = k[0].text
             # print(k[0].text)
         except YouBlockedUserError:
-            await event.reply("```Please unblock @fakemailbot and try again```")
+            await event.reply("```Please unblock @fakemailbot and try again```"
+                              )
             return
         await event.edit(mail)
 
@@ -112,8 +114,7 @@ async def _(event):
     async with borg.conversation(chat) as conv:
         try:
             response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=97342984)
-            )
+                events.NewMessage(incoming=True, from_users=97342984))
             await borg.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
@@ -147,8 +148,7 @@ async def _(event):
     async with borg.conversation(chat) as conv:
         try:
             response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=186675376)
-            )
+                events.NewMessage(incoming=True, from_users=186675376))
             await borg.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:

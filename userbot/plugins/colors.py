@@ -38,12 +38,12 @@ async def _(event):
             os.remove("UniBorg.png")
             await event.delete()
     else:
-        await event.edit("Syntax: `.color <color_code>` example : `.color #ff0000`")
+        await event.edit(
+            "Syntax: `.color <color_code>` example : `.color #ff0000`")
 
 
-CMD_HELP.update(
-    {
-        "colors": "`.color` <color_code>  :\
+CMD_HELP.update({
+    "colors":
+    "`.color` <color_code>  :\
       \nUSAGE: sends you a plain image of the color example :`.color #ff0000` . "
-    }
-)
+})

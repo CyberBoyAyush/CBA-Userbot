@@ -41,18 +41,16 @@ async def _(event):
         downloaded_file_name = await borg.download_media(
             reply_message,
             Config.TMP_DOWNLOAD_DIRECTORY,
-            progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                progress(d, t, event, c_time, "trying to download")
-            ),
+            progress_callback=lambda d, t: asyncio.get_event_loop().
+            create_task(progress(d, t, event, c_time, "trying to download")),
         )
     except Exception as e:  # pylint:disable=C0103,W0703
         await event.edit(str(e))
     else:
         end = datetime.now()
         ms = (end - start).seconds
-        await event.edit(
-            "Downloaded to `{}` in {} seconds.".format(downloaded_file_name, ms)
-        )
+        await event.edit("Downloaded to `{}` in {} seconds.".format(
+            downloaded_file_name, ms))
         new_required_file_name = ""
         new_required_file_caption = ""
         command_to_run = []
@@ -60,10 +58,10 @@ async def _(event):
         voice_note = False
         supports_streaming = False
         if input_str == "voice":
-            new_required_file_caption = "NLFC_" + str(round(time.time())) + ".opus"
-            new_required_file_name = (
-                Config.TMP_DOWNLOAD_DIRECTORY + "/" + new_required_file_caption
-            )
+            new_required_file_caption = "NLFC_" + str(round(
+                time.time())) + ".opus"
+            new_required_file_name = (Config.TMP_DOWNLOAD_DIRECTORY + "/" +
+                                      new_required_file_caption)
             command_to_run = [
                 "ffmpeg",
                 "-i",
@@ -81,10 +79,10 @@ async def _(event):
             voice_note = True
             supports_streaming = True
         elif input_str == "mp3":
-            new_required_file_caption = "mp3_" + str(round(time.time())) + ".mp3"
-            new_required_file_name = (
-                Config.TMP_DOWNLOAD_DIRECTORY + "/" + new_required_file_caption
-            )
+            new_required_file_caption = "mp3_" + str(round(
+                time.time())) + ".mp3"
+            new_required_file_name = (Config.TMP_DOWNLOAD_DIRECTORY + "/" +
+                                      new_required_file_caption)
             command_to_run = [
                 "ffmpeg",
                 "-i",
@@ -121,18 +119,16 @@ async def _(event):
                 force_document=force_document,
                 voice_note=voice_note,
                 supports_streaming=supports_streaming,
-                progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                    progress(d, t, event, c_time, "trying to upload")
-                ),
+                progress_callback=lambda d, t: asyncio.get_event_loop().
+                create_task(progress(d, t, event, c_time, "trying to upload")),
             )
             ms_two = (end_two - end).seconds
             os.remove(new_required_file_name)
             await event.delete()
 
 
-CMD_HELP.update(
-    {
-        "filetomp3": "`.nfc voice` or `.nfc mp3` reply to required media to extract voice/mp3 :\
+CMD_HELP.update({
+    "filetomp3":
+    "`.nfc voice` or `.nfc mp3` reply to required media to extract voice/mp3 :\
       \n**USAGE:**Converts the required media file to voice or mp3 file. "
-    }
-)
+})

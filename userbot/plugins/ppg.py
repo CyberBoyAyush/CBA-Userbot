@@ -18,10 +18,10 @@ async def _(event):
         await event.edit(str(error_i_a))
         return False
     replied_user_profile_photos = await borg(
-        GetUserPhotosRequest(
-            user_id=replied_user.user.id, offset=42, max_id=0, limit=80
-        )
-    )
+        GetUserPhotosRequest(user_id=replied_user.user.id,
+                             offset=42,
+                             max_id=0,
+                             limit=80))
     replied_user_profile_photos_count = "NaN"
     try:
         replied_user_profile_photos_count = replied_user_profile_photos.count
@@ -80,16 +80,12 @@ async def get_full_user(event):
         previous_message = await event.get_reply_message()
         if previous_message.forward:
             replied_user = await event.client(
-                GetFullUserRequest(
-                    previous_message.forward.from_id
-                    or previous_message.forward.channel_id
-                )
-            )
+                GetFullUserRequest(previous_message.forward.from_id
+                                   or previous_message.forward.channel_id))
             return replied_user, None
         else:
             replied_user = await event.client(
-                GetFullUserRequest(previous_message.from_id)
-            )
+                GetFullUserRequest(previous_message.from_id))
             return replied_user, None
     else:
         input_str = None
@@ -100,7 +96,8 @@ async def get_full_user(event):
         if event.message.entities is not None:
             mention_entity = event.message.entities
             probable_user_mention_entity = mention_entity[0]
-            if isinstance(probable_user_mention_entity, MessageEntityMentionName):
+            if isinstance(probable_user_mention_entity,
+                          MessageEntityMentionName):
                 user_id = probable_user_mention_entity.user_id
                 replied_user = await event.client(GetFullUserRequest(user_id))
                 return replied_user, None
@@ -108,7 +105,8 @@ async def get_full_user(event):
                 try:
                     user_object = await event.client.get_entity(input_str)
                     user_id = user_object.id
-                    replied_user = await event.client(GetFullUserRequest(user_id))
+                    replied_user = await event.client(
+                        GetFullUserRequest(user_id))
                     return replied_user, None
                 except Exception as e:
                     return None, e

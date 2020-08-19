@@ -31,7 +31,8 @@ async def _(event):
         msg = await event.message.get_reply_message()
         if msg.forward:
             # FIXME forward privacy memes
-            who = await borg.get_entity(msg.forward.from_id or msg.forward.channel_id)
+            who = await borg.get_entity(msg.forward.from_id
+                                        or msg.forward.channel_id)
         else:
             who = await msg.get_sender()
 
@@ -40,6 +41,8 @@ async def _(event):
 
 @borg.on(admin_cmd(pattern=r"members", outgoing=True))
 async def _(event):
-    members = [get_who_string(m) async for m in borg.iter_participants(event.chat_id)]
+    members = [
+        get_who_string(m) async for m in borg.iter_participants(event.chat_id)
+    ]
 
     await event.edit("\n".join(members), parse_mode="html")

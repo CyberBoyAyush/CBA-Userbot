@@ -26,18 +26,17 @@ async def gps(event):
     if geoloc:
         lon = geoloc.longitude
         lat = geoloc.latitude
-        await reply_to_id.reply(
-            input_str, file=types.InputMediaGeoPoint(types.InputGeoPoint(lat, lon))
-        )
+        await reply_to_id.reply(input_str,
+                                file=types.InputMediaGeoPoint(
+                                    types.InputGeoPoint(lat, lon)))
         await event.delete()
     else:
         await event.edit("i coudn't find it")
 
 
-CMD_HELP.update(
-    {
-        "gps": "`.gps` <location name> :\
+CMD_HELP.update({
+    "gps":
+    "`.gps` <location name> :\
       \nUSAGE: Sends you the given location name\
       "
-    }
-)
+})

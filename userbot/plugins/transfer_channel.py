@@ -21,10 +21,9 @@ async def _(event):
         pwd = await borg(functions.account.GetPasswordRequest())
         my_srp_password = pwd_mod.compute_check(pwd, Config.TELE_GRAM_2FA_CODE)
         await borg(
-            functions.channels.EditCreatorRequest(
-                channel=current_channel, user_id=user_name, password=my_srp_password
-            )
-        )
+            functions.channels.EditCreatorRequest(channel=current_channel,
+                                                  user_id=user_name,
+                                                  password=my_srp_password))
     except Exception as e:
         await event.edit(str(e))
     else:

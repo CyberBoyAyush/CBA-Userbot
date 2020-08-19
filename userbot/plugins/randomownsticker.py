@@ -22,14 +22,9 @@ def choser(cmd, pack, blacklist={}):
         nonlocal docs
         if docs is None:
             docs = [
-                utils.get_input_document(x)
-                for x in (
-                    await borg(
-                        functions.messages.GetStickerSetRequest(
-                            types.InputStickerSetShortName(pack)
-                        )
-                    )
-                ).documents
+                utils.get_input_document(x) for x in (await borg(
+                    functions.messages.GetStickerSetRequest(
+                        types.InputStickerSetShortName(pack)))).documents
                 if x.id not in blacklist
             ]
 

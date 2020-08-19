@@ -31,10 +31,9 @@ async def _(event):
         await asyncio.sleep(86400)  # type for 10 seconds
 
 
-CMD_HELP.update(
-    {
-        "fake": ".fake (action name)\
+CMD_HELP.update({
+    "fake":
+    ".fake (action name)\
     \nUsage: Type .fake (action name) this shows the fake action in the group  the actions are typing contact ,game, location, voice, round, video,photo,document.\
     "
-    }
-)
+})

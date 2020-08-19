@@ -28,8 +28,10 @@ async def remove_profilepic(deletedp):
         lim = 1
 
     pfplist = await deletedp.client(
-        GetUserPhotosRequest(user_id=deletedp.from_id, offset=0, max_id=100, limit=lim)
-    )
+        GetUserPhotosRequest(user_id=deletedp.from_id,
+                             offset=0,
+                             max_id=100,
+                             limit=lim))
     input_photos = []
     for sep in pfplist.photos:
         input_photos.append(
@@ -37,8 +39,7 @@ async def remove_profilepic(deletedp):
                 id=sep.id,
                 access_hash=sep.access_hash,
                 file_reference=sep.file_reference,
-            )
-        )
+            ))
     await deletedp.client(DeletePhotosRequest(id=input_photos))
     await deletedp.edit(
         f"`Successfully deleted {len(input_photos)} profile picture(s)\n Coz My Master Dosent Likes That DP.`"

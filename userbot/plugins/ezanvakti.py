@@ -9,8 +9,8 @@ from telethon import events
 from userbot.utils import admin_cmd
 
 logging.basicConfig(
-    format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
-)
+    format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s",
+    level=logging.WARNING)
 
 TEMPAT = ""
 
@@ -49,15 +49,10 @@ async def get_adzan(adzan):
     maghrib = result["items"][0]["maghrib"]
     isya = result["items"][0]["isha"]
 
-    textkirim = (
-        f"⏱  **Tarih ** `{tanggal}`:\n"
-        + f"`{lokasi} | {lokasi2} | {lokasi3} | {lokasi4}`\n\n"
-        + f"**Güneş :** `{subuh}`\n"
-        + f"**İmsak :** `{syuruk}`\n"
-        + f"**Öğle :** `{zuhur}`\n"
-        + f"**İkindi :** `{ashar}`\n"
-        + f"**Akşam :** `{maghrib}`\n"
-        + f"**Yatsı :** `{isya}`\n"
-    )
+    textkirim = (f"⏱  **Tarih ** `{tanggal}`:\n" +
+                 f"`{lokasi} | {lokasi2} | {lokasi3} | {lokasi4}`\n\n" +
+                 f"**Güneş :** `{subuh}`\n" + f"**İmsak :** `{syuruk}`\n" +
+                 f"**Öğle :** `{zuhur}`\n" + f"**İkindi :** `{ashar}`\n" +
+                 f"**Akşam :** `{maghrib}`\n" + f"**Yatsı :** `{isya}`\n")
 
     await adzan.edit(textkirim)

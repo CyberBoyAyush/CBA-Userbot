@@ -17,7 +17,8 @@ async def _(event):
         return
     d_link = event.pattern_match.group(1)
     if ".com" not in d_link:
-        await event.edit("` I need a link to download something pro.`**(._.)**")
+        await event.edit("` I need a link to download something pro.`**(._.)**"
+                         )
     else:
         await event.edit("🎶**Initiating Download!**🎶")
     bot = "@DeezLoadBot"
@@ -38,7 +39,8 @@ async def _(event):
             await borg.send_file(
                 event.chat_id,
                 songh,
-                caption="🔆**Here's the requested song!**🔆\n`Check out` [X-tra userbot](https://github.com/spandey112/sensibleuserbot)",
+                caption=
+                "🔆**Here's the requested song!**🔆\n`Check out` [X-tra userbot](https://github.com/spandey112/sensibleuserbot)",
             )
             await event.delete()
         except YouBlockedUserError:

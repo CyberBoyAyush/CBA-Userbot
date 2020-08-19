@@ -58,9 +58,8 @@ async def carbon_api(e):
         chrome_options.add_experimental_option("prefs", prefs)
         await e.edit("🔳🔳🔲🔲🔲")
 
-        driver = webdriver.Chrome(
-            executable_path=Config.CHROME_DRIVER, options=chrome_options
-        )
+        driver = webdriver.Chrome(executable_path=Config.CHROME_DRIVER,
+                                  options=chrome_options)
         driver.get(url)
         download_path = "./"
         driver.command_executor._commands["send_command"] = (
@@ -69,11 +68,15 @@ async def carbon_api(e):
         )
         params = {
             "cmd": "Page.setDownloadBehavior",
-            "params": {"behavior": "allow", "downloadPath": download_path},
+            "params": {
+                "behavior": "allow",
+                "downloadPath": download_path
+            },
         }
         command_result = driver.execute("send_command", params)
 
-        driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
+        driver.find_element_by_xpath(
+            "//button[contains(text(),'Export')]").click()
         sleep(3)  # this might take a bit.
         # driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
         # sleep(5)
@@ -123,9 +126,8 @@ async def carbon_api(e):
         chrome_options.add_experimental_option("prefs", prefs)
         await e.edit("🔘🔘📛📛📛")
 
-        driver = webdriver.Chrome(
-            executable_path=Config.CHROME_DRIVER, options=chrome_options
-        )
+        driver = webdriver.Chrome(executable_path=Config.CHROME_DRIVER,
+                                  options=chrome_options)
         driver.get(url)
         download_path = "./"
         driver.command_executor._commands["send_command"] = (
@@ -134,11 +136,15 @@ async def carbon_api(e):
         )
         params = {
             "cmd": "Page.setDownloadBehavior",
-            "params": {"behavior": "allow", "downloadPath": download_path},
+            "params": {
+                "behavior": "allow",
+                "downloadPath": download_path
+            },
         }
         command_result = driver.execute("send_command", params)
 
-        driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
+        driver.find_element_by_xpath(
+            "//button[contains(text(),'Export')]").click()
         sleep(5)  # this might take a bit.
         # driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
         # sleep(5)
@@ -188,9 +194,8 @@ async def carbon_api(e):
         chrome_options.add_experimental_option("prefs", prefs)
         await e.edit("🔵🔵🎛🎛🎛")
 
-        driver = webdriver.Chrome(
-            executable_path=Config.CHROME_DRIVER, options=chrome_options
-        )
+        driver = webdriver.Chrome(executable_path=Config.CHROME_DRIVER,
+                                  options=chrome_options)
         driver.get(url)
         download_path = "./"
         driver.command_executor._commands["send_command"] = (
@@ -199,11 +204,15 @@ async def carbon_api(e):
         )
         params = {
             "cmd": "Page.setDownloadBehavior",
-            "params": {"behavior": "allow", "downloadPath": download_path},
+            "params": {
+                "behavior": "allow",
+                "downloadPath": download_path
+            },
         }
         command_result = driver.execute("send_command", params)
 
-        driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
+        driver.find_element_by_xpath(
+            "//button[contains(text(),'Export')]").click()
         sleep(5)  # this might take a bit.
         # driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
         # sleep(5)
@@ -253,9 +262,8 @@ async def carbon_api(e):
         chrome_options.add_experimental_option("prefs", prefs)
         await e.edit("🌝🌝🌚🌚🌚")
 
-        driver = webdriver.Chrome(
-            executable_path=Config.CHROME_DRIVER, options=chrome_options
-        )
+        driver = webdriver.Chrome(executable_path=Config.CHROME_DRIVER,
+                                  options=chrome_options)
         driver.get(url)
         download_path = "./"
         driver.command_executor._commands["send_command"] = (
@@ -264,11 +272,15 @@ async def carbon_api(e):
         )
         params = {
             "cmd": "Page.setDownloadBehavior",
-            "params": {"behavior": "allow", "downloadPath": download_path},
+            "params": {
+                "behavior": "allow",
+                "downloadPath": download_path
+            },
         }
         command_result = driver.execute("send_command", params)
 
-        driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
+        driver.find_element_by_xpath(
+            "//button[contains(text(),'Export')]").click()
         sleep(5)  # this might take a bit.
         # driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
         # sleep(5)
@@ -310,7 +322,12 @@ async def carbon_api(e):
         elif textx:
             pcode = str(textx.message)  # Importing message to module
         code = quote_plus(pcode)  # Converting to urlencoded
-        url = CARBON.format(code=code, R=RED, G=GREEN, B=BLUE, O=OPC, lang=CARBONLANG)
+        url = CARBON.format(code=code,
+                            R=RED,
+                            G=GREEN,
+                            B=BLUE,
+                            O=OPC,
+                            lang=CARBONLANG)
         chrome_options = Options()
         chrome_options.add_argument("--headless")
         chrome_options.binary_location = Config.GOOGLE_CHROME_BIN
@@ -322,9 +339,8 @@ async def carbon_api(e):
         chrome_options.add_experimental_option("prefs", prefs)
         await e.edit("⬛⬛⬜⬜⬜")
 
-        driver = webdriver.Chrome(
-            executable_path=Config.CHROME_DRIVER, options=chrome_options
-        )
+        driver = webdriver.Chrome(executable_path=Config.CHROME_DRIVER,
+                                  options=chrome_options)
         driver.get(url)
         download_path = "./"
         driver.command_executor._commands["send_command"] = (
@@ -333,11 +349,15 @@ async def carbon_api(e):
         )
         params = {
             "cmd": "Page.setDownloadBehavior",
-            "params": {"behavior": "allow", "downloadPath": download_path},
+            "params": {
+                "behavior": "allow",
+                "downloadPath": download_path
+            },
         }
         command_result = driver.execute("send_command", params)
 
-        driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
+        driver.find_element_by_xpath(
+            "//button[contains(text(),'Export')]").click()
         sleep(5)  # this might take a bit.
         # driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
         # sleep(5)
@@ -412,7 +432,12 @@ async def carbon_api(e):
         elif textx:
             pcode = str(textx.message)  # Importing message to module
         code = quote_plus(pcode)  # Converting to urlencoded
-        url = CARBON.format(code=code, R=RED, G=GREEN, B=BLUE, T=The, lang=CARBONLANG)
+        url = CARBON.format(code=code,
+                            R=RED,
+                            G=GREEN,
+                            B=BLUE,
+                            T=The,
+                            lang=CARBONLANG)
         chrome_options = Options()
         chrome_options.add_argument("--headless")
         chrome_options.binary_location = Config.GOOGLE_CHROME_BIN
@@ -424,9 +449,8 @@ async def carbon_api(e):
         chrome_options.add_experimental_option("prefs", prefs)
         await e.edit("⬛⬛⬜⬜⬜")
 
-        driver = webdriver.Chrome(
-            executable_path=Config.CHROME_DRIVER, options=chrome_options
-        )
+        driver = webdriver.Chrome(executable_path=Config.CHROME_DRIVER,
+                                  options=chrome_options)
         driver.get(url)
         download_path = "./"
         driver.command_executor._commands["send_command"] = (
@@ -435,11 +459,15 @@ async def carbon_api(e):
         )
         params = {
             "cmd": "Page.setDownloadBehavior",
-            "params": {"behavior": "allow", "downloadPath": download_path},
+            "params": {
+                "behavior": "allow",
+                "downloadPath": download_path
+            },
         }
         command_result = driver.execute("send_command", params)
 
-        driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
+        driver.find_element_by_xpath(
+            "//button[contains(text(),'Export')]").click()
         sleep(5)  # this might take a bit.
         #  driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
         # sleep(5)

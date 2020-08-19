@@ -10,10 +10,8 @@ from telethon.tl.types import ChatAdminRights
 from userbot.utils import admin_cmd
 
 logging.basicConfig(
-    format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
-)
-
-
+    format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s",
+    level=logging.WARNING)
 """
 @borg.on(admin_cmd(pattern="promote ?(.*)"))
 async def _(event):
