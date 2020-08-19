@@ -3,17 +3,13 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import html
 
-from telethon import events
-from telethon import utils
+from telethon import events, utils
+from telethon.errors import (BadRequestError, ChatAdminRequiredError,
+                             ImageProcessFailedError, PhotoCropSizeSmallError,
+                             UserAdminInvalidError)
 from telethon.tl import types
+
 from userbot.utils import admin_cmd
-from telethon.errors import (
-    BadRequestError,
-    ChatAdminRequiredError,
-    ImageProcessFailedError,
-    PhotoCropSizeSmallError,
-    UserAdminInvalidError,
-)
 
 
 def get_who_string(who):

@@ -6,27 +6,23 @@ Audio and video downloader using Youtube-dl
 .ytv To Download in mp4 format
 """
 
+import asyncio
+import math
 import os
 import time
-from html import unescape
-import math
-import asyncio
-from youtube_dl import YoutubeDL
-from googleapiclient.discovery import build
-from youtube_dl.utils import (
-    DownloadError,
-    ContentTooShortError,
-    ExtractorError,
-    GeoRestrictedError,
-    MaxDownloadsReached,
-    PostProcessingError,
-    UnavailableVideoError,
-    XAttrMetadataError,
-)
 from asyncio import sleep
+from html import unescape
+
+from googleapiclient.discovery import build
 from telethon.tl.types import DocumentAttributeAudio
-from userbot.utils import admin_cmd
+from youtube_dl import YoutubeDL
+from youtube_dl.utils import (ContentTooShortError, DownloadError,
+                              ExtractorError, GeoRestrictedError,
+                              MaxDownloadsReached, PostProcessingError,
+                              UnavailableVideoError, XAttrMetadataError)
+
 from userbot.uniborgConfig import Config
+from userbot.utils import admin_cmd
 
 
 async def progress(current, total, event, start, type_of_ps, file_name=None):

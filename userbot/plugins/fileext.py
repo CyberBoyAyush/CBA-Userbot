@@ -1,8 +1,9 @@
 """Get info about a File Extension
 Syntax: .filext EXTENSION"""
-from telethon import events
 import requests
 from bs4 import BeautifulSoup
+from telethon import events
+
 from userbot.utils import admin_cmd
 
 

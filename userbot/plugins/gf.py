@@ -4,9 +4,9 @@ Available Commands: .gf
 by @KshitijGagan
 inspired from @xcruzhd2 """
 
-from telethon import events
-
 import asyncio
+
+from telethon import events
 
 
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))

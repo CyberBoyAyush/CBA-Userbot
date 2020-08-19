@@ -5,15 +5,12 @@ Syntax: .belo
 Quotes credits: Being logical Channel
 """
 
-from telethon import events
-
 import asyncio
-
 import os
-
+import random
 import sys
 
-import random
+from telethon import events
 
 
 @borg.on(events.NewMessage(pattern=r"\.belo", outgoing=True))

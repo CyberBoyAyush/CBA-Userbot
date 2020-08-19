@@ -16,13 +16,15 @@
 Syntax: .rmbg https://link.to/image.extension
 Syntax: .rmbg as reply to a media"""
 import asyncio
-from datetime import datetime
 import io
 import os
+from datetime import datetime
+
 import requests
 from telethon import events
-from userbot.utils import progress, admin_cmd
+
 from userbot import CMD_HELP
+from userbot.utils import admin_cmd, progress
 
 
 @borg.on(admin_cmd(pattern="rmbg ?(.*)"))

@@ -1,11 +1,13 @@
 """Update UserBot code
 Syntax: .update"""
 
-import git
-from contextlib import suppress
+import asyncio
 import os
 import sys
-import asyncio
+from contextlib import suppress
+
+import git
+
 from userbot.utils import admin_cmd
 
 # -- Constants -- #

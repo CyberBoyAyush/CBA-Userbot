@@ -5,10 +5,12 @@ Syntax: .siteshot <Website URL with http://>
 import io
 import traceback
 from datetime import datetime
+
 from selenium import webdriver
 from telethon import events
-from userbot.utils import admin_cmd
+
 from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="ss (.*)"))

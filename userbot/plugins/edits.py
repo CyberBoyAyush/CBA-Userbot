@@ -10,9 +10,10 @@ Available Commands:
 .candy
 .nothappy"""
 
-from telethon import events
 import asyncio
 from collections import deque
+
+from telethon import events
 from uniborg.util import admin_cmd
 
 

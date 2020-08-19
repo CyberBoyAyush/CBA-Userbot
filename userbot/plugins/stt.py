@@ -1,9 +1,11 @@
 """Speech to Text
 Syntax: .stt <Language Code> as reply to a speech message"""
-from telethon import events
-import requests
 import os
 from datetime import datetime
+
+import requests
+from telethon import events
+
 from userbot.utils import admin_cmd
 
 

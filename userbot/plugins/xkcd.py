@@ -1,10 +1,12 @@
 """XKCD Search
 Syntax: .xkcd <search>"""
-from telethon import events
 import asyncio
 import json
-import requests
 from urllib.parse import quote
+
+import requests
+from telethon import events
+
 from userbot.utils import admin_cmd
 
 

@@ -1,10 +1,12 @@
 # This Plugin Is Created By @StarkxD
 
-from telethon import events
+import asyncio
 import random
 import re
+
+from telethon import events
+
 from userbot.utils import admin_cmd
-import asyncio
 
 
 @borg.on(admin_cmd("fban ?(.*)"))

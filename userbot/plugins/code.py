@@ -1,10 +1,9 @@
 """COMMAND : .code |;|"""
 
-from telethon import events
-
 import asyncio
 
 import requests
+from telethon import events
 
 
 @borg.on(events.NewMessage(pattern=r"\.code (.*)", outgoing=True))

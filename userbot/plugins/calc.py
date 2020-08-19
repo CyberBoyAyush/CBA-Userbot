@@ -1,12 +1,14 @@
 # credits to @mrconfused
-from telethon import events, errors, functions, types
-import inspect
-import traceback
 import asyncio
-import sys
+import inspect
 import io
-from userbot.utils import admin_cmd
+import sys
+import traceback
+
+from telethon import errors, events, functions, types
+
 from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="calc"))

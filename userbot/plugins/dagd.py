@@ -4,12 +4,14 @@ Available Commands:
 .dns google.com
 .url <long url>
 .unshort <short url>"""
-from telethon import events
-import os
-import requests
 import json
-from userbot.utils import admin_cmd
+import os
+
+import requests
+from telethon import events
+
 from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="dns (.*)"))

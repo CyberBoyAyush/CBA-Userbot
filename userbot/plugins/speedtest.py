@@ -1,10 +1,12 @@
 """Check your internet speed powered by speedtest.net
 Syntax: .speedtest
 Available Options: image, file, text"""
-from telethon import events
-from datetime import datetime
 import io
+from datetime import datetime
+
 import speedtest
+from telethon import events
+
 from userbot.utils import admin_cmd
 
 

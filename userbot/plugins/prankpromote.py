@@ -1,11 +1,13 @@
 """Reply to a user to .promote them in the current chat"""
-from userbot.utils import admin_cmd
-from telethon.tl.types import ChatAdminRights
-from telethon.tl.functions.channels import EditAdminRequest
-from datetime import datetime
 import asyncio
-from telethon import events
 import logging
+from datetime import datetime
+
+from telethon import events
+from telethon.tl.functions.channels import EditAdminRequest
+from telethon.tl.types import ChatAdminRights
+
+from userbot.utils import admin_cmd
 
 logging.basicConfig(
     format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING

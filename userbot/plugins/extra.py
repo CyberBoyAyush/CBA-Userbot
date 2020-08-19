@@ -1,20 +1,20 @@
 import asyncio
+import io
+import re
 import subprocess
 import time
-import re
-import io
-from userbot import bot, BOTLOG, BOTLOG_CHATID, CMD_HELP
+from collections import deque
+
 from telethon import events, functions, types
 from telethon.events import StopPropagation
-from telethon.tl.functions.messages import ExportChatInviteRequest
+from telethon.tl.functions.channels import (CreateChannelRequest,
+                                            DeleteMessagesRequest,
+                                            LeaveChannelRequest)
 from telethon.tl.functions.contacts import BlockRequest
-from telethon.tl.functions.channels import (
-    LeaveChannelRequest,
-    CreateChannelRequest,
-    DeleteMessagesRequest,
-)
-from collections import deque
+from telethon.tl.functions.messages import ExportChatInviteRequest
 from telethon.tl.functions.users import GetFullUserRequest
+
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
 from userbot.events import register
 from userbot.utils import admin_cmd
 

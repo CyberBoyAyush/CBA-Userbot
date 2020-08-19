@@ -1,8 +1,9 @@
 # By Sensible Userbot
-from telethon import events
 import asyncio
 import os
 import sys
+
+from telethon import events
 
 
 @borg.on(events.NewMessage(pattern=r"\.plane", outgoing=True))

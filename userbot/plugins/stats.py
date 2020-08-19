@@ -1,9 +1,11 @@
-from userbot import bot
-from telethon import events
 import asyncio
 from datetime import datetime
-from telethon.tl.types import User, Chat, Channel
+
+from telethon import events
+from telethon.tl.types import Channel, Chat, User
 from uniborg.util import admin_cmd
+
+from userbot import bot
 
 
 @bot.on(admin_cmd(pattern=r"stats"))

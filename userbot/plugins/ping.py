@@ -1,9 +1,9 @@
-from telethon import events
-from datetime import datetime
-from telethon import events
-from datetime import datetime
-from userbot.utils import admin_cmd
 import time
+from datetime import datetime
+
+from telethon import events
+
+from userbot.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="pong ?(.*)"))

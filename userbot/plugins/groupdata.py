@@ -1,45 +1,33 @@
-from asyncio import sleep
-from os import remove
-from telethon import events
 import asyncio
-from telethon.errors import (
-    ChannelInvalidError,
-    ChannelPrivateError,
-    ChannelPublicGroupNaError,
-    InviteHashEmptyError,
-    InviteHashExpiredError,
-    InviteHashInvalidError,
-)
-from emoji import emojize
-from telethon.tl.types import (
-    MessageActionChannelMigrateFrom,
-    ChannelParticipantsAdmins,
-    ChannelParticipantCreator,
-)
-from telethon.tl.functions.messages import (
-    GetHistoryRequest,
-    CheckChatInviteRequest,
-    GetFullChatRequest,
-)
-from telethon.events import ChatAction
+from asyncio import sleep
 from datetime import datetime
 from math import sqrt
-from telethon.tl.functions.channels import (
-    GetFullChannelRequest,
-    GetParticipantsRequest,
-    LeaveChannelRequest,
-)
+from os import remove
+
+from emoji import emojize
+from telethon import events
+from telethon.errors import (BadRequestError, ChannelInvalidError,
+                             ChannelPrivateError, ChannelPublicGroupNaError,
+                             ChatAdminRequiredError, ImageProcessFailedError,
+                             InviteHashEmptyError, InviteHashExpiredError,
+                             InviteHashInvalidError, PhotoCropSizeSmallError,
+                             UserAdminInvalidError)
+from telethon.errors.rpcerrorlist import (MessageTooLongError,
+                                          UserIdInvalidError)
+from telethon.events import ChatAction
+from telethon.tl.functions.channels import (GetFullChannelRequest,
+                                            GetParticipantsRequest,
+                                            LeaveChannelRequest)
+from telethon.tl.functions.messages import (CheckChatInviteRequest,
+                                            GetFullChatRequest,
+                                            GetHistoryRequest)
+from telethon.tl.types import (ChannelParticipantCreator,
+                               ChannelParticipantsAdmins,
+                               MessageActionChannelMigrateFrom)
 from telethon.utils import get_input_location
-from telethon.errors.rpcerrorlist import UserIdInvalidError, MessageTooLongError
-from telethon.errors import (
-    BadRequestError,
-    ChatAdminRequiredError,
-    ImageProcessFailedError,
-    PhotoCropSizeSmallError,
-    UserAdminInvalidError,
-)
+
 from userbot import CMD_HELP
-from userbot.utils import errors_handler, admin_cmd
+from userbot.utils import admin_cmd, errors_handler
 
 
 @borg.on(admin_cmd(pattern="leave$"))

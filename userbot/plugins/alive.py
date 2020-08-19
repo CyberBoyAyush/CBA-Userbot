@@ -1,10 +1,12 @@
 """Check if userbot alive. If you change these, you become the gayest gay such that even the gay world will disown you."""
 # IMG CREDITS: @WhySooSerious
 import asyncio
+
 from telethon import events
-from uniborg.util import admin_cmd
-from userbot import ALIVE_NAME
 from telethon.tl.types import ChannelParticipantsAdmins
+from uniborg.util import admin_cmd
+
+from userbot import ALIVE_NAME
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 PM_IMG = "https://telegra.ph/file/d59cc705ff17d984d11fa.jpg"

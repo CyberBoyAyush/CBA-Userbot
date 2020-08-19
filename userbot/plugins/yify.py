@@ -3,10 +3,11 @@
 # (c) Shrimadhav U K
 
 
-from telethon import events
 import asyncio
-from bs4 import BeautifulSoup
+
 import requests
+from bs4 import BeautifulSoup
+from telethon import events
 
 from userbot.utils import admin_cmd
 

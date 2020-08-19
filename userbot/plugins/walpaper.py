@@ -4,24 +4,18 @@
 
 # Usage .gamerdp  Im Not Responsible For Any Ban caused By This
 
-import requests
-import re
-import random
-
-import urllib
-import os
-
-from telethon.tl import functions
-
-from datetime import datetime
-
-from PIL import Image, ImageDraw, ImageFont
-
-from uniborg.util import admin_cmd
-
 import asyncio
-
+import os
+import random
+import re
+import urllib
+from datetime import datetime
 from time import sleep
+
+import requests
+from PIL import Image, ImageDraw, ImageFont
+from telethon.tl import functions
+from uniborg.util import admin_cmd
 
 COLLECTION_STRING = [
     "star-wars-wallpaper-1080p",

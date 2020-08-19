@@ -4,11 +4,13 @@ Life Pro Tips
 by
   @Deonnn
 """
-from telethon import events
 import asyncio
 import os
-import sys
 import random
+import sys
+
+from telethon import events
+
 from userbot.utils import admin_cmd
 
 

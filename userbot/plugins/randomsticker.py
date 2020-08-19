@@ -5,14 +5,16 @@
 """ Command: .dab , .brain 
 credit: lejend @r4v4n4
 """
-from userbot.utils import admin_cmd
-from random import choice
-from urllib import parse
-from os import remove
-import requests
 import asyncio
 import random
-from telethon import events, types, functions, utils
+from os import remove
+from random import choice
+from urllib import parse
+
+import requests
+from telethon import events, functions, types, utils
+
+from userbot.utils import admin_cmd
 
 BASE_URL = "https://headp.at/pats/{}"
 PAT_IMAGE = "pat.jpg"

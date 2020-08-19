@@ -1,10 +1,12 @@
-from telethon import events
-from userbot.utils import admin_cmd
+import asyncio
 import random
 import re
-import asyncio
-from userbot import CMD_HELP
 from collections import deque
+
+from telethon import events
+
+from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="think$", outgoing=True))

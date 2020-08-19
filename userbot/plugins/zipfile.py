@@ -1,15 +1,10 @@
-from telethon import events
-
 import asyncio
-
+import os
+import time
 import zipfile
 
 from pySmartDL import SmartDL
-
-import time
-
-import os
-
+from telethon import events
 from uniborg.util import admin_cmd, humanbytes, progress, time_formatter
 
 

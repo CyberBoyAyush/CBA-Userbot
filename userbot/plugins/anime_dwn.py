@@ -5,11 +5,13 @@ cmd:- .anime page_link
 By:- @Zero_cool7870	  
 
 """
-from telethon import events
 import asyncio
-from bs4 import BeautifulSoup as bs
-import requests
 import os
+
+import requests
+from bs4 import BeautifulSoup as bs
+from telethon import events
+
 from userbot.utils import admin_cmd
 
 chunk_size = 3242880

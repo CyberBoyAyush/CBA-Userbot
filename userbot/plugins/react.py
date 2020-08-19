@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 # (c) @INF1N17Y
 
-from telethon import events
-import random
 import asyncio
+import random
+
+from telethon import events
+
 from userbot.utils import admin_cmd
 
 

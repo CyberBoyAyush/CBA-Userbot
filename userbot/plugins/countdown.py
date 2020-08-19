@@ -1,18 +1,12 @@
 """COMMAND : .cd, .scd, .padmin"""
 
-from telethon import events
-
+import asyncio
+import importlib.util
+import random
 from datetime import datetime
 
+from telethon import events
 from uniborg.util import admin_cmd
-
-import importlib.util
-
-import asyncio
-
-import random
-
-import importlib.util
 
 
 @borg.on(admin_cmd(pattern="(f?c)d "))

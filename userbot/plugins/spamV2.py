@@ -1,8 +1,10 @@
 import asyncio
 import time
 from asyncio import wait
-from userbot.utils import admin_cmd
+
 from telethon import events, utils
+
+from userbot.utils import admin_cmd
 
 
 @borg.on(admin_cmd(outgoing=True, pattern="sspam"))
