@@ -7,9 +7,7 @@ import asyncio
 from userbot.utils import admin_cmd
 
 
-
 @borg.on(admin_cmd(pattern="eye"))
-
 async def _(event):
 
     if event.fwd_from:
@@ -22,23 +20,23 @@ async def _(event):
 
     #input_str = event.pattern_match.group(1)
 
-    #if input_str == "eye":
+    # if input_str == "eye":
 
     await event.edit("👁👁")
 
     animation_chars = [
 
-            "👁👁\n  👄  =====> Gays",
-            "👁👁\n  👅  =====> Lesbos",    
-            "👁👁\n  💋  =====> Crakers",
-            "👁👁\n  👄  =====> Jokers",
-            "👁👁\n  👅  =====> Fools",    
-            "👁👁\n  💋  =====> Idiots",
-            "👁👁\n  👄  =====> Stupids",
-            "👁👁\n  👅  =====> Harami Creatures",    
-            "👁👁\n  💋  =====> Crazys",
-            "👁👁\n  👄  =====> Hi All🧚🏻💚, How Are You All🧚🏻💚..."
-        ]
+        "👁👁\n  👄  =====> Gays",
+        "👁👁\n  👅  =====> Lesbos",
+        "👁👁\n  💋  =====> Crakers",
+        "👁👁\n  👄  =====> Jokers",
+        "👁👁\n  👅  =====> Fools",
+        "👁👁\n  💋  =====> Idiots",
+        "👁👁\n  👄  =====> Stupids",
+        "👁👁\n  👅  =====> Harami Creatures",
+        "👁👁\n  💋  =====> Crazys",
+        "👁👁\n  👄  =====> Hi All🧚🏻💚, How Are You All🧚🏻💚..."
+    ]
 
     for i in animation_ttl:
 

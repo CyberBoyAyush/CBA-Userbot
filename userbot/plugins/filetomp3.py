@@ -9,19 +9,20 @@ from telethon import events
 from userbot.utils import admin_cmd, progress
 from userbot import CMD_HELP
 
+
 @borg.on(admin_cmd(pattern="nfc ?(.*)"))
 async def _(event):
     if event.fwd_from:
-        return 
+        return
     if not event.reply_to_msg_id:
-       await event.edit("```Reply to any media file.```")
-       return
-    reply_message = await event.get_reply_message() 
+        await event.edit("```Reply to any media file.```")
+        return
+    reply_message = await event.get_reply_message()
     if not reply_message.media:
-       await event.edit("reply to media file")
-       return
+        await event.edit("reply to media file")
+        return
     input_str = event.pattern_match.group(1)
-    if  input_str is None:
+    if input_str is None:
         await event.edit("try `.nfc voice` or`.nfc mp3`")
         return
     elif input_str == "mp3":
@@ -31,7 +32,7 @@ async def _(event):
     else:
         await event.edit("try `.nfc voice` or`.nfc mp3`")
         return
-        
+
     try:
         start = datetime.now()
         c_time = time.time()
@@ -55,8 +56,10 @@ async def _(event):
         voice_note = False
         supports_streaming = False
         if input_str == "voice":
-            new_required_file_caption = "NLFC_" + str(round(time.time())) + ".opus"
-            new_required_file_name = Config.TMP_DOWNLOAD_DIRECTORY + "/" + new_required_file_caption
+            new_required_file_caption = "NLFC_" + \
+                str(round(time.time())) + ".opus"
+            new_required_file_name = Config.TMP_DOWNLOAD_DIRECTORY + \
+                "/" + new_required_file_caption
             command_to_run = [
                 "ffmpeg",
                 "-i",
@@ -74,8 +77,10 @@ async def _(event):
             voice_note = True
             supports_streaming = True
         elif input_str == "mp3":
-            new_required_file_caption = "mp3_" + str(round(time.time())) + ".mp3"
-            new_required_file_name = Config.TMP_DOWNLOAD_DIRECTORY + "/" + new_required_file_caption
+            new_required_file_caption = "mp3_" + \
+                str(round(time.time())) + ".mp3"
+            new_required_file_name = Config.TMP_DOWNLOAD_DIRECTORY + \
+                "/" + new_required_file_caption
             command_to_run = [
                 "ffmpeg",
                 "-i",
@@ -120,7 +125,7 @@ async def _(event):
             os.remove(new_required_file_name)
             await event.delete()
 
-            
+
 CMD_HELP.update({"filetomp3": "`.nfc voice` or `.nfc mp3` reply to required media to extract voice/mp3 :\
       \n**USAGE:**Converts the required media file to voice or mp3 file. "
-})             
+                 })

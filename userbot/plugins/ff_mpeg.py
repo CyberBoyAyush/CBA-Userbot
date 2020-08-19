@@ -29,7 +29,7 @@ async def ff_mpeg_trim_cmd(event):
                     reply_message,
                     FF_MPEG_DOWN_LOAD_MEDIA_PATH,
                     progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                      progress(d, t, event, c_time, "trying to download")
+                        progress(d, t, event, c_time, "trying to download")
                     )
                 )
             except Exception as e:  # pylint:disable=C0103,W0703
@@ -76,7 +76,7 @@ async def ff_mpeg_trim_cmd(event):
                 allow_cache=False,
                 reply_to=event.message.id,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                   progress(d, t, event, c_time, "trying to upload")
+                    progress(d, t, event, c_time, "trying to upload")
                 )
             )
             os.remove(o)
@@ -102,7 +102,7 @@ async def ff_mpeg_trim_cmd(event):
                 allow_cache=False,
                 reply_to=event.message.id,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                   progress(d, t, event, c_time, "trying to upload")
+                    progress(d, t, event, c_time, "trying to upload")
                 )
             )
             os.remove(o)
@@ -149,6 +149,7 @@ async def take_screen_shot(video_file, output_directory, ttl):
         return None
 
 # https://github.com/Nekmo/telegram-upload/blob/master/telegram_upload/video.py#L26
+
 
 async def cult_small_video(video_file, output_directory, start_time, end_time):
     # https://stackoverflow.com/a/13891070/4723940

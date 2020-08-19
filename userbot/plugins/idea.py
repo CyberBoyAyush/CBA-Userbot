@@ -1,7 +1,8 @@
 """This Idea Is Flip for @UniBorg
 Syntax: .This Idea Is flip [optiIn Favour Ofal_choice]"""
 from telethon import events
-import random, re
+import random
+import re
 from uniborg.util import admin_cmd
 
 

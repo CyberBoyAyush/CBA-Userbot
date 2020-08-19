@@ -24,4 +24,3 @@ async def _(event):
         await event.edit(str(e))
     else:
         await event.edit("Transferred 🌚")
-

@@ -54,7 +54,7 @@ Person: <a href='tg://user?id={}'>{}</a>
         user_id,
         first_name,
         user_bio,
-        dc_id, 
+        dc_id,
         replied_user_profile_photos_count,
         replied_user.user.restricted,
         replied_user.user.verified,

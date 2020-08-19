@@ -10,6 +10,7 @@ from telethon import events
 from userbot.utils import admin_cmd
 from userbot import CMD_HELP
 
+
 @borg.on(admin_cmd(pattern="ss (.*)"))
 async def _(event):
     if event.fwd_from:
@@ -33,11 +34,13 @@ async def _(event):
         input_str = event.pattern_match.group(1)
         driver.get(input_str)
         await event.edit("Calculating Page Dimensions")
-        height = driver.execute_script("return Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);")
-        width = driver.execute_script("return Math.max(document.body.scrollWidth, document.body.offsetWidth, document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.offsetWidth);")
+        height = driver.execute_script(
+            "return Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);")
+        width = driver.execute_script(
+            "return Math.max(document.body.scrollWidth, document.body.offsetWidth, document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.offsetWidth);")
         await event.edit("Painting web-page")
         driver.set_window_size(width + 100, height + 100)
-        # Add some pixels on top of the calculated dimensions 
+        # Add some pixels on top of the calculated dimensions
         # for good measure to make the scroll bars disappear
         im_png = driver.get_screenshot_as_png()
         # saves screenshot of entire page
@@ -63,10 +66,10 @@ async def _(event):
     except Exception:
         await event.edit(traceback.format_exc())
 
-        
+
 CMD_HELP.update({
     "ss":
     ".ss <url>\
     \nUsage: Takes a screenshot of a website and sends the screenshot.\
     \nExample of a valid URL : `https://www.google.com`"
-})        
+})

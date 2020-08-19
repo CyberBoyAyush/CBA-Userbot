@@ -21,7 +21,8 @@ def get_video_thumb(file, output=None, width=320):
     metadata = extractMetadata(createParser(file))
     p = subprocess.Popen([
         'ffmpeg', '-i', file,
-        '-ss', str(int((0, metadata.get('duration').seconds)[metadata.has('duration')] / 2)),
+        '-ss', str(int((0, metadata.get('duration').seconds)
+                       [metadata.has('duration')] / 2)),
         # '-filter:v', 'scale={}:-1'.format(width),
         '-vframes', '1',
         output,
@@ -44,7 +45,7 @@ async def _(event):
             await event.get_reply_message(),
             Config.TMP_DOWNLOAD_DIRECTORY,
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                 progress(d, t, mone, c_time, "trying to download")
+                progress(d, t, mone, c_time, "trying to download")
             )
         )
         if downloaded_file_name.endswith(".mp4"):
@@ -58,7 +59,8 @@ async def _(event):
         # resize image
         # ref: https://t.me/PyrogramChat/44663
         # https://stackoverflow.com/a/21669827/4723940
-        Image.open(downloaded_file_name).convert("RGB").save(downloaded_file_name)
+        Image.open(downloaded_file_name).convert(
+            "RGB").save(downloaded_file_name)
         img = Image.open(downloaded_file_name)
         # https://stackoverflow.com/a/37631799/4723940
         # img.thumbnail((320, 320))
@@ -67,7 +69,7 @@ async def _(event):
         # https://pillow.readthedocs.io/en/3.1.x/reference/Image.html#create-thumbnails
         os.remove(downloaded_file_name)
         await event.edit(
-            "Custom video / file thumbnail saved. " + \
+            "Custom video / file thumbnail saved. " +
             "This image will be used in the upload, till `.clearthumbnail`."
         )
     else:

@@ -1,12 +1,15 @@
-#Made By mariodevs Keep Credits If You Are Goanna Kang This Lol
+# Made By mariodevs Keep Credits If You Are Goanna Kang This Lol
 
-#And Thanks To The Creator Of Autopic This Script Was Made from Snippets From That Script
+# And Thanks To The Creator Of Autopic This Script Was Made from Snippets From That Script
 
-#Usage .gamerdp  Im Not Responsible For Any Ban caused By This
+# Usage .gamerdp  Im Not Responsible For Any Ban caused By This
 
-import requests , re , random 
+import requests
+import re
+import random
 
-import urllib , os 
+import urllib
+import os
 
 from telethon.tl import functions
 
@@ -22,17 +25,18 @@ from time import sleep
 
 COLLECTION_STRING = [
 
-  "star-wars-wallpaper-1080p",
+    "star-wars-wallpaper-1080p",
 
-  "4k-sci-fi-wallpaper",
+    "4k-sci-fi-wallpaper",
 
-  "star-wars-iphone-6-wallpaper",
+    "star-wars-iphone-6-wallpaper",
 
-  "kylo-ren-wallpaper",
+    "kylo-ren-wallpaper",
 
-  "darth-vader-wallpaper"
+    "darth-vader-wallpaper"
 
 ]
+
 
 async def animepp():
 
@@ -54,24 +58,26 @@ async def animepp():
 
     if not os.path.exists("f.ttf"):
 
-        urllib.request.urlretrieve("https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf","f.ttf")
+        urllib.request.urlretrieve(
+            "https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf", "f.ttf")
 
-    urllib.request.urlretrieve(fy,"donottouch.jpg")
+    urllib.request.urlretrieve(fy, "donottouch.jpg")
+
 
 @borg.on(admin_cmd(pattern="gamerdp ?(.*)"))
-
 async def main(event):
 
-    await event.edit("**Starting Gamer Profile Pic.......\n\nModded by @Mariodevs ! Check Your Dp After 20 Seconds") #Owner @MarioDevs
+    # Owner @MarioDevs
+    await event.edit("**Starting Gamer Profile Pic.......\n\nModded by @Mariodevs ! Check Your Dp After 20 Seconds")
 
     while True:
 
         await animepp()
 
-        file = await event.client.upload_file("donottouch.jpg")  
+        file = await event.client.upload_file("donottouch.jpg")
 
-        await event.client(functions.photos.UploadProfilePhotoRequest( file))
+        await event.client(functions.photos.UploadProfilePhotoRequest(file))
 
         os.system("rm -rf donottouch.jpg")
 
-        await asyncio.sleep(3600) #Edit this to your required needs
+        await asyncio.sleep(3600)  # Edit this to your required needs

@@ -6,9 +6,7 @@ import asyncio
 from uniborg.util import admin_cmd
 
 
-
 @borg.on(admin_cmd(pattern="phub"))
-
 async def _(event):
 
     if event.fwd_from:
@@ -23,23 +21,23 @@ async def _(event):
 
     animation_chars = [
 
-            "P_",
+        "P_",
 
-            "PO_",
+        "PO_",
 
-            "POR_",
+        "POR_",
 
-            "PORN_",
-            
-            "PORNH_",
-            
-            "PORNHU_",
-            
-           "PORNHUB_", 
-           
-           "PORNHUB",
+        "PORN_",
 
-        ]
+        "PORNH_",
+
+        "PORNHU_",
+
+        "PORNHUB_",
+
+        "PORNHUB",
+
+    ]
 
     for i in animation_ttl:
 
@@ -49,7 +47,6 @@ async def _(event):
 
 
 @borg.on(admin_cmd(pattern=r"fayash"))
-
 async def _(event):
 
     if event.fwd_from:
@@ -64,27 +61,27 @@ async def _(event):
 
     animation_chars = [
 
-            "F_",
+        "F_",
 
-            "FA_",
+        "FA_",
 
-            "FAY_",
+        "FAY_",
 
-            "FAYA_",
-            
-            "FAYAS_",
-            
-            "FAYASH_",
-            
-            "FAYASH🦄_",
-        
-            "FAYASH🦄💜_",
-            
-            "FAYASH🦄💜🍭",
-        
-            "o××}̶̶[̶̶Ғ@YΔ🅢ℌ>➤",
+        "FAYA_",
 
-        ]
+        "FAYAS_",
+
+        "FAYASH_",
+
+        "FAYASH🦄_",
+
+        "FAYASH🦄💜_",
+
+        "FAYASH🦄💜🍭",
+
+        "o××}̶̶[̶̶Ғ@YΔ🅢ℌ>➤",
+
+    ]
 
     for i in animation_ttl:
 
@@ -93,18 +90,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-
-
-from telethon import events
-
-import asyncio
-
-
-
-
-
 @borg.on(admin_cmd(pattern=r"sexy"))
-
 async def _(event):
 
     if event.fwd_from:
@@ -119,19 +105,19 @@ async def _(event):
 
     animation_chars = [
 
-            "S_",
+        "S_",
 
-            "SE_",
+        "SE_",
 
-            "SEX_",
+        "SEX_",
 
-            "SEXY_",
-            
-            "SEXY👄_",
-            
-            "SEXY👄",
-            
-        ]
+        "SEXY_",
+
+        "SEXY👄_",
+
+        "SEXY👄",
+
+    ]
 
     for i in animation_ttl:
 

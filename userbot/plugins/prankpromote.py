@@ -1,13 +1,13 @@
 """Reply to a user to .promote them in the current chat"""
+from userbot.utils import admin_cmd
+from telethon.tl.types import ChatAdminRights
+from telethon.tl.functions.channels import EditAdminRequest
+from datetime import datetime
+import asyncio
+from telethon import events
 import logging
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
-from telethon import events
-import asyncio
-from datetime import datetime
-from telethon.tl.functions.channels import EditAdminRequest
-from telethon.tl.types import ChatAdminRights
-from userbot.utils import admin_cmd
 
 
 """
@@ -41,6 +41,7 @@ async def _(event):
     else:
         await event.edit("Successfully Promoted")
 """
+
 
 @borg.on(admin_cmd(pattern="prankpromote ?(.*)"))
 async def _(event):

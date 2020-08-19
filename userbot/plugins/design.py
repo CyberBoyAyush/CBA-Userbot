@@ -21,6 +21,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
+
 @borg.on(admin_cmd("pay"))
 async def _(event):
     if event.fwd_from:

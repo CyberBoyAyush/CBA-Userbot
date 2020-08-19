@@ -12,8 +12,7 @@ from userbot.utils import admin_cmd
 import importlib.util
 
 
-
-@borg.on(admin_cmd(pattern="sdm", outgoing=True  ))
+@borg.on(admin_cmd(pattern="sdm", outgoing=True))
 async def selfdestruct(destroy):
     if not destroy.text[0].isalpha() and destroy.text[0] not in ("/", "#", "@", "!"):
         message = destroy.text
@@ -25,10 +24,10 @@ async def selfdestruct(destroy):
         await destroy.delete()
         smsg = await destroy.client.send_message(destroy.chat_id, text)
         time.sleep(counter)
-        await smsg.delete()  
+        await smsg.delete()
 
-        
-@borg.on(admin_cmd(pattern="selfd", outgoing=True  ))
+
+@borg.on(admin_cmd(pattern="selfd", outgoing=True))
 async def selfdestruct(destroy):
     if not destroy.text[0].isalpha() and destroy.text[0] not in ("/", "#", "@", "!"):
         message = destroy.text
@@ -43,9 +42,9 @@ async def selfdestruct(destroy):
         await destroy.delete()
         smsg = await destroy.client.send_message(destroy.chat_id, text)
         time.sleep(counter)
-        await smsg.delete()        
+        await smsg.delete()
 
-        
+
 CMD_HELP.update({
     "selfdestruct":
     ".sdm number | [text]\
@@ -53,4 +52,4 @@ CMD_HELP.update({
 \n\n.self number | [text]\
 \nUsage:self destruct this message in number seconds with showing that it will destruct. \
 "
-})         
+})

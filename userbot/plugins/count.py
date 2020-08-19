@@ -50,10 +50,7 @@ logger = logging.getLogger(__name__)
 # Bots:\t{}""".format(ms, u, g, c, bc, b))
 
 
-
-
-
-@borg.on(admin_cmd(pattern='count'))  
+@borg.on(admin_cmd(pattern='count'))
 async def stats(event: NewMessage.Event) -> None:  # pylint: disable = R0912, R0914, R0915
     """Command to get stats about the account"""
     waiting_message = await event.edit('`💫🧚🏻Collecting stats, Wait Master🧚🏻💫`')

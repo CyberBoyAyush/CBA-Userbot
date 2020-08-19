@@ -2,7 +2,7 @@
 from geopy.geocoders import Nominatim
 from userbot.utils import admin_cmd
 from telethon.tl import types
-from userbot import CMD_HELP 
+from userbot import CMD_HELP
 
 
 @borg.on(admin_cmd(pattern="gps ?(.*)"))
@@ -41,4 +41,4 @@ async def gps(event):
 CMD_HELP.update({"gps": "`.gps` <location name> :\
       \nUSAGE: Sends you the given location name\
       "
-})
+                 })

@@ -10,6 +10,7 @@ import requests
 
 from userbot.utils import admin_cmd
 
+
 @borg.on(admin_cmd(pattern=f"yify recents", outgoing=True))
 async def _(event):
     if event.fwd_from:
@@ -28,7 +29,8 @@ async def _(event):
         movie_links = movie_links[1:]
         for torrent_link in movie_links:
             href_link = BASE_URL + torrent_link.get("href")
-            magnetic_link_response = requests.get(href_link, allow_redirects=False)
+            magnetic_link_response = requests.get(
+                href_link, allow_redirects=False)
             magnetic_link = magnetic_link_response.headers.get("Location")
             await borg.send_message(
                 uploadbot,

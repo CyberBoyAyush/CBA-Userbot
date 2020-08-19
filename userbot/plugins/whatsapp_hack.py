@@ -2,62 +2,32 @@
 .whatsapp"""
 
 
-
 from telethon import events
-
 
 
 import asyncio
 
 
-
-
-
-
-
-
-
-
-
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
-
-
-
 async def _(event):
-
-
 
     if event.fwd_from:
 
-
-
         return
-
-
 
     animation_interval = 2
 
-
-
     animation_ttl = range(0, 15)
-
-
 
     input_str = event.pattern_match.group(1)
 
-
-
     if input_str == "telegram":
-
-
 
         await event.edit(input_str)
 
-
-
         animation_chars = [
 
-        
+
 
             "Looking for Telegram databases in targeted person...",
 
@@ -67,7 +37,7 @@ async def _(event):
 
             "Hacking... 11.07%\n[██░░░░░░░░░░░░░░░░░░]\n`Looking for Telegram...`\nETA: 0m, 18s",
 
-            "Hacking... 20.63%\n[███░░░░░░░░░░░░░░░░░]\n`Found folder C:/Telegram`\nETA: 0m, 16s",    
+            "Hacking... 20.63%\n[███░░░░░░░░░░░░░░░░░]\n`Found folder C:/Telegram`\nETA: 0m, 16s",
 
             "Hacking... 34.42%\n[█████░░░░░░░░░░░░░░░]\n`Found folder C:/Telegarm`\nETA: 0m, 14s",
 
@@ -91,14 +61,8 @@ async def _(event):
 
         ]
 
-
-
         for i in animation_ttl:
 
-
-
             await asyncio.sleep(animation_interval)
-
-
 
             await event.edit(animation_chars[i % 15])

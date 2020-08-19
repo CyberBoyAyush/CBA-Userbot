@@ -5,6 +5,7 @@ from datetime import datetime
 from userbot.utils import admin_cmd
 import time
 
+
 @borg.on(admin_cmd(pattern="pong ?(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -15,7 +16,7 @@ async def _(event):
     end = datetime.now()
     ms = (end - start).microseconds * 0.00001
     await mone.edit("💜🦄Ping  Speed is💜🦄 `{} ms`".format(ms))
- 
+
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -45,7 +46,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-#@command(pattern="^.ping$")
+# @command(pattern="^.ping$")
 @borg.on(admin_cmd(pattern="ping$"))
 async def _(event):
     if event.fwd_from:

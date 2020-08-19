@@ -24,6 +24,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 link_preview=False
             )
         await event.answer([result] if result else None)
+
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"helpme_next\((.+?)\)")
     ))
@@ -56,11 +57,12 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         else:
             reply_pop_up_alert = "im not your bot!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"us_plugin_(.*)")
     ))
     async def on_plug_in_callback_query_handler(event):
-        if event.query.user_id == bot.uid: 
+        if event.query.user_id == bot.uid:
             plugin_name = event.data_match.group(1).decode("UTF-8")
             help_string = ""
             try:
@@ -77,11 +79,13 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 © Userbot".format(plugin_name)
             try:
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-            except: 
-                halps = "Do .help {} to get the list of commands.".format(plugin_name)
+            except:
+                halps = "Do .help {} to get the list of commands.".format(
+                    plugin_name)
                 await event.answer(halps, cache_time=0, alert=True)
         else:
             reply_pop_up_alert = "im not your bot!"
+
 
 def paginate_help(page_number, loaded_plugins, prefix):
     number_of_rows = 8

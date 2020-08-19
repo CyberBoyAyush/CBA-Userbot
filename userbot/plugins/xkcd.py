@@ -22,8 +22,8 @@ async def _(event):
             queryresult = requests.get(
                 xkcd_search_url,
                 params={
-                    "action":"xkcd",
-                    "query":quote(input_str)
+                    "action": "xkcd",
+                    "query": quote(input_str)
                 }
             ).text
             xkcd_id = queryresult.split(" ")[2].lstrip("\n")

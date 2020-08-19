@@ -108,6 +108,7 @@ WHERE = ["in the chest", "on the head", "on the butt", "on the crotch"]
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@Sur_vivor"
 
+
 @borg.on(admin_cmd(pattern="slap ?(.*)"))
 async def who(event):
     if event.fwd_from:
@@ -124,6 +125,7 @@ async def who(event):
 
     except:
         await event.edit("`Can't slap this nibba !!`")
+
 
 async def get_user(event):
     if event.reply_to_msg_id:
@@ -156,6 +158,7 @@ async def get_user(event):
 
     return replied_user
 
+
 async def slap(replied_user, event):
     user_id = replied_user.user.id
     first_name = replied_user.user.first_name
@@ -169,12 +172,12 @@ async def slap(replied_user, event):
     item = random.choice(ITEMS)
     hit = random.choice(HIT)
     throw = random.choice(THROW)
-    where = random.choice(WHERE)		  
+    where = random.choice(WHERE)
 
-    caption = temp.format(user1=DEFAULTUSER, victim=slapped, item=item, hits=hit, throws=throw, where=where)
+    caption = temp.format(user1=DEFAULTUSER, victim=slapped,
+                          item=item, hits=hit, throws=throw, where=where)
 
     return caption
-
 
 
 CMD_HELP.update({

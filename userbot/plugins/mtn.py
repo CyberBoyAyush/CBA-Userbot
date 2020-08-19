@@ -9,9 +9,7 @@ import asyncio
 from uniborg.util import admin_cmd
 
 
-
 @borg.on(admin_cmd(pattern=r"mtn"))
-
 async def _(event):
 
     if event.fwd_from:
@@ -29,28 +27,28 @@ async def _(event):
     await event.edit("mtn")
 
     animation_chars = [
-        
-            "`Connecting To MTN NG ....`",
-            "`█ ▇ ▆ ▅ ▄ ▂ ▁`",
-            "`▒ ▇ ▆ ▅ ▄ ▂ ▁`",
-            "`▒ ▒ ▆ ▅ ▄ ▂ ▁`",
-            "`▒ ▒ ▒ ▅ ▄ ▂ ▁`",    
-            "`▒ ▒ ▒ ▒ ▄ ▂ ▁`",
-            "`▒ ▒ ▒ ▒ ▒ ▂ ▁`",
-            "`▒ ▒ ▒ ▒ ▒ ▒ ▁`",
-            "`▒ ▒ ▒ ▒ ▒ ▒ ▒`",
-            "*Optimising Network...*",
-            "`▒ ▒ ▒ ▒ ▒ ▒ ▒`",
-            "`▁ ▒ ▒ ▒ ▒ ▒ ▒`",           
-            "`▁ ▂ ▒ ▒ ▒ ▒ ▒`",
-            "`▁ ▂ ▄ ▒ ▒ ▒ ▒`",
-            "`▁ ▂ ▄ ▅ ▒ ▒ ▒`",
-            "`▁ ▂ ▄ ▅ ▆ ▒ ▒`",
-            "`▁ ▂ ▄ ▅ ▆ ▇ ▒`",
-            "`▁ ▂ ▄ ▅ ▆ ▇ █`",
-            "**MTN Network Boosted....**"
 
- ]
+        "`Connecting To MTN NG ....`",
+        "`█ ▇ ▆ ▅ ▄ ▂ ▁`",
+        "`▒ ▇ ▆ ▅ ▄ ▂ ▁`",
+        "`▒ ▒ ▆ ▅ ▄ ▂ ▁`",
+        "`▒ ▒ ▒ ▅ ▄ ▂ ▁`",
+        "`▒ ▒ ▒ ▒ ▄ ▂ ▁`",
+        "`▒ ▒ ▒ ▒ ▒ ▂ ▁`",
+        "`▒ ▒ ▒ ▒ ▒ ▒ ▁`",
+        "`▒ ▒ ▒ ▒ ▒ ▒ ▒`",
+        "*Optimising Network...*",
+        "`▒ ▒ ▒ ▒ ▒ ▒ ▒`",
+        "`▁ ▒ ▒ ▒ ▒ ▒ ▒`",
+        "`▁ ▂ ▒ ▒ ▒ ▒ ▒`",
+        "`▁ ▂ ▄ ▒ ▒ ▒ ▒`",
+        "`▁ ▂ ▄ ▅ ▒ ▒ ▒`",
+        "`▁ ▂ ▄ ▅ ▆ ▒ ▒`",
+        "`▁ ▂ ▄ ▅ ▆ ▇ ▒`",
+        "`▁ ▂ ▄ ▅ ▆ ▇ █`",
+        "**MTN Network Boosted....**"
+
+    ]
 
     for i in animation_ttl:
 

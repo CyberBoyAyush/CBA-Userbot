@@ -5,6 +5,7 @@ from datetime import datetime
 from telethon.tl.types import User, Chat, Channel
 from uniborg.util import admin_cmd
 
+
 @bot.on(admin_cmd(pattern=r"stats"))
 async def _(event):
     if event.fwd_from:

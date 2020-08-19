@@ -1,4 +1,4 @@
-#created by Jisan
+# created by Jisan
 
 
 from telethon import events
@@ -9,12 +9,14 @@ import random
 import sys
 from userbot import utils
 from userbot.utils import admin_cmd
-from userbot import ALIVE_NAME , CMD_HELP
-import random, re
+from userbot import ALIVE_NAME, CMD_HELP
+import random
+import re
 import importlib.util
 from collections import deque
 
 DEF = str(ALIVE_NAME) if ALIVE_NAME else "cat"
+
 
 @borg.on(admin_cmd(pattern="shoot (.*)"))
 async def _(event):
@@ -26,15 +28,15 @@ async def _(event):
     await event.edit(f"**Ready Commando **__{DEF}....")
     animation_chars = [
 
-            "Ｆｉｉｉｉｉｒｅ",
-            f"__**Commando **__{DEF}          \n\n_/﹋\_\n (҂`_´)\n <,︻╦╤─ ҉ - \n _/﹋\_\n",    
-            f"__**Commando **__{DEF}          \n\n_/﹋\_\n (҂`_´)\n  <,︻╦╤─ ҉ - -\n _/﹋\_\n",
-            f"__**Commando **__{DEF}         \n\n_/﹋\_\n (҂`_´)\n <,︻╦╤─ ҉ - - -\n _/﹋\_\n",
-            f"__**Commando **__{DEF}         \n\n_/﹋\_\n (҂`_´)\n<,︻╦╤─ ҉ - -\n _/﹋\_\n",
-            f"__**Commando **__{DEF}          \n\n_/﹋\_\n (҂`_´)\n <,︻╦╤─ ҉ - \n _/﹋\_\n",
-            f"__**Commando **__{DEF}          \n\n_/﹋\_\n (҂`_´)\n  <,︻╦╤─ ҉ - -\n _/﹋\_\n",
-            f"__**Commando **__{DEF}          \n\n_/﹋\_\n (҂`_´)\n <,︻╦╤─ ҉ - - - {name}\n _/﹋\_\n",
-        ]
+        "Ｆｉｉｉｉｉｒｅ",
+        f"__**Commando **__{DEF}          \n\n_/﹋\_\n (҂`_´)\n <,︻╦╤─ ҉ - \n _/﹋\_\n",
+        f"__**Commando **__{DEF}          \n\n_/﹋\_\n (҂`_´)\n  <,︻╦╤─ ҉ - -\n _/﹋\_\n",
+        f"__**Commando **__{DEF}         \n\n_/﹋\_\n (҂`_´)\n <,︻╦╤─ ҉ - - -\n _/﹋\_\n",
+        f"__**Commando **__{DEF}         \n\n_/﹋\_\n (҂`_´)\n<,︻╦╤─ ҉ - -\n _/﹋\_\n",
+        f"__**Commando **__{DEF}          \n\n_/﹋\_\n (҂`_´)\n <,︻╦╤─ ҉ - \n _/﹋\_\n",
+        f"__**Commando **__{DEF}          \n\n_/﹋\_\n (҂`_´)\n  <,︻╦╤─ ҉ - -\n _/﹋\_\n",
+        f"__**Commando **__{DEF}          \n\n_/﹋\_\n (҂`_´)\n <,︻╦╤─ ҉ - - - {name}\n _/﹋\_\n",
+    ]
     for i in animation_ttl:
-            await asyncio.sleep(animation_interval)
-            await event.edit(animation_chars[i % 12])
+        await asyncio.sleep(animation_interval)
+        await event.edit(animation_chars[i % 12])

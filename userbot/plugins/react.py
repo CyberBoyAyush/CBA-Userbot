@@ -7,7 +7,8 @@ import random
 import asyncio
 from userbot.utils import admin_cmd
 
-@borg.on(admin_cmd(pattern=f"react ?(.*)",outgoing=True))
+
+@borg.on(admin_cmd(pattern=f"react ?(.*)", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -91,7 +92,7 @@ async def _(event):
             "-ᄒᴥᄒ-",
             "◖⚆ᴥ⚆◗",
         ]
-    else:    
+    else:
         emoticons = [
             "( ͡° ͜ʖ ͡°)",
             "¯\_(ツ)_/¯",

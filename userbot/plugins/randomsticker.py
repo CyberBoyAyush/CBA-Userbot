@@ -17,6 +17,7 @@ from telethon import events, types, functions, utils
 BASE_URL = "https://headp.at/pats/{}"
 PAT_IMAGE = "pat.jpg"
 
+
 def choser(cmd, pack, blacklist={}):
     docs = None
     @borg.on(events.NewMessage(pattern=rf'\.{cmd}', outgoing=True))
@@ -30,6 +31,7 @@ def choser(cmd, pack, blacklist={}):
                 if x.id not in blacklist
             ]
         await event.respond(file=random.choice(docs))
+
 
 choser('brain', 'supermind')
 choser('dab', 'DabOnHaters', {
@@ -49,25 +51,25 @@ choser('dab', 'DabOnHaters', {
     1653974154589768677
 })
 
-#HeadPat Module for Userbot (http://headp.at)
-#cmd:- .pat username or reply to msg
-#By:- git: jaskaranSM tg: @Zero_cool7870
-@borg.on(admin_cmd(pattern="pat ?(.*)", outgoing =True))
+# HeadPat Module for Userbot (http://headp.at)
+# cmd:- .pat username or reply to msg
+# By:- git: jaskaranSM tg: @Zero_cool7870
+@borg.on(admin_cmd(pattern="pat ?(.*)", outgoing=True))
 async def lastfm(event):
     if event.fwd_from:
         return
     username = event.pattern_match.group(1)
     if not username and not event.reply_to_msg_id:
         await event.edit("`Reply to a message or provide username`")
-        return 
+        return
     resp = requests.get("http://headp.at/js/pats.json")
     pats = resp.json()
     pat = BASE_URL.format(parse.quote(choice(pats)))
     await event.delete()
-    with open(PAT_IMAGE,'wb') as f:
+    with open(PAT_IMAGE, 'wb') as f:
         f.write(requests.get(pat).content)
     if username:
-        await borg.send_file(event.chat_id,PAT_IMAGE,caption=username)
+        await borg.send_file(event.chat_id, PAT_IMAGE, caption=username)
     else:
-        await borg.send_file(event.chat_id,PAT_IMAGE,reply_to=event.reply_to_msg_id) 
+        await borg.send_file(event.chat_id, PAT_IMAGE, reply_to=event.reply_to_msg_id)
     remove(PAT_IMAGE)

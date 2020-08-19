@@ -13,11 +13,7 @@ import os
 from uniborg.util import admin_cmd, humanbytes, progress, time_formatter
 
 
-
-
-
 @borg.on(admin_cmd(pattern="compress ?(.*)"))
-
 async def _(event):
 
     if event.fwd_from:
@@ -46,7 +42,7 @@ async def _(event):
 
                 Config.TMP_DOWNLOAD_DIRECTORY
 
-                
+
 
             )
 
@@ -54,7 +50,8 @@ async def _(event):
 
             await event.edit("Finish downloading to my local")
 
-            zipfile.ZipFile(directory_name + '.zip', 'w', zipfile.ZIP_DEFLATED).write(directory_name)
+            zipfile.ZipFile(directory_name + '.zip', 'w',
+                            zipfile.ZIP_DEFLATED).write(directory_name)
 
             await borg.send_file(
 
@@ -80,7 +77,7 @@ async def _(event):
 
             except:
 
-                    pass
+                pass
 
             await event.edit("task Completed")
 
@@ -96,6 +93,7 @@ async def _(event):
 
         directory_name = input_str
 
-        zipfile.ZipFile(directory_name + '.zip', 'w', zipfile.ZIP_DEFLATED).write(directory_name)
+        zipfile.ZipFile(directory_name + '.zip', 'w',
+                        zipfile.ZIP_DEFLATED).write(directory_name)
 
         await event.edit("Local file compressed to `{}`".format(directory_name + ".zip"))

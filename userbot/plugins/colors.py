@@ -6,6 +6,7 @@ from PIL import Image, ImageColor
 from userbot.utils import admin_cmd
 from userbot import CMD_HELP
 
+
 @borg.on(admin_cmd(pattern="color (.*)"))
 async def _(event):
     if event.fwd_from:
@@ -35,11 +36,8 @@ async def _(event):
             await event.delete()
     else:
         await event.edit("Syntax: `.color <color_code>` example : `.color #ff0000`")
-        
-        
-        
-        
-         
+
+
 CMD_HELP.update({"colors": "`.color` <color_code>  :\
       \nUSAGE: sends you a plain image of the color example :`.color #ff0000` . "
-}) 
+                 })

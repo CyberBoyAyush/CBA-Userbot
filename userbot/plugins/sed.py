@@ -77,6 +77,7 @@ async def group_has_sedbot(group):
 async def on_message(event):
     last_msgs[event.chat_id].appendleft(event.message)
 
+
 @command(allow_edited_updates=True)
 async def on_edit(event):
     for m in last_msgs[event.chat_id]:
@@ -109,12 +110,12 @@ async def on_regex(event):
 
     raise events.StopPropagation
 
-    
+
 CMD_HELP.update({
     "sed":
     ".s<delimiter><old word(s)><delimiter><new word(s)>\
     \nUsage: Replaces a word or words using sed.\
     \nDelimiters: `/, :, |, _`\
     example: tag any sentence and type s/a/b. where is required word to replace and b is correct word."
-    
-})    
+
+})

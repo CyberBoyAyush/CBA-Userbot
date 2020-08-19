@@ -11,6 +11,7 @@ import json
 from userbot.utils import admin_cmd
 from userbot import CMD_HELP
 
+
 @borg.on(admin_cmd(pattern="dns (.*)"))
 async def _(event):
     if event.fwd_from:
@@ -49,6 +50,3 @@ async def _(event):
         await event.edit("Input URL: {}\nReDirected URL: {}".format(input_str, r.headers["Location"]))
     else:
         await event.edit("Input URL {} returned status_code {}".format(input_str, r.status_code))
-
-        
-

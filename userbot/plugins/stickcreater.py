@@ -12,11 +12,12 @@ from userbot.utils import admin_cmd
 
 # RegEx by https://t.me/c/1220993104/500653 ( @SnapDragon7410 )
 
+
 @borg.on(admin_cmd(pattern="stcr ?(?:(.*?) \| )?(.*)", outgoing=True))
 async def sticklet(event):
-    R = random.randint(0,256)
-    G = random.randint(0,256)
-    B = random.randint(0,256)
+    R = random.randint(0, 256)
+    G = random.randint(0, 256)
+    B = random.randint(0, 256)
     reply_message = event.message
     # get the input text
     # the text on which we would like to do the magic on
@@ -48,7 +49,8 @@ async def sticklet(event):
         fontsize -= 3
         font = ImageFont.truetype(FONT_FILE, size=fontsize)
     width, height = draw.multiline_textsize(sticktext, font=font)
-    draw.multiline_text(((512-width)/2,(512-height)/2), sticktext, font=font, fill=(R, G, B))
+    draw.multiline_text(((512-width)/2, (512-height)/2),
+                        sticktext, font=font, fill=(R, G, B))
     image_stream = io.BytesIO()
     image_stream.name = "Friday.webp"
     image.save(image_stream, "WebP")
@@ -61,8 +63,7 @@ async def sticklet(event):
     except:
         pass
 
-    
-    
+
 async def get_font_file(client, channel_id, search_kw=""):
     # first get the font messages
     font_file_message_s = await client.get_messages(

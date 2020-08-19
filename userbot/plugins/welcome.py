@@ -5,6 +5,7 @@ from userbot.plugins.sql_helper.welcome_sql import get_current_welcome_settings,
 from userbot import CMD_HELP
 from userbot.utils import admin_cmd
 
+
 @bot.on(events.ChatAction())  # pylint:disable=E0602
 async def _(event):
     cws = get_current_welcome_settings(event.chat_id)
@@ -41,9 +42,10 @@ async def _(event):
             userid = a_user.id
             current_saved_welcome_message = cws.custom_welcome_message
             mention = "[{}](tg://user?id={})".format(a_user.first_name, a_user.id)
-            
+
             current_message = await event.reply(
-                current_saved_welcome_message.format(mention=mention, title=title, count=count, first=first, last=last, fullname=fullname, username=username, userid=userid),
+                current_saved_welcome_message.format(
+                    mention=mention, title=title, count=count, first=first, last=last, fullname=fullname, username=username, userid=userid),
                 file=cws.media_file_id
             )
             update_previous_welcome(event.chat_id, current_message.id)
@@ -56,7 +58,8 @@ async def _(event):
     msg = await event.get_reply_message()
     if msg and msg.media:
         bot_api_file_id = pack_bot_file_id(msg.media)
-        add_welcome_setting(event.chat_id, msg.message, True, 0, bot_api_file_id)
+        add_welcome_setting(event.chat_id, msg.message,
+                            True, 0, bot_api_file_id)
         await event.edit("Welcome note saved. ")
     else:
         input_str = event.text.split(None, 1)
@@ -71,9 +74,11 @@ async def _(event):
     cws = get_current_welcome_settings(event.chat_id)
     rm_welcome_setting(event.chat_id)
     await event.edit(
-        "Welcome note cleared. " + \
-        "The previous welcome message was `{}`.".format(cws.custom_welcome_message)
+        "Welcome note cleared. " +
+        "The previous welcome message was `{}`.".format(
+            cws.custom_welcome_message)
     )
+
 
 @borg.on(admin_cmd(pattern="listwelcome"))  # pylint:disable=E0602
 async def _(event):
@@ -82,16 +87,16 @@ async def _(event):
     cws = get_current_welcome_settings(event.chat_id)
     if hasattr(cws, 'custom_welcome_message'):
         await event.edit(
-            "Welcome note found. " + \
-        "Your welcome message is\n\n`{}`.".format(cws.custom_welcome_message)
-    )
+            "Welcome note found. " +
+            "Your welcome message is\n\n`{}`.".format(
+                cws.custom_welcome_message)
+        )
     else:
         await event.edit(
             "No Welcome Message found"
         )
-        
-        
-        
+
+
 CMD_HELP.update({
     "welcome":
     "\
@@ -104,4 +109,4 @@ CMD_HELP.update({
 \n\n.clearwelcome\
 \nUsage: Deletes the welcome note for the current chat.\
 "
-})        
+})

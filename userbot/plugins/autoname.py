@@ -29,7 +29,7 @@ async def _(event):
         except FloodWaitError as ex:
             logger.warning(str(e))
             await asyncio.sleep(ex.seconds)
-    
+
         # else:
             # logger.info(r.stringify())
             # await borg.send_message(  # pylint:disable=E0602
@@ -37,4 +37,4 @@ async def _(event):
             #     "Successfully Changed Profile Name"
             # )
         await asyncio.sleep(DEL_TIME_OUT)
-    await event.edit(f"Auto Name has been started Master") 
+    await event.edit(f"Auto Name has been started Master")

@@ -1,7 +1,8 @@
 # This Plugin Is Created By @StarkxD
 
 from telethon import events
-import random, re
+import random
+import re
 from userbot.utils import admin_cmd
 import asyncio
 
