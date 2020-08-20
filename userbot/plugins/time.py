@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 from userbot.utils import admin_cmd
 
 
-FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+FONT_FILE_TO_USE = "Fonts/digital.ttf"
 
 
 @borg.on(admin_cmd("time ?(.*)"))  # pylint:disable=E0602
