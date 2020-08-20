@@ -15,7 +15,7 @@ FONT_FILE_TO_USE = "Fonts/digital.ttf"
 async def _(event):
     if event.fwd_from:
         return
-    current_time = datetime.now().strftime("FRIDAY TIMEZONE \n LOCATION: India \n  Time: %H:%M:%S \n  Date: %d.%m.%y")
+    current_time = datetime.now().strftime("FRIDAY TIMEZONE \nLOCATION: India \nTime: %H:%M:%S \nDate: %d.%m.%y")
     start = datetime.now()
     input_str = event.pattern_match.group(1)
     reply_msg_id = event.message.id
