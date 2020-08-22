@@ -11,7 +11,7 @@
 Best User Bot To Manage Your Telegram Account 
 ## Most PowerFul And Better And Secure
 
-## © By Team #SᴛᴀʀᴋGᴀɴɢ™
+## CyberBoyAyush
 
 ### For any query or want to know how it works join Group And Channel 
 
@@ -25,7 +25,7 @@ Best User Bot To Manage Your Telegram Account
 
 ### Host Friday In Heroku
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/StarkGang/FridayUserbot)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/CyberBoyAyush/CBA-Userbot)
 
 ## Telegram-String
 
