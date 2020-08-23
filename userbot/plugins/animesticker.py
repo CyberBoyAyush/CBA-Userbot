@@ -46,7 +46,7 @@ def deEmojify(inputString: str) -> str:
 
 
 #@register(outgoing=True, pattern="^.waifu(?: |$)(.*)", allow_sudo=True))
-@borg.on(admin_cmd(pattern=r"waifu(?: |$)(.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern=r"waifu(?: |$)(.*)"))
 async def waifu(animu):
 #"""Creates random anime sticker!"""
 
