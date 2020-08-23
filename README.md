@@ -11,14 +11,9 @@
 Best User Bot To Manage Your Telegram Account 
 ## Most PowerFul And Better And Secure
 
-## CyberBoyAyush
+## This Repo Onwed By🔥
 * [@CYBERBOYAYUSH](https://telegram.dog/CyberBoyAyush)
 * [@XHACKERZKALI](https://telegram.dog/XHACKERZKALI)
-
-## HOW TO DEPLOY 
-
-<a href="https://youtu.be/xfHcm_e92eQ"><img src="https://img.shields.io/badge/How%20To-Deploy-red.svg?logo=Youtube"></a>
-
 
 ### Host Friday In Heroku
 
