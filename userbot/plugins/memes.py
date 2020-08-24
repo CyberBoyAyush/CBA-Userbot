@@ -849,7 +849,7 @@ async def vapor(vpr):
 @register(outgoing=True, pattern="^.repo$")
 async def repo(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("Hey ! I am Using [Friday Userbot](https://github.com/CyberBoyAyush/CBA-Userbot) !")
+        await e.edit("Hey ! I am Using [CBA USERBOT](https://github.com/CyberBoyAyush/CBA-Userbot) !")
 
 @register(outgoing=True, pattern="^.fridayuserbot$")
 async def source(sed):
