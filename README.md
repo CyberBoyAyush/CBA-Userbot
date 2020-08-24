@@ -30,7 +30,7 @@
 
 Simply clone the repository and run the main file:
 ```sh
-git clone https://github.com/starkGang/Fridayuserbot
+git clone https://github.com/CyberBoyAyush/CBA-Userbot
 cd FridayUserbot
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
