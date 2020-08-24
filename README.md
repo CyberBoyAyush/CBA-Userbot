@@ -15,7 +15,7 @@
 * [@CYBERBOYAYUSH](https://telegram.dog/CyberBoyAyush)
 * [@XHACKERZKALI](https://telegram.dog/XHACKERZKALI)
 
-## We Are Not Responsible For Any Banning Of Acc So Deploy On Your Own Risk😒
+## We Are Not Responsible For Any Banning Of Your Telegram Account So Deploy On Your Own Risk😒
 
 ### Host CBA - Userbot In Heroku (On Your Own Risk)
 
