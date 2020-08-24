@@ -11,7 +11,7 @@
 Best User Bot To Manage Your Telegram Account 
 ## Most PowerFul And Better And Secure
 
-## This Repo Onwed By🔥
+## This Repo Owned By🔥
 * [@CYBERBOYAYUSH](https://telegram.dog/CyberBoyAyush)
 * [@XHACKERZKALI](https://telegram.dog/XHACKERZKALI)
 
