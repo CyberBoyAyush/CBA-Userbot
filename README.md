@@ -15,7 +15,9 @@ Best User Bot To Manage Your Telegram Account
 * [@CYBERBOYAYUSH](https://telegram.dog/CyberBoyAyush)
 * [@XHACKERZKALI](https://telegram.dog/XHACKERZKALI)
 
-### Host CBA - Userbot In Heroku
+## We Are Not Responsible For Any Banning Of Acc So Deploy On Your Own Risk😒
+
+### Host CBA - Userbot In Heroku (On Your Own Risk)
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/CyberBoyAyush/CBA-Userbot)
 
