@@ -74,6 +74,6 @@ Fortunately there are no Mandatory vars for the UniBorg Support Config.
 - The userbot will not work without setting the mandatory vars.
 
 ## Credits😎
-* [StarkXD](https://telegram.dog/StarkXD) For FRIDAY Repo🙏
 * [CyberBoyAyush](https://Telegram.dog/CyberBoyAyush) Onwer Of This Repo🔥
 * [XHackerzKali](https://telegram.dog/Xhackerzkali) Helping Me😎
+* [StarkXD](https://telegram.dog/StarkXD) For FRIDAY Repo🙏
