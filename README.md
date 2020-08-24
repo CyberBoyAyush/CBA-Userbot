@@ -21,7 +21,7 @@ Best User Bot To Manage Your Telegram Account
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/CyberBoyAyush/CBA-Userbot)
 
-## Telegram-String
+## Online Telegram-String Generator
 
 [![Run on Repl.it](https://repl.it/badge/github/STARKGANG/friday)](https://cba-userbot.cyberboyayush.repl.run)
 
