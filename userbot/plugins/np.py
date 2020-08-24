@@ -22,11 +22,11 @@ async def _(event):
     animation_chars = [
             "No",
             "Problem",
-            "Boss",
-            "Yeah ! No problem",
-            "No Problem Boss.lol",
-            "No Problem Boss😇.Lol",
-            "No Problem Man😇.Lol"
+            "Bsdk",
+            "Yeah ! No problem Bsdk",
+            "No Problem Bsdk.lol",
+            "No Problem Bsdk😇.Lol",
+            "No Problem Bsdk😇.Gaand Maraa🖕"
          ]
             
 
