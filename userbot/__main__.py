@@ -49,7 +49,7 @@ for name in files:
 
 import userbot._core
 
-print("Friday Has Been Enabled ! Try .ping")
+print("CBA Userbot Is Working Say Thnx To @CyberBoyAyush! Try .ping")
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
