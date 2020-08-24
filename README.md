@@ -17,6 +17,10 @@
 
 ## We Are Not Responsible For Any Banning Of Your Telegram Account So Deploy On Your Own Risk😒
 
+## Official Support💖
+<a href="https://t.me/CBA_USERBOT"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
+<a href="https://t.me/CBA_USERBOT_SUPPORT"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
+
 ### Host CBA - Userbot In Heroku (On Your Own Risk)
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/CyberBoyAyush/CBA-Userbot)
