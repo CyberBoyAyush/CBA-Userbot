@@ -1,4 +1,4 @@
-# FRIDAY-USERBOT
+# CBA-USERBOT
 
 <p align="center">
 <img src="https://telegra.ph/file/fc3aef09eb9b82d244f97.jpg" alt="CBA Userbot">
