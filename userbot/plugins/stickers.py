@@ -30,7 +30,7 @@ from userbot.utils import admin_cmd
 from userbot import ALIVE_NAME, CUSTOM_STICKER_PACK_NAME, CUSTOM_ANIMATED_PACK_NAME
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Who is this"
-CUSTOM_STICKER_NAME =str(CUSTOM_STICKER_PACK_NAME) if CUSTOM_STICKER_PACK_NAME else "My Boss CBA Userbot Volume Pack One"
+CUSTOM_STICKER_NAME =str(CUSTOM_STICKER_PACK_NAME) if CUSTOM_STICKER_PACK_NAME else "My Boss CBA-Userbot Volume Pack One"
 CUSTOM_ANIME_PACK = str(CUSTOM_ANIMATED_PACK_NAME) if CUSTOM_ANIMATED_PACK_NAME else "My Boss Animated Pack"
 FILLED_UP_DADDY = "Invalid pack selected."
 
