@@ -4,7 +4,7 @@ from var import Var
 from pathlib import Path
 from userbot.uniborgConfig import Config
 from userbot import LOAD_PLUG
-from userbot import CMD_LIST
+from userbot import CMD_LIST, SUDO_LIST, bot
 import re
 import logging
 import inspect
