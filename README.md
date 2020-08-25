@@ -80,4 +80,4 @@ Fortunately there are no Mandatory vars for the UniBorg Support Config.
 ## Credits😎
 * [CyberBoyAyush](https://Telegram.dog/CyberBoyAyush) Onwer Of This Repo🔥
 * [XHackerzKali](https://telegram.dog/Xhackerzkali) Helping Me😎
-* [StarkXD](https://telegram.dog/StarkXD) For FRIDAY Repo🙏
+* [StarkXD](https://telegram.dog/StarkXD) For [FRIDAY](https://github.com/StarkGang/FridayUserbot) Repo🙏
