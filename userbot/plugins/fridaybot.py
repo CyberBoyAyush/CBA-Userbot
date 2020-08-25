@@ -20,7 +20,7 @@ async def _(event):
     await event.edit("Thanks")
     animation_chars = [
             "Click here to Go to Telegraph",
-            "[Click Here For Guide](https://telegra.ph/FRIDAY-06-15)"
+            "[Click Here For Guide](https://telegram.dog/CBA-USERBOT)"
          ]
             
 
