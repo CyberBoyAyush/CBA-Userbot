@@ -19,7 +19,7 @@ from ..utils import admin_cmd, sudo_cmd, edit_or_reply
 async def apk(event):
     app_name = event.pattern_match.group(1)
     event = await edit_or_reply(event ,"Searching!")
-   try:
+    try:
         remove_space = app_name.split(' ')
         final_name = '+'.join(remove_space)
         page = requests.get("https://play.google.com/store/search?q="+final_name+"&c=apps")
@@ -37,7 +37,7 @@ async def apk(event):
         app_details += "\n\n<code>Developer :</code> <a href='"+app_dev_link+"'>"+app_dev+"</a>"
         app_details += "\n<code>Rating :</code> "+app_rating.replace("Rated ", "⭐ ").replace(" out of ", "/").replace(" stars", "", 1).replace(" stars", "⭐ ").replace("five", "5")
         app_details += "\n<code>Features :</code> <a href='"+app_link+"'>View in Play Store</a>"
-        app_details += "\n\n===> @FridayOT <==="
+        app_details += "\n\n===> @CBA_USERBOT <==="
         await event.edit(app_details, link_preview = True, parse_mode = 'HTML')
     except IndexError:
         await event.edit("No result found in search. Please enter **Valid app name**")
@@ -49,7 +49,7 @@ async def apk(event):
 async def apkr(event):
     app_name = event.pattern_match.group(1)
     event = await edit_or_reply(event ,"searching!")
-  try:
+    try:
         remove_space = app_name.split(' ')
         final_name = '+'.join(remove_space)
         page = requests.get("https://play.google.com/store/search?q="+final_name+"&c=apps")
