@@ -20,7 +20,7 @@ async def _(event):
 
     animation_interval = 0.3
 
-    animation_ttl = range(0, 15)
+    animation_ttl = range(0, 12)
 
     await event.edit("Police")
 
@@ -40,7 +40,6 @@ async def _(event):
             "🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴",
             "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
             "🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴",
-            "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
             "[R.A.G.N.A.R](https://www.instagram.com/ashmit.malasi/) **Police Service Here**"
  ]
 
@@ -48,4 +47,4 @@ async def _(event):
 
         await asyncio.sleep(animation_interval)
 
-        await event.edit(animation_chars[i % 15])
+        await event.edit(animation_chars[i % 12])
