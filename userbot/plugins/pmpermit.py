@@ -21,10 +21,10 @@ PREV_REPLY_MESSAGE = {}
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "**YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n`THIS IS ILLEGAL AND REGARDED AS A CRIME`"
 USER_BOT_WARN_ZERO = "`You were spamming my Boss's inbox, henceforth your retarded lame ass has been blocked by me. Now wait untill my master notices you and decides to unblock you.` "
-USER_BOT_NO_WARN = ("`Hello ! This is` **R.A.G.N.A.R**\n"
+USER_BOT_NO_WARN = ("`Hello ! This is`  **R.A.G.N.A.R**\n"
                     "`Private Messaging Security Protocol ⚠️`\n\n"
                     "**Currently My Boss**\n"
-                    f"{DEFAULTUSER} is Busy ! So Better Don't Spam His Inbox and wait !!\n\n"
+                    f"{DEFAULTUSER} is Busy ! So Better Don't Spam His Inbox and wait !! He Will Reply Soon !!\n\n"
                     f"`{CUSTOM_MIDDLE_PMP}` \n\n"
                     "**Send** 🍁 `/start` 🍁  **To Start A Valid Conversation!!**")
 
