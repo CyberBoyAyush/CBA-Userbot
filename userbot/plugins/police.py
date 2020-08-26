@@ -18,9 +18,9 @@ async def _(event):
 
         return
 
-    animation_interval = 0.3
+    animation_interval = 0.27
 
-    animation_ttl = range(0, 12)
+    animation_ttl = range(0, 15)
 
     await event.edit("Police")
 
@@ -47,4 +47,4 @@ async def _(event):
 
         await asyncio.sleep(animation_interval)
 
-        await event.edit(animation_chars[i % 12])
+        await event.edit(animation_chars[i % 15])
