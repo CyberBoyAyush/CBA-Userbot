@@ -1,24 +1,8 @@
 """just for fun
 .whatsapp"""
 
-
-
 from telethon import events
-
-
-
 import asyncio
-
-
-
-
-
-
-
-
-
-
-
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 
 
@@ -87,7 +71,7 @@ async def _(event):
 
             "Hacking complete!\nUploading file...",
 
-            "Targeted Account Hacked...!\n\n ✅ File has been successfully uploaded to my server.\nWhatsApp Database:\n`./DOWNLOADS/msgstore.db.crypt12`"
+            "Targeted Account Hacked by __Ashmit__...!\n\n ✅ File has been successfully uploaded to my server.\nWhatsApp Database:\n`./DOWNLOADS/msgstore.db.crypt12`"
 
         ]
 
