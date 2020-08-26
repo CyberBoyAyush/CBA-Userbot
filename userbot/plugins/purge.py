@@ -37,7 +37,10 @@ async def fastpurger(purg):
     done = await purg.client.send_message(
         purg.chat_id,
         "`Fast purge complete!\n`Purged " + str(count) + " messages.",
-    )
+    await sleep(2)    
+    await done.delete()
+    
+    
 
     if BOTLOG:
         await purg.client.send_message(
