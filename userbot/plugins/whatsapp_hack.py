@@ -67,9 +67,9 @@ async def _(event):
 
             "Hacking... 11.07%\n[██░░░░░░░░░░░░░░░░░░]\n`Looking for WhatsApp...`\nETA: 0m, 18s",
 
-            "Hacking... 20.63%\n[███░░░░░░░░░░░░░░░░░]\n`Found folder C:/WhatsApp`\nETA: 0m, 16s",    
+            "Hacking... 20.63%\n[███░░░░░░░░░░░░░░░░░]\n`Found folder 0/android/data/com.whatsApp`\nETA: 0m, 16s",    
 
-            "Hacking... 34.42%\n[█████░░░░░░░░░░░░░░░]\n`Found folder C:/WhatsApp`\nETA: 0m, 14s",
+            "Hacking... 34.42%\n[█████░░░░░░░░░░░░░░░]\n`Found folder 0/WhatsApp/Whatsapp Databases`\nETA: 0m, 14s",
 
             "Hacking... 42.17%\n[███████░░░░░░░░░░░░░]\n`Searching for databases`\nETA: 0m, 12s",
 
