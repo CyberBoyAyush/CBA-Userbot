@@ -1,4 +1,3 @@
-
 from telethon import events
 
 import asyncio
@@ -8,7 +7,7 @@ from uniborg.util import admin_cmd
 from userbot import ALIVE_NAME
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "R.A.G.N.A.R Userbot"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Friday Userbot"
 
 @borg.on(admin_cmd(pattern=r"police"))
 
