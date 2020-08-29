@@ -1,4 +1,4 @@
-"""AFK Plugin for Friday
+"""AFK Plugin for R.A.G.N.A.R
 Syntax: .afk REASON"""
 import asyncio
 import datetime
@@ -31,7 +31,7 @@ async def set_not_afk(event):
                 event.chat_id,
                 "Please set `PLUGIN_CHANNEL` " + \
                 "for the proper functioning of afk functionality " + \
-                "in @FridayOT\n\n `{}`".format(str(e)),
+                "Ask @Error404_INSaNE\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True
             )
@@ -61,7 +61,7 @@ async def _(event):
             afk_time = datetime.datetime.now()  # pylint:disable=E0602
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
-            await event.edit(f"My Boss Is Going Afk ! And The Reason is {reason}")
+            await event.edit(f"My Boss Is Going Afk ! Reason is : {reason}")
         else:
             await event.edit(f"My Boss is Going")
         await asyncio.sleep(5)
@@ -124,7 +124,7 @@ async def on_afk(event):
         message_to_reply = f"**My Boss is AFK** ! \n\n**Reason** : `{reason}` \n\n**Afk Since** : {afk_since}" + \
             f"\n\n__Kindly Leave A Message__ ! \n`He Will Reply To You Soon !`" \
             if reason \
-            else f"**Hello, Boss Is AFK Right Now And May Be Forgot List Reason ! Any Way He Will Come Back Soon !**"
+            else f"**Hello, Boss Is AFK Right Now And May Be he Forgot to List Reason ! Any Way He Will Come Back Soon !**"
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
