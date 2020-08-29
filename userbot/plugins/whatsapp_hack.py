@@ -5,45 +5,25 @@ from telethon import events
 import asyncio
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 
-
-
 async def _(event):
-
-
 
     if event.fwd_from:
 
-
-
         return
-
-
 
     animation_interval = 2
 
-
-
-    animation_ttl = range(0, 15)
-
-
+   animation_ttl = range(0, 15)
 
     input_str = event.pattern_match.group(1)
 
-
-
     if input_str == "whatsapp":
-
-
 
         await event.edit(input_str)
 
-
-
         animation_chars = [
 
-        
-
-            "Looking for WhatsApp databases in targeted person...",
+             "Looking for WhatsApp databases in targeted person...",
 
             " User online: True\nTelegram access: True\nRead Storage: True ",
 
@@ -71,18 +51,12 @@ async def _(event):
 
             "Hacking complete!\nUploading file...",
 
-            "Targeted Account Hacked by __Ashmit__...!\n\n ✅ File has been successfully uploaded to my server.\nWhatsApp Database:\n`./DOWNLOADS/msgstore.db.crypt12`"
+            "Targeted Account Hacked by__ [__Ashmit__](https://t.me/Error404_INSaNE) __...!\n\n ✅ File has been successfully uploaded to my server.\nWhatsApp Database:\n`./DOWNLOADS/msgstore.db.crypt12`"
 
         ]
 
-
-
         for i in animation_ttl:
 
-
-
             await asyncio.sleep(animation_interval)
-
-
 
             await event.edit(animation_chars[i % 15])
