@@ -11,7 +11,7 @@ pm_caption += "`TELETHON VERSION:` **6.0.9**\n`Python:` **3.7.4**\n"
 pm_caption += "`DATABASE STATUS:` **Functional**\n"
 pm_caption += "**Current Branch** : `master`\n"
 pm_caption += "**OS Version** : `3.14`\n"
-pm_caption += "**Made By 😎** : @Insane_Ashmit\n\n"
+pm_caption += "**Made By 😎** : @Error404_INSaNE\n\n"
 pm_caption += "Want to Deploy Your Own : DM my master\n"
 
 @borg.on(admin_cmd(pattern=r"alive"))
