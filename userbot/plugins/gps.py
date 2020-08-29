@@ -17,9 +17,9 @@ async def gps(event):
     if not input_str:
         return await event.edit("Boss ! Give A Place To Search 😔 !.")
 
-    await event.edit("Finding This Location In Maps Server.....")
+    await event.edit("Finding This Location In RAGNAR's Maps Server.....")
 
-    geolocator = Nominatim(user_agent="F.R.I.D.A.Y USERBOT")
+    geolocator = Nominatim(user_agent="R.A.G.N.A.R USERBOT")
     geoloc = geolocator.geocode(input_str)
 
     if geoloc:
