@@ -1,4 +1,4 @@
-# Copyright (C) By CyberBoyAyush [@CyberBoyAyush]
+# Copyright (C) By StarkGang [@STARKXD]
 # Don't edit credits
 # Works On Bases Of Cyberboysumanjay's Inshorts News Api
 # Test
